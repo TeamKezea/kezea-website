@@ -145,92 +145,82 @@ HERO
 ========================= */
 
 #hero {
-min-height: 100vh;
+    min-height: 100vh;
 
-```
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 
-padding: 120px 8% 70px;
+    padding: 150px 8% 80px;
 
-background:
-    linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.95),
-        rgba(0, 0, 0, 0.65),
-        rgba(0, 0, 0, 0.9)
-    ),
-    url("https://images.unsplash.com/photo-1542751371-adc38448a05e")
-    center / cover no-repeat;
-```
-
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.9)
+        ),
+        url("https://images.unsplash.com/photo-1542751371-adc38448a05e")
+        center / cover no-repeat;
 }
 
 .hero-content {
-max-width: 720px;
+    width: 100%;
+    max-width: 720px;
+
+    position: relative;
+    z-index: 2;
 }
 
 .welcome {
-color: #f7c600;
+    color: #f7c600;
 
-```
-font-size: 17px;
-font-weight: 600;
+    font-size: 17px;
+    font-weight: 600;
 
-letter-spacing: 6px;
-```
-
+    letter-spacing: 6px;
 }
 
 .hero-content h1 {
-margin: 20px 0;
+    margin: 20px 0;
 
-```
-font-family: 'Orbitron', sans-serif;
-font-size: 88px;
-line-height: 0.98;
-```
-
+    font-family: 'Orbitron', sans-serif;
+    font-size: 88px;
+    line-height: 1;
 }
 
 .hero-content h1 span {
-color: #f7c600;
+    color: #f7c600;
 }
 
 .hero-line {
-width: 110px;
-height: 4px;
+    width: 110px;
+    height: 4px;
 
-```
-margin: 25px 0;
+    margin: 25px 0;
 
-background: #f7c600;
-```
-
+    background: #f7c600;
 }
 
 .hero-content p {
-max-width: 560px;
+    max-width: 560px;
 
-```
-color: #aaa;
+    color: #aaa;
 
-font-size: 18px;
-line-height: 1.7;
-```
+    font-size: 18px;
+    line-height: 1.7;
 
+    margin: 0;
 }
 
 .hero-buttons {
-display: flex;
-gap: 18px;
+    display: flex;
+    align-items: center;
 
-```
-margin-top: 35px;
-```
+    gap: 18px;
 
+    margin-top: 35px;
 }
-
 /* =========================
 BUTTONS
 ========================= */
