@@ -1189,3 +1189,115 @@ footer a:hover {
     }
 
 }
+/* =========================================================
+   KEZEA PLAYER PAGE - GAMING BACKGROUND
+========================================================= */
+
+body.player-body {
+    position: relative;
+    overflow-x: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 5, 5, 0.96),
+            rgba(5, 5, 5, 0.72),
+            rgba(5, 5, 5, 0.94)
+        ),
+        url("https://images.unsplash.com/photo-1542751371-adc38448a05e")
+        center / cover no-repeat fixed;
+}
+
+
+/* خلفية إضافية تعطي لمعة KEZEA */
+
+body.player-body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(247, 198, 0, 0.10),
+            transparent 35%
+        );
+
+    z-index: 0;
+}
+
+
+/* نخلي المحتوى فوق الخلفية */
+
+body.player-body .player-page {
+    position: relative;
+    z-index: 1;
+
+    background: transparent;
+}
+
+
+/* الكرت فوق كل شيء */
+
+body.player-body .player-profile {
+    position: relative;
+    z-index: 2;
+
+    background: rgba(21, 21, 21, 0.92);
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 0 30px rgba(247, 198, 0, 0.15),
+        0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+
+/* Back to Team فوق الخلفية */
+
+body.player-body .back-btn {
+    position: absolute;
+    z-index: 5;
+}
+
+
+/* حركة خفيفة للخلفية */
+
+@media (min-width: 901px) {
+
+    body.player-body {
+        background-size: cover;
+
+        animation: playerBackground 18s ease-in-out infinite alternate;
+    }
+
+}
+
+
+@keyframes playerBackground {
+
+    from {
+        background-position: center center;
+    }
+
+    to {
+        background-position: center 52%;
+    }
+
+}
+
+
+/* الموبايل */
+
+@media (max-width: 600px) {
+
+    body.player-body {
+        background-attachment: scroll;
+
+        background-position: center;
+    }
+
+}
