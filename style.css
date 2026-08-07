@@ -1134,3 +1134,113 @@ img{
     }
 
 }
+.player-page{
+
+min-height:100vh;
+background:#0b0b0b;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:50px;
+
+}
+
+
+.back-btn{
+
+position:absolute;
+top:30px;
+left:30px;
+
+color:#f7c600;
+
+}
+
+
+.player-profile{
+
+background:#151515;
+
+border:2px solid #f7c600;
+
+border-radius:25px;
+
+padding:50px;
+
+text-align:center;
+
+max-width:500px;
+
+}
+
+
+.player-profile img{
+
+width:150px;
+height:150px;
+
+border-radius:50%;
+
+border:3px solid #f7c600;
+
+}
+
+
+.player-profile h1{
+
+font-family:'Orbitron';
+
+color:#f7c600;
+
+font-size:45px;
+
+}
+
+
+.player-profile h3{
+
+letter-spacing:3px;
+
+}
+
+
+.player-info{
+
+display:flex;
+
+gap:20px;
+
+margin:30px 0;
+
+justify-content:center;
+
+}
+
+
+.player-info div{
+
+background:#222;
+
+padding:20px;
+
+border-radius:15px;
+
+}
+
+
+.player-info span{
+
+display:block;
+
+color:#aaa;
+
+}
+
+
+.player-info b{
+
+color:#f7c600;
+
+font-size:25px;
+
+}
