@@ -277,46 +277,34 @@ ul{
 
 }
 #roster{
-
     padding:100px 8%;
     background:#0b0b0b;
-
 }
 
 
 .section-title{
-
     text-align:center;
     margin-bottom:60px;
-
 }
 
 
 .section-title span{
-
     color:#f7c600;
     letter-spacing:5px;
-    font-size:14px;
-
 }
 
 
 .section-title h2{
-
     font-family:'Orbitron',sans-serif;
     font-size:45px;
-    margin:15px 0;
-
 }
 
 
 .section-line{
-
     width:100px;
     height:4px;
     background:#f7c600;
-    margin:auto;
-
+    margin:20px auto;
 }
 
 
@@ -329,6 +317,83 @@ ul{
 
 }
 
+
+
+.player-card{
+
+    background:#151515;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    border:1px solid #222;
+    transition:.3s;
+
+}
+
+
+
+.player-card:hover{
+
+    transform:translateY(-10px);
+    border-color:#f7c600;
+
+}
+
+
+
+.player-number{
+
+    color:#555;
+    font-size:30px;
+
+}
+
+
+
+.player-avatar{
+
+    width:120px;
+    height:120px;
+    margin:20px auto;
+    border-radius:50%;
+    background:#222;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:50px;
+    border:3px solid #f7c600;
+
+}
+
+
+
+.player-card h3{
+
+    font-family:'Orbitron',sans-serif;
+    font-size:25px;
+
+}
+
+
+
+.player-card p{
+
+    color:#f7c600;
+    margin-top:10px;
+
+}
+
+
+
+@media(max-width:900px){
+
+.players{
+grid-template-columns:1fr;
+}
+
+}
 
 
 .player-card{
