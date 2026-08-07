@@ -84,6 +84,16 @@
 
 </div>
     
+  <script>
+
+function openPlayer(player){
+
+window.location.href="player.html?player="+player;
+
+}
+
+</script>  
+    
 <body>
 
 
@@ -264,30 +274,29 @@ JOIN DISCORD
     <div class="players">
 
 
-<a href="player.html?player=zyvix" class="player-card">
-    
-    <div class="player-number">
-        01
-    </div>
+<div class="player-card" onclick="openPlayer('zyvix')">
 
-    <div class="player-avatar">
-        👑
-    </div>
+<div class="player-number">
+01
+</div>
 
-    <h3>
-        Zyvix
-    </h3>
+<div class="player-avatar">
+👑
+</div>
 
-    <p>
-        CAPTAIN
-    </p>
+<h3>
+Zyvix
+</h3>
+
+<p>
+CAPTAIN
+</p>
 
 </div>
 
 
+<div class="player-card" onclick="openPlayer('taiqz')">
 
-<a href="player.html?player=taiqz" class="player-card">
-    
             <div class="player-number">
                 02
             </div>
@@ -309,7 +318,7 @@ JOIN DISCORD
 
 
 
-<a href="player.html?player=vexy" class="player-card">
+<div class="player-card" onclick="openPlayer('vexy')">
     
             <div class="player-number">
                 03
