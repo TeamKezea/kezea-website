@@ -1442,3 +1442,27 @@ body.player-body .back-btn:hover {
     box-shadow:
         0 0 20px rgba(247,198,0,0.5);
 }
+.player-link {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 8px 18px;
+
+    color: #f7c600;
+
+    border: 1px solid #f7c600;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.player-card:hover .player-link {
+    background: #f7c600;
+    color: #000;
+}
