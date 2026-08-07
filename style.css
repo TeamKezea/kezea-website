@@ -477,13 +477,11 @@ grid-template-columns:1fr;
     grid-template-columns:1fr;
 
 }
+/* ACHIEVEMENTS */
 
-}
 #achievements{
-
     padding:100px 8%;
-    background:#111;
-
+    background:#0b0b0b;
 }
 
 
@@ -498,7 +496,7 @@ grid-template-columns:1fr;
 
 .achievement-card{
 
-    background:#171717;
+    background:#151515;
     padding:40px;
     text-align:center;
     border-radius:20px;
@@ -527,9 +525,8 @@ grid-template-columns:1fr;
 
 .achievement-card h3{
 
-    font-family:'Orbitron',sans-serif;
     color:#f7c600;
-    font-size:20px;
+    font-family:'Orbitron',sans-serif;
 
 }
 
@@ -542,22 +539,15 @@ grid-template-columns:1fr;
 }
 
 
-@media(max-width:900px){
 
-.achievements-box{
+/* ROCKET LEAGUE */
 
-    grid-template-columns:1fr;
-
-}
-
-}
 #rocket-league{
 
     padding:100px 8%;
-    background:#0b0b0b;
+    background:#111;
 
 }
-
 
 
 .rocket-container{
@@ -570,10 +560,7 @@ grid-template-columns:1fr;
     padding:70px;
     border-radius:25px;
 
-    border:1px solid #222;
-
 }
-
 
 
 .rocket-text span{
@@ -584,47 +571,25 @@ grid-template-columns:1fr;
 }
 
 
-
 .rocket-text h2{
 
     font-family:'Orbitron',sans-serif;
     font-size:55px;
-    margin:20px 0;
 
 }
-
 
 
 .rocket-text p{
 
     color:#aaa;
-    max-width:450px;
-    font-size:18px;
-    margin-bottom:35px;
+    margin:20px 0;
 
 }
-
 
 
 .rocket-car{
 
-    font-size:160px;
-
-    animation:carMove 3s infinite alternate;
-
-}
-
-
-
-@keyframes carMove{
-
-    from{
-        transform:translateX(0);
-    }
-
-    to{
-        transform:translateX(30px);
-    }
+    font-size:150px;
 
 }
 
@@ -632,17 +597,11 @@ grid-template-columns:1fr;
 
 @media(max-width:900px){
 
+.achievements-box,
 .rocket-container{
 
+    grid-template-columns:1fr;
     flex-direction:column;
-    text-align:center;
-
-}
-
-
-.rocket-car{
-
-    margin-top:40px;
 
 }
 
