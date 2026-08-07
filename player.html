@@ -1,174 +1,116 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
 
-<title>KEZEA - Player</title>
+<title>Zyvix | KEZEA Esports</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
-
 </head>
 
-<script>
 
-const player = params.get("player");console.log(player);
-    
-zyvix:{
-name:"Zyvix",
-role:"CAPTAIN",
-wins:"12",
-goals:"85",
-mvp:"8",
-desc:"Team captain of KEZEA Esports."
-},
-
-taiqz:{
-name:"Taiqz",
-role:"PLAYER",
-wins:"7",
-goals:"60",
-mvp:"5",
-desc:"Competitive Rocket League player."
-},
-
-vexy:{
-name:"Real Vexy",
-role:"PLAYER",
-wins:"5",
-goals:"45",
-mvp:"3",
-desc:"KEZEA player with a strong drive to win."
-}
-
-};
-
-
-const params = new URLSearchParams(window.location.search);
-
-const player = params.get("player");
-
-
-if(players[player]){
-
-document.getElementById("player-name").innerHTML = players[player].name;
-
-document.getElementById("player-role").innerHTML = players[player].role;
-
-document.getElementById("wins").innerHTML = players[player].wins;
-
-document.getElementById("goals").innerHTML = players[player].goals;
-
-document.getElementById("mvp").innerHTML = players[player].mvp;
-
-document.getElementById("player-desc").innerHTML = players[player].desc;
-
-}
-
-</script>
-    
 <body>
 
 
-<div class="player-page">
+<a href="index.html" class="back-btn">
+← Back to Team
+</a>
 
 
-    <a href="index.html" class="back-btn">
-        ← Back to Team
-    </a>
+
+<div class="player-profile">
 
 
-    <div class="player-profile">
+<img src="logo.png" alt="Zyvix">
 
 
-        <img src="logo.png" alt="Player">
 
-
-        <h1 id="player-name">
-    Player
+<h1>
+Zyvix
 </h1>
 
 
-<h3 id="player-role">
-    PLAYER
+<h3>
+CAPTAIN
 </h3>
+
 
 
 <div class="player-info">
 
+
 <div>
+
 🏆
-<span>Wins</span>
-<b id="wins">0</b>
+
+<span>
+Wins
+</span>
+
+<b>
+12
+</b>
+
 </div>
 
 
+
 <div>
+
 🎯
-<span>Goals</span>
-<b id="goals">0</b>
+
+<span>
+Goals
+</span>
+
+<b>
+85
+</b>
+
 </div>
+
 
 
 <div>
+
 ⭐
-<span>MVP</span>
-<b id="mvp">0</b>
-</div>
+
+<span>
+MVP
+</span>
+
+<b>
+8
+</b>
 
 </div>
 
 
-<p id="player-desc">
-Player information
+</div>
+
+
+
+<p>
+
+Zyvix is the captain of KEZEA Esports.
+Leading the team with teamwork,
+strategy and competitive Rocket League skills.
+
 </p>
 
 
-        <h3>
-            CAPTAIN
-        </h3>
 
+<div class="player-role">
 
-        <div class="player-info">
+ROCKET LEAGUE PLAYER
 
+</div>
 
-            <div>
-                🏆
-                <span>Wins</span>
-                <b>12</b>
-            </div>
-
-
-            <div>
-                🎯
-                <span>Goals</span>
-                <b>85</b>
-            </div>
-
-
-            <div>
-                ⭐
-                <span>MVP</span>
-                <b>8</b>
-            </div>
-
-
-        </div>
-
-
-        <p>
-            Team captain of KEZEA Esports.
-            Competitive Rocket League player
-            focused on teamwork and winning.
-        </p>
-
-
-    </div>
 
 
 </div>
+
 
 
 </body>
