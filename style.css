@@ -1244,3 +1244,8 @@ color:#f7c600;
 font-size:25px;
 
 }
+.player-card{
+    text-decoration:none;
+    color:white;
+    display:block;
+}
