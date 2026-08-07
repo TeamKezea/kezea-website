@@ -1,140 +1,1009 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Team Kezea | Esports</title>
-    <meta name="description" content="Official website of Team Kezea Esports.">
+<title>KEZEA ESPORTS | Rocket League</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<meta name="description" content="Official Team Kezea Esports website. Rocket League esports team.">
 
-        body {
-            background: #0d0d0d;
-            color: white;
-        }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
 
-        header {
-            background: #111;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 3px solid #00ff99;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header h1 {
-            color: #00ff99;
-            font-size: 45px;
-        }
+:root {
+    --green: #00ff88;
+    --green-dark: #00b85f;
+    --black: #050505;
+    --dark: #0b0d0c;
+    --card: #101412;
+    --white: #ffffff;
+    --gray: #9da5a1;
+}
 
-        nav {
-            margin-top: 15px;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-            font-size: 18px;
-        }
+body {
+    background:
+        radial-gradient(circle at 80% 20%, rgba(0,255,136,0.09), transparent 30%),
+        radial-gradient(circle at 10% 50%, rgba(0,255,136,0.05), transparent 30%),
+        #050505;
+    color: white;
+    font-family: 'Rajdhani', Arial, sans-serif;
+    overflow-x: hidden;
+}
 
-        nav a:hover {
-            color: #00ff99;
-        }
+/* ================= NAVBAR ================= */
 
-        .hero {
-            min-height: 80vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            padding: 30px;
-        }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background: rgba(3,5,4,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,255,136,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    z-index: 1000;
+}
 
-        .hero h2 {
-            font-size: 55px;
-            color: #00ff99;
-        }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
 
-        .hero p {
-            margin-top: 20px;
-            font-size: 20px;
-            color: #ccc;
-        }
+.logo-symbol {
+    width: 42px;
+    height: 42px;
+    border: 2px solid var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    box-shadow: 0 0 20px rgba(0,255,136,0.25);
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 35px;
-            padding: 15px 35px;
-            background: #00ff99;
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-        }
+.logo-symbol span {
+    transform: rotate(-45deg);
+    color: var(--green);
+    font-size: 25px;
+    font-weight: 700;
+}
 
-        .btn:hover {
-            transform: scale(1.05);
-        }
+.logo small {
+    display: block;
+    font-size: 9px;
+    color: var(--green);
+    letter-spacing: 5px;
+    margin-top: -5px;
+}
 
-        footer {
-            background: #111;
-            text-align: center;
-            padding: 20px;
-            color: #aaa;
-        }
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 35px;
-            }
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: .25s;
+}
 
-            .hero h2 {
-                font-size: 38px;
-            }
+nav a:hover {
+    color: var(--green);
+}
 
-            nav a {
-                margin: 6px;
-                font-size: 15px;
-            }
-        }
-    </style>
+.discord-btn {
+    background: var(--green);
+    color: #00150b !important;
+    padding: 12px 22px;
+    clip-path: polygon(8% 0,100% 0,92% 100%,0 100%);
+    font-weight: 700;
+}
+
+.discord-btn:hover {
+    box-shadow: 0 0 25px rgba(0,255,136,0.4);
+    color: black !important;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 820px;
+    padding: 130px 7% 70px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, #050505 0%, rgba(5,5,5,.88) 38%, rgba(5,5,5,.35) 75%, #050505 100%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    right: -150px;
+    top: 120px;
+    border-radius: 50%;
+    background: rgba(0,255,136,.08);
+    filter: blur(100px);
+}
+
+.hero-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome {
+    color: var(--green);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(75px, 10vw, 150px);
+    line-height: .78;
+    font-weight: 700;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: var(--green);
+    text-shadow: 0 0 35px rgba(0,255,136,.2);
+}
+
+.subtitle {
+    margin-top: 30px;
+    color: #d2d2d2;
+    max-width: 510px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.hero-line {
+    width: 80px;
+    height: 4px;
+    background: var(--green);
+    margin-top: 28px;
+    box-shadow: 0 0 15px var(--green);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn {
+    padding: 15px 28px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: .25s;
+}
+
+.btn-green {
+    background: var(--green);
+    color: black;
+}
+
+.btn-outline {
+    border: 1px solid #555;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-green:hover {
+    box-shadow: 0 0 30px rgba(0,255,136,.35);
+}
+
+/* Fake Rocket League car */
+
+.car-area {
+    position: absolute;
+    right: 4%;
+    bottom: 90px;
+    width: 52%;
+    height: 430px;
+}
+
+.car {
+    position: absolute;
+    right: 8%;
+    bottom: 100px;
+    width: 510px;
+    height: 170px;
+    background:
+        linear-gradient(160deg, #202722, #050605);
+    border: 3px solid var(--green);
+    border-radius: 80px 100px 30px 30px;
+    transform: skewX(-8deg) rotate(-4deg);
+    box-shadow:
+        0 0 25px rgba(0,255,136,.3),
+        inset 0 0 40px rgba(0,255,136,.05);
+}
+
+.car::before {
+    content: "KEZEA";
+    position: absolute;
+    right: 100px;
+    top: 65px;
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.car::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 45px;
+    left: 60px;
+    top: -45px;
+    background: #111714;
+    border: 2px solid var(--green);
+    border-radius: 80px 80px 5px 5px;
+}
+
+.wheel {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #050505;
+    border: 8px solid #222;
+    border-radius: 50%;
+    bottom: -45px;
+    box-shadow: 0 0 0 3px var(--green);
+}
+
+.wheel.one {
+    left: 75px;
+}
+
+.wheel.two {
+    right: 70px;
+}
+
+.boost {
+    position: absolute;
+    width: 250px;
+    height: 45px;
+    left: -230px;
+    top: 70px;
+    background: linear-gradient(90deg, transparent, var(--green));
+    filter: blur(15px);
+    opacity: .8;
+}
+
+.ball {
+    position: absolute;
+    right: 18%;
+    top: 30px;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    border: 4px solid var(--green);
+    background:
+        radial-gradient(circle at 35% 30%, #444, #080a09 65%);
+    box-shadow: 0 0 35px rgba(0,255,136,.35);
+}
+
+/* ================= STATS ================= */
+
+.stats {
+    width: 86%;
+    margin: -35px auto 0;
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: rgba(10,14,12,.95);
+    border: 1px solid rgba(0,255,136,.55);
+    box-shadow: 0 0 30px rgba(0,255,136,.08);
+}
+
+.stat {
+    padding: 25px;
+    text-align: center;
+    border-right: 1px solid #252b28;
+}
+
+.stat:last-child {
+    border: none;
+}
+
+.stat-icon {
+    color: var(--green);
+    font-size: 30px;
+}
+
+.stat h3 {
+    font-size: 32px;
+    color: white;
+}
+
+.stat p {
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ================= SECTIONS ================= */
+
+section:not(.hero) {
+    padding: 100px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: var(--green);
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+
+.section-title h2 {
+    font-size: 55px;
+    margin-top: 5px;
+}
+
+.section-line {
+    width: 65px;
+    height: 3px;
+    background: var(--green);
+    margin: 15px auto;
+}
+
+/* ================= PLAYERS ================= */
+
+.players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.player-card {
+    min-height: 370px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 40%, rgba(0,255,136,.16), transparent 45%),
+        linear-gradient(145deg, #131815, #070807);
+    border: 1px solid rgba(0,255,136,.5);
+    padding: 30px;
+    transition: .3s;
+}
+
+.player-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--green);
+    box-shadow: 0 15px 45px rgba(0,255,136,.12);
+}
+
+.player-number {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 70px;
+    color: rgba(0,255,136,.07);
+    font-weight: 700;
+}
+
+.player-avatar {
+    width: 180px;
+    height: 210px;
+    margin: 10px auto;
+    background:
+        radial-gradient(circle at 50% 25%, #202b25 0 17%, transparent 18%),
+        linear-gradient(145deg, #172019, #050605);
+    border: 1px solid rgba(0,255,136,.25);
+    position: relative;
+}
+
+.player-avatar::before {
+    content: "K";
+    position: absolute;
+    font-size: 130px;
+    font-weight: 700;
+    color: rgba(0,255,136,.08);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.player-name {
+    text-align: center;
+    color: var(--green);
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.player-role {
+    text-align: center;
+    color: #bbb;
+    letter-spacing: 3px;
+    margin-top: 3px;
+}
+
+/* ================= ROCKET LEAGUE ================= */
+
+.rl-section {
+    padding-top: 30px !important;
+}
+
+.rl-box {
+    min-height: 350px;
+    border: 1px solid rgba(0,255,136,.45);
+    background:
+        radial-gradient(circle at 20% 50%, rgba(0,255,136,.15), transparent 35%),
+        linear-gradient(100deg,#0c110e,#070807);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 7%;
+    overflow: hidden;
+}
+
+.rl-car {
+    width: 380px;
+    height: 125px;
+    border: 3px solid var(--green);
+    border-radius: 70px 100px 25px 25px;
+    transform: rotate(-5deg);
+    background: #0c100e;
+    box-shadow: 0 0 35px rgba(0,255,136,.2);
+    position: relative;
+}
+
+.rl-car::after {
+    content: "KEZEA";
+    position: absolute;
+    right: 80px;
+    top: 42px;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.rl-text {
+    max-width: 480px;
+}
+
+.rl-text span {
+    color: var(--green);
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.rl-text h2 {
+    font-size: 60px;
+    line-height: 1;
+    margin: 10px 0 20px;
+}
+
+.rl-text p {
+    color: #aaa;
+    font-size: 18px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    border-top: 1px solid #222;
+    padding: 60px 7% 25px;
+    background: #070807;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+}
+
+.footer-logo {
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.footer-logo span {
+    color: var(--green);
+}
+
+footer h3 {
+    color: var(--green);
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+footer a {
+    display: block;
+    color: #999;
+    text-decoration: none;
+    margin: 8px 0;
+    transition: .2s;
+}
+
+footer a:hover {
+    color: var(--green);
+}
+
+.footer-desc {
+    color: #888;
+    max-width: 250px;
+    margin-top: 12px;
+    line-height: 1.5;
+}
+
+.copyright {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #202320;
+    color: #666;
+    text-align: center;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width: 900px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 750px;
+        padding: 120px 25px 50px;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .car-area {
+        opacity: .25;
+        right: -30%;
+        width: 100%;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .players {
+        grid-template-columns: 1fr;
+    }
+
+    .rl-box {
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 550px) {
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat {
+        border-right: none;
+        border-bottom: 1px solid #252b28;
+    }
+
+    .section-title h2 {
+        font-size: 40px;
+    }
+
+    .rl-car {
+        width: 280px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>TEAM KEZEA</h1>
+<!-- ================= HEADER ================= -->
 
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Roster</a>
-            <a href="#">News</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
+<header>
 
-    <section class="hero">
-        <h2>WELCOME TO TEAM KEZEA</h2>
+    <div class="logo">
+        <div class="logo-symbol">
+            <span>K</span>
+        </div>
 
-        <p>
-            Professional Esports Team
+        <div>
+            KEZEA
+            <small>ESPORTS</small>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#roster">ROSTER</a>
+        <a href="#achievements">ACHIEVEMENTS</a>
+        <a href="#news">NEWS</a>
+        <a href="#rocket-league">ROCKET LEAGUE</a>
+        <a href="#contact">CONTACT</a>
+        <a class="discord-btn" href="#">JOIN OUR DISCORD</a>
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="welcome">
+            WELCOME TO
+        </div>
+
+        <h1>
+            TEAM<br>
+            <span>KEZEA</span>
+        </h1>
+
+        <div class="hero-line"></div>
+
+        <p class="subtitle">
+            A competitive Rocket League esports team
+            built on passion, teamwork and a drive for greatness.
         </p>
 
-        <a class="btn" href="#">
-            JOIN US
-        </a>
-    </section>
+        <div class="hero-buttons">
+            <a href="#roster" class="btn btn-green">
+                OUR TEAM
+            </a>
 
-    <footer>
-        © 2026 Team Kezea
-    </footer>
+            <a href="#" class="btn btn-outline">
+                JOIN OUR DISCORD
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="car-area">
+
+        <div class="ball"></div>
+
+        <div class="car">
+
+            <div class="boost"></div>
+
+            <div class="wheel one"></div>
+            <div class="wheel two"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<div class="stats" id="achievements">
+
+    <div class="stat">
+        <div class="stat-icon">🏆</div>
+        <h3>12+</h3>
+        <p>Tournaments</p>
+    </div>
+
+    <div class="stat">
+        <div class="stat-icon">🏅</div>
+        <h3>27+</h3>
+        <p>Wins</p>
+    </div>
+
+    <div class="stat">
+        <div class="stat-icon">👥</div>
+        <h3>3</h3>
+        <p>Teammates</p>
+    </div>
+
+    <div class="stat">
+        <div class="stat-icon">🎯</div>
+        <h3>VICTORY</h3>
+        <p>Our Goal</p>
+    </div>
+
+</div>
+
+
+<!-- ================= PLAYERS ================= -->
+
+<section id="roster">
+
+    <div class="section-title">
+
+        <span>THE SQUAD</span>
+
+        <h2>OUR PLAYERS</h2>
+
+        <div class="section-line"></div>
+
+    </div>
+
+
+    <div class="players">
+
+        <div class="player-card">
+
+            <div class="player-number">01</div>
+
+            <div class="player-avatar"></div>
+
+            <div class="player-name">
+                Zyvix
+            </div>
+
+            <div class="player-role">
+                PLAYER
+            </div>
+
+        </div>
+
+
+        <div class="player-card">
+
+            <div class="player-number">02</div>
+
+            <div class="player-avatar"></div>
+
+            <div class="player-name">
+                Taiqz
+            </div>
+
+            <div class="player-role">
+                PLAYER
+            </div>
+
+        </div>
+
+
+        <div class="player-card">
+
+            <div class="player-number">03</div>
+
+            <div class="player-avatar"></div>
+
+            <div class="player-name">
+                Real Vexy
+            </div>
+
+            <div class="player-role">
+                PLAYER
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ROCKET LEAGUE ================= -->
+
+<section class="rl-section" id="rocket-league">
+
+    <div class="rl-box">
+
+        <div class="rl-car"></div>
+
+        <div class="rl-text">
+
+            <span>ROCKET LEAGUE</span>
+
+            <h2>
+                WE PLAY<br>
+                TO WIN
+            </h2>
+
+            <p>
+                Every match is a step closer to greatness.
+                Every goal is for Kezea.
+            </p>
+
+            <br>
+
+            <a href="#roster" class="btn btn-green">
+                VIEW RL TEAM →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NEWS ================= -->
+
+<section id="news">
+
+    <div class="section-title">
+
+        <span>KEZEA UPDATES</span>
+
+        <h2>LATEST NEWS</h2>
+
+        <div class="section-line"></div>
+
+    </div>
+
+    <div class="players">
+
+        <div class="player-card">
+
+            <div class="player-name">
+                TEAM KEZEA
+            </div>
+
+            <p style="color:#aaa;text-align:center;margin-top:25px;font-size:18px;">
+                New era. New goals. Same ambition.
+            </p>
+
+        </div>
+
+        <div class="player-card">
+
+            <div class="player-name">
+                ROCKET LEAGUE
+            </div>
+
+            <p style="color:#aaa;text-align:center;margin-top:25px;font-size:18px;">
+                Compete. Improve. Conquer.
+            </p>
+
+        </div>
+
+        <div class="player-card">
+
+            <div class="player-name">
+                STAY TUNED
+            </div>
+
+            <p style="color:#aaa;text-align:center;margin-top:25px;font-size:18px;">
+                More announcements coming soon.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+    <div class="footer-grid">
+
+        <div>
+
+            <div class="footer-logo">
+                <span>KEZEA</span> ESPORTS
+            </div>
+
+            <p class="footer-desc">
+                Built different.<br>
+                Born to compete.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>LINKS</h3>
+
+            <a href="#home">Home</a>
+            <a href="#roster">Roster</a>
+            <a href="#rocket-league">Rocket League</a>
+            <a href="#news">News</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>SOCIALS</h3>
+
+            <a href="#">Discord</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">YouTube</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>JOIN KEZEA</h3>
+
+            <p class="footer-desc">
+                Be part of the family.
+                Compete. Improve. Win.
+            </p>
+
+            <br>
+
+            <a class="discord-btn" href="#">
+                JOIN NOW
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 Team Kezea. All Rights Reserved.
+    </div>
+
+</footer>
 
 </body>
 </html>
