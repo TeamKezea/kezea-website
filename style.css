@@ -987,3 +987,40 @@ color:#f7c600;
 cursor:pointer;
 
 }
+img{
+    max-width:100%;
+}
+
+
+@media(max-width:900px){
+
+.navbar{
+    padding:0 20px;
+}
+
+
+.navbar ul{
+    display:none;
+}
+
+
+.hero-content h1{
+    font-size:55px;
+}
+
+
+.hero-content p{
+    font-size:16px;
+}
+
+
+.rocket-container{
+    padding:30px;
+}
+
+
+.rocket-text h2{
+    font-size:40px;
+}
+
+}
