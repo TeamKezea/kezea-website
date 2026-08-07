@@ -19,22 +19,34 @@
     
 <div id="playerModal" class="modal">
 
-    <div class="modal-box">
+<div class="profile-box">
 
-        <span class="close" onclick="closePlayer()">×</span>
+<span class="close" onclick="closePlayer()">×</span>
 
-        <h2 id="playerName"></h2>
+<img id="profileImg" src="">
 
-        <h3 id="playerRole"></h3>
+<h2 id="profileName"></h2>
 
-        <p id="playerRank"></p>
+<h3 id="profileRole"></h3>
 
-        <p id="playerInfo"></p>
+<div class="stats-profile">
 
-    </div>
+<p>🏆 Wins: <b id="wins"></b></p>
+
+<p>🎯 Goals: <b id="goals"></b></p>
+
+<p>⭐ MVP: <b id="mvp"></b></p>
 
 </div>
 
+
+<p id="profileBio"></p>
+
+
+</div>
+
+</div>
+    
 <body>
 
 
@@ -215,29 +227,29 @@ JOIN DISCORD
     <div class="players">
 
 
-        <div class="player-card" onclick="openPlayer('Zyvix','CAPTAIN','Champion I','Captin Kezea And GameSense')">
+        <div class="player-card" onclick="openPlayer('Zyvix')">
 
-            <div class="player-number">
-                01
-            </div>
+    <div class="player-number">
+        01
+    </div>
 
-            <div class="player-avatar">
-                👑
-            </div>
+    <div class="player-avatar">
+        👑
+    </div>
 
-            <h3>
-                Zyvix
-            </h3>
+    <h3>
+        Zyvix
+    </h3>
 
-            <p>
-                CAPTAIN
-            </p>
+    <p>
+        CAPTAIN
+    </p>
 
-        </div>
+</div>
 
 
 
-        <div class="player-card" onclick="openPlayer('Taiqz','PLAYER','Champion II','Fast mechanical player And GameSense')">
+        <div class="player-card" onclick="openPlayer('Taiqz')">
 
             <div class="player-number">
                 02
@@ -260,7 +272,7 @@ JOIN DISCORD
 
 
 
-        <div class="player-card" onclick="openPlayer('Real Vexy','PLAYER','Platinum III','The Future Champion')">
+        <div class="player-card" onclick="openPlayer('Real Vexy')">
 
             <div class="player-number">
                 03
