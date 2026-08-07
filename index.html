@@ -3,114 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Kezea</title>
+
+    <title>Team Kezea | Esports</title>
+    <meta name="description" content="Official website of Team Kezea Esports.">
 
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial,sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
-        body{
-            background:#0d0d0d;
-            color:white;
+        body {
+            background: #0d0d0d;
+            color: white;
         }
 
-        header{
-            background:#111;
-            padding:20px;
-            text-align:center;
-            border-bottom:3px solid #00ff99;
+        header {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #00ff99;
         }
 
-        header h1{
-            color:#00ff99;
-            font-size:45px;
+        header h1 {
+            color: #00ff99;
+            font-size: 45px;
         }
 
-        nav{
-            margin-top:15px;
+        nav {
+            margin-top: 15px;
         }
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin:15px;
-            font-size:18px;
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 18px;
         }
 
-        .hero{
-            height:80vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            flex-direction:column;
-            text-align:center;
+        nav a:hover {
+            color: #00ff99;
         }
 
-        .hero h2{
-            font-size:55px;
-            color:#00ff99;
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 30px;
         }
 
-        .hero p{
-            margin-top:20px;
-            font-size:20px;
-            color:#ccc;
+        .hero h2 {
+            font-size: 55px;
+            color: #00ff99;
         }
 
-        .btn{
-            margin-top:35px;
-            padding:15px 35px;
-            background:#00ff99;
-            color:black;
-            text-decoration:none;
-            font-weight:bold;
-            border-radius:8px;
+        .hero p {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ccc;
         }
 
-        footer{
-            background:#111;
-            text-align:center;
-            padding:20px;
+        .btn {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 15px 35px;
+            background: #00ff99;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 20px;
+            color: #aaa;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 35px;
+            }
+
+            .hero h2 {
+                font-size: 38px;
+            }
+
+            nav a {
+                margin: 6px;
+                font-size: 15px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>TEAM KEZEA</h1>
+    <header>
+        <h1>TEAM KEZEA</h1>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Roster</a>
-        <a href="#">News</a>
-        <a href="#">Contact</a>
-    </nav>
-</header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Roster</a>
+            <a href="#">News</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-<section class="hero">
+    <section class="hero">
+        <h2>WELCOME TO TEAM KEZEA</h2>
 
-<h2>WELCOME TO TEAM KEZEA</h2>
+        <p>
+            Professional Esports Team
+        </p>
 
-<p>
-Professional Esports Team
-</p>
+        <a class="btn" href="#">
+            JOIN US
+        </a>
+    </section>
 
-<a class="btn" href="#">
-Join Us
-</a>
-
-</section>
-
-<footer>
-
-© 2026 Team Kezea
-
-</footer>
+    <footer>
+        © 2026 Team Kezea
+    </footer>
 
 </body>
 </html>
