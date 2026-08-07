@@ -467,21 +467,26 @@ grid-template-columns:1fr;
     letter-spacing:2px;
 
 }
-
-
+/* PLAYERS MOBILE */
 
 @media(max-width:900px){
 
-.players{
-
-    grid-template-columns:1fr;
+    .players{
+        grid-template-columns:1fr;
+    }
 
 }
-/* ACHIEVEMENTS */
+
+
+/* =========================
+   ACHIEVEMENTS
+========================= */
 
 #achievements{
+
     padding:100px 8%;
     background:#0b0b0b;
+
 }
 
 
@@ -527,6 +532,7 @@ grid-template-columns:1fr;
 
     color:#f7c600;
     font-family:'Orbitron',sans-serif;
+    margin-top:15px;
 
 }
 
@@ -540,7 +546,10 @@ grid-template-columns:1fr;
 
 
 
-/* ROCKET LEAGUE */
+/* =========================
+   ROCKET LEAGUE
+========================= */
+
 
 #rocket-league{
 
@@ -548,6 +557,7 @@ grid-template-columns:1fr;
     background:#111;
 
 }
+
 
 
 .rocket-container{
@@ -559,50 +569,97 @@ grid-template-columns:1fr;
     background:#151515;
     padding:70px;
     border-radius:25px;
+    border:1px solid #222;
 
 }
+
 
 
 .rocket-text span{
 
     color:#f7c600;
     letter-spacing:5px;
+    font-weight:600;
 
 }
+
 
 
 .rocket-text h2{
 
     font-family:'Orbitron',sans-serif;
     font-size:55px;
+    margin:20px 0;
 
 }
+
 
 
 .rocket-text p{
 
     color:#aaa;
-    margin:20px 0;
+    max-width:450px;
+    line-height:1.7;
+    margin-bottom:30px;
 
 }
+
 
 
 .rocket-car{
 
     font-size:150px;
 
+    animation:carMove 2s infinite alternate;
+
 }
 
 
+
+@keyframes carMove{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+
+    to{
+
+        transform:translateX(30px);
+
+    }
+
+}
+
+
+
+/* MOBILE */
 
 @media(max-width:900px){
 
-.achievements-box,
-.rocket-container{
 
-    grid-template-columns:1fr;
-    flex-direction:column;
+    .achievements-box{
 
-}
+        grid-template-columns:1fr;
+
+    }
+
+
+    .rocket-container{
+
+        flex-direction:column;
+        text-align:center;
+
+    }
+
+
+    .rocket-car{
+
+        margin-top:40px;
+
+    }
+
 
 }
