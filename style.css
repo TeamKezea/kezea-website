@@ -1,147 +1,134 @@
 /* =========================================================
-KEZEA ESPORTS
-CLEAN STYLE SHEET
+   KEZEA ESPORTS
+   CLEAN STYLE SHEET
 ========================================================= */
 
+
 /* =========================
-RESET
+   RESET
 ========================= */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-font-family: 'Poppins', sans-serif;
-background: #0b0b0b;
-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    background: #0b0b0b;
+    color: #fff;
 }
 
 a {
-color: inherit;
-text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 img {
-max-width: 100%;
-display: block;
+    max-width: 100%;
+    display: block;
 }
 
+
 /* =========================
-NAVBAR
+   NAVBAR
 ========================= */
 
 .navbar {
-position: fixed;
-top: 0;
-left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
 
-```
-width: 100%;
-height: 85px;
+    width: 100%;
+    height: 85px;
 
-padding: 0 8%;
+    padding: 0 8%;
 
-display: flex;
-align-items: center;
-justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-background: rgba(0, 0, 0, 0.82);
-backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.82);
+    backdrop-filter: blur(12px);
 
-z-index: 1000;
-```
-
+    z-index: 1000;
 }
 
 .logo {
-display: flex;
-align-items: center;
-gap: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 
-```
-font-family: 'Orbitron', sans-serif;
-font-size: 27px;
-font-weight: 800;
-```
-
+    font-family: 'Orbitron', sans-serif;
+    font-size: 27px;
+    font-weight: 800;
 }
 
 .logo-symbol img {
-width: 58px;
-height: 58px;
-object-fit: contain;
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
 }
 
 .logo span {
-display: block;
+    display: block;
 
-```
-color: #f7c600;
+    color: #f7c600;
 
-font-family: 'Poppins', sans-serif;
-font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
 
-letter-spacing: 4px;
-```
-
+    letter-spacing: 4px;
 }
 
 .navbar ul {
-display: flex;
-align-items: center;
-gap: 28px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
 
-```
-list-style: none;
-```
-
+    list-style: none;
 }
 
 .navbar ul a {
-font-size: 13px;
-font-weight: 600;
+    font-size: 13px;
+    font-weight: 600;
 
-```
-transition: 0.3s;
-```
-
+    transition: 0.3s;
 }
 
 .navbar ul a:hover {
-color: #f7c600;
+    color: #f7c600;
 }
 
 .discord-btn {
-padding: 11px 20px;
+    padding: 11px 20px;
 
-```
-background: #f7c600;
-color: #000;
+    background: #f7c600;
+    color: #000;
 
-border-radius: 30px;
+    border-radius: 30px;
 
-font-size: 13px;
-font-weight: 700;
+    font-size: 13px;
+    font-weight: 700;
 
-transition: 0.3s;
-```
-
+    transition: 0.3s;
 }
 
 .discord-btn:hover {
-transform: translateY(-3px);
-box-shadow: 0 0 20px rgba(247, 198, 0, 0.5);
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 20px rgba(247, 198, 0, 0.5);
 }
 
+
 /* =========================
-HERO
+   HERO
 ========================= */
 
 #hero {
@@ -205,12 +192,12 @@ HERO
 .hero-content p {
     max-width: 560px;
 
+    margin: 0;
+
     color: #aaa;
 
     font-size: 18px;
     line-height: 1.7;
-
-    margin: 0;
 }
 
 .hero-buttons {
@@ -221,101 +208,98 @@ HERO
 
     margin-top: 35px;
 }
+
+
 /* =========================
-BUTTONS
+   BUTTONS
 ========================= */
 
 .btn {
-display: inline-block;
+    display: inline-block;
 
-```
-padding: 14px 30px;
+    padding: 14px 30px;
 
-background: #f7c600;
-color: #000;
+    background: #f7c600;
+    color: #000;
 
-border: 2px solid #f7c600;
-border-radius: 30px;
+    border: 2px solid #f7c600;
+    border-radius: 30px;
 
-font-weight: 700;
+    font-weight: 700;
 
-transition: 0.3s;
-```
-
+    transition: 0.3s;
 }
 
 .btn:hover {
-transform: translateY(-4px);
-box-shadow: 0 0 22px rgba(247, 198, 0, 0.45);
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 0 22px rgba(247, 198, 0, 0.45);
 }
 
 .btn.outline {
-background: transparent;
-color: #fff;
+    background: transparent;
+    color: #fff;
 }
 
+
 /* =========================
-STATS
+   STATS
 ========================= */
 
 #stats {
-padding: 70px 8%;
+    padding: 70px 8%;
 
-```
-background: #111;
-```
-
+    background: #111;
 }
 
 .stat-box {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 20px;
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
 }
 
 .stat {
-padding: 30px 20px;
+    padding: 30px 20px;
 
-```
-text-align: center;
+    text-align: center;
 
-background: #171717;
+    background: #171717;
 
-border: 1px solid #242424;
-border-radius: 16px;
+    border: 1px solid #242424;
+    border-radius: 16px;
 
-transition: 0.3s;
-```
-
+    transition: 0.3s;
 }
 
 .stat:hover {
-transform: translateY(-7px);
-border-color: #f7c600;
+    transform: translateY(-7px);
+
+    border-color: #f7c600;
 }
 
 .stat > span {
-font-size: 35px;
+    font-size: 35px;
 }
 
 .stat h2 {
-margin: 12px 0;
+    margin: 12px 0;
 
-```
-color: #f7c600;
+    color: #f7c600;
 
-font-family: 'Orbitron', sans-serif;
-font-size: 30px;
-```
-
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
 }
 
 .stat p {
-color: #aaa;
+    color: #aaa;
 }
 
+
 /* =========================
-SECTIONS
+   SECTIONS
 ========================= */
 
 #about,
@@ -323,793 +307,379 @@ SECTIONS
 #achievements,
 #rocket-league,
 #news {
-padding: 100px 8%;
+    padding: 100px 8%;
 }
 
 #about {
-background: #0b0b0b;
+    background: #0b0b0b;
 }
 
 #roster {
-background: #111;
+    background: #111;
 }
 
 #achievements {
-background: #0b0b0b;
+    background: #0b0b0b;
 }
 
 #rocket-league {
-background: #111;
+    background: #111;
 }
 
 #news {
-background: #0b0b0b;
+    background: #0b0b0b;
 }
 
 .section-title {
-margin-bottom: 55px;
-text-align: center;
+    margin-bottom: 55px;
+
+    text-align: center;
 }
 
 .section-title span {
-color: #f7c600;
+    color: #f7c600;
 
-```
-font-size: 13px;
-font-weight: 600;
+    font-size: 13px;
+    font-weight: 600;
 
-letter-spacing: 5px;
-```
-
+    letter-spacing: 5px;
 }
 
 .section-title h2 {
-margin-top: 8px;
+    margin-top: 8px;
 
-```
-font-family: 'Orbitron', sans-serif;
-font-size: 42px;
-```
-
+    font-family: 'Orbitron', sans-serif;
+    font-size: 42px;
 }
 
 .section-line {
-width: 90px;
-height: 4px;
+    width: 90px;
+    height: 4px;
 
-```
-margin: 18px auto 0;
+    margin: 18px auto 0;
 
-background: #f7c600;
-```
-
+    background: #f7c600;
 }
 
+
 /* =========================
-ABOUT
+   ABOUT
 ========================= */
 
 .about-content {
-max-width: 800px;
+    max-width: 800px;
 
-```
-margin: auto;
+    margin: auto;
 
-text-align: center;
-```
-
+    text-align: center;
 }
 
 .about-content p {
-margin-bottom: 18px;
+    margin-bottom: 18px;
 
-```
-color: #aaa;
+    color: #aaa;
 
-font-size: 18px;
-line-height: 1.8;
-```
-
+    font-size: 18px;
+    line-height: 1.8;
 }
 
+
 /* =========================
-PLAYERS
+   PLAYERS
 ========================= */
 
 .players {
-display: grid;
+    display: grid;
 
-```
-grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-gap: 25px;
-```
-
+    gap: 25px;
 }
 
 .player-card {
-position: relative;
+    position: relative;
 
-```
-display: block;
+    display: block;
 
-padding: 40px 25px;
+    padding: 40px 25px;
 
-text-align: center;
+    text-align: center;
 
-background: #171717;
+    background: #171717;
 
-border: 1px solid #242424;
-border-radius: 20px;
+    border: 1px solid #242424;
+    border-radius: 20px;
 
-cursor: pointer;
+    cursor: pointer;
 
-transition: 0.3s;
-```
-
+    transition: 0.3s;
 }
 
 .player-card:hover {
-transform: translateY(-10px);
+    transform: translateY(-10px);
 
-```
-border-color: #f7c600;
+    border-color: #f7c600;
 
-box-shadow:
-    0 0 25px rgba(247, 198, 0, 0.18);
-```
-
+    box-shadow:
+        0 0 25px rgba(247, 198, 0, 0.18);
 }
 
 .player-number {
-position: absolute;
+    position: absolute;
 
-```
-top: 15px;
-right: 20px;
+    top: 15px;
+    right: 20px;
 
-color: #333;
+    color: #333;
 
-font-family: 'Orbitron', sans-serif;
-font-size: 32px;
-```
-
+    font-family: 'Orbitron', sans-serif;
+    font-size: 32px;
 }
 
 .player-avatar {
-width: 120px;
-height: 120px;
+    width: 120px;
+    height: 120px;
 
-```
-margin: auto;
+    margin: auto;
 
-display: flex;
-align-items: center;
-justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-background: #222;
+    background: #222;
 
-border: 3px solid #f7c600;
-border-radius: 50%;
+    border: 3px solid #f7c600;
+    border-radius: 50%;
 
-font-size: 52px;
-```
-
+    font-size: 52px;
 }
 
 .player-card h3 {
-margin-top: 22px;
+    margin-top: 22px;
 
-```
-font-family: 'Orbitron', sans-serif;
-font-size: 23px;
-```
-
+    font-family: 'Orbitron', sans-serif;
+    font-size: 23px;
 }
 
 .player-card p {
-margin-top: 8px;
+    margin-top: 8px;
 
-```
-color: #f7c600;
+    color: #f7c600;
 
-font-size: 12px;
-font-weight: 600;
+    font-size: 12px;
+    font-weight: 600;
 
-letter-spacing: 3px;
-```
-
+    letter-spacing: 3px;
 }
 
+
 /* =========================
-NEWS / ACHIEVEMENTS
+   NEWS / ACHIEVEMENTS
 ========================= */
 
 .news-box {
-display: grid;
+    display: grid;
 
-```
-grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-gap: 25px;
-```
-
+    gap: 25px;
 }
 
 .news-card {
-padding: 35px 25px;
+    padding: 35px 25px;
 
-```
-text-align: center;
+    text-align: center;
 
-background: #171717;
+    background: #171717;
 
-border: 1px solid #242424;
-border-radius: 18px;
+    border: 1px solid #242424;
+    border-radius: 18px;
 
-transition: 0.3s;
-```
-
+    transition: 0.3s;
 }
 
 .news-card:hover {
-transform: translateY(-8px);
+    transform: translateY(-8px);
 
-```
-border-color: #f7c600;
-```
-
+    border-color: #f7c600;
 }
 
 .news-card h3 {
-color: #f7c600;
+    color: #f7c600;
 
-```
-font-family: 'Orbitron', sans-serif;
-font-size: 20px;
-```
-
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
 }
 
 .news-card p {
-margin-top: 15px;
+    margin-top: 15px;
 
-```
-color: #aaa;
+    color: #aaa;
 
-line-height: 1.7;
-```
-
+    line-height: 1.7;
 }
 
+
 /* =========================
-ROCKET LEAGUE
+   ROCKET LEAGUE
 ========================= */
 
 .rocket-container {
-min-height: 350px;
+    min-height: 350px;
 
-```
-display: flex;
-align-items: center;
-justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-gap: 50px;
+    gap: 50px;
 
-padding: 60px;
+    padding: 60px;
 
-background: #171717;
+    background: #171717;
 
-border: 1px solid #242424;
-border-radius: 25px;
+    border: 1px solid #242424;
+    border-radius: 25px;
 
-overflow: hidden;
-```
-
+    overflow: hidden;
 }
 
 .rocket-text {
-max-width: 500px;
+    max-width: 500px;
 }
 
 .rocket-text > span {
-color: #f7c600;
+    color: #f7c600;
 
-```
-font-size: 13px;
-font-weight: 600;
+    font-size: 13px;
+    font-weight: 600;
 
-letter-spacing: 5px;
-```
-
+    letter-spacing: 5px;
 }
 
 .rocket-text h2 {
-margin: 15px 0;
+    margin: 15px 0;
 
-```
-font-family: 'Orbitron', sans-serif;
-font-size: 55px;
-```
-
+    font-family: 'Orbitron', sans-serif;
+    font-size: 55px;
 }
 
 .rocket-text p {
-margin-bottom: 28px;
+    margin-bottom: 28px;
 
-```
-color: #aaa;
+    color: #aaa;
 
-line-height: 1.7;
-```
-
+    line-height: 1.7;
 }
 
 .rocket-car {
-animation: carMove 2s infinite alternate ease-in-out;
+    animation: carMove 2s infinite alternate ease-in-out;
 }
 
 .rocket-car img {
-width: 360px;
+    width: 360px;
 
-```
-filter: drop-shadow(
-    0 0 22px rgba(247, 198, 0, 0.5)
-);
-```
-
+    filter:
+        drop-shadow(
+            0 0 22px rgba(247, 198, 0, 0.5)
+        );
 }
 
 @keyframes carMove {
 
-```
-from {
-    transform: translateX(0);
-}
+    from {
+        transform: translateX(0);
+    }
 
-to {
-    transform: translateX(25px);
-}
-```
+    to {
+        transform: translateX(25px);
+    }
 
 }
+
 
 /* =========================
-FOOTER
+   FOOTER
 ========================= */
 
 footer {
-padding: 65px 8% 25px;
+    padding: 65px 8% 25px;
 
-```
-background: #050505;
-```
-
+    background: #050505;
 }
 
 .footer-grid {
-display: grid;
+    display: grid;
 
-```
-grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-gap: 40px;
-```
-
+    gap: 40px;
 }
 
 .footer-logo {
-color: #f7c600;
+    color: #f7c600;
 
-```
-font-family: 'Orbitron', sans-serif;
-font-size: 32px;
-```
-
-}
-
-footer h3 {
-margin-bottom: 15px;
-
-```
-color: #f7c600;
-```
-
-}
-
-footer p {
-color: #888;
-
-```
-line-height: 1.8;
-```
-
-}
-
-footer a {
-display: block;
-
-```
-margin: 10px 0;
-
-color: #888;
-
-transition: 0.3s;
-```
-
-}
-
-footer a:hover {
-color: #f7c600;
-}
-
-.copyright {
-margin-top: 45px;
-padding-top: 20px;
-
-```
-text-align: center;
-
-color: #555;
-
-border-top: 1px solid #222;
-
-font-size: 13px;
-```
-
-}
-
-/* =========================
-PLAYER PAGE
-========================= */
-
-.player-page {
-min-height: 100vh;
-
-```
-display: flex;
-align-items: center;
-justify-content: center;
-
-padding: 80px 20px 40px;
-
-background: #0b0b0b;
-```
-
-}
-
-.back-btn {
-position: fixed;
-
-```
-top: 25px;
-left: 30px;
-
-z-index: 10;
-
-color: #f7c600;
-
-font-weight: 600;
-
-transition: 0.3s;
-```
-
-}
-
-.back-btn:hover {
-color: #fff;
-transform: translateX(-4px);
-}
-
-.player-profile {
-width: 100%;
-max-width: 520px;
-
-```
-padding: 50px 35px;
-
-text-align: center;
-
-background: #151515;
-
-border: 2px solid #f7c600;
-border-radius: 25px;
-
-box-shadow:
-    0 0 30px rgba(247, 198, 0, 0.12);
-```
-
-}
-
-.player-profile > img {
-width: 150px;
-height: 150px;
-
-```
-margin: 0 auto 20px;
-
-object-fit: contain;
-
-border: 3px solid #f7c600;
-border-radius: 50%;
-```
-
-}
-
-.player-profile h1 {
-color: #f7c600;
-
-```
-font-family: 'Orbitron', sans-serif;
-font-size: 45px;
-```
-
-}
-
-.player-profile h3 {
-margin-top: 8px;
-
-```
-letter-spacing: 3px;
-```
-
-}
-
-.player-profile p {
-margin-top: 25px;
-
-```
-color: #aaa;
-
-line-height: 1.8;
-```
-
-}
-
-.player-info {
-display: flex;
-justify-content: center;
-
-```
-gap: 15px;
-
-margin: 30px 0;
-```
-
-}
-
-.player-info > div {
-min-width: 90px;
-
-```
-padding: 18px 12px;
-
-background: #222;
-
-border-radius: 13px;
-```
-
-}
-
-.player-info span {
-display: block;
-
-```
-margin-top: 5px;
-
-color: #aaa;
-```
-
-}
-
-.player-info b {
-display: block;
-
-```
-margin-top: 4px;
-
-color: #f7c600;
-
-font-size: 24px;
-```
-
-}
-
-.player-role {
-display: inline-block;
-
-```
-margin-top: 25px;
-padding: 10px 20px;
-
-color: #f7c600;
-
-border: 1px solid #f7c600;
-border-radius: 30px;
-
-font-size: 12px;
-letter-spacing: 2px;
-```
-
-}
-
-/* =========================
-MOBILE
-========================= */
-
-@media (max-width: 1100px) {
-
-```
-.navbar ul {
-    gap: 15px;
-}
-
-.navbar ul a {
-    font-size: 11px;
-}
-
-.discord-btn {
-    padding: 9px 14px;
-    font-size: 11px;
-}
-```
-
-}
-
-@media (max-width: 900px) {
-
-```
-.navbar {
-    height: 75px;
-    padding: 0 20px;
-}
-
-.navbar ul {
-    display: none;
-}
-
-.logo {
-    font-size: 22px;
-}
-
-.logo-symbol img {
-    width: 45px;
-    height: 45px;
-}
-
-.discord-btn {
-    padding: 9px 14px;
-    font-size: 11px;
-}
-
-
-#hero {
-    padding: 120px 20px 60px;
-}
-
-.hero-content h1 {
-    font-size: 55px;
-}
-
-.hero-content p {
-    font-size: 16px;
-}
-
-.hero-buttons {
-    flex-direction: column;
-    max-width: 250px;
-}
-
-
-.stat-box {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-
-.players {
-    grid-template-columns: 1fr;
-}
-
-
-.news-box {
-    grid-template-columns: 1fr;
-}
-
-
-.rocket-container {
-    flex-direction: column;
-
-    text-align: center;
-
-    padding: 35px 25px;
-}
-
-.rocket-text h2 {
-    font-size: 42px;
-}
-
-.rocket-car img {
-    width: 280px;
-}
-
-
-.footer-grid {
-    grid-template-columns: 1fr;
-
-    text-align: center;
-}
-```
-
-}
-
-@media (max-width: 500px) {
-
-```
-#about,
-#roster,
-#achievements,
-#rocket-league,
-#news {
-    padding: 75px 20px;
-}
-
-.hero-content h1 {
-    font-size: 45px;
-}
-
-.section-title h2 {
+    font-family: 'Orbitron', sans-serif;
     font-size: 32px;
 }
 
-.stat-box {
-    grid-template-columns: 1fr;
+footer h3 {
+    margin-bottom: 15px;
+
+    color: #f7c600;
 }
 
-.player-profile {
-    padding: 40px 20px;
+footer p {
+    color: #888;
+
+    line-height: 1.8;
 }
 
-.player-profile h1 {
-    font-size: 35px;
+footer a {
+    display: block;
+
+    margin: 10px 0;
+
+    color: #888;
+
+    transition: 0.3s;
 }
 
-.player-profile > img {
-    width: 120px;
-    height: 120px;
+footer a:hover {
+    color: #f7c600;
 }
 
-.player-info {
-    flex-wrap: wrap;
+.copyright {
+    margin-top: 45px;
+    padding-top: 20px;
+
+    text-align: center;
+
+    color: #555;
+
+    border-top: 1px solid #222;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   PLAYER PAGE
+========================================================= */
+
+.player-page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 20px 50px;
+
+    background: #0b0b0b;
 }
 
 .back-btn {
-    top: 18px;
-    left: 20px;
-}
-```
-
-}
-/* =========================================================
-   ZYVIX PLAYER PAGE - FINAL FIX
-========================================================= */
-
-body.player-body {
-    margin: 0;
-    padding: 0;
-
-    min-height: 100vh;
-
-    background: #0b0b0b;
-
-    overflow-x: hidden;
-}
-
-
-/* =========================
-   BACK BUTTON
-========================= */
-
-body.player-body .back-btn {
     position: fixed;
 
     top: 25px;
@@ -1126,41 +696,16 @@ body.player-body .back-btn {
     font-size: 15px;
     font-weight: 600;
 
-    text-decoration: none;
-
     transition: 0.3s;
 }
 
-body.player-body .back-btn:hover {
-    color: #ffffff;
+.back-btn:hover {
+    color: #fff;
 
     transform: translateX(-5px);
 }
 
-
-/* =========================
-   PLAYER PAGE
-========================= */
-
-body.player-body .player-page {
-    width: 100%;
-    min-height: 100vh;
-
-    padding: 100px 20px 50px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #0b0b0b;
-}
-
-
-/* =========================
-   PLAYER CARD
-========================= */
-
-body.player-body .player-profile {
+.player-profile {
     width: 100%;
     max-width: 520px;
 
@@ -1181,12 +726,8 @@ body.player-body .player-profile {
     animation: playerCardAppear 0.5s ease;
 }
 
-
-/* =========================
-   PLAYER IMAGE
-========================= */
-
-body.player-body .player-image {
+.player-profile > img,
+.player-image {
     width: 150px;
     height: 150px;
 
@@ -1203,12 +744,7 @@ body.player-body .player-image {
         0 0 20px rgba(247, 198, 0, 0.2);
 }
 
-
-/* =========================
-   NAME
-========================= */
-
-body.player-body .player-profile h1 {
+.player-profile h1 {
     margin: 0;
 
     color: #f7c600;
@@ -1218,15 +754,10 @@ body.player-body .player-profile h1 {
     font-weight: 700;
 }
 
-
-/* =========================
-   ROLE
-========================= */
-
-body.player-body .player-profile h3 {
+.player-profile h3 {
     margin: 8px 0 0;
 
-    color: #ffffff;
+    color: #fff;
 
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -1235,12 +766,7 @@ body.player-body .player-profile h3 {
     letter-spacing: 3px;
 }
 
-
-/* =========================
-   PLAYER STATS
-========================= */
-
-body.player-body .player-info {
+.player-info {
     width: 100%;
 
     margin: 30px 0;
@@ -1251,22 +777,20 @@ body.player-body .player-info {
     gap: 10px;
 }
 
-
-body.player-body .player-info > div {
+.player-info > div {
     width: 90px;
     min-width: 90px;
 
     padding: 10px 8px;
 
-    background: #222222;
+    background: #222;
 
     border-radius: 12px;
 
     text-align: center;
 }
 
-
-body.player-body .player-info .stat-icon {
+.player-info .stat-icon {
     display: block;
 
     margin-bottom: 2px;
@@ -1274,8 +798,7 @@ body.player-body .player-info .stat-icon {
     font-size: 18px;
 }
 
-
-body.player-body .player-info span:not(.stat-icon) {
+.player-info span:not(.stat-icon) {
     display: block;
 
     color: #aaa;
@@ -1283,8 +806,7 @@ body.player-body .player-info span:not(.stat-icon) {
     font-size: 13px;
 }
 
-
-body.player-body .player-info b {
+.player-info b {
     display: block;
 
     margin-top: 2px;
@@ -1295,17 +817,12 @@ body.player-body .player-info b {
     font-size: 23px;
 }
 
-
-/* =========================
-   BIO
-========================= */
-
-body.player-body .player-profile > p {
-    margin: 25px auto 0;
-
+.player-profile > p {
     max-width: 470px;
 
-    color: #ffffff;
+    margin: 25px auto 0;
+
+    color: #fff;
 
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
@@ -1313,12 +830,7 @@ body.player-body .player-profile > p {
     line-height: 1.7;
 }
 
-
-/* =========================
-   ROLE LABEL
-========================= */
-
-body.player-body .player-role {
+.player-role {
     display: inline-block;
 
     margin-top: 25px;
@@ -1335,11 +847,6 @@ body.player-body .player-role {
     letter-spacing: 2px;
 }
 
-
-/* =========================
-   ANIMATION
-========================= */
-
 @keyframes playerCardAppear {
 
     from {
@@ -1355,56 +862,323 @@ body.player-body .player-role {
 }
 
 
-/* =========================
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar ul {
+        gap: 15px;
+    }
+
+    .navbar ul a {
+        font-size: 11px;
+    }
+
+    .discord-btn {
+        padding: 9px 14px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        height: 75px;
+
+        padding: 0 20px;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .logo-symbol img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .discord-btn {
+        padding: 9px 14px;
+
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       HERO MOBILE FIX
+    ========================= */
+
+    #hero {
+        min-height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        padding: 130px 20px 70px;
+
+        background-position: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .welcome {
+        font-size: 13px;
+
+        letter-spacing: 4px;
+    }
+
+    .hero-content h1 {
+        margin: 15px 0;
+
+        font-size: 55px;
+
+        line-height: 1.05;
+    }
+
+    .hero-line {
+        width: 80px;
+        height: 3px;
+
+        margin: 20px 0;
+    }
+
+    .hero-content p {
+        max-width: 520px;
+
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        gap: 12px;
+
+        margin-top: 28px;
+
+        max-width: none;
+    }
+
+    .hero-buttons .btn {
+        padding: 12px 20px;
+
+        font-size: 13px;
+    }
+
+
+    /* STATS */
+
+    .stat-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* PLAYERS */
+
+    .players {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* NEWS */
+
+    .news-box {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ROCKET LEAGUE */
+
+    .rocket-container {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 35px 25px;
+    }
+
+    .rocket-text h2 {
+        font-size: 42px;
+    }
+
+    .rocket-car img {
+        width: 280px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
 @media (max-width: 600px) {
 
-    body.player-body .back-btn {
+    #about,
+    #roster,
+    #achievements,
+    #rocket-league,
+    #news {
+        padding: 75px 20px;
+    }
+
+
+    /* HERO */
+
+    #hero {
+        min-height: 100svh;
+
+        padding: 120px 20px 60px;
+    }
+
+    .welcome {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+
+        line-height: 1.05;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+    .hero-buttons .btn {
+        padding: 10px 17px;
+
+        font-size: 12px;
+    }
+
+
+    /* SECTION TITLES */
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+
+    /* STATS */
+
+    .stat-box {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* PLAYER PAGE */
+
+    .player-page {
+        min-height: 100svh;
+
+        padding: 85px 15px 30px;
+    }
+
+    .player-profile {
+        padding: 35px 18px;
+
+        border-radius: 20px;
+    }
+
+    .player-profile h1 {
+        font-size: 35px;
+    }
+
+    .player-profile > img,
+    .player-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .player-info {
+        gap: 6px;
+    }
+
+    .player-info > div {
+        width: 80px;
+        min-width: 80px;
+    }
+
+    .player-profile > p {
+        font-size: 14px;
+    }
+
+    .back-btn {
         top: 18px;
         left: 18px;
 
         font-size: 13px;
     }
 
+}
 
-    body.player-body .player-page {
-        padding: 80px 15px 30px;
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero-content h1 {
+        font-size: 38px;
     }
 
+    .hero-buttons {
+        flex-direction: column;
 
-    body.player-body .player-profile {
-        padding: 35px 18px;
-
-        border-radius: 20px;
+        align-items: flex-start;
     }
 
-
-    body.player-body .player-image {
-        width: 120px;
-        height: 120px;
+    .hero-buttons .btn {
+        width: auto;
     }
 
-
-    body.player-body .player-profile h1 {
-        font-size: 35px;
-    }
-
-
-    body.player-body .player-info {
-        gap: 6px;
-    }
-
-
-    body.player-body .player-info > div {
-        width: 80px;
-        min-width: 80px;
-    }
-
-
-    body.player-body .player-profile > p {
-        font-size: 14px;
+    .player-info > div {
+        width: 75px;
+        min-width: 75px;
     }
 
 }
