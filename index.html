@@ -16,7 +16,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
+    
+<div id="playerModal" class="modal">
 
+    <div class="modal-box">
+
+        <span class="close" onclick="closePlayer()">×</span>
+
+        <h2 id="playerName"></h2>
+
+        <h3 id="playerRole"></h3>
+
+        <p id="playerRank"></p>
+
+        <p id="playerInfo"></p>
+
+    </div>
+
+</div>
 
 <body>
 
@@ -198,7 +215,7 @@ JOIN DISCORD
     <div class="players">
 
 
-        <div class="player-card">
+        <div class="player-card" onclick="openPlayer('Zyvix','CAPTAIN','Grand Champion','Team Leader and Rocket League player')">
 
             <div class="player-number">
                 01
@@ -220,7 +237,7 @@ JOIN DISCORD
 
 
 
-        <div class="player-card">
+        <div class="player-card" onclick="openPlayer('Taiqz','PLAYER','Champion','Competitive Rocket League player')">
 
             <div class="player-number">
                 02
@@ -243,7 +260,7 @@ JOIN DISCORD
 
 
 
-        <div class="player-card">
+        <div class="player-card" onclick="openPlayer('Real Vexy','PLAYER','Champion','Fast mechanical player')">
 
             <div class="player-number">
                 03
