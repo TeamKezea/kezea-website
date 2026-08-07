@@ -262,124 +262,98 @@ JOIN DISCORD
 
     <div class="section-title">
 
-        <span>THE SQUAD</span>
+    <span>THE SQUAD</span>
+    <h2>OUR PLAYERS</h2>
+    <div class="section-line"></div>
 
-        <h2>OUR PLAYERS</h2>
+</div>
 
-        <div class="section-line"></div>
+
+<div class="players">
+
+    <div class="player-card" onclick="openPlayer('zyvix')">
+
+        <div class="player-number">01</div>
+
+        <div class="player-avatar">👑</div>
+
+        <h3>Zyvix</h3>
+
+        <p>CAPTAIN</p>
 
     </div>
 
 
-    <div class="players">
 
+    <div class="player-card" onclick="openPlayer('taiqz')">
 
-<div class="player-card" onclick="openPlayer('zyvix')">
+        <div class="player-number">02</div>
 
-<div class="player-number">
-01
-</div>
+        <div class="player-avatar">🎮</div>
 
-<div class="player-avatar">
-👑
-</div>
+        <h3>Taiqz</h3>
 
-<h3>
-Zyvix
-</h3>
-
-<p>
-CAPTAIN
-</p>
-
-</div>
-
-
-<div class="player-card" onclick="openPlayer('taiqz')">
-
-            <div class="player-number">
-                02
-            </div>
-
-            <div class="player-avatar">
-                🎮
-            </div>
-
-            <h3>
-                Taiqz
-            </h3>
-
-            <p>
-                PLAYER
-            </p>
-
-        </div>
-
-
-
-
-<div class="player-card" onclick="openPlayer('vexy')">
-    
-            <div class="player-number">
-                03
-            </div>
-
-            <div class="player-avatar">
-                ⚡
-            </div>
-
-            <h3>
-                Real Vexy
-            </h3>
-
-            <p>
-                PLAYER
-            </p>
-
-        </div>
-
+        <p>PLAYER</p>
 
     </div>
 
-<div id="player-popup" class="player-popup">
 
-    <div class="popup-box">
 
-        <span class="close" onclick="closePlayer()">×</span>
+    <div class="player-card" onclick="openPlayer('vexy')">
 
-        <h2 id="popup-name">Zyvix</h2>
+        <div class="player-number">03</div>
 
-        <h3 id="popup-role">CAPTAIN</h3>
+        <div class="player-avatar">⚡</div>
 
-        <p id="popup-info">
-            Player information
-        </p>
+        <h3>Real Vexy</h3>
 
-        <div class="popup-stats">
+        <p>PLAYER</p>
 
-            <div>
-                🏆
-                <b id="popup-wins">0</b>
-                Wins
-            </div>
+    </div>
 
-            <div>
-                🎯
-                <b id="popup-goals">0</b>
-                Goals
-            </div>
+</div>
 
-            <div>
-                ⭐
-                <b id="popup-mvp">0</b>
-                MVP
-            </div>
 
+
+<!-- PLAYER POPUP -->
+
+<div id="player-popup" class="popup-box">
+
+    <span class="close" onclick="closePlayer()">×</span>
+
+    <h2 id="popup-name"></h2>
+
+    <h3 id="popup-role"></h3>
+
+    <p id="popup-info"></p>
+
+
+    <div class="popup-stats">
+
+        <div>
+            🏆
+            <b id="popup-wins"></b>
+            Wins
+        </div>
+
+
+        <div>
+            🎯
+            <b id="popup-goals"></b>
+            Goals
+        </div>
+
+
+        <div>
+            ⭐
+            <b id="popup-mvp"></b>
+            MVP
         </div>
 
     </div>
 
 </div>
+
 
 <div id="player-popup" class="player-popup">
 
@@ -735,6 +709,64 @@ document.getElementById("popup-info").innerHTML=p.info;
 document.getElementById("popup-wins").innerHTML=p.wins;
 document.getElementById("popup-goals").innerHTML=p.goals;
 document.getElementById("popup-mvp").innerHTML=p.mvp;
+
+document.getElementById("player-popup").style.display="flex";
+
+}
+
+
+function closePlayer(){
+
+document.getElementById("player-popup").style.display="none";
+
+}
+
+</script>
+    <script>
+
+const players = {
+
+zyvix:{
+name:"Zyvix",
+role:"CAPTAIN",
+info:"Team captain of KEZEA Esports.",
+wins:"12",
+goals:"85",
+mvp:"8"
+},
+
+taiqz:{
+name:"Taiqz",
+role:"PLAYER",
+info:"Competitive Rocket League player.",
+wins:"7",
+goals:"60",
+mvp:"5"
+},
+
+vexy:{
+name:"Real Vexy",
+role:"PLAYER",
+info:"KEZEA player focused on winning.",
+wins:"5",
+goals:"45",
+mvp:"3"
+}
+
+};
+
+
+function openPlayer(player){
+
+let data = players[player];
+
+document.getElementById("popup-name").innerHTML = data.name;
+document.getElementById("popup-role").innerHTML = data.role;
+document.getElementById("popup-info").innerHTML = data.info;
+
+document.getElementById("popup-wins").innerHTML = data.wins;
+document.getElementById("popup-goals").innerHTML = data.goals;
+document.getElementById("popup-mvp").innerHTML = data.mvp;
 
 document.getElementById("player-popup").style.display="flex";
 
