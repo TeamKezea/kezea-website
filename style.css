@@ -88,3 +88,191 @@ ul{
     transform:translateY(-3px);
     box-shadow:0 0 20px #f7c600;
 }
+#hero{
+
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:120px 8%;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.7),
+        rgba(0,0,0,.9)
+    ),
+    url("https://images.unsplash.com/photo-1542751371-adc38448a05e")
+    center/cover;
+
+}
+
+
+.hero-content{
+    max-width:700px;
+}
+
+
+.welcome{
+
+    color:#f7c600;
+    letter-spacing:5px;
+    font-size:18px;
+
+}
+
+
+.hero-content h1{
+
+    font-family:'Orbitron',sans-serif;
+    font-size:90px;
+    line-height:1;
+    margin:20px 0;
+
+}
+
+
+.hero-content h1 span{
+
+    color:#f7c600;
+
+}
+
+
+.hero-line{
+
+    width:120px;
+    height:5px;
+    background:#f7c600;
+    margin:25px 0;
+
+}
+
+
+.hero-content p{
+
+    color:#aaa;
+    font-size:20px;
+    max-width:550px;
+
+}
+
+
+.hero-buttons{
+
+    margin-top:40px;
+    display:flex;
+    gap:20px;
+
+}
+
+
+.btn{
+
+    padding:15px 35px;
+    background:#f7c600;
+    color:#000;
+    font-weight:700;
+    border-radius:30px;
+    transition:.3s;
+
+}
+
+
+.btn:hover{
+
+    box-shadow:0 0 25px #f7c600;
+    transform:translateY(-5px);
+
+}
+
+
+.btn.outline{
+
+    background:transparent;
+    color:white;
+    border:2px solid #f7c600;
+
+}
+#stats{
+
+    background:#111;
+    padding:70px 8%;
+
+}
+
+
+.stat-box{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+
+}
+
+
+.stat{
+
+    background:#171717;
+    border:1px solid #222;
+    padding:35px;
+    text-align:center;
+    border-radius:15px;
+    transition:.3s;
+
+}
+
+
+.stat:hover{
+
+    border-color:#f7c600;
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(247,198,0,.25);
+
+}
+
+
+.stat span{
+
+    font-size:40px;
+
+}
+
+
+.stat h2{
+
+    color:#f7c600;
+    font-family:'Orbitron',sans-serif;
+    font-size:35px;
+    margin:15px 0;
+
+}
+
+
+.stat p{
+
+    color:#aaa;
+    font-size:16px;
+
+}
+
+
+
+@media(max-width:900px){
+
+    .stat-box{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    .stat-box{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
