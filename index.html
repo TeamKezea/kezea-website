@@ -1,147 +1,181 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BKXETE7ELY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BKXETE7ELY');
-</script>
-
-    <meta name="description" content="Official KEZEA Esports website. A competitive Rocket League esports team built on passion, teamwork and a drive for greatness.">
-    
-<meta name="author" content="Team Kezea">
-
-
-<meta property="og:title" content="KEZEA Esports">
-
-<meta property="og:description" content="Competitive Rocket League esports team.">
-
-<meta property="og:image" content="logo.png">
-
-<meta property="og:type" content="website">
-
-
-<link rel="icon" type="image/png" href="logo.png">
-    
-    <link rel="icon" type="image/png" href="logo.png">
-    
-    <meta name="google-site-verification" content="HxjGGB0V_TbKgoSrfknSjcGnYt4F0NY1BSdPWhC2jM4" />
+```
+<!-- =========================
+     BASIC META
+========================== -->
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>KEZEA ESPORTS</title>
 
+<meta
+    name="description"
+    content="Official KEZEA Esports website. A competitive Rocket League esports team built on passion, teamwork and a drive for greatness."
+>
+
+<meta
+    name="keywords"
+    content="KEZEA, KEZEA Esports, Rocket League, Esports Team"
+>
+
+<meta name="author" content="Team Kezea">
+
+<!-- =========================
+     OPEN GRAPH
+========================== -->
+
+<meta property="og:title" content="KEZEA Esports">
+
+<meta
+    property="og:description"
+    content="Competitive Rocket League esports team."
+>
+
+<meta property="og:image" content="logo.png">
+<meta property="og:type" content="website">
+
+<!-- =========================
+     FAVICON
+========================== -->
+
+<link rel="icon" type="image/png" href="logo.png">
+
+<!-- =========================
+     GOOGLE VERIFICATION
+========================== -->
+
+<meta
+    name="google-site-verification"
+    content="HxjGGB0V_TbKgoSrfknSjcGnYt4F0NY1BSdPWhC2jM4"
+>
+
+<!-- =========================
+     GOOGLE ANALYTICS
+========================== -->
+
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-BKXETE7ELY"
+></script>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-BKXETE7ELY');
+</script>
+
+<!-- =========================
+     CSS
+========================== -->
+
 <link rel="stylesheet" href="style.css">
+
+<!-- =========================
+     GOOGLE FONTS
+========================== -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+```
 
 </head>
-    
-    <meta name="description" content="Official KEZEA Esports website. Rocket League competitive team, players, news and achievements.">
 
-<meta name="keywords" content="KEZEA, KEZEA Esports, Rocket League, Esports Team">
-
-<meta name="author" content="Team Kezea">
-    
-<div id="playerModal" class="modal">
-
-    
-<div class="profile-box">
-
-<span class="close" onclick="closePlayer()">×</span>
-
-<img id="profileImg" src="">
-
-<h2 id="profileName"></h2>
-
-<h3 id="profileRole"></h3>
-
-<div class="stats-profile">
-
-<p>🏆 Wins: <b id="wins"></b></p>
-
-<p>🎯 Goals: <b id="goals"></b></p>
-
-<p>⭐ MVP: <b id="mvp"></b></p>
-
-</div>
-
-
-<p id="profileBio"></p>
-
-
-</div>
-
-</div>
-    
-  <script>
-
-function openPlayer(player){
-
-window.location.href="player.html?player="+player;
-
-}
-
-</script>  
-    
 <body>
 
+```
+<!-- =====================================================
+     NAVBAR
+====================================================== -->
 
 <header id="home">
 
+    <nav class="navbar">
 
-<nav class="navbar">
+        <!-- LOGO -->
 
+        <div class="logo">
 
-<div class="logo">
+            <div class="logo-symbol">
 
+                <img
+                    src="https://cdn.discordapp.com/attachments/1387143485328720003/1535013415100350534/13c4cb41a1e5d84f2acdb95d1a842ce0.png?ex=6a76e0e5&is=6a758f65&hm=5a30c03d0c3e67b638ab15cd0b7d9b6a6f2b190a8e2be4a8fb090687c8fa3981&"
+                    alt="KEZEA Logo"
+                >
 
-<img
-src="https://cdn.discordapp.com/attachments/1387143485328720003/1535013415100350534/13c4cb41a1e5d84f2acdb95d1a842ce0.png?ex=6a76e0e5&is=6a758f65&hm=5a30c03d0c3e67b638ab15cd0b7d9b6a6f2b190a8e2be4a8fb090687c8fa3981&"
-alt="KEZEA Logo">
+            </div>
 
+            <div>
+                KEZEA
+                <span>ESPORTS</span>
+            </div>
 
-<div>
-KEZEA
-<span>ESPORTS</span>
-</div>
-
-
-</div>
-
-
-
-<ul>
-
-<li><a href="#home">HOME</a></li>
-<li><a href="#about">ABOUT</a></li>
-<li><a href="#roster">ROSTER</a></li>
-<li><a href="#achievements">ACHIEVEMENTS</a></li>
-<li><a href="#rocket-league">ROCKET LEAGUE</a></li>
-<li><a href="#news">NEWS</a></li>
-<li><a href="#contact">CONTACT</a></li>
-
-</ul>
+        </div>
 
 
+        <!-- NAVIGATION -->
 
-<a class="discord-btn" href="https://discord.gg/scS8xKQdV">
-JOIN DISCORD
-</a>
+        <ul>
+
+            <li>
+                <a href="#home">HOME</a>
+            </li>
+
+            <li>
+                <a href="#about">ABOUT</a>
+            </li>
+
+            <li>
+                <a href="#roster">ROSTER</a>
+            </li>
+
+            <li>
+                <a href="#achievements">ACHIEVEMENTS</a>
+            </li>
+
+            <li>
+                <a href="#rocket-league">ROCKET LEAGUE</a>
+            </li>
+
+            <li>
+                <a href="#news">NEWS</a>
+            </li>
+
+            <li>
+                <a href="#contact">CONTACT</a>
+            </li>
+
+        </ul>
 
 
-</nav>
+        <!-- DISCORD -->
 
+        <a
+            class="discord-btn"
+            href="https://discord.gg/scS8xKQdV"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            JOIN DISCORD
+        </a>
+
+    </nav>
 
 </header>
 
@@ -150,446 +184,485 @@ JOIN DISCORD
 <main>
 
 
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-<section id="hero">
+    <section id="hero">
 
+        <div class="hero-content">
 
-<div class="hero-content">
+            <div class="welcome">
+                WELCOME TO
+            </div>
 
 
-<div class="welcome">
-WELCOME TO
-</div>
-
-
-
-<h1>
-
-TEAM
-<br>
-
-<span>KEZEA</span>
-
-</h1>
-
-
-
-<div class="hero-line"></div>
-
-
-
-<p>
-
-A competitive Rocket League esports team
-built on passion, teamwork and a drive for greatness.
-
-</p>
-
-
-
-
-<div class="hero-buttons">
-
-
-<a href="#roster" class="btn">
-
-OUR TEAM
-
-</a>
-
-
-
-<a href="https://discord.gg/scS8xKQdV" class="btn outline">
-
-JOIN DISCORD
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-<section id="stats">
-
-    <div class="stat-box">
-
-        <div class="stat">
-            <span>🏆</span>
-            <h2>2</h2>
-            <p>Tournaments</p>
-        </div>
-
-
-        <div class="stat">
-            <span>🥇</span>
-            <h2>0</h2>
-            <p>Wins</p>
-        </div>
-
-
-        <div class="stat">
-            <span>👥</span>
-            <h2>3</h2>
-            <p>Players</p>
-        </div>
-
-
-        <div class="stat">
-            <span>🎯</span>
-            <h2>VICTORY</h2>
-            <p>Our Goal</p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="about">
-
-</section>
-
-
-<section id="roster">
-
-    <div class="section-title">
-
-<span>THE SQUAD</span>
-<h2>OUR PLAYERS</h2>
-<div class="section-line"></div>
-
-</div>
-
-
-<div class="players">
-
-
-<div class="player-card" onclick="openPlayer('zyvix')">
-
-<div class="player-number">
-01
-</div>
-
-<div class="player-avatar">
-👑
-</div>
-
-<h3>Zyvix</h3>
-
-<p>CAPTAIN</p>
-
-</div>
-
-
-
-<div class="player-card" onclick="openPlayer('taiqz')">
-
-<div class="player-number">
-02
-</div>
-
-<div class="player-avatar">
-🎮
-</div>
-
-<h3>Taiqz</h3>
-
-<p>PLAYER</p>
-
-</div>
-
-
-
-<div class="player-card" onclick="openPlayer('vexy')">
-
-<div class="player-number">
-03
-</div>
-
-<div class="player-avatar">
-⚡
-</div>
-
-<h3>Real Vexy</h3>
-
-<p>PLAYER</p>
-
-</div>
-
-
-</div>
-
-<!-- PLAYER POPUP -->
-
-<div id="player-popup" class="popup-box">
-
-<span class="close" onclick="closePlayer()">×</span>
-
-<h2 id="popup-name"></h2>
-
-<h3 id="popup-role"></h3>
-
-<p id="popup-info"></p>
-
-
-<div class="popup-stats">
-
-<div>
-🏆
-<b id="popup-wins"></b>
-Wins
-</div>
-
-
-<div>
-🎯
-<b id="popup-goals"></b>
-Goals
-</div>
-
-
-<div>
-⭐
-<b id="popup-mvp"></b>
-MVP
-</div>
-
-
-</div>
-
-</div>
-
-<div id="player-popup" class="player-popup">
-
-    <div class="popup-box">
-
-        <span class="close" onclick="closePlayer()">×</span>
-
-        <h2 id="popup-name">Zyvix</h2>
-
-        <h3 id="popup-role">CAPTAIN</h3>
-
-        <p id="popup-info">
-            Player information
-        </p>
-
-    
-</section>
-
-
-<section id="achievements">
-
-    <div class="section-title">
-
-<span>THE SQUAD</span>
-
-<h2>OUR PLAYERS</h2>
-
-<div class="section-line"></div>
-
-</div>
-
-
-<div class="players">
-
-
-<div class="player-card" onclick="openPlayer('zyvix')">
-
-<div class="player-number">
-01
-</div>
-
-<div class="player-avatar">
-👑
-</div>
-
-<h3>Zyvix</h3>
-
-<p>CAPTAIN</p>
-
-</div>
-
-
-
-<div class="player-card" onclick="openPlayer('taiqz')">
-
-<div class="player-number">
-02
-</div>
-
-<div class="player-avatar">
-🎮
-</div>
-
-<h3>Taiqz</h3>
-
-<p>PLAYER</p>
-
-</div>
-
-
-
-<div class="player-card" onclick="openPlayer('vexy')">
-
-<div class="player-number">
-03
-</div>
-
-<div class="player-avatar">
-⚡
-</div>
-
-<h3>Real Vexy</h3>
-
-<p>PLAYER</p>
-
-</div>
-
-
-</div>
-    
-</section>
-
-
-<section id="rocket-league">
-
-
-    <div class="rocket-container">
-
-
-        <div class="rocket-text">
-
-            <span>
-                ROCKET LEAGUE
-            </span>
-
-
-            <h2>
-                WE PLAY
+            <h1>
+                TEAM
                 <br>
-                TO WIN
-            </h2>
+                <span>KEZEA</span>
+            </h1>
+
+
+            <div class="hero-line"></div>
 
 
             <p>
-                Every match is a step closer to greatness.
-                Every goal is for Kezea.
+                A competitive Rocket League esports team
+                built on passion, teamwork and a drive for greatness.
             </p>
 
 
-            <a href="#roster" class="btn">
-                VIEW RL TEAM →
-            </a>
+            <div class="hero-buttons">
 
+                <a href="#roster" class="btn">
+                    OUR TEAM
+                </a>
+
+                <a
+                    href="https://discord.gg/scS8xKQdV"
+                    class="btn outline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    JOIN DISCORD
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         STATS
+    ====================================================== -->
+
+    <section id="stats">
+
+        <div class="stat-box">
+
+            <div class="stat">
+                <span>🏆</span>
+                <h2>2</h2>
+                <p>Tournaments</p>
+            </div>
+
+
+            <div class="stat">
+                <span>🥇</span>
+                <h2>0</h2>
+                <p>Wins</p>
+            </div>
+
+
+            <div class="stat">
+                <span>👥</span>
+                <h2>3</h2>
+                <p>Players</p>
+            </div>
+
+
+            <div class="stat">
+                <span>🎯</span>
+                <h2>VICTORY</h2>
+                <p>Our Goal</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section id="about">
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ROSTER
+    ====================================================== -->
+
+    <section id="roster">
+
+        <div class="section-title">
+
+            <span>THE SQUAD</span>
+
+            <h2>OUR PLAYERS</h2>
+
+            <div class="section-line"></div>
 
         </div>
 
 
-
-       <div class="rocket-car">
-
-    <img src="care.png" alt="Rocket League Car">
-
-</div>
-        
-    </div>
+        <div class="players">
 
 
-</section>
+            <!-- ZYVIX -->
 
+            <div
+                class="player-card"
+                onclick="openPlayer('zyvix')"
+            >
 
-<section id="news">
+                <div class="player-number">
+                    01
+                </div>
 
+                <div class="player-avatar">
+                    👑
+                </div>
 
-    <div class="section-title">
+                <h3>Zyvix</h3>
 
-        <span>KEZEA UPDATES</span>
+                <p>CAPTAIN</p>
 
-        <h2>LATEST NEWS</h2>
-
-        <div class="section-line"></div>
-
-    </div>
+            </div>
 
 
 
-    <div class="news-box">
+            <!-- TAIQZ -->
+
+            <div
+                class="player-card"
+                onclick="openPlayer('taiqz')"
+            >
+
+                <div class="player-number">
+                    02
+                </div>
+
+                <div class="player-avatar">
+                    🎮
+                </div>
+
+                <h3>Taiqz</h3>
+
+                <p>PLAYER</p>
+
+            </div>
 
 
-        <div class="news-card">
 
-            <h3>
-                TEAM KEZEA
-            </h3>
+            <!-- VEXY -->
 
-            <p>
-                New era. New goals.
-                Same ambition.
-            </p>
+            <div
+                class="player-card"
+                onclick="openPlayer('vexy')"
+            >
+
+                <div class="player-number">
+                    03
+                </div>
+
+                <div class="player-avatar">
+                    ⚡
+                </div>
+
+                <h3>Real Vexy</h3>
+
+                <p>PLAYER</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACHIEVEMENTS
+    ====================================================== -->
+
+    <section id="achievements">
+
+        <div class="section-title">
+
+            <span>KEZEA ESPORTS</span>
+
+            <h2>ACHIEVEMENTS</h2>
+
+            <div class="section-line"></div>
 
         </div>
 
 
+        <div class="news-box">
 
-        <div class="news-card">
+            <div class="news-card">
 
-            <h3>
-                ROCKET LEAGUE
-            </h3>
+                <h3>
+                    TOURNAMENTS
+                </h3>
 
-            <p>
-                Compete. Improve.
-                Conquer.
-            </p>
+                <p>
+                    2 tournaments played.
+                </p>
+
+            </div>
+
+
+            <div class="news-card">
+
+                <h3>
+                    VICTORY
+                </h3>
+
+                <p>
+                    The next goal is the first championship.
+                </p>
+
+            </div>
+
+
+            <div class="news-card">
+
+                <h3>
+                    FUTURE
+                </h3>
+
+                <p>
+                    More competitions and achievements coming soon.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ROCKET LEAGUE
+    ====================================================== -->
+
+    <section id="rocket-league">
+
+        <div class="rocket-container">
+
+
+            <div class="rocket-text">
+
+                <span>
+                    ROCKET LEAGUE
+                </span>
+
+
+                <h2>
+                    WE PLAY
+                    <br>
+                    TO WIN
+                </h2>
+
+
+                <p>
+                    Every match is a step closer to greatness.
+                    Every goal is for Kezea.
+                </p>
+
+
+                <a
+                    href="#roster"
+                    class="btn"
+                >
+                    VIEW RL TEAM →
+                </a>
+
+            </div>
+
+
+
+            <div class="rocket-car">
+
+                <img
+                    src="care.png"
+                    alt="Rocket League Car"
+                >
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NEWS
+    ====================================================== -->
+
+    <section id="news">
+
+        <div class="section-title">
+
+            <span>KEZEA UPDATES</span>
+
+            <h2>LATEST NEWS</h2>
+
+            <div class="section-line"></div>
 
         </div>
 
 
+        <div class="news-box">
 
-        <div class="news-card">
 
-            <h3>
-                STAY TUNED
-            </h3>
+            <div class="news-card">
 
-            <p>
-                More announcements
-                coming soon.
-            </p>
+                <h3>
+                    TEAM KEZEA
+                </h3>
+
+                <p>
+                    New era.
+                    New goals.
+                    Same ambition.
+                </p>
+
+            </div>
+
+
+
+            <div class="news-card">
+
+                <h3>
+                    ROCKET LEAGUE
+                </h3>
+
+                <p>
+                    Compete.
+                    Improve.
+                    Conquer.
+                </p>
+
+            </div>
+
+
+
+            <div class="news-card">
+
+                <h3>
+                    STAY TUNED
+                </h3>
+
+                <p>
+                    More announcements
+                    coming soon.
+                </p>
+
+            </div>
+
 
         </div>
 
-
-    </div>
-
-
-</section>
+    </section>
 
 
-<section id="contact">
 
-</section>
+    <!-- =====================================================
+         CONTACT ANCHOR
+    ====================================================== -->
 
+    <section id="contact">
+
+    </section>
 
 
 </main>
 
 
 
+<!-- =====================================================
+     PLAYER POPUP
+====================================================== -->
 
-<footer id="contact">
+<div
+    id="player-popup"
+    class="player-popup"
+    style="display: none;"
+>
 
+    <div class="popup-box">
+
+        <span
+            class="close"
+            onclick="closePlayer()"
+        >
+            ×
+        </span>
+
+
+        <h2 id="popup-name"></h2>
+
+        <h3 id="popup-role"></h3>
+
+        <p id="popup-info"></p>
+
+
+        <div class="popup-stats">
+
+            <div>
+
+                🏆
+
+                <b id="popup-wins"></b>
+
+                Wins
+
+            </div>
+
+
+            <div>
+
+                🎯
+
+                <b id="popup-goals"></b>
+
+                Goals
+
+            </div>
+
+
+            <div>
+
+                ⭐
+
+                <b id="popup-mvp"></b>
+
+                MVP
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
 
     <div class="footer-grid">
 
+
+        <!-- BRAND -->
 
         <div>
 
@@ -598,7 +671,8 @@ MVP
             </h2>
 
             <p>
-                Built different.<br>
+                Built different.
+                <br>
                 Born to compete.
             </p>
 
@@ -606,20 +680,35 @@ MVP
 
 
 
+        <!-- LINKS -->
+
         <div>
 
             <h3>
                 LINKS
             </h3>
 
-            <a href="#home">Home</a>
-            <a href="#roster">Roster</a>
-            <a href="#news">News</a>
-            <a href="#rocket-league">Rocket League</a>
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#roster">
+                Roster
+            </a>
+
+            <a href="#news">
+                News
+            </a>
+
+            <a href="#rocket-league">
+                Rocket League
+            </a>
 
         </div>
 
 
+
+        <!-- SOCIALS -->
 
         <div>
 
@@ -627,11 +716,21 @@ MVP
                 SOCIALS
             </h3>
 
-            <a href="https://discord.gg/scS8xKQdV">
+
+            <a
+                href="https://discord.gg/scS8xKQdV"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 Discord
             </a>
 
-            <a href="https://www.tiktok.com/@teamkezea0">
+
+            <a
+                href="https://www.tiktok.com/@teamkezea0"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 TikTok
             </a>
 
@@ -644,129 +743,137 @@ MVP
 
     <div class="copyright">
 
-        © 2026 KEZEA Esports. All Rights Reserved.
+        © 2026 KEZEA Esports.
+        All Rights Reserved.
 
     </div>
-
 
 </footer>
 
 
+
+<!-- =====================================================
+     MAIN JAVASCRIPT
+====================================================== -->
+
 <script src="script.js"></script>
+
+
+
+<!-- =====================================================
+     PLAYER DATA + POPUP
+====================================================== -->
 
 <script>
 
-const playerData = {
+    const players = {
 
-Zyvix:{
-role:"CAPTAIN",
-info:"Leader of KEZEA Esports.",
-wins:"12",
-goals:"85",
-mvp:"8"
-},
+        zyvix: {
+            name: "Zyvix",
+            role: "CAPTAIN",
+            info: "Team captain of KEZEA Esports.",
+            wins: "12",
+            goals: "85",
+            mvp: "8"
+        },
 
-Taiqz:{
-role:"PLAYER",
-info:"Competitive Rocket League player.",
-wins:"7",
-goals:"60",
-mvp:"5"
-},
+        taiqz: {
+            name: "Taiqz",
+            role: "PLAYER",
+            info: "Competitive Rocket League player.",
+            wins: "7",
+            goals: "60",
+            mvp: "5"
+        },
 
-"Real Vexy":{
-role:"PLAYER",
-info:"Fast and skilled KEZEA player.",
-wins:"5",
-goals:"45",
-mvp:"3"
-}
+        vexy: {
+            name: "Real Vexy",
+            role: "PLAYER",
+            info: "KEZEA player focused on winning.",
+            wins: "5",
+            goals: "45",
+            mvp: "3"
+        }
 
-};
-
-
-function openPlayer(name){
-
-let p = playerData[name];
-
-document.getElementById("popup-name").innerHTML=name;
-document.getElementById("popup-role").innerHTML=p.role;
-document.getElementById("popup-info").innerHTML=p.info;
-document.getElementById("popup-wins").innerHTML=p.wins;
-document.getElementById("popup-goals").innerHTML=p.goals;
-document.getElementById("popup-mvp").innerHTML=p.mvp;
-
-document.getElementById("player-popup").style.display="flex";
-
-}
+    };
 
 
-function closePlayer(){
 
-document.getElementById("player-popup").style.display="none";
+    function openPlayer(player) {
 
-}
+        const data = players[player];
 
-</script>
-    <script>
-
-const players = {
-
-zyvix:{
-name:"Zyvix",
-role:"CAPTAIN",
-info:"Team captain of KEZEA Esports.",
-wins:"12",
-goals:"85",
-mvp:"8"
-},
-
-taiqz:{
-name:"Taiqz",
-role:"PLAYER",
-info:"Competitive Rocket League player.",
-wins:"7",
-goals:"60",
-mvp:"5"
-},
-
-vexy:{
-name:"Real Vexy",
-role:"PLAYER",
-info:"KEZEA player focused on winning.",
-wins:"5",
-goals:"45",
-mvp:"3"
-}
-
-};
+        if (!data) {
+            return;
+        }
 
 
-function openPlayer(player){
+        document.getElementById("popup-name").textContent =
+            data.name;
 
-let data = players[player];
+        document.getElementById("popup-role").textContent =
+            data.role;
 
-document.getElementById("popup-name").innerHTML = data.name;
-document.getElementById("popup-role").innerHTML = data.role;
-document.getElementById("popup-info").innerHTML = data.info;
+        document.getElementById("popup-info").textContent =
+            data.info;
 
-document.getElementById("popup-wins").innerHTML = data.wins;
-document.getElementById("popup-goals").innerHTML = data.goals;
-document.getElementById("popup-mvp").innerHTML = data.mvp;
+        document.getElementById("popup-wins").textContent =
+            data.wins;
 
-document.getElementById("player-popup").style.display="flex";
+        document.getElementById("popup-goals").textContent =
+            data.goals;
 
-}
+        document.getElementById("popup-mvp").textContent =
+            data.mvp;
 
 
-function closePlayer(){
+        document.getElementById("player-popup").style.display =
+            "flex";
 
-document.getElementById("player-popup").style.display="none";
+    }
 
-}
+
+
+    function closePlayer() {
+
+        document.getElementById("player-popup").style.display =
+            "none";
+
+    }
+
+
+
+    /*
+     * Close popup when clicking outside the popup box
+     */
+
+    document
+        .getElementById("player-popup")
+        .addEventListener("click", function (event) {
+
+            if (event.target === this) {
+                closePlayer();
+            }
+
+        });
+
+
+
+    /*
+     * Close popup with ESC
+     */
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+            closePlayer();
+        }
+
+    });
 
 </script>
-    
+```
+
 </body>
 
 </html>
