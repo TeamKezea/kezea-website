@@ -1,55 +1,64 @@
+<script>
+
 const players = {
 
-    Zyvix:{
-        role:"CAPTAIN",
-        img:"logo.png",
-        wins:"12",
-        goals:"85",
-        mvp:"8",
-        bio:"Team captain of KEZEA Esports. Competitive Rocket League player."
-    },
 
-    Taiqz:{
-        role:"PLAYER",
-        img:"logo.png",
-        wins:"7",
-        goals:"60",
-        mvp:"5",
-        bio:"Fast player with strong mechanics."
-    },
+zyvix:{
+name:"Zyvix",
+role:"CAPTAIN",
+info:"Team captain of KEZEA Esports. Competitive Rocket League player focused on teamwork and winning.",
+wins:"12",
+goals:"85",
+mvp:"8"
+},
 
-    "Real Vexy":{
-        role:"PLAYER",
-        img:"logo.png",
-        wins:"5",
-        goals:"45",
-        mvp:"3",
-        bio:"Focused on improvement and teamwork."
-    }
+
+taiqz:{
+name:"Taiqz",
+role:"PLAYER",
+info:"Fast Rocket League player with strong mechanics and competitive mindset.",
+wins:"7",
+goals:"60",
+mvp:"5"
+},
+
+
+vexy:{
+name:"Real Vexy",
+role:"PLAYER",
+info:"KEZEA player focused on improvement, teamwork and victory.",
+wins:"5",
+goals:"45",
+mvp:"3"
+}
+
 
 };
 
 
 
-function openPlayer(name){
+function openPlayer(player){
 
-    let p = players[name];
 
-    document.getElementById("playerModal").style.display="flex";
+let data = players[player];
 
-    document.getElementById("profileName").innerHTML = name;
 
-    document.getElementById("profileRole").innerHTML = p.role;
+document.getElementById("popup-name").innerHTML=data.name;
 
-    document.getElementById("profileImg").src = p.img;
+document.getElementById("popup-role").innerHTML=data.role;
 
-    document.getElementById("wins").innerHTML = p.wins;
+document.getElementById("popup-info").innerHTML=data.info;
 
-    document.getElementById("goals").innerHTML = p.goals;
 
-    document.getElementById("mvp").innerHTML = p.mvp;
+document.getElementById("popup-wins").innerHTML=data.wins;
 
-    document.getElementById("profileBio").innerHTML = p.bio;
+document.getElementById("popup-goals").innerHTML=data.goals;
+
+document.getElementById("popup-mvp").innerHTML=data.mvp;
+
+
+document.getElementById("player-popup").style.display="flex";
+
 
 }
 
@@ -57,6 +66,11 @@ function openPlayer(name){
 
 function closePlayer(){
 
-    document.getElementById("playerModal").style.display="none";
+
+document.getElementById("player-popup").style.display="none";
+
 
 }
+
+
+</script>
