@@ -341,7 +341,46 @@ CAPTAIN
 
     </div>
 
+<div id="player-popup" class="player-popup">
 
+    <div class="popup-box">
+
+        <span class="close" onclick="closePlayer()">×</span>
+
+        <h2 id="popup-name">Zyvix</h2>
+
+        <h3 id="popup-role">CAPTAIN</h3>
+
+        <p id="popup-info">
+            Player information
+        </p>
+
+        <div class="popup-stats">
+
+            <div>
+                🏆
+                <b id="popup-wins">0</b>
+                Wins
+            </div>
+
+            <div>
+                🎯
+                <b id="popup-goals">0</b>
+                Goals
+            </div>
+
+            <div>
+                ⭐
+                <b id="popup-mvp">0</b>
+                MVP
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    
 </section>
 
 
@@ -615,7 +654,61 @@ CAPTAIN
 
 <script src="script.js"></script>
 
+<script>
 
+const playerData = {
+
+Zyvix:{
+role:"CAPTAIN",
+info:"Leader of KEZEA Esports.",
+wins:"12",
+goals:"85",
+mvp:"8"
+},
+
+Taiqz:{
+role:"PLAYER",
+info:"Competitive Rocket League player.",
+wins:"7",
+goals:"60",
+mvp:"5"
+},
+
+"Real Vexy":{
+role:"PLAYER",
+info:"Fast and skilled KEZEA player.",
+wins:"5",
+goals:"45",
+mvp:"3"
+}
+
+};
+
+
+function openPlayer(name){
+
+let p = playerData[name];
+
+document.getElementById("popup-name").innerHTML=name;
+document.getElementById("popup-role").innerHTML=p.role;
+document.getElementById("popup-info").innerHTML=p.info;
+document.getElementById("popup-wins").innerHTML=p.wins;
+document.getElementById("popup-goals").innerHTML=p.goals;
+document.getElementById("popup-mvp").innerHTML=p.mvp;
+
+document.getElementById("player-popup").style.display="flex";
+
+}
+
+
+function closePlayer(){
+
+document.getElementById("player-popup").style.display="none";
+
+}
+
+</script>
+    
 </body>
 
 </html>
