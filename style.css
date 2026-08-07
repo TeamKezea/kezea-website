@@ -663,3 +663,25 @@ grid-template-columns:1fr;
 
 
 }
+.rocket-car img{
+
+    width:350px;
+    max-width:100%;
+    filter:drop-shadow(0 0 25px #f7c600);
+
+    animation:carMove 2s infinite alternate;
+
+}
+
+
+@keyframes carMove{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(30px);
+    }
+
+}
