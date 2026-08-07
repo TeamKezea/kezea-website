@@ -872,7 +872,98 @@
     });
 
 </script>
-```
+    <!-- باقي محتوى الصفحة فوق -->
+
+    <!-- PLAYER POPUP HTML -->
+    <div id="player-popup" class="player-popup">
+        <div class="popup-box">
+            <span class="close" onclick="closePlayer()">&times;</span>
+
+            <h2 id="popup-name"></h2>
+            <h3 id="popup-role"></h3>
+            <p id="popup-info"></p>
+
+            <div class="popup-stats">
+                <div>
+                    Wins
+                    <b id="popup-wins"></b>
+                </div>
+
+                <div>
+                    Goals
+                    <b id="popup-goals"></b>
+                </div>
+
+                <div>
+                    MVP
+                    <b id="popup-mvp"></b>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ هنا تحط السكربت -->
+    <script>
+        const players = {
+            zyvix: {
+                name: "Zyvix",
+                role: "CAPTAIN",
+                info: "Team captain of KEZEA Esports. Competitive Rocket League player focused on teamwork and winning.",
+                wins: "12",
+                goals: "85",
+                mvp: "8"
+            },
+
+            taiqz: {
+                name: "Taiqz",
+                role: "PLAYER",
+                info: "Fast Rocket League player with strong mechanics and competitive mindset.",
+                wins: "7",
+                goals: "60",
+                mvp: "5"
+            },
+
+            vexy: {
+                name: "Real Vexy",
+                role: "PLAYER",
+                info: "KEZEA player focused on improvement, teamwork and victory.",
+                wins: "5",
+                goals: "45",
+                mvp: "3"
+            }
+        };
+
+        function openPlayer(player) {
+            const data = players[player];
+            if (!data) return;
+
+            document.getElementById("popup-name").textContent = data.name;
+            document.getElementById("popup-role").textContent = data.role;
+            document.getElementById("popup-info").textContent = data.info;
+            document.getElementById("popup-wins").textContent = data.wins;
+            document.getElementById("popup-goals").textContent = data.goals;
+            document.getElementById("popup-mvp").textContent = data.mvp;
+
+            document.getElementById("player-popup").style.display = "flex";
+        }
+
+        function closePlayer() {
+            document.getElementById("player-popup").style.display = "none";
+        }
+
+        document.getElementById("player-popup")
+            .addEventListener("click", function (event) {
+                if (event.target === this) {
+                    closePlayer();
+                }
+            });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closePlayer();
+            }
+        });
+    </script>
 
 </body>
 
