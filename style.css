@@ -1,1359 +1,1388 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* =========================================================
+KEZEA ESPORTS
+MAIN STYLE SHEET
+========================================================= */
+
+/* =========================================================
+RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
 }
 
-html{
-    scroll-behavior:smooth;
+body {
+font-family: 'Poppins', sans-serif;
+background: #0b0b0b;
+color: white;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:#0b0b0b;
-    color:white;
+a {
+text-decoration: none;
+color: inherit;
 }
 
-a{
-    text-decoration:none;
-    color:inherit;
+ul {
+list-style: none;
 }
 
-ul{
-    list-style:none;
+img {
+max-width: 100%;
 }
 
-.navbar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:85px;
-    padding:0 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(0,0,0,.75);
-    backdrop-filter:blur(12px);
-    z-index:1000;
+/* =========================================================
+NAVBAR
+========================================================= */
+
+.navbar {
+position: fixed;
+top: 0;
+left: 0;
+
+```
+width: 100%;
+height: 85px;
+
+padding: 0 8%;
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+background: rgba(0, 0, 0, 0.75);
+backdrop-filter: blur(12px);
+
+z-index: 1000;
+```
+
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    font-family:'Orbitron',sans-serif;
-    font-size:28px;
-    font-weight:700;
+/* LOGO */
+
+.logo {
+display: flex;
+align-items: center;
+
+```
+gap: 15px;
+
+font-family: 'Orbitron', sans-serif;
+font-size: 28px;
+font-weight: 700;
+```
+
 }
 
-.logo img{
-    width:60px;
-    height:60px;
-    object-fit:contain;
+.logo img {
+width: 60px;
+height: 60px;
+
+```
+object-fit: contain;
+```
+
 }
 
-.logo span{
-    display:block;
-    font-size:12px;
-    color:#f7c600;
-    letter-spacing:3px;
+.logo span {
+display: block;
+
+```
+font-size: 12px;
+color: #f7c600;
+
+letter-spacing: 3px;
+```
+
 }
 
-.navbar ul{
-    display:flex;
-    gap:35px;
+/* NAV LINKS */
+
+.navbar ul {
+display: flex;
+gap: 35px;
 }
 
-.navbar ul li a{
-    font-size:15px;
-    font-weight:500;
-    transition:.3s;
+.navbar ul li a {
+font-size: 15px;
+font-weight: 500;
+
+```
+transition: 0.3s;
+```
+
 }
 
-.navbar ul li a:hover{
-    color:#f7c600;
+.navbar ul li a:hover {
+color: #f7c600;
 }
 
-.discord-btn{
-    padding:12px 24px;
-    background:#f7c600;
-    color:#000;
-    border-radius:50px;
-    font-weight:700;
-    transition:.3s;
+/* DISCORD BUTTON */
+
+.discord-btn {
+padding: 12px 24px;
+
+```
+background: #f7c600;
+color: #000;
+
+border-radius: 50px;
+
+font-weight: 700;
+
+transition: 0.3s;
+```
+
 }
 
-.discord-btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 0 20px #f7c600;
+.discord-btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 0 20px #f7c600;
 }
-#hero{
 
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    padding:120px 8%;
+/* =========================================================
+HERO
+========================================================= */
 
-    background:
+#hero {
+min-height: 100vh;
+
+```
+display: flex;
+align-items: center;
+
+padding: 120px 8%;
+
+background:
     linear-gradient(
-        rgba(0,0,0,.7),
-        rgba(0,0,0,.9)
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.9)
     ),
     url("https://images.unsplash.com/photo-1542751371-adc38448a05e")
-    center/cover;
+    center / cover;
+```
 
 }
 
+.hero-content {
+max-width: 700px;
+}
+
+.welcome {
+color: #f7c600;
 
-.hero-content{
-    max-width:700px;
+```
+letter-spacing: 5px;
+font-size: 18px;
+```
+
 }
 
+.hero-content h1 {
+font-family: 'Orbitron', sans-serif;
 
-.welcome{
+```
+font-size: 90px;
+line-height: 1;
 
-    color:#f7c600;
-    letter-spacing:5px;
-    font-size:18px;
+margin: 20px 0;
+```
+
+}
 
+.hero-content h1 span {
+color: #f7c600;
 }
 
+.hero-line {
+width: 120px;
+height: 5px;
 
-.hero-content h1{
+```
+background: #f7c600;
 
-    font-family:'Orbitron',sans-serif;
-    font-size:90px;
-    line-height:1;
-    margin:20px 0;
+margin: 25px 0;
+```
 
 }
 
+.hero-content p {
+color: #aaa;
 
-.hero-content h1 span{
+```
+font-size: 20px;
 
-    color:#f7c600;
+max-width: 550px;
+```
 
 }
 
+.hero-buttons {
+margin-top: 40px;
 
-.hero-line{
+```
+display: flex;
+gap: 20px;
+```
 
-    width:120px;
-    height:5px;
-    background:#f7c600;
-    margin:25px 0;
-
 }
+
+/* =========================================================
+BUTTONS
+========================================================= */
+
+.btn {
+display: inline-block;
+
+```
+padding: 15px 35px;
+
+background: #f7c600;
+color: #000;
 
+font-weight: 700;
 
-.hero-content p{
+border-radius: 30px;
 
-    color:#aaa;
-    font-size:20px;
-    max-width:550px;
+transition: 0.3s;
+```
 
 }
 
+.btn:hover {
+box-shadow: 0 0 25px #f7c600;
 
-.hero-buttons{
+```
+transform: translateY(-5px);
+```
 
-    margin-top:40px;
-    display:flex;
-    gap:20px;
+}
+
+.btn.outline {
+background: transparent;
+color: white;
 
+```
+border: 2px solid #f7c600;
+```
+
 }
 
+/* =========================================================
+STATS
+========================================================= */
 
-.btn{
+#stats {
+background: #111;
 
-    padding:15px 35px;
-    background:#f7c600;
-    color:#000;
-    font-weight:700;
-    border-radius:30px;
-    transition:.3s;
+```
+padding: 70px 8%;
+```
 
 }
 
+.stat-box {
+display: grid;
 
-.btn:hover{
+```
+grid-template-columns: repeat(4, 1fr);
 
-    box-shadow:0 0 25px #f7c600;
-    transform:translateY(-5px);
+gap: 25px;
+```
 
 }
+
+.stat {
+background: #171717;
+
+```
+border: 1px solid #222;
 
+padding: 35px;
 
-.btn.outline{
+text-align: center;
 
-    background:transparent;
-    color:white;
-    border:2px solid #f7c600;
+border-radius: 15px;
 
+transition: 0.3s;
+```
+
 }
-#stats{
+
+.stat:hover {
+border-color: #f7c600;
+
+```
+transform: translateY(-10px);
 
-    background:#111;
-    padding:70px 8%;
+box-shadow:
+    0 0 25px rgba(247, 198, 0, 0.25);
+```
 
 }
+
+.stat span {
+font-size: 40px;
+}
+
+.stat h2 {
+color: #f7c600;
 
+```
+font-family: 'Orbitron', sans-serif;
 
-.stat-box{
+font-size: 35px;
 
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
+margin: 15px 0;
+```
 
 }
 
+.stat p {
+color: #aaa;
 
-.stat{
+```
+font-size: 16px;
+```
 
-    background:#171717;
-    border:1px solid #222;
-    padding:35px;
-    text-align:center;
-    border-radius:15px;
-    transition:.3s;
+}
+
+/* =========================================================
+SECTION TITLES
+========================================================= */
 
+.section-title {
+text-align: center;
+
+```
+margin-bottom: 60px;
+```
+
 }
+
+.section-title span {
+color: #f7c600;
 
+```
+letter-spacing: 5px;
+```
 
-.stat:hover{
+}
+
+.section-title h2 {
+font-family: 'Orbitron', sans-serif;
 
-    border-color:#f7c600;
-    transform:translateY(-10px);
-    box-shadow:0 0 25px rgba(247,198,0,.25);
+```
+font-size: 45px;
+```
 
 }
 
+.section-line {
+width: 100px;
+height: 4px;
 
-.stat span{
+```
+background: #f7c600;
 
-    font-size:40px;
+margin: 20px auto;
+```
 
 }
 
+/* =========================================================
+ROSTER
+========================================================= */
 
-.stat h2{
+#roster {
+padding: 100px 8%;
 
-    color:#f7c600;
-    font-family:'Orbitron',sans-serif;
-    font-size:35px;
-    margin:15px 0;
+```
+background: #0b0b0b;
+```
 
 }
 
+.players {
+display: grid;
 
-.stat p{
+```
+grid-template-columns: repeat(3, 1fr);
 
-    color:#aaa;
-    font-size:16px;
+gap: 30px;
+```
 
 }
+
+.player-card {
+position: relative;
+
+```
+background: #151515;
+
+padding: 40px;
 
+border-radius: 20px;
 
+text-align: center;
 
-@media(max-width:900px){
+border: 1px solid #222;
 
-    .stat-box{
+cursor: pointer;
 
-        grid-template-columns:1fr 1fr;
+transition: 0.3s;
+```
 
-    }
+}
+
+.player-card:hover {
+transform: translateY(-10px);
 
+```
+border-color: #f7c600;
+
+box-shadow:
+    0 0 30px rgba(247, 198, 0, 0.2);
+```
+
 }
 
+.player-number {
+position: absolute;
 
-@media(max-width:500px){
+```
+top: 15px;
+right: 20px;
 
-    .stat-box{
+color: #333;
 
-        grid-template-columns:1fr;
+font-size: 35px;
 
-    }
+font-family: 'Orbitron', sans-serif;
+```
 
 }
-#roster{
-    padding:100px 8%;
-    background:#0b0b0b;
+
+.player-avatar {
+width: 120px;
+height: 120px;
+
+```
+margin: 0 auto;
+
+border-radius: 50%;
+
+background: #222;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+font-size: 55px;
+
+border: 3px solid #f7c600;
+```
+
 }
+
+.player-card h3 {
+font-family: 'Orbitron', sans-serif;
 
+```
+margin-top: 25px;
 
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
+font-size: 25px;
+```
+
 }
+
+.player-card p {
+color: #f7c600;
+
+```
+margin-top: 10px;
 
+letter-spacing: 2px;
+```
 
-.section-title span{
-    color:#f7c600;
-    letter-spacing:5px;
 }
 
+/* =========================================================
+ACHIEVEMENTS
+========================================================= */
 
-.section-title h2{
-    font-family:'Orbitron',sans-serif;
-    font-size:45px;
+#achievements {
+padding: 100px 8%;
+
+```
+background: #0b0b0b;
+```
+
 }
 
+.achievements-box {
+display: grid;
 
-.section-line{
-    width:100px;
-    height:4px;
-    background:#f7c600;
-    margin:20px auto;
+```
+grid-template-columns: repeat(3, 1fr);
+
+gap: 30px;
+```
+
 }
 
+.achievement-card {
+background: #151515;
 
+```
+padding: 40px;
 
-.players{
+text-align: center;
 
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
+border-radius: 20px;
 
-}
+border: 1px solid #222;
 
+transition: 0.3s;
+```
 
+}
+
+.achievement-card:hover {
+transform: translateY(-10px);
 
-.player-card{
+```
+border-color: #f7c600;
 
-    background:#151515;
-    padding:40px;
-    border-radius:20px;
-    text-align:center;
-    border:1px solid #222;
-    transition:.3s;
+box-shadow:
+    0 0 25px rgba(247, 198, 0, 0.2);
+```
 
 }
 
+.achievement-icon {
+font-size: 55px;
+
+```
+margin-bottom: 20px;
+```
+
+}
 
+.achievement-card h3 {
+color: #f7c600;
 
-.player-card:hover{
+```
+font-family: 'Orbitron', sans-serif;
 
-    transform:translateY(-10px);
-    border-color:#f7c600;
+margin-top: 15px;
+```
 
 }
 
+.achievement-card p {
+color: #aaa;
 
+```
+margin-top: 15px;
+```
 
-.player-number{
+}
+
+/* =========================================================
+ROCKET LEAGUE
+========================================================= */
+
+#rocket-league {
+padding: 100px 8%;
 
-    color:#555;
-    font-size:30px;
+```
+background: #111;
+```
 
 }
 
+.rocket-container {
+display: flex;
 
+```
+align-items: center;
+justify-content: space-between;
 
-.player-avatar{
+background: #151515;
 
-    width:120px;
-    height:120px;
-    margin:20px auto;
-    border-radius:50%;
-    background:#222;
+padding: 70px;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+border-radius: 25px;
 
-    font-size:50px;
-    border:3px solid #f7c600;
+border: 1px solid #222;
+```
 
 }
+
+.rocket-text span {
+color: #f7c600;
+
+```
+letter-spacing: 5px;
+
+font-weight: 600;
+```
 
+}
 
+.rocket-text h2 {
+font-family: 'Orbitron', sans-serif;
 
-.player-card h3{
+```
+font-size: 55px;
 
-    font-family:'Orbitron',sans-serif;
-    font-size:25px;
+margin: 20px 0;
+```
 
 }
+
+.rocket-text p {
+color: #aaa;
+
+```
+max-width: 450px;
+
+line-height: 1.7;
+
+margin-bottom: 30px;
+```
 
+}
 
+.rocket-car {
+animation: carMove 2s infinite alternate;
+}
 
-.player-card p{
+.rocket-car img {
+width: 350px;
+max-width: 100%;
 
-    color:#f7c600;
-    margin-top:10px;
+```
+filter: drop-shadow(0 0 25px #f7c600);
+```
 
 }
 
+@keyframes carMove {
 
+```
+from {
+    transform: translateX(0);
+}
 
-@media(max-width:900px){
+to {
+    transform: translateX(30px);
+}
+```
 
-.players{
-grid-template-columns:1fr;
 }
+
+/* =========================================================
+NEWS
+========================================================= */
 
+#news {
+padding: 100px 8%;
+
+```
+background: #0b0b0b;
+```
+
 }
 
+.news-box {
+display: grid;
 
-.player-card{
+```
+grid-template-columns: repeat(3, 1fr);
 
-    background:#151515;
-    border:1px solid #222;
-    padding:40px;
-    text-align:center;
-    border-radius:20px;
-    position:relative;
-    transition:.3s;
+gap: 30px;
+```
 
 }
+
+.news-card {
+background: #151515;
+
+```
+padding: 40px;
+
+border-radius: 20px;
 
+text-align: center;
 
+border: 1px solid #222;
 
-.player-card:hover{
+transition: 0.3s;
+```
 
-    transform:translateY(-10px);
-    border-color:#f7c600;
-    box-shadow:0 0 30px rgba(247,198,0,.2);
+}
+
+.news-card:hover {
+transform: translateY(-10px);
+
+```
+border-color: #f7c600;
 
+box-shadow:
+    0 0 25px rgba(247, 198, 0, 0.2);
+```
+
 }
+
+.news-card h3 {
+color: #f7c600;
+
+```
+font-family: 'Orbitron', sans-serif;
 
+font-size: 22px;
+```
 
+}
+
+.news-card p {
+color: #aaa;
 
-.player-number{
+```
+margin-top: 20px;
 
-    position:absolute;
-    top:15px;
-    right:20px;
-    color:#333;
-    font-size:35px;
-    font-family:'Orbitron',sans-serif;
+font-size: 18px;
+```
 
 }
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+footer {
+background: #050505;
+
+```
+padding: 70px 8% 30px;
+```
 
+}
 
+.footer-grid {
+display: grid;
 
-.player-avatar{
+```
+grid-template-columns: repeat(3, 1fr);
 
-    width:120px;
-    height:120px;
-    margin:auto;
-    border-radius:50%;
-    background:#222;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:55px;
-    border:3px solid #f7c600;
+gap: 40px;
+```
 
 }
+
+.footer-logo {
+font-family: 'Orbitron', sans-serif;
 
+```
+color: #f7c600;
 
+font-size: 35px;
+```
 
-.player-card h3{
+}
 
-    font-family:'Orbitron',sans-serif;
-    margin-top:25px;
-    font-size:25px;
+footer h3 {
+color: #f7c600;
 
+```
+margin-bottom: 20px;
+```
+
 }
 
+footer a {
+display: block;
 
+```
+color: #aaa;
 
-.player-card p{
+margin: 12px 0;
+```
 
-    color:#f7c600;
-    margin-top:10px;
-    letter-spacing:2px;
+}
 
+footer a:hover {
+color: #f7c600;
 }
-/* PLAYERS MOBILE */
 
-@media(max-width:900px){
+footer p {
+color: #aaa;
 
-    .players{
-        grid-template-columns:1fr;
-    }
+```
+line-height: 1.8;
+```
 
 }
 
+.copyright {
+text-align: center;
 
-/* =========================
-   ACHIEVEMENTS
-========================= */
+```
+margin-top: 50px;
 
-#achievements{
+padding-top: 20px;
 
-    padding:100px 8%;
-    background:#0b0b0b;
+border-top: 1px solid #222;
 
+color: #666;
+```
+
 }
+
+/* =========================================================
+PLAYER PAGE
+========================================================= */
 
+.player-page {
+min-height: 100vh;
 
-.achievements-box{
+```
+background: #0b0b0b;
 
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
+display: flex;
 
+justify-content: center;
+align-items: center;
+
+padding: 50px;
+```
+
 }
+
+.back-btn {
+position: absolute;
 
+```
+top: 30px;
+left: 30px;
+
+color: #f7c600;
+
+font-weight: 600;
+
+transition: 0.3s;
+
+z-index: 10;
+```
+
+}
 
-.achievement-card{
+.back-btn:hover {
+color: white;
 
-    background:#151515;
-    padding:40px;
-    text-align:center;
-    border-radius:20px;
-    border:1px solid #222;
-    transition:.3s;
+```
+transform: translateX(-5px);
+```
 
 }
 
+.player-profile {
+background: #151515;
 
-.achievement-card:hover{
+```
+border: 2px solid #f7c600;
 
-    transform:translateY(-10px);
-    border-color:#f7c600;
-    box-shadow:0 0 25px rgba(247,198,0,.2);
+border-radius: 25px;
 
+padding: 50px;
+
+text-align: center;
+
+max-width: 500px;
+
+width: 100%;
+
+box-shadow:
+    0 0 30px rgba(247, 198, 0, 0.15);
+```
+
 }
 
+.player-profile img {
+width: 150px;
+height: 150px;
 
-.achievement-icon{
+```
+border-radius: 50%;
 
-    font-size:55px;
-    margin-bottom:20px;
+object-fit: cover;
 
+border: 3px solid #f7c600;
+
+margin-bottom: 20px;
+```
+
 }
+
+.player-profile h1 {
+font-family: 'Orbitron', sans-serif;
+
+```
+color: #f7c600;
+
+font-size: 45px;
+```
 
+}
 
-.achievement-card h3{
+.player-profile h3 {
+letter-spacing: 3px;
 
-    color:#f7c600;
-    font-family:'Orbitron',sans-serif;
-    margin-top:15px;
+```
+margin-top: 10px;
+```
 
 }
 
+.player-profile p {
+color: #aaa;
 
-.achievement-card p{
+```
+line-height: 1.8;
 
-    color:#aaa;
-    margin-top:15px;
+margin-top: 25px;
+```
 
 }
+
+/* =========================================================
+PLAYER STATS
+========================================================= */
+
+.player-info {
+display: flex;
+
+```
+gap: 20px;
+
+margin: 30px 0;
 
+justify-content: center;
+```
 
+}
 
-/* =========================
-   ROCKET LEAGUE
-========================= */
+.player-info div {
+background: #222;
 
+```
+padding: 20px;
 
-#rocket-league{
+border-radius: 15px;
 
-    padding:100px 8%;
-    background:#111;
+min-width: 90px;
+```
 
 }
+
+.player-info span {
+display: block;
+
+```
+color: #aaa;
 
+margin-top: 5px;
+```
 
+}
 
-.rocket-container{
+.player-info b {
+display: block;
 
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+```
+color: #f7c600;
 
-    background:#151515;
-    padding:70px;
-    border-radius:25px;
-    border:1px solid #222;
+font-size: 25px;
 
+margin-top: 5px;
+```
+
 }
+
+.player-role {
+display: inline-block;
 
+```
+margin-top: 25px;
 
+padding: 10px 20px;
 
-.rocket-text span{
+border: 1px solid #f7c600;
 
-    color:#f7c600;
-    letter-spacing:5px;
-    font-weight:600;
+border-radius: 30px;
 
+color: #f7c600;
+
+font-size: 13px;
+
+letter-spacing: 2px;
+```
+
 }
+
+/* =========================================================
+PLAYER POPUP
+========================================================= */
+
+.player-popup {
+display: none;
 
+```
+position: fixed;
 
+top: 0;
+left: 0;
 
-.rocket-text h2{
+width: 100%;
+height: 100%;
 
-    font-family:'Orbitron',sans-serif;
-    font-size:55px;
-    margin:20px 0;
+background: rgba(0, 0, 0, 0.8);
 
+justify-content: center;
+align-items: center;
+
+padding: 20px;
+
+z-index: 2000;
+```
+
 }
+
+.popup-box {
+position: relative;
+
+```
+background: #151515;
 
+border: 2px solid #f7c600;
 
+border-radius: 20px;
 
-.rocket-text p{
+padding: 40px;
 
-    color:#aaa;
-    max-width:450px;
-    line-height:1.7;
-    margin-bottom:30px;
+width: 400px;
+max-width: 100%;
 
+text-align: center;
+
+box-shadow:
+    0 0 30px rgba(247, 198, 0, 0.25);
+```
+
 }
 
+.popup-box h2 {
+color: #f7c600;
 
+```
+font-family: 'Orbitron', sans-serif;
 
-.rocket-car{
+font-size: 35px;
+```
 
-    font-size:150px;
+}
 
-    animation:carMove 2s infinite alternate;
+.popup-box h3 {
+letter-spacing: 3px;
 
+```
+margin-top: 10px;
+```
+
 }
+
+.popup-box p {
+color: #aaa;
 
+```
+margin-top: 15px;
 
+line-height: 1.6;
+```
 
-@keyframes carMove{
+}
+
+.close {
+position: absolute;
+
+```
+right: 20px;
+top: 10px;
 
-    from{
+font-size: 35px;
 
-        transform:translateX(0);
+color: #f7c600;
 
-    }
+cursor: pointer;
 
+transition: 0.3s;
+```
 
-    to{
+}
 
-        transform:translateX(30px);
+.close:hover {
+color: white;
 
-    }
+```
+transform: rotate(90deg);
+```
 
 }
+
+.popup-stats {
+display: flex;
+
+```
+gap: 15px;
 
+justify-content: center;
 
+margin-top: 30px;
+```
 
-/* MOBILE */
+}
+
+.popup-stats div {
+background: #222;
 
-@media(max-width:900px){
+```
+padding: 15px;
 
+border-radius: 10px;
 
-    .achievements-box{
+min-width: 85px;
 
-        grid-template-columns:1fr;
+color: #aaa;
+```
 
-    }
+}
 
+.popup-stats b {
+display: block;
 
-    .rocket-container{
+```
+color: #f7c600;
 
-        flex-direction:column;
-        text-align:center;
+font-size: 25px;
+```
 
-    }
+}
 
+/* =========================================================
+MOBILE
+========================================================= */
 
-    .rocket-car{
+@media (max-width: 900px) {
 
-        margin-top:40px;
+```
+.navbar {
+    padding: 0 20px;
 
-    }
+    height: 75px;
+}
 
+.logo {
+    font-size: 22px;
+}
 
+.logo img {
+    width: 45px;
+    height: 45px;
 }
-.rocket-car img{
 
-    width:350px;
-    max-width:100%;
-    filter:drop-shadow(0 0 25px #f7c600);
+.navbar ul {
+    display: none;
+}
 
-    animation:carMove 2s infinite alternate;
+.discord-btn {
+    padding: 10px 15px;
 
+    font-size: 13px;
 }
 
 
-@keyframes carMove{
+/* HERO */
 
-    from{
-        transform:translateX(0);
-    }
+#hero {
+    padding: 120px 20px 60px;
+}
 
-    to{
-        transform:translateX(30px);
-    }
+.hero-content h1 {
+    font-size: 55px;
+}
 
+.welcome {
+    font-size: 14px;
 }
-/* NEWS SECTION */
 
-#news{
-    padding:100px 8%;
-    background:#0b0b0b;
+.hero-content p {
+    font-size: 16px;
 }
 
+.hero-buttons {
+    flex-direction: column;
+}
 
-.news-box{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
+.btn {
+    text-align: center;
 }
+
 
+/* STATS */
 
-.news-card{
-    background:#151515;
-    padding:40px;
-    border-radius:20px;
-    text-align:center;
-    border:1px solid #222;
-    transition:.3s;
+.stat-box {
+    grid-template-columns: 1fr 1fr;
 }
 
 
-.news-card:hover{
-    transform:translateY(-10px);
-    border-color:#f7c600;
-    box-shadow:0 0 25px rgba(247,198,0,.2);
+/* PLAYERS */
+
+.players {
+    grid-template-columns: 1fr;
 }
+
 
+/* ACHIEVEMENTS */
 
-.news-card h3{
-    color:#f7c600;
-    font-family:'Orbitron',sans-serif;
-    font-size:22px;
+.achievements-box {
+    grid-template-columns: 1fr;
 }
+
+
+/* ROCKET LEAGUE */
+
+.rocket-container {
+    flex-direction: column;
 
+    text-align: center;
 
-.news-card p{
-    color:#aaa;
-    margin-top:20px;
-    font-size:18px;
+    padding: 30px;
+
+    gap: 40px;
+}
+
+.rocket-text h2 {
+    font-size: 40px;
 }
 
+.rocket-car img {
+    width: 250px;
+}
 
-@media(max-width:900px){
 
-    .news-box{
-        grid-template-columns:1fr;
-    }
+/* NEWS */
 
+.news-box {
+    grid-template-columns: 1fr;
 }
+
+
 /* FOOTER */
 
-footer{
+.footer-grid {
+    grid-template-columns: 1fr;
 
-    background:#050505;
-    padding:70px 8% 30px;
-
+    text-align: center;
 }
 
 
-.footer-grid{
+/* PLAYER PAGE */
 
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:40px;
+.player-page {
+    padding: 80px 20px 30px;
+}
 
+.back-btn {
+    top: 20px;
+    left: 20px;
+}
+
+.player-profile {
+    padding: 35px 20px;
+}
+
+.player-profile h1 {
+    font-size: 35px;
+}
+
+.player-info {
+    gap: 10px;
+}
+
+.player-info div {
+    padding: 15px 10px;
+
+    min-width: 80px;
 }
 
 
-.footer-logo{
+/* POPUP */
 
-    font-family:'Orbitron',sans-serif;
-    color:#f7c600;
-    font-size:35px;
+.popup-box {
+    padding: 35px 20px;
+}
+
+.popup-stats {
+    gap: 8px;
+}
+
+.popup-stats div {
+    min-width: 75px;
+
+    padding: 12px 8px;
+}
+```
 
 }
 
+/* =========================================================
+SMALL PHONES
+========================================================= */
 
-footer h3{
+@media (max-width: 500px) {
 
-    color:#f7c600;
-    margin-bottom:20px;
-
+```
+.stat-box {
+    grid-template-columns: 1fr;
 }
 
-
-footer a{
-
-    display:block;
-    color:#aaa;
-    margin:12px 0;
-
+.hero-content h1 {
+    font-size: 45px;
 }
 
-
-footer a:hover{
-
-    color:#f7c600;
-
+.section-title h2 {
+    font-size: 35px;
 }
 
-
-footer p{
-
-    color:#aaa;
-    line-height:1.8;
-
+.player-info {
+    flex-wrap: wrap;
 }
 
-
-.copyright{
-
-    text-align:center;
-    margin-top:50px;
-    padding-top:20px;
-    border-top:1px solid #222;
-    color:#666;
-
+.player-profile img {
+    width: 120px;
+    height: 120px;
 }
 
-
-@media(max-width:900px){
-
-    .footer-grid{
-
-        grid-template-columns:1fr;
-        text-align:center;
-
-    }
-
+.popup-stats {
+    flex-wrap: wrap;
 }
-.player-card{
-    cursor:pointer;
-}
-
-
-/* PLAYER POPUP */
-
-.modal{
-
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-
-    background:rgba(0,0,0,.8);
-
-    justify-content:center;
-    align-items:center;
-
-    z-index:2000;
-
-}
-
-
-
-.modal-box{
-
-    background:#151515;
-    border:2px solid #f7c600;
-
-    padding:40px;
-
-    width:400px;
-
-    text-align:center;
-
-    border-radius:20px;
-
-    box-shadow:0 0 30px #f7c600;
-
-}
-
-
-
-.modal-box h2{
-
-    color:#f7c600;
-    font-family:'Orbitron',sans-serif;
-    font-size:35px;
-
-}
-
-
-
-.modal-box h3{
-
-    margin:15px;
-
-}
-
-
-
-.modal-box p{
-
-    color:#aaa;
-    margin:10px;
-
-}
-
-
-
-.close{
-
-    float:right;
-    cursor:pointer;
-
-    font-size:30px;
-    color:#f7c600;
-
-}
-.modal{
-
-display:none;
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,.85);
-
-align-items:center;
-
-justify-content:center;
-
-z-index:3000;
-
-}
-
-
-.profile-box{
-
-background:#151515;
-
-width:420px;
-
-padding:40px;
-
-border-radius:25px;
-
-border:2px solid #f7c600;
-
-text-align:center;
-
-}
-
-
-.profile-box img{
-
-width:120px;
-
-height:120px;
-
-border-radius:50%;
-
-object-fit:cover;
-
-border:3px solid #f7c600;
-
-}
-
-
-.profile-box h2{
-
-font-family:'Orbitron';
-
-color:#f7c600;
-
-font-size:35px;
-
-}
-
-
-.stats-profile{
-
-margin:25px 0;
-
-color:#aaa;
-
-}
-
-
-.close{
-
-float:right;
-
-font-size:30px;
-
-color:#f7c600;
-
-cursor:pointer;
-
-}
-img{
-    max-width:100%;
-}
-
-
-@media(max-width:900px){
-
-.navbar{
-    padding:0 20px;
-}
-
-
-.navbar ul{
-    display:none;
-}
-
-
-.hero-content h1{
-    font-size:55px;
-}
-
-
-.hero-content p{
-    font-size:16px;
-}
-
-
-.rocket-container{
-    padding:30px;
-}
-
-
-.rocket-text h2{
-    font-size:40px;
-}
-
-}
-/* MOBILE IMPROVEMENTS */
-
-img{
-    max-width:100%;
-}
-
-
-@media(max-width:900px){
-
-    .navbar{
-        padding:0 20px;
-        height:75px;
-    }
-
-
-    .logo{
-        font-size:22px;
-    }
-
-
-    .logo img{
-        width:45px;
-        height:45px;
-    }
-
-
-    .navbar ul{
-        display:none;
-    }
-
-
-    .discord-btn{
-        padding:10px 15px;
-        font-size:13px;
-    }
-
-
-    #hero{
-        padding:120px 20px 60px;
-    }
-
-
-    .hero-content h1{
-        font-size:55px;
-    }
-
-
-    .welcome{
-        font-size:14px;
-    }
-
-
-    .hero-content p{
-        font-size:16px;
-    }
-
-
-    .hero-buttons{
-        flex-direction:column;
-    }
-
-
-    .btn{
-        text-align:center;
-    }
-
-
-    .stat-box{
-        grid-template-columns:1fr;
-    }
-
-
-    .players{
-        grid-template-columns:1fr;
-    }
-
-
-    .achievements-box{
-        grid-template-columns:1fr;
-    }
-
-
-    .rocket-container{
-        flex-direction:column;
-        padding:30px;
-        gap:40px;
-    }
-
-
-    .rocket-text h2{
-        font-size:40px;
-    }
-
-
-    .rocket-car img{
-        width:250px;
-    }
-
-
-    .news-box{
-        grid-template-columns:1fr;
-    }
-
-
-    .footer-grid{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-}
-.player-page{
-
-min-height:100vh;
-background:#0b0b0b;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:50px;
-
-}
-
-
-.back-btn{
-
-position:absolute;
-top:30px;
-left:30px;
-
-color:#f7c600;
-
-}
-
-
-.player-profile{
-
-background:#151515;
-
-border:2px solid #f7c600;
-
-border-radius:25px;
-
-padding:50px;
-
-text-align:center;
-
-max-width:500px;
-
-}
-
-
-.player-profile img{
-
-width:150px;
-height:150px;
-
-border-radius:50%;
-
-border:3px solid #f7c600;
-
-}
-
-
-.player-profile h1{
-
-font-family:'Orbitron';
-
-color:#f7c600;
-
-font-size:45px;
-
-}
-
-
-.player-profile h3{
-
-letter-spacing:3px;
-
-}
-
-
-.player-info{
-
-display:flex;
-
-gap:20px;
-
-margin:30px 0;
-
-justify-content:center;
-
-}
-
-
-.player-info div{
-
-background:#222;
-
-padding:20px;
-
-border-radius:15px;
-
-}
-
-
-.player-info span{
-
-display:block;
-
-color:#aaa;
-
-}
-
-
-.player-info b{
-
-color:#f7c600;
-
-font-size:25px;
-
-}
-.player-card{
-    text-decoration:none;
-    color:white;
-    display:block;
-}
-.player-popup{
-
-display:none;
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,.8);
-
-justify-content:center;
-align-items:center;
-
-z-index:2000;
-
-}
-
-
-.popup-box{
-
-background:#151515;
-
-border:2px solid #f7c600;
-
-border-radius:20px;
-
-padding:40px;
-
-width:400px;
-
-text-align:center;
-
-position:relative;
-
-}
-
-
-.popup-box h2{
-
-color:#f7c600;
-
-font-family:'Orbitron';
-
-font-size:35px;
-
-}
-
-
-.popup-box h3{
-
-letter-spacing:3px;
-
-}
-
-
-.close{
-
-position:absolute;
-
-right:20px;
-top:10px;
-
-font-size:35px;
-
-color:white;
-
-cursor:pointer;
-
-}
-
-
-.popup-stats{
-
-display:flex;
-
-gap:15px;
-
-justify-content:center;
-
-margin-top:30px;
-
-}
-
-
-.popup-stats div{
-
-background:#222;
-
-padding:15px;
-
-border-radius:10px;
-
-}
-
-
-.popup-stats b{
-
-display:block;
-
-color:#f7c600;
-
-font-size:25px;
+```
 
 }
