@@ -3857,3 +3857,43 @@ body.player-body .back-btn:hover {
     box-shadow:
         0 0 18px rgba(247, 198, 0, 0.35);
 }
+/* =========================================
+   PLAYER CARD LINKS - FIX
+========================================= */
+
+.player-card .player-link {
+    position: relative;
+    z-index: 10;
+
+    display: inline-block;
+
+    margin-top: 18px;
+    padding: 9px 20px;
+
+    color: #f7c600;
+    background: transparent;
+
+    border: 1px solid #f7c600;
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.player-card:hover .player-link {
+    background: #f7c600;
+    color: #000;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 18px rgba(247, 198, 0, 0.35);
+}
