@@ -1605,3 +1605,75 @@ footer a:hover {
         width: 73px;
     }
 }
+/* =========================================
+   BACK TO TEAM - FINAL POSITION
+========================================= */
+
+body.player-body .back-btn {
+    position: absolute !important;
+
+    top: calc(50% - 330px) !important;
+    left: 50% !important;
+
+    transform: translateX(-50%) !important;
+
+    width: auto !important;
+
+    padding: 10px 18px;
+
+    color: #f7c600;
+
+    background: rgba(20, 20, 20, 0.9);
+
+    border: 1px solid rgba(247, 198, 0, 0.6);
+
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    z-index: 100 !important;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+body.player-body .back-btn:hover {
+    color: #000;
+
+    background: #f7c600;
+
+    border-color: #f7c600;
+
+    transform: translateX(-50%) translateY(-3px) !important;
+
+    box-shadow:
+        0 0 22px rgba(247, 198, 0, 0.4);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body.player-body .back-btn {
+        position: absolute !important;
+
+        top: 25px !important;
+        left: 50% !important;
+
+        transform: translateX(-50%) !important;
+
+        padding: 9px 15px;
+
+        font-size: 12px;
+    }
+
+    body.player-body .back-btn:hover {
+        transform: translateX(-50%) translateY(-3px) !important;
+    }
+
+}
