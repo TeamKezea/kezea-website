@@ -416,57 +416,248 @@ document.addEventListener("DOMContentLoaded", () => {
 </section>
 
 
-<!-- =========================
-     ACHIEVEMENTS
-========================== -->
+/* =========================================
+   ACHIEVEMENTS - KEZEA GAMING STYLE
+========================================= */
 
-<section id="achievements">
+#achievements {
+    position: relative;
+    overflow: hidden;
 
-    <div class="section-title">
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(247, 198, 0, 0.08),
+            transparent 45%
+        ),
+        #080808;
+}
 
-        <span>KEZEA ESPORTS</span>
+/* لمعة ذهبية بالخلفية */
 
-        <h2>ACHIEVEMENTS</h2>
+#achievements::before {
+    content: "";
 
-        <div class="section-line"></div>
+    position: absolute;
+    width: 500px;
+    height: 500px;
 
-    </div>
+    top: -250px;
+    left: 50%;
 
-    <div class="news-box">
+    transform: translateX(-50%);
 
-        <div class="news-card">
+    background: rgba(247, 198, 0, 0.08);
 
-            <h3>TOURNAMENTS</h3>
+    filter: blur(100px);
 
-            <p>
-                2 tournaments played.
-            </p>
+    pointer-events: none;
+}
 
-        </div>
+/* العنوان */
 
-        <div class="news-card">
+#achievements .section-title {
+    position: relative;
+    z-index: 2;
+}
 
-            <h3>VICTORY</h3>
+#achievements .section-title span {
+    color: #f7c600;
+    letter-spacing: 6px;
+}
 
-            <p>
-                The next goal is the first championship.
-            </p>
+#achievements .section-title h2 {
+    font-size: 45px;
 
-        </div>
+    text-shadow:
+        0 0 20px rgba(247, 198, 0, 0.15);
+}
 
-        <div class="news-card">
+/* الكروت */
 
-            <h3>FUTURE</h3>
+#achievements .news-box {
+    position: relative;
+    z-index: 2;
 
-            <p>
-                More competitions and achievements coming soon.
-            </p>
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
-        </div>
+    gap: 25px;
 
-    </div>
+    max-width: 1100px;
+    margin: auto;
+}
 
-</section>
+#achievements .news-card {
+    position: relative;
+
+    min-height: 190px;
+
+    padding: 35px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30, 30, 30, 0.95),
+            rgba(14, 14, 14, 0.98)
+        );
+
+    border: 1px solid #292929;
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* الخط الذهبي فوق الكرت */
+
+#achievements .news-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #f7c600,
+        transparent
+    );
+
+    opacity: 0.7;
+}
+
+/* لمعة داخلية */
+
+#achievements .news-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    top: -60px;
+    right: -60px;
+
+    background: rgba(247, 198, 0, 0.08);
+
+    border-radius: 50%;
+
+    filter: blur(20px);
+
+    transition: 0.35s;
+}
+
+/* Hover */
+
+#achievements .news-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #f7c600;
+
+    box-shadow:
+        0 0 25px rgba(247, 198, 0, 0.15),
+        0 15px 40px rgba(0, 0, 0, 0.45);
+}
+
+#achievements .news-card:hover::after {
+    background: rgba(247, 198, 0, 0.18);
+}
+
+/* العنوان */
+
+#achievements .news-card h3 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    color: #f7c600;
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 21px;
+
+    letter-spacing: 1px;
+}
+
+/* النص */
+
+#achievements .news-card p {
+    position: relative;
+    z-index: 2;
+
+    max-width: 280px;
+
+    margin-top: 15px;
+
+    color: #aaa;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   ACHIEVEMENTS MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    #achievements .news-box {
+        grid-template-columns: 1fr;
+
+        max-width: 550px;
+    }
+
+    #achievements .news-card {
+        min-height: 160px;
+    }
+
+    #achievements .section-title h2 {
+        font-size: 36px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #achievements {
+        padding: 75px 20px;
+    }
+
+    #achievements .section-title h2 {
+        font-size: 30px;
+    }
+
+    #achievements .section-title span {
+        font-size: 11px;
+        letter-spacing: 4px;
+    }
+
+    #achievements .news-card {
+        padding: 30px 20px;
+        min-height: 150px;
+    }
+
+}
 
 
     <!-- =========================
