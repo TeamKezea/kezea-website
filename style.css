@@ -3584,3 +3584,134 @@ body.player-body .back-btn:hover {
     }
 
 }
+/* =========================================
+   PLAYER PROFILE - ESPORTS DETAILS
+========================================= */
+
+.player-profile {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow داخل الكرت */
+
+.player-profile::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    top: -140px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: rgba(247, 198, 0, 0.08);
+
+    filter: blur(70px);
+
+    pointer-events: none;
+}
+
+/* خط ذهبي علوي */
+
+.player-profile::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 10%;
+
+    width: 80%;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #f7c600,
+        transparent
+    );
+
+    box-shadow:
+        0 0 15px rgba(247, 198, 0, 0.5);
+}
+
+/* نخلي المحتوى فوق التأثير */
+
+.player-profile > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* اسم اللاعب */
+
+.player-profile h1 {
+    text-shadow:
+        0 0 18px rgba(247, 198, 0, 0.2);
+
+    transition: 0.3s ease;
+}
+
+.player-profile:hover h1 {
+    text-shadow:
+        0 0 25px rgba(247, 198, 0, 0.45);
+}
+
+
+/* مربعات الإحصائيات */
+
+.player-info > div {
+    border: 1px solid #292929;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.player-info > div:hover {
+    transform: translateY(-5px);
+
+    border-color: #f7c600;
+
+    background: #272727;
+
+    box-shadow:
+        0 0 18px rgba(247, 198, 0, 0.12);
+}
+
+
+/* الأرقام */
+
+.player-info b {
+    text-shadow:
+        0 0 10px rgba(247, 198, 0, 0.2);
+}
+
+
+/* Role Badge */
+
+.player-role {
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.player-role:hover {
+    color: #000;
+
+    background: #f7c600;
+
+    box-shadow:
+        0 0 20px rgba(247, 198, 0, 0.35);
+}
