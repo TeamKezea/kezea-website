@@ -1,10 +1,13 @@
 /* =========================================================
-   KEZEA ESPORTS — COMPLETE GAMING STYLE
+   KEZEA ESPORTS — GAMING UI V2
    ========================================================= */
 
-/* =========================
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+/* =========================================================
    RESET
-========================= */
+   ========================================================= */
 
 * {
     margin: 0;
@@ -14,7 +17,6 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px;
 }
 
 body {
@@ -34,15 +36,33 @@ img {
     display: block;
 }
 
-::selection {
-    background: #f7c600;
-    color: #000;
+
+/* =========================================================
+   GOLD VARIABLES
+   ========================================================= */
+
+:root {
+    --gold: #f7c600;
+    --gold-light: #ffe45c;
+    --gold-dark: #b58d00;
+
+    --black: #070707;
+    --dark: #0d0d0d;
+    --card: #151515;
+    --card-light: #1c1c1c;
+
+    --gray: #999;
+    --border: rgba(247, 198, 0, 0.18);
+
+    --gold-glow:
+        0 0 10px rgba(247,198,0,.35),
+        0 0 30px rgba(247,198,0,.12);
 }
 
 
-/* =========================
+/* =========================================================
    SCROLLBAR
-========================= */
+   ========================================================= */
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -53,33 +73,14 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #f7c600;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #ffe45c;
-}
-
-
-/* =========================
-   GLOBAL GOLD GLOW
-========================= */
-
-:root {
-    --gold: #f7c600;
-    --gold-light: #ffe45c;
-    --black: #070707;
-    --dark: #0d0d0d;
-    --card: #151515;
-    --border: rgba(247, 198, 0, 0.18);
-    --gray: #999;
+    background: var(--gold);
+    border-radius: 20px;
 }
 
 
 /* =========================================================
    NAVBAR
-========================================================= */
+   ========================================================= */
 
 .navbar {
     position: fixed;
@@ -89,16 +90,17 @@ img {
     width: 100%;
     height: 82px;
 
-    padding: 0 6%;
+    padding: 0 7%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    background: rgba(5, 5, 5, 0.82);
+    background: rgba(5,5,5,.82);
+
     backdrop-filter: blur(18px);
 
-    border-bottom: 1px solid rgba(247, 198, 0, 0.08);
+    border-bottom: 1px solid rgba(247,198,0,.08);
 
     z-index: 1000;
 }
@@ -109,14 +111,14 @@ img {
     gap: 12px;
 
     font-family: 'Orbitron', sans-serif;
-    font-size: 26px;
-    font-weight: 900;
+    font-size: 25px;
+    font-weight: 800;
 
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .logo:hover {
-    transform: translateY(-2px);
+    transform: scale(1.03);
 }
 
 .logo-symbol {
@@ -131,16 +133,16 @@ img {
 
     border-radius: 50%;
 
-    background: rgba(247, 198, 0, 0.15);
+    background: rgba(247,198,0,.18);
 
-    filter: blur(8px);
+    filter: blur(10px);
 
     z-index: -1;
 }
 
 .logo-symbol img {
-    width: 55px;
-    height: 55px;
+    width: 52px;
+    height: 52px;
 
     object-fit: contain;
 }
@@ -151,6 +153,7 @@ img {
     color: var(--gold);
 
     font-family: 'Poppins', sans-serif;
+
     font-size: 9px;
 
     letter-spacing: 4px;
@@ -159,7 +162,8 @@ img {
 .navbar ul {
     display: flex;
     align-items: center;
-    gap: 25px;
+
+    gap: 26px;
 
     list-style: none;
 }
@@ -172,7 +176,7 @@ img {
 
     color: #ddd;
 
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .navbar ul a::after {
@@ -181,14 +185,14 @@ img {
     position: absolute;
 
     left: 0;
-    bottom: -7px;
+    bottom: -8px;
 
     width: 0;
     height: 2px;
 
     background: var(--gold);
 
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .navbar ul a:hover {
@@ -198,11 +202,6 @@ img {
 .navbar ul a:hover::after {
     width: 100%;
 }
-
-
-/* =========================
-   DISCORD BUTTON
-========================= */
 
 .discord-btn {
     padding: 11px 20px;
@@ -215,23 +214,19 @@ img {
     font-size: 12px;
     font-weight: 800;
 
-    transition: 0.3s;
-
-    box-shadow:
-        0 0 0 rgba(247, 198, 0, 0);
+    transition: .3s;
 }
 
 .discord-btn:hover {
     transform: translateY(-3px);
 
-    box-shadow:
-        0 0 25px rgba(247, 198, 0, 0.5);
+    box-shadow: var(--gold-glow);
 }
 
 
 /* =========================================================
    HERO
-========================================================= */
+   ========================================================= */
 
 #hero {
     position: relative;
@@ -241,82 +236,88 @@ img {
     display: flex;
     align-items: center;
 
-    padding: 150px 8% 90px;
+    padding: 150px 8% 100px;
 
     overflow: hidden;
 
     background:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.97) 0%,
-            rgba(0, 0, 0, 0.78) 45%,
-            rgba(0, 0, 0, 0.45) 100%
+            rgba(0,0,0,.96) 0%,
+            rgba(0,0,0,.75) 45%,
+            rgba(0,0,0,.55) 100%
         ),
         url("https://images.unsplash.com/photo-1542751371-adc38448a05e")
         center / cover no-repeat;
 }
 
 
-/* Animated gold light */
+/* GOLD LIGHT */
 
 #hero::before {
     content: "";
 
     position: absolute;
 
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
 
-    top: 20%;
-    right: -150px;
+    right: -180px;
+    top: 10%;
 
-    background: rgba(247, 198, 0, 0.12);
+    background: radial-gradient(
+        circle,
+        rgba(247,198,0,.18),
+        transparent 65%
+    );
 
-    filter: blur(100px);
+    filter: blur(20px);
 
-    border-radius: 50%;
-
-    animation: goldPulse 5s ease-in-out infinite alternate;
+    animation: heroGlow 6s ease-in-out infinite alternate;
 }
+
+
+/* DIAGONAL GAMING LINES */
 
 #hero::after {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     background:
         linear-gradient(
             135deg,
-            transparent 45%,
-            rgba(247, 198, 0, 0.04) 50%,
-            transparent 55%
+            transparent 65%,
+            rgba(247,198,0,.035) 65%,
+            rgba(247,198,0,.035) 66%,
+            transparent 66%
         );
 
-    background-size: 250px 250px;
+    background-size: 80px 80px;
 
-    opacity: 0.5;
+    opacity: .45;
 }
+
 
 .hero-content {
     position: relative;
+
+    max-width: 760px;
+
     z-index: 2;
 
-    width: 100%;
-    max-width: 720px;
-
-    animation: heroEnter 1s ease;
+    animation: heroEnter 1s ease forwards;
 }
 
 .welcome {
     color: var(--gold);
 
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
 
-    letter-spacing: 6px;
-
-    animation: fadeUp 0.8s ease;
+    letter-spacing: 7px;
 }
 
 .hero-content h1 {
@@ -324,21 +325,19 @@ img {
 
     font-family: 'Orbitron', sans-serif;
 
-    font-size: clamp(55px, 8vw, 90px);
+    font-size: clamp(55px, 8vw, 95px);
 
-    line-height: 0.98;
+    line-height: .95;
 
-    letter-spacing: -3px;
-
-    text-shadow:
-        0 0 35px rgba(247, 198, 0, 0.08);
+    text-transform: uppercase;
 }
 
 .hero-content h1 span {
     color: var(--gold);
 
     text-shadow:
-        0 0 30px rgba(247, 198, 0, 0.35);
+        0 0 15px rgba(247,198,0,.35),
+        0 0 45px rgba(247,198,0,.12);
 }
 
 .hero-line {
@@ -350,23 +349,21 @@ img {
     background: var(--gold);
 
     box-shadow:
-        0 0 15px rgba(247, 198, 0, 0.6);
-
-    animation: lineGrow 1s ease;
+        0 0 15px rgba(247,198,0,.5);
 }
 
 .hero-content p {
-    max-width: 570px;
+    max-width: 590px;
 
     color: #aaa;
 
     font-size: 17px;
+
     line-height: 1.8;
 }
 
 .hero-buttons {
     display: flex;
-    align-items: center;
 
     gap: 15px;
 
@@ -376,7 +373,7 @@ img {
 
 /* =========================================================
    BUTTONS
-========================================================= */
+   ========================================================= */
 
 .btn {
     position: relative;
@@ -389,14 +386,14 @@ img {
     color: #000;
 
     border: 2px solid var(--gold);
+
     border-radius: 30px;
 
     font-weight: 800;
-    font-size: 13px;
 
     overflow: hidden;
 
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .btn::before {
@@ -410,22 +407,26 @@ img {
     width: 100%;
     height: 100%;
 
-    background: rgba(255,255,255,0.25);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
 
-    transform: skewX(-20deg);
-
-    transition: 0.5s;
+    transition: .5s;
 }
 
 .btn:hover::before {
-    left: 120%;
+    left: 100%;
 }
 
 .btn:hover {
     transform: translateY(-4px);
 
     box-shadow:
-        0 0 25px rgba(247, 198, 0, 0.45);
+        0 0 20px rgba(247,198,0,.45),
+        0 10px 30px rgba(0,0,0,.4);
 }
 
 .btn.outline {
@@ -433,30 +434,20 @@ img {
     color: #fff;
 }
 
-.btn.outline:hover {
-    color: #000;
-    background: var(--gold);
-}
-
 
 /* =========================================================
    STATS
-========================================================= */
+   ========================================================= */
 
 #stats {
     position: relative;
 
     padding: 65px 8%;
 
-    background:
-        linear-gradient(
-            180deg,
-            #111,
-            #0c0c0c
-        );
+    background: #0d0d0d;
 
-    border-top: 1px solid rgba(247, 198, 0, 0.08);
-    border-bottom: 1px solid rgba(247, 198, 0, 0.08);
+    border-top: 1px solid rgba(247,198,0,.08);
+    border-bottom: 1px solid rgba(247,198,0,.08);
 }
 
 .stat-box {
@@ -477,17 +468,17 @@ img {
     background:
         linear-gradient(
             145deg,
-            #181818,
+            #191919,
             #101010
         );
 
-    border: 1px solid #252525;
+    border: 1px solid #242424;
 
     border-radius: 16px;
 
     overflow: hidden;
 
-    transition: 0.35s;
+    transition: .35s;
 }
 
 .stat::before {
@@ -496,7 +487,7 @@ img {
     position: absolute;
 
     left: 0;
-    top: 0;
+    bottom: 0;
 
     width: 100%;
     height: 2px;
@@ -505,17 +496,15 @@ img {
 
     transform: scaleX(0);
 
-    transition: 0.35s;
+    transition: .35s;
 }
 
 .stat:hover {
     transform: translateY(-8px);
 
-    border-color: rgba(247, 198, 0, 0.5);
+    border-color: var(--gold);
 
-    box-shadow:
-        0 10px 35px rgba(0,0,0,0.35),
-        0 0 25px rgba(247, 198, 0, 0.08);
+    box-shadow: var(--gold-glow);
 }
 
 .stat:hover::before {
@@ -532,18 +521,20 @@ img {
     color: var(--gold);
 
     font-family: 'Orbitron', sans-serif;
-    font-size: 30px;
+
+    font-size: 28px;
 }
 
 .stat p {
     color: #888;
+
     font-size: 13px;
 }
 
 
 /* =========================================================
    SECTIONS
-========================================================= */
+   ========================================================= */
 
 #about,
 #roster,
@@ -560,7 +551,7 @@ img {
 #about,
 #achievements,
 #news {
-    background: #090909;
+    background: #080808;
 }
 
 #roster,
@@ -568,37 +559,8 @@ img {
     background: #101010;
 }
 
-
-/* Decorative background */
-
-#about::before,
-#roster::before,
-#achievements::before,
-#news::before {
-    content: "";
-
-    position: absolute;
-
-    width: 350px;
-    height: 350px;
-
-    background: rgba(247, 198, 0, 0.04);
-
-    filter: blur(100px);
-
-    border-radius: 50%;
-
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   SECTION TITLES
-========================================================= */
-
 .section-title {
     position: relative;
-    z-index: 2;
 
     margin-bottom: 60px;
 
@@ -611,7 +573,7 @@ img {
     font-size: 12px;
     font-weight: 700;
 
-    letter-spacing: 5px;
+    letter-spacing: 6px;
 }
 
 .section-title h2 {
@@ -619,30 +581,26 @@ img {
 
     font-family: 'Orbitron', sans-serif;
 
-    font-size: clamp(30px, 5vw, 44px);
+    font-size: clamp(30px, 5vw, 45px);
 }
 
 .section-line {
     width: 90px;
-    height: 3px;
+    height: 4px;
 
     margin: 18px auto 0;
 
     background: var(--gold);
 
-    box-shadow:
-        0 0 15px rgba(247, 198, 0, 0.45);
+    box-shadow: var(--gold-glow);
 }
 
 
 /* =========================================================
    ABOUT
-========================================================= */
+   ========================================================= */
 
 .about-content {
-    position: relative;
-    z-index: 2;
-
     max-width: 850px;
 
     margin: auto;
@@ -653,21 +611,19 @@ img {
 .about-content p {
     margin-bottom: 20px;
 
-    color: #aaa;
+    color: #999;
 
     font-size: 17px;
+
     line-height: 1.9;
 }
 
 
 /* =========================================================
-   PLAYERS
-========================================================= */
+   PLAYER CARDS
+   ========================================================= */
 
 .players {
-    position: relative;
-    z-index: 2;
-
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
@@ -678,17 +634,15 @@ img {
 .player-card {
     position: relative;
 
-    display: block;
-
-    padding: 42px 25px;
+    padding: 40px 25px 30px;
 
     text-align: center;
 
     background:
         linear-gradient(
             145deg,
-            #191919,
-            #101010
+            #1a1a1a,
+            #0e0e0e
         );
 
     border: 1px solid #292929;
@@ -697,12 +651,10 @@ img {
 
     overflow: hidden;
 
-    cursor: pointer;
-
     transition:
-        transform 0.4s ease,
-        border-color 0.4s ease,
-        box-shadow 0.4s ease;
+        transform .4s,
+        border-color .4s,
+        box-shadow .4s;
 }
 
 .player-card::before {
@@ -710,21 +662,21 @@ img {
 
     position: absolute;
 
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
 
+    top: -130px;
     left: 50%;
-    top: -90px;
 
     transform: translateX(-50%);
 
-    background: rgba(247, 198, 0, 0.12);
+    background: radial-gradient(
+        circle,
+        rgba(247,198,0,.20),
+        transparent 70%
+    );
 
-    filter: blur(50px);
-
-    opacity: 0;
-
-    transition: 0.4s;
+    transition: .4s;
 }
 
 .player-card:hover {
@@ -733,12 +685,14 @@ img {
     border-color: var(--gold);
 
     box-shadow:
-        0 20px 50px rgba(0,0,0,0.4),
-        0 0 30px rgba(247, 198, 0, 0.12);
+        0 15px 45px rgba(0,0,0,.5),
+        0 0 25px rgba(247,198,0,.12);
 }
 
 .player-card:hover::before {
-    opacity: 1;
+    transform:
+        translateX(-50%)
+        scale(1.4);
 }
 
 .player-number {
@@ -747,19 +701,24 @@ img {
     top: 15px;
     right: 20px;
 
-    color: #292929;
+    color: #333;
 
     font-family: 'Orbitron', sans-serif;
 
-    font-size: 32px;
-    font-weight: 900;
+    font-size: 30px;
+
+    transition: .3s;
+}
+
+.player-card:hover .player-number {
+    color: rgba(247,198,0,.35);
 }
 
 .player-avatar {
     position: relative;
 
-    width: 130px;
-    height: 130px;
+    width: 135px;
+    height: 135px;
 
     margin: auto;
 
@@ -767,7 +726,7 @@ img {
     align-items: center;
     justify-content: center;
 
-    background: #0b0b0b;
+    background: #111;
 
     border: 3px solid var(--gold);
 
@@ -776,9 +735,10 @@ img {
     overflow: hidden;
 
     box-shadow:
-        0 0 25px rgba(247, 198, 0, 0.15);
+        0 0 0 6px rgba(247,198,0,.05),
+        0 0 25px rgba(247,198,0,.18);
 
-    transition: 0.4s;
+    transition: .4s;
 }
 
 .player-avatar img {
@@ -786,13 +746,20 @@ img {
     height: 100%;
 
     object-fit: cover;
+
+    transition: .5s;
 }
 
 .player-card:hover .player-avatar {
-    transform: scale(1.06);
+    transform: scale(1.08);
 
     box-shadow:
-        0 0 30px rgba(247, 198, 0, 0.35);
+        0 0 0 8px rgba(247,198,0,.07),
+        0 0 35px rgba(247,198,0,.35);
+}
+
+.player-card:hover .player-avatar img {
+    transform: scale(1.08);
 }
 
 .player-card h3 {
@@ -804,7 +771,7 @@ img {
 }
 
 .player-card p {
-    margin-top: 8px;
+    margin-top: 7px;
 
     color: var(--gold);
 
@@ -819,40 +786,37 @@ img {
 
     margin-top: 18px;
 
-    padding: 8px 17px;
+    padding: 8px 18px;
 
     color: var(--gold);
 
-    border: 1px solid rgba(247, 198, 0, 0.6);
+    border: 1px solid var(--gold);
 
-    border-radius: 25px;
+    border-radius: 20px;
 
     font-size: 11px;
     font-weight: 700;
 
     letter-spacing: 1px;
 
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .player-card:hover .player-link {
-    color: #000;
-
     background: var(--gold);
 
+    color: #000;
+
     box-shadow:
-        0 0 15px rgba(247, 198, 0, 0.3);
+        0 0 18px rgba(247,198,0,.35);
 }
 
 
 /* =========================================================
-   NEWS / ACHIEVEMENTS
-========================================================= */
+   ACHIEVEMENTS + NEWS
+   ========================================================= */
 
 .news-box {
-    position: relative;
-    z-index: 2;
-
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
@@ -863,24 +827,24 @@ img {
 .news-card {
     position: relative;
 
-    padding: 38px 25px;
+    padding: 35px 25px;
 
     text-align: center;
 
     background:
         linear-gradient(
             145deg,
-            #181818,
+            #191919,
             #101010
         );
 
-    border: 1px solid #272727;
+    border: 1px solid #282828;
 
     border-radius: 20px;
 
     overflow: hidden;
 
-    transition: 0.35s;
+    transition: .35s;
 }
 
 .news-card::after {
@@ -888,8 +852,8 @@ img {
 
     position: absolute;
 
-    bottom: 0;
     left: 0;
+    bottom: 0;
 
     width: 100%;
     height: 3px;
@@ -898,16 +862,16 @@ img {
 
     transform: scaleX(0);
 
-    transition: 0.35s;
+    transition: .35s;
 }
 
 .news-card:hover {
-    transform: translateY(-9px);
+    transform: translateY(-10px);
 
-    border-color: rgba(247, 198, 0, 0.5);
+    border-color: rgba(247,198,0,.5);
 
     box-shadow:
-        0 15px 40px rgba(0,0,0,0.35);
+        0 15px 40px rgba(0,0,0,.4);
 }
 
 .news-card:hover::after {
@@ -933,12 +897,12 @@ img {
 
 /* =========================================================
    ROCKET LEAGUE
-========================================================= */
+   ========================================================= */
 
 .rocket-container {
     position: relative;
 
-    min-height: 390px;
+    min-height: 380px;
 
     display: flex;
     align-items: center;
@@ -949,42 +913,23 @@ img {
     padding: 60px;
 
     background:
-        linear-gradient(
-            135deg,
-            #191919,
-            #0f0f0f
-        );
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(247,198,0,.10),
+            transparent 35%
+        ),
+        #171717;
 
     border: 1px solid #292929;
 
-    border-radius: 28px;
+    border-radius: 25px;
 
     overflow: hidden;
-
-    box-shadow:
-        inset 0 0 60px rgba(247, 198, 0, 0.025);
-}
-
-.rocket-container::before {
-    content: "";
-
-    position: absolute;
-
-    width: 400px;
-    height: 400px;
-
-    right: -100px;
-    top: -100px;
-
-    background: rgba(247, 198, 0, 0.1);
-
-    filter: blur(90px);
-
-    border-radius: 50%;
 }
 
 .rocket-text {
     position: relative;
+
     z-index: 2;
 
     max-width: 500px;
@@ -1004,7 +949,7 @@ img {
 
     font-family: 'Orbitron', sans-serif;
 
-    font-size: clamp(42px, 6vw, 58px);
+    font-size: clamp(42px, 6vw, 60px);
 
     line-height: 1;
 }
@@ -1019,33 +964,55 @@ img {
 
 .rocket-car {
     position: relative;
+
     z-index: 2;
 
-    animation: carFloat 2.5s ease-in-out infinite alternate;
+    animation:
+        carFloat 2.5s ease-in-out infinite alternate;
 }
 
 .rocket-car img {
-    width: 380px;
+    width: 390px;
 
     filter:
-        drop-shadow(
-            0 0 25px rgba(247, 198, 0, 0.45)
-        );
+        drop-shadow(0 0 15px rgba(247,198,0,.3))
+        drop-shadow(0 0 45px rgba(247,198,0,.12));
+}
+
+.rocket-container::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 2px;
+
+    right: -100px;
+    bottom: 70px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+    );
+
+    opacity: .3;
+
+    transform: rotate(-8deg);
 }
 
 
 /* =========================================================
    FOOTER
-========================================================= */
+   ========================================================= */
 
 footer {
-    position: relative;
-
     padding: 70px 8% 25px;
 
     background: #040404;
 
-    border-top: 1px solid rgba(247, 198, 0, 0.08);
+    border-top: 1px solid rgba(247,198,0,.08);
 }
 
 .footer-grid {
@@ -1062,16 +1029,17 @@ footer {
     font-family: 'Orbitron', sans-serif;
 
     font-size: 32px;
+
+    text-shadow:
+        0 0 15px rgba(247,198,0,.2);
 }
 
 footer h3 {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 
     color: var(--gold);
 
     font-size: 14px;
-
-    letter-spacing: 2px;
 }
 
 footer p {
@@ -1083,11 +1051,11 @@ footer p {
 footer a {
     display: block;
 
-    margin: 11px 0;
+    margin: 10px 0;
 
     color: #777;
 
-    transition: 0.3s;
+    transition: .3s;
 }
 
 footer a:hover {
@@ -1097,22 +1065,22 @@ footer a:hover {
 }
 
 .copyright {
-    margin-top: 50px;
-    padding-top: 22px;
+    margin-top: 45px;
+    padding-top: 20px;
 
     text-align: center;
 
-    color: #555;
+    color: #444;
 
-    border-top: 1px solid #1d1d1d;
+    border-top: 1px solid #1c1c1c;
 
     font-size: 12px;
 }
 
 
 /* =========================================================
-   SOCIAL BUTTON
-========================================================= */
+   SOCIAL BUTTON — PLAYER PAGE
+   ========================================================= */
 
 .social-btn {
     display: inline-block;
@@ -1121,72 +1089,31 @@ footer a:hover {
 
     padding: 11px 25px;
 
-    color: #000;
-
     background: var(--gold);
+    color: #000;
 
     border-radius: 30px;
 
     font-size: 13px;
     font-weight: 800;
 
-    transition: 0.3s;
-
-    box-shadow:
-        0 0 0 rgba(247, 198, 0, 0);
+    transition: .3s;
 }
 
 .social-btn:hover {
     transform: translateY(-4px);
 
     box-shadow:
-        0 0 25px rgba(247, 198, 0, 0.5);
+        0 0 25px rgba(247,198,0,.45);
 }
 
 
 /* =========================================================
    PLAYER PAGE
-========================================================= */
-
-body.player-body {
-    position: relative;
-
-    min-height: 100vh;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(4,4,4,0.97),
-            rgba(4,4,4,0.75),
-            rgba(4,4,4,0.96)
-        ),
-        url("https://images.unsplash.com/photo-1542751371-adc38448a05e")
-        center / cover no-repeat fixed;
-
-    overflow-x: hidden;
-}
-
-body.player-body::before {
-    content: "";
-
-    position: fixed;
-    inset: 0;
-
-    pointer-events: none;
-
-    background:
-        radial-gradient(
-            circle at 50% 40%,
-            rgba(247,198,0,0.10),
-            transparent 35%
-        );
-
-    z-index: 0;
-}
+   ========================================================= */
 
 .player-page {
     position: relative;
-    z-index: 1;
 
     width: 100%;
     min-height: 100vh;
@@ -1197,7 +1124,31 @@ body.player-body::before {
 
     padding: 120px 20px 60px;
 
-    background: transparent;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,5,5,.96),
+            rgba(5,5,5,.72),
+            rgba(5,5,5,.94)
+        ),
+        url("https://images.unsplash.com/photo-1542751371-adc38448a05e")
+        center / cover no-repeat;
+}
+
+.player-page::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(247,198,0,.12),
+            transparent 40%
+        );
+
+    pointer-events: none;
 }
 
 .player-profile {
@@ -1205,25 +1156,25 @@ body.player-body::before {
     z-index: 2;
 
     width: 100%;
-    max-width: 540px;
+    max-width: 520px;
 
     padding: 45px 35px;
 
     text-align: center;
 
-    background: rgba(15,15,15,0.92);
+    background: rgba(18,18,18,.9);
 
-    backdrop-filter: blur(15px);
-
-    border: 1px solid rgba(247,198,0,0.55);
+    border: 2px solid var(--gold);
 
     border-radius: 25px;
 
-    box-shadow:
-        0 0 35px rgba(247,198,0,0.12),
-        0 25px 70px rgba(0,0,0,0.6);
+    backdrop-filter: blur(12px);
 
-    animation: playerAppear 0.7s ease;
+    box-shadow:
+        0 0 35px rgba(247,198,0,.12),
+        0 25px 70px rgba(0,0,0,.6);
+
+    animation: playerAppear .7s ease;
 }
 
 .player-profile > img,
@@ -1231,7 +1182,7 @@ body.player-body::before {
     width: 150px;
     height: 150px;
 
-    margin: 0 auto 22px;
+    margin: 0 auto 20px;
 
     object-fit: cover;
 
@@ -1239,10 +1190,10 @@ body.player-body::before {
 
     border-radius: 50%;
 
-    background: #090909;
+    background: #111;
 
     box-shadow:
-        0 0 30px rgba(247,198,0,0.25);
+        0 0 30px rgba(247,198,0,.25);
 }
 
 .player-profile h1 {
@@ -1255,8 +1206,6 @@ body.player-body::before {
 
 .player-profile h3 {
     margin-top: 8px;
-
-    color: #fff;
 
     font-size: 14px;
 
@@ -1275,25 +1224,15 @@ body.player-body::before {
 }
 
 .player-info > div {
-    width: 95px;
+    width: 90px;
 
     padding: 12px 8px;
 
-    background: #1a1a1a;
+    background: #222;
 
-    border: 1px solid #272727;
+    border: 1px solid #303030;
 
-    border-radius: 13px;
-
-    text-align: center;
-
-    transition: 0.3s;
-}
-
-.player-info > div:hover {
-    border-color: var(--gold);
-
-    transform: translateY(-4px);
+    border-radius: 12px;
 }
 
 .player-info .stat-icon {
@@ -1307,7 +1246,7 @@ body.player-body::before {
 .player-info span:not(.stat-icon) {
     display: block;
 
-    color: #888;
+    color: #999;
 
     font-size: 12px;
 }
@@ -1325,86 +1264,60 @@ body.player-body::before {
 }
 
 .player-profile > p {
-    max-width: 470px;
-
-    margin: 25px auto 0;
-
-    color: #aaa;
-
-    font-size: 14px;
+    color: #bbb;
 
     line-height: 1.8;
-}
-
-.player-role {
-    display: inline-block;
-
-    margin-top: 25px;
-
-    padding: 9px 20px;
-
-    color: var(--gold);
-
-    border: 1px solid var(--gold);
-
-    border-radius: 30px;
-
-    font-size: 11px;
-    font-weight: 700;
-
-    letter-spacing: 2px;
 }
 
 
 /* =========================================================
    BACK TO TEAM
-========================================================= */
+   ========================================================= */
 
 .back-btn {
     position: fixed;
 
-    top: 105px;
-    left: 50%;
-
-    transform: translateX(-50%);
+    top: 25px;
+    left: 25px;
 
     z-index: 100;
 
-    padding: 9px 18px;
+    padding: 10px 17px;
 
     color: var(--gold);
 
-    background: rgba(10,10,10,0.9);
+    background: rgba(15,15,15,.9);
 
-    border: 1px solid rgba(247,198,0,0.5);
+    border: 1px solid rgba(247,198,0,.5);
 
     border-radius: 12px;
 
-    font-size: 13px;
-    font-weight: 600;
-
     backdrop-filter: blur(10px);
 
-    transition: 0.3s;
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: .3s;
 }
 
 .back-btn:hover {
-    color: #000;
-
     background: var(--gold);
 
-    transform: translateX(-50%) translateY(-3px);
+    color: #000;
+
+    transform: translateY(-3px);
 
     box-shadow:
-        0 0 20px rgba(247,198,0,0.4);
+        0 0 20px rgba(247,198,0,.35);
 }
 
 
 /* =========================================================
    ANIMATIONS
-========================================================= */
+   ========================================================= */
 
 @keyframes heroEnter {
+
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -1416,54 +1329,35 @@ body.player-body::before {
     }
 }
 
-@keyframes fadeUp {
+@keyframes heroGlow {
+
     from {
-        opacity: 0;
-        transform: translateY(20px);
+        transform: scale(1);
+        opacity: .5;
     }
 
     to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes lineGrow {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 120px;
-    }
-}
-
-@keyframes goldPulse {
-    from {
-        transform: scale(0.9);
-        opacity: 0.5;
-    }
-
-    to {
-        transform: scale(1.15);
-        opacity: 1;
+        transform: scale(1.25);
+        opacity: .9;
     }
 }
 
 @keyframes carFloat {
+
     from {
-        transform: translateY(0) translateX(0);
+        transform: translateY(0) rotate(-1deg);
     }
 
     to {
-        transform: translateY(-12px) translateX(15px);
+        transform: translateY(-15px) rotate(1deg);
     }
 }
 
 @keyframes playerAppear {
+
     from {
         opacity: 0;
-        transform: translateY(25px) scale(0.97);
+        transform: translateY(25px) scale(.97);
     }
 
     to {
@@ -1475,7 +1369,7 @@ body.player-body::before {
 
 /* =========================================================
    TABLET
-========================================================= */
+   ========================================================= */
 
 @media (max-width: 1100px) {
 
@@ -1493,35 +1387,13 @@ body.player-body::before {
 
     .discord-btn {
         padding: 9px 13px;
-        font-size: 10px;
-    }
-
-    #hero {
-        padding-left: 6%;
-        padding-right: 6%;
-    }
-
-    .stat-box {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .players {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .rocket-container {
-        padding: 45px;
-    }
-
-    .rocket-car img {
-        width: 300px;
     }
 }
 
 
 /* =========================================================
    MOBILE
-========================================================= */
+   ========================================================= */
 
 @media (max-width: 900px) {
 
@@ -1540,17 +1412,13 @@ body.player-body::before {
     }
 
     .logo-symbol img {
-        width: 44px;
-        height: 44px;
-    }
-
-    .logo span {
-        font-size: 7px;
-        letter-spacing: 3px;
+        width: 43px;
+        height: 43px;
     }
 
     .discord-btn {
         padding: 9px 13px;
+
         font-size: 10px;
     }
 
@@ -1563,13 +1431,13 @@ body.player-body::before {
     }
 
     .welcome {
-        font-size: 12px;
-        letter-spacing: 3px;
+        font-size: 11px;
+
+        letter-spacing: 4px;
     }
 
     .hero-content h1 {
-        font-size: 52px;
-        letter-spacing: -2px;
+        font-size: 55px;
     }
 
     .hero-content p {
@@ -1601,7 +1469,7 @@ body.player-body::before {
     }
 
     .rocket-car img {
-        width: 270px;
+        width: 280px;
     }
 
     .footer-grid {
@@ -1609,16 +1477,12 @@ body.player-body::before {
 
         text-align: center;
     }
-
-    footer a:hover {
-        transform: none;
-    }
 }
 
 
 /* =========================================================
-   SMALL MOBILE
-========================================================= */
+   SMALL PHONES
+   ========================================================= */
 
 @media (max-width: 600px) {
 
@@ -1631,33 +1495,15 @@ body.player-body::before {
     }
 
     #stats {
-        padding: 45px 18px;
+        padding: 50px 18px;
     }
 
-    .stat-box {
-        grid-template-columns: 1fr 1fr;
-
-        gap: 12px;
-    }
-
-    .stat {
-        padding: 22px 10px;
-    }
-
-    .stat > span {
-        font-size: 27px;
-    }
-
-    .stat h2 {
-        font-size: 23px;
-    }
-
-    .stat p {
-        font-size: 11px;
+    #hero {
+        padding: 110px 20px 60px;
     }
 
     .hero-content h1 {
-        font-size: 44px;
+        font-size: 43px;
     }
 
     .hero-content p {
@@ -1669,63 +1515,29 @@ body.player-body::before {
     }
 
     .hero-buttons .btn {
-        padding: 10px 17px;
+        padding: 11px 17px;
 
         font-size: 11px;
+    }
+
+    .stat-box {
+        grid-template-columns: 1fr;
     }
 
     .section-title {
         margin-bottom: 40px;
     }
 
-    .section-title span {
-        font-size: 10px;
-        letter-spacing: 3px;
-    }
-
     .section-title h2 {
         font-size: 30px;
     }
 
-    .about-content p {
-        font-size: 14px;
-    }
-
-    .player-card {
-        padding: 35px 20px;
-    }
-
-    .player-avatar {
-        width: 115px;
-        height: 115px;
-    }
-
-    .rocket-text h2 {
-        font-size: 40px;
-    }
-
-    .rocket-text p {
-        font-size: 14px;
-    }
-
-    .rocket-car img {
-        width: 230px;
-    }
-
-    .player-page {
-        min-height: 100svh;
-
-        padding: 130px 15px 40px;
-    }
-
     .player-profile {
-        padding: 35px 17px;
-
-        border-radius: 20px;
+        padding: 35px 18px;
     }
 
     .player-profile h1 {
-        font-size: 34px;
+        font-size: 35px;
     }
 
     .player-profile > img,
@@ -1739,29 +1551,24 @@ body.player-body::before {
     }
 
     .player-info > div {
-        width: 82px;
+        width: 78px;
         padding: 10px 5px;
-    }
-
-    .player-profile > p {
-        font-size: 13px;
     }
 
     .back-btn {
         top: 85px;
+        left: 18px;
 
         font-size: 11px;
 
-        padding: 8px 14px;
-
-        white-space: nowrap;
+        padding: 8px 12px;
     }
 }
 
 
 /* =========================================================
-   VERY SMALL PHONES
-========================================================= */
+   VERY SMALL
+   ========================================================= */
 
 @media (max-width: 400px) {
 
@@ -1776,299 +1583,25 @@ body.player-body::before {
 
     .discord-btn {
         padding: 8px 10px;
+
         font-size: 9px;
     }
 
     .hero-content h1 {
-        font-size: 38px;
+        font-size: 37px;
     }
 
     .hero-buttons {
         flex-direction: column;
+
         align-items: flex-start;
     }
 
     .hero-buttons .btn {
-        width: max-content;
-    }
-
-    .stat-box {
-        grid-template-columns: 1fr;
+        width: auto;
     }
 
     .player-info > div {
-        width: 75px;
+        width: 73px;
     }
-
-    .player-profile {
-        padding: 30px 12px;
-    }
-
-    .player-profile h1 {
-        font-size: 30px;
-    }
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-/* =========================================================
-   KEZEA ACHIEVEMENTS - PRO GAMING STYLE
-========================================================= */
-
-.achievement-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.achievement-card {
-    position: relative;
-
-    padding: 35px 25px;
-
-    min-height: 300px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(30, 30, 30, 0.95),
-            rgba(13, 13, 13, 0.98)
-        );
-
-    border: 1px solid #292929;
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    transition:
-        transform 0.4s ease,
-        border-color 0.4s ease,
-        box-shadow 0.4s ease;
-}
-
-/* GOLD GLOW */
-
-.achievement-card::before {
-    content: "";
-
-    position: absolute;
-
-    width: 180px;
-    height: 180px;
-
-    top: -90px;
-    right: -90px;
-
-    background: #f7c600;
-
-    opacity: 0.08;
-
-    border-radius: 50%;
-
-    filter: blur(30px);
-
-    transition: 0.4s;
-}
-
-.achievement-card:hover {
-    transform: translateY(-10px);
-
-    border-color: #f7c600;
-
-    box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.5),
-        0 0 25px rgba(247, 198, 0, 0.12);
-}
-
-.achievement-card:hover::before {
-    opacity: 0.18;
-    transform: scale(1.4);
-}
-
-
-/* ICON */
-
-.achievement-icon {
-    width: 65px;
-    height: 65px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: 18px;
-
-    background: #191919;
-
-    border: 1px solid #333;
-
-    border-radius: 16px;
-
-    font-size: 30px;
-
-    transition: 0.4s;
-}
-
-.achievement-card:hover .achievement-icon {
-    border-color: #f7c600;
-
-    box-shadow:
-        0 0 20px rgba(247, 198, 0, 0.2);
-
-    transform: translateY(-4px);
-}
-
-
-/* NUMBER */
-
-.achievement-number {
-    color: #f7c600;
-
-    font-family: 'Orbitron', sans-serif;
-
-    font-size: 36px;
-    font-weight: 800;
-
-    line-height: 1;
-}
-
-
-/* TITLE */
-
-.achievement-card h3 {
-    margin-top: 12px;
-
-    font-family: 'Orbitron', sans-serif;
-
-    font-size: 17px;
-
-    letter-spacing: 1px;
-}
-
-
-/* DESCRIPTION */
-
-.achievement-card p {
-    max-width: 220px;
-
-    margin-top: 12px;
-
-    color: #888;
-
-    font-size: 13px;
-
-    line-height: 1.7;
-}
-
-
-/* STATUS */
-
-.achievement-status {
-    margin-top: 20px;
-
-    padding: 6px 13px;
-
-    color: #f7c600;
-
-    border: 1px solid rgba(247, 198, 0, 0.4);
-
-    border-radius: 20px;
-
-    font-size: 9px;
-    font-weight: 700;
-
-    letter-spacing: 2px;
-}
-
-
-/* HIGHLIGHT CARD */
-
-.achievement-card.highlight {
-    border-color: rgba(247, 198, 0, 0.45);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(247, 198, 0, 0.08),
-            rgba(15, 15, 15, 0.98)
-        );
-}
-
-.achievement-card.highlight .achievement-number {
-    text-shadow:
-        0 0 15px rgba(247, 198, 0, 0.35);
-}
-
-
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
-
-.reveal {
-    opacity: 0;
-
-    transform: translateY(35px);
-
-    transition:
-        opacity 0.7s ease,
-        transform 0.7s ease;
-}
-
-.reveal.active {
-    opacity: 1;
-
-    transform: translateY(0);
-}
-
-
-/* =========================================================
-   ACHIEVEMENT MOBILE
-========================================================= */
-
-@media (max-width: 1000px) {
-
-    .achievement-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .achievement-grid {
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-    }
-
-    .achievement-card {
-        min-height: 270px;
-
-        padding: 30px 20px;
-    }
-
 }
