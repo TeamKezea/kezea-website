@@ -2596,3 +2596,357 @@ body.player-body .back-btn:hover {
         padding: 3px 6px;
     }
 }
+/* =========================================================
+   KEZEA - ROCKET LEAGUE PREMIUM SECTION
+========================================================= */
+
+#rocket-league {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(247, 198, 0, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #0b0b0b,
+            #111111,
+            #080808
+        );
+}
+
+/* خلفية ذهبية */
+
+#rocket-league::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -180px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: rgba(247, 198, 0, 0.08);
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+#rocket-league .rocket-container {
+    position: relative;
+    z-index: 2;
+
+    min-height: 420px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    padding: 65px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(28, 28, 28, 0.98),
+            rgba(10, 10, 10, 0.98)
+        );
+
+    border: 1px solid #292929;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+/* خط ذهبي */
+
+#rocket-league .rocket-container::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #f7c600,
+            transparent
+        );
+
+    box-shadow:
+        0 0 20px rgba(247, 198, 0, 0.6);
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+#rocket-league .rocket-text {
+    position: relative;
+    z-index: 3;
+
+    max-width: 520px;
+}
+
+#rocket-league .rocket-text > span {
+    display: inline-block;
+
+    color: #f7c600;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    text-shadow:
+        0 0 12px rgba(247, 198, 0, 0.25);
+}
+
+#rocket-league .rocket-text h2 {
+    margin: 15px 0 20px;
+
+    color: #fff;
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 58px;
+
+    line-height: 1.05;
+
+    text-shadow:
+        0 0 25px rgba(255, 255, 255, 0.04);
+}
+
+#rocket-league .rocket-text h2 br + * {
+    color: #f7c600;
+}
+
+#rocket-league .rocket-text p {
+    max-width: 470px;
+
+    margin-bottom: 30px;
+
+    color: #999;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CAR
+========================================================= */
+
+#rocket-league .rocket-car {
+    position: relative;
+    z-index: 2;
+
+    flex-shrink: 0;
+
+    animation:
+        rocketCarFloat 3s ease-in-out infinite alternate;
+}
+
+#rocket-league .rocket-car::before {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 160px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: rgba(247, 198, 0, 0.12);
+
+    border-radius: 50%;
+
+    filter: blur(35px);
+
+    z-index: -1;
+}
+
+#rocket-league .rocket-car img {
+    width: 400px;
+
+    max-width: 100%;
+
+    filter:
+        drop-shadow(
+            0 0 18px rgba(247, 198, 0, 0.35)
+        )
+        drop-shadow(
+            0 25px 25px rgba(0, 0, 0, 0.55)
+        );
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+#rocket-league .rocket-container:hover .rocket-car img {
+    transform: scale(1.08) rotate(-2deg);
+
+    filter:
+        drop-shadow(
+            0 0 30px rgba(247, 198, 0, 0.6)
+        )
+        drop-shadow(
+            0 25px 30px rgba(0, 0, 0, 0.6)
+        );
+}
+
+
+/* =========================================================
+   FLOAT ANIMATION
+========================================================= */
+
+@keyframes rocketCarFloat {
+
+    from {
+        transform: translateY(-8px);
+    }
+
+    to {
+        transform: translateY(8px);
+    }
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+#rocket-league .btn {
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 0 rgba(247, 198, 0, 0);
+}
+
+#rocket-league .btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.35),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.6s ease;
+}
+
+#rocket-league .btn:hover::before {
+    left: 140%;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    #rocket-league .rocket-container {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 50px 30px;
+
+        gap: 35px;
+    }
+
+    #rocket-league .rocket-text {
+        max-width: 600px;
+    }
+
+    #rocket-league .rocket-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #rocket-league .rocket-car img {
+        width: 320px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    #rocket-league {
+        padding: 75px 20px;
+    }
+
+    #rocket-league .rocket-container {
+        padding: 40px 20px;
+
+        border-radius: 22px;
+    }
+
+    #rocket-league .rocket-text > span {
+        font-size: 11px;
+
+        letter-spacing: 4px;
+    }
+
+    #rocket-league .rocket-text h2 {
+        font-size: 40px;
+    }
+
+    #rocket-league .rocket-text p {
+        font-size: 14px;
+    }
+
+    #rocket-league .rocket-car img {
+        width: 270px;
+    }
+
+    #rocket-league .rocket-car::before {
+        width: 240px;
+        height: 120px;
+    }
+}
