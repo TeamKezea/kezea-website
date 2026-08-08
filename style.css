@@ -3466,3 +3466,121 @@ body.player-body .back-btn:hover {
     }
 
 }
+/* =========================================
+   PLAYER CARDS - EXTRA GAMING EFFECTS
+========================================= */
+
+.player-card {
+    isolation: isolate;
+}
+
+/* خط ذهبي متحرك عند الـ Hover */
+
+.player-card::before {
+    transition: opacity 0.4s ease;
+}
+
+.player-card:hover::before {
+    opacity: 1;
+
+    box-shadow:
+        0 0 12px rgba(247, 198, 0, 0.7);
+}
+
+
+/* لمعة تمر داخل الكرت */
+
+.player-card::after {
+    transition:
+        background 0.4s ease,
+        transform 0.5s ease;
+}
+
+.player-card:hover::after {
+    transform: scale(1.4);
+}
+
+
+/* اسم اللاعب */
+
+.player-card h3 {
+    text-shadow:
+        0 0 0 transparent;
+
+    transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+.player-card:hover h3 {
+    color: #f7c600;
+
+    text-shadow:
+        0 0 15px rgba(247, 198, 0, 0.35);
+}
+
+
+/* Role */
+
+.player-card p {
+    transition:
+        letter-spacing 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+.player-card:hover p {
+    letter-spacing: 4px;
+
+    text-shadow:
+        0 0 10px rgba(247, 198, 0, 0.3);
+}
+
+
+/* زر LINKS */
+
+.player-link {
+    transform: translateY(0);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.player-card:hover .player-link {
+    transform: translateY(-2px);
+}
+
+
+/* حركة خفيفة للكرت */
+
+@keyframes playerGlow {
+
+    0% {
+        box-shadow:
+            0 0 20px rgba(247, 198, 0, 0.08);
+    }
+
+    50% {
+        box-shadow:
+            0 0 28px rgba(247, 198, 0, 0.14);
+    }
+
+    100% {
+        box-shadow:
+            0 0 20px rgba(247, 198, 0, 0.08);
+    }
+
+}
+
+
+/* فقط على الكمبيوتر */
+
+@media (min-width: 901px) {
+
+    .player-card:hover {
+        animation: playerGlow 1.8s ease-in-out infinite;
+    }
+
+}
