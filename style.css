@@ -1,35 +1,6 @@
 /* =========================================================
-   KEZEA ESPORTS
-   GAMING STYLE v2
-========================================================= */
-
-/* =========================
-   VARIABLES
-========================= */
-
-:root {
-    --gold: #f7c600;
-    --gold-light: #ffe45c;
-    --gold-dark: #b88c00;
-
-    --black: #050505;
-    --dark: #0b0b0b;
-    --dark-2: #111;
-    --card: #151515;
-    --card-2: #1b1b1b;
-
-    --white: #ffffff;
-    --gray: #999;
-    --gray-dark: #555;
-
-    --border: rgba(247, 198, 0, 0.18);
-
-    --glow:
-        0 0 25px rgba(247, 198, 0, 0.18);
-
-    --transition: 0.3s ease;
-}
-
+   KEZEA ESPORTS — COMPLETE GAMING STYLE
+   ========================================================= */
 
 /* =========================
    RESET
@@ -48,8 +19,8 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: var(--black);
-    color: var(--white);
+    background: #070707;
+    color: #fff;
     overflow-x: hidden;
 }
 
@@ -63,13 +34,8 @@ img {
     display: block;
 }
 
-
-/* =========================
-   SELECTION
-========================= */
-
 ::selection {
-    background: var(--gold);
+    background: #f7c600;
     color: #000;
 }
 
@@ -87,8 +53,27 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--gold);
+    background: #f7c600;
     border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffe45c;
+}
+
+
+/* =========================
+   GLOBAL GOLD GLOW
+========================= */
+
+:root {
+    --gold: #f7c600;
+    --gold-light: #ffe45c;
+    --black: #070707;
+    --dark: #0d0d0d;
+    --card: #151515;
+    --border: rgba(247, 198, 0, 0.18);
+    --gray: #999;
 }
 
 
@@ -104,7 +89,7 @@ img {
     width: 100%;
     height: 82px;
 
-    padding: 0 7%;
+    padding: 0 6%;
 
     display: flex;
     align-items: center;
@@ -118,37 +103,45 @@ img {
     z-index: 1000;
 }
 
-
-/* LOGO */
-
 .logo {
     display: flex;
     align-items: center;
     gap: 12px;
 
     font-family: 'Orbitron', sans-serif;
-    font-size: 25px;
-    font-weight: 800;
+    font-size: 26px;
+    font-weight: 900;
 
-    transition: var(--transition);
+    transition: 0.3s;
 }
 
 .logo:hover {
-    transform: scale(1.03);
+    transform: translateY(-2px);
 }
 
 .logo-symbol {
-    width: 52px;
-    height: 52px;
+    position: relative;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.logo-symbol::after {
+    content: "";
+
+    position: absolute;
+    inset: -5px;
+
+    border-radius: 50%;
+
+    background: rgba(247, 198, 0, 0.15);
+
+    filter: blur(8px);
+
+    z-index: -1;
 }
 
 .logo-symbol img {
-    width: 100%;
-    height: 100%;
+    width: 55px;
+    height: 55px;
+
     object-fit: contain;
 }
 
@@ -162,9 +155,6 @@ img {
 
     letter-spacing: 4px;
 }
-
-
-/* NAV LINKS */
 
 .navbar ul {
     display: flex;
@@ -182,7 +172,7 @@ img {
 
     color: #ddd;
 
-    transition: var(--transition);
+    transition: 0.3s;
 }
 
 .navbar ul a::after {
@@ -198,7 +188,7 @@ img {
 
     background: var(--gold);
 
-    transition: var(--transition);
+    transition: 0.3s;
 }
 
 .navbar ul a:hover {
@@ -210,7 +200,9 @@ img {
 }
 
 
-/* DISCORD */
+/* =========================
+   DISCORD BUTTON
+========================= */
 
 .discord-btn {
     padding: 11px 20px;
@@ -223,16 +215,17 @@ img {
     font-size: 12px;
     font-weight: 800;
 
-    box-shadow: 0 0 0 rgba(247, 198, 0, 0);
+    transition: 0.3s;
 
-    transition: var(--transition);
+    box-shadow:
+        0 0 0 rgba(247, 198, 0, 0);
 }
 
 .discord-btn:hover {
     transform: translateY(-3px);
 
     box-shadow:
-        0 0 25px rgba(247, 198, 0, 0.45);
+        0 0 25px rgba(247, 198, 0, 0.5);
 }
 
 
@@ -255,39 +248,36 @@ img {
     background:
         linear-gradient(
             90deg,
-            rgba(0,0,0,0.96),
-            rgba(0,0,0,0.70),
-            rgba(0,0,0,0.92)
+            rgba(0, 0, 0, 0.97) 0%,
+            rgba(0, 0, 0, 0.78) 45%,
+            rgba(0, 0, 0, 0.45) 100%
         ),
         url("https://images.unsplash.com/photo-1542751371-adc38448a05e")
         center / cover no-repeat;
 }
 
 
-/* GOLD LIGHT */
+/* Animated gold light */
 
 #hero::before {
     content: "";
 
     position: absolute;
 
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
 
-    right: -250px;
-    top: 10%;
+    top: 20%;
+    right: -150px;
 
-    background: rgba(247,198,0,0.08);
-
-    border-radius: 50%;
+    background: rgba(247, 198, 0, 0.12);
 
     filter: blur(100px);
 
+    border-radius: 50%;
+
     animation: goldPulse 5s ease-in-out infinite alternate;
 }
-
-
-/* GRID EFFECT */
 
 #hero::after {
     content: "";
@@ -295,71 +285,64 @@ img {
     position: absolute;
     inset: 0;
 
-    opacity: 0.12;
-
-    background-image:
+    background:
         linear-gradient(
-            rgba(247,198,0,0.15) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(247,198,0,0.15) 1px,
-            transparent 1px
+            135deg,
+            transparent 45%,
+            rgba(247, 198, 0, 0.04) 50%,
+            transparent 55%
         );
 
-    background-size: 70px 70px;
+    background-size: 250px 250px;
 
-    mask-image: linear-gradient(
-        to bottom,
-        black,
-        transparent
-    );
+    opacity: 0.5;
 }
-
-
-/* HERO CONTENT */
 
 .hero-content {
     position: relative;
-
-    width: 100%;
-    max-width: 750px;
-
     z-index: 2;
 
-    animation: heroAppear 1s ease;
+    width: 100%;
+    max-width: 720px;
+
+    animation: heroEnter 1s ease;
 }
 
 .welcome {
     color: var(--gold);
 
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
 
-    letter-spacing: 7px;
+    letter-spacing: 6px;
+
+    animation: fadeUp 0.8s ease;
 }
 
 .hero-content h1 {
     margin: 20px 0;
 
     font-family: 'Orbitron', sans-serif;
-    font-size: clamp(55px, 8vw, 95px);
 
-    line-height: 0.95;
+    font-size: clamp(55px, 8vw, 90px);
 
-    text-transform: uppercase;
+    line-height: 0.98;
+
+    letter-spacing: -3px;
+
+    text-shadow:
+        0 0 35px rgba(247, 198, 0, 0.08);
 }
 
 .hero-content h1 span {
     color: var(--gold);
 
     text-shadow:
-        0 0 25px rgba(247,198,0,0.25);
+        0 0 30px rgba(247, 198, 0, 0.35);
 }
 
 .hero-line {
-    width: 110px;
+    width: 120px;
     height: 4px;
 
     margin: 28px 0;
@@ -367,11 +350,13 @@ img {
     background: var(--gold);
 
     box-shadow:
-        0 0 15px rgba(247,198,0,0.6);
+        0 0 15px rgba(247, 198, 0, 0.6);
+
+    animation: lineGrow 1s ease;
 }
 
 .hero-content p {
-    max-width: 600px;
+    max-width: 570px;
 
     color: #aaa;
 
@@ -379,12 +364,10 @@ img {
     line-height: 1.8;
 }
 
-
-/* HERO BUTTONS */
-
 .hero-buttons {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+
     gap: 15px;
 
     margin-top: 35px;
@@ -396,11 +379,11 @@ img {
 ========================================================= */
 
 .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
 
-    padding: 14px 28px;
+    display: inline-block;
+
+    padding: 14px 30px;
 
     background: var(--gold);
     color: #000;
@@ -409,15 +392,40 @@ img {
     border-radius: 30px;
 
     font-weight: 800;
+    font-size: 13px;
 
-    transition: var(--transition);
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255,255,255,0.25);
+
+    transform: skewX(-20deg);
+
+    transition: 0.5s;
+}
+
+.btn:hover::before {
+    left: 120%;
 }
 
 .btn:hover {
     transform: translateY(-4px);
 
     box-shadow:
-        0 0 25px rgba(247,198,0,0.45);
+        0 0 25px rgba(247, 198, 0, 0.45);
 }
 
 .btn.outline {
@@ -426,8 +434,8 @@ img {
 }
 
 .btn.outline:hover {
-    background: var(--gold);
     color: #000;
+    background: var(--gold);
 }
 
 
@@ -438,9 +446,17 @@ img {
 #stats {
     position: relative;
 
-    padding: 70px 8%;
+    padding: 65px 8%;
 
-    background: #0d0d0d;
+    background:
+        linear-gradient(
+            180deg,
+            #111,
+            #0c0c0c
+        );
+
+    border-top: 1px solid rgba(247, 198, 0, 0.08);
+    border-bottom: 1px solid rgba(247, 198, 0, 0.08);
 }
 
 .stat-box {
@@ -448,29 +464,30 @@ img {
 
     grid-template-columns: repeat(4, 1fr);
 
-    gap: 20px;
+    gap: 18px;
 }
 
 .stat {
     position: relative;
 
-    padding: 32px 20px;
+    padding: 30px 20px;
 
     text-align: center;
 
     background:
         linear-gradient(
             145deg,
-            #191919,
+            #181818,
             #101010
         );
 
-    border: 1px solid #242424;
-    border-radius: 18px;
+    border: 1px solid #252525;
+
+    border-radius: 16px;
 
     overflow: hidden;
 
-    transition: var(--transition);
+    transition: 0.35s;
 }
 
 .stat::before {
@@ -478,27 +495,31 @@ img {
 
     position: absolute;
 
+    left: 0;
     top: 0;
-    left: -100%;
 
     width: 100%;
     height: 2px;
 
     background: var(--gold);
 
-    transition: 0.5s;
+    transform: scaleX(0);
+
+    transition: 0.35s;
 }
 
 .stat:hover {
     transform: translateY(-8px);
 
-    border-color: var(--gold);
+    border-color: rgba(247, 198, 0, 0.5);
 
-    box-shadow: var(--glow);
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.35),
+        0 0 25px rgba(247, 198, 0, 0.08);
 }
 
 .stat:hover::before {
-    left: 100%;
+    transform: scaleX(1);
 }
 
 .stat > span {
@@ -506,7 +527,7 @@ img {
 }
 
 .stat h2 {
-    margin: 12px 0;
+    margin: 10px 0;
 
     color: var(--gold);
 
@@ -515,7 +536,8 @@ img {
 }
 
 .stat p {
-    color: #999;
+    color: #888;
+    font-size: 13px;
 }
 
 
@@ -531,6 +553,8 @@ img {
     position: relative;
 
     padding: 110px 8%;
+
+    overflow: hidden;
 }
 
 #about,
@@ -541,13 +565,41 @@ img {
 
 #roster,
 #rocket-league {
-    background: #111;
+    background: #101010;
 }
 
 
-/* SECTION TITLE */
+/* Decorative background */
+
+#about::before,
+#roster::before,
+#achievements::before,
+#news::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    background: rgba(247, 198, 0, 0.04);
+
+    filter: blur(100px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SECTION TITLES
+========================================================= */
 
 .section-title {
+    position: relative;
+    z-index: 2;
+
     margin-bottom: 60px;
 
     text-align: center;
@@ -563,23 +615,23 @@ img {
 }
 
 .section-title h2 {
-    margin-top: 10px;
+    margin-top: 8px;
 
     font-family: 'Orbitron', sans-serif;
 
-    font-size: clamp(30px, 4vw, 45px);
+    font-size: clamp(30px, 5vw, 44px);
 }
 
 .section-line {
     width: 90px;
-    height: 4px;
+    height: 3px;
 
     margin: 18px auto 0;
 
     background: var(--gold);
 
     box-shadow:
-        0 0 15px rgba(247,198,0,0.5);
+        0 0 15px rgba(247, 198, 0, 0.45);
 }
 
 
@@ -588,6 +640,9 @@ img {
 ========================================================= */
 
 .about-content {
+    position: relative;
+    z-index: 2;
+
     max-width: 850px;
 
     margin: auto;
@@ -606,10 +661,13 @@ img {
 
 
 /* =========================================================
-   PLAYER CARDS
+   PLAYERS
 ========================================================= */
 
 .players {
+    position: relative;
+    z-index: 2;
+
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
@@ -622,23 +680,29 @@ img {
 
     display: block;
 
-    padding: 45px 25px;
+    padding: 42px 25px;
 
     text-align: center;
 
     background:
         linear-gradient(
             145deg,
-            #1b1b1b,
-            #111
+            #191919,
+            #101010
         );
 
     border: 1px solid #292929;
+
     border-radius: 22px;
 
     overflow: hidden;
 
-    transition: 0.4s ease;
+    cursor: pointer;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
 }
 
 .player-card::before {
@@ -646,14 +710,17 @@ img {
 
     position: absolute;
 
-    inset: 0;
+    width: 180px;
+    height: 180px;
 
-    background:
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(247,198,0,0.13),
-            transparent 50%
-        );
+    left: 50%;
+    top: -90px;
+
+    transform: translateX(-50%);
+
+    background: rgba(247, 198, 0, 0.12);
+
+    filter: blur(50px);
 
     opacity: 0;
 
@@ -666,8 +733,8 @@ img {
     border-color: var(--gold);
 
     box-shadow:
-        0 15px 45px rgba(0,0,0,0.45),
-        0 0 25px rgba(247,198,0,0.15);
+        0 20px 50px rgba(0,0,0,0.4),
+        0 0 30px rgba(247, 198, 0, 0.12);
 }
 
 .player-card:hover::before {
@@ -680,21 +747,21 @@ img {
     top: 15px;
     right: 20px;
 
-    color: #333;
+    color: #292929;
 
     font-family: 'Orbitron', sans-serif;
-    font-size: 30px;
+
+    font-size: 32px;
+    font-weight: 900;
 }
 
 .player-avatar {
     position: relative;
 
-    width: 135px;
-    height: 135px;
+    width: 130px;
+    height: 130px;
 
     margin: auto;
-
-    overflow: hidden;
 
     display: flex;
     align-items: center;
@@ -703,19 +770,15 @@ img {
     background: #0b0b0b;
 
     border: 3px solid var(--gold);
+
     border-radius: 50%;
 
+    overflow: hidden;
+
     box-shadow:
-        0 0 25px rgba(247,198,0,0.18);
+        0 0 25px rgba(247, 198, 0, 0.15);
 
     transition: 0.4s;
-}
-
-.player-card:hover .player-avatar {
-    transform: scale(1.07);
-
-    box-shadow:
-        0 0 35px rgba(247,198,0,0.4);
 }
 
 .player-avatar img {
@@ -725,9 +788,14 @@ img {
     object-fit: cover;
 }
 
-.player-card h3 {
-    position: relative;
+.player-card:hover .player-avatar {
+    transform: scale(1.06);
 
+    box-shadow:
+        0 0 30px rgba(247, 198, 0, 0.35);
+}
+
+.player-card h3 {
     margin-top: 22px;
 
     font-family: 'Orbitron', sans-serif;
@@ -736,8 +804,6 @@ img {
 }
 
 .player-card p {
-    position: relative;
-
     margin-top: 8px;
 
     color: var(--gold);
@@ -748,12 +814,7 @@ img {
     letter-spacing: 3px;
 }
 
-
-/* PLAYER LINK */
-
 .player-link {
-    position: relative;
-
     display: inline-block;
 
     margin-top: 18px;
@@ -762,29 +823,36 @@ img {
 
     color: var(--gold);
 
-    border: 1px solid var(--gold);
+    border: 1px solid rgba(247, 198, 0, 0.6);
 
-    border-radius: 20px;
+    border-radius: 25px;
 
     font-size: 11px;
     font-weight: 700;
 
     letter-spacing: 1px;
 
-    transition: var(--transition);
+    transition: 0.3s;
 }
 
 .player-card:hover .player-link {
-    background: var(--gold);
     color: #000;
+
+    background: var(--gold);
+
+    box-shadow:
+        0 0 15px rgba(247, 198, 0, 0.3);
 }
 
 
 /* =========================================================
-   ACHIEVEMENTS / NEWS CARDS
+   NEWS / ACHIEVEMENTS
 ========================================================= */
 
 .news-box {
+    position: relative;
+    z-index: 2;
+
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
@@ -795,23 +863,24 @@ img {
 .news-card {
     position: relative;
 
-    padding: 38px 28px;
+    padding: 38px 25px;
 
     text-align: center;
 
     background:
         linear-gradient(
             145deg,
-            #1a1a1a,
+            #181818,
             #101010
         );
 
     border: 1px solid #272727;
+
     border-radius: 20px;
 
     overflow: hidden;
 
-    transition: 0.35s ease;
+    transition: 0.35s;
 }
 
 .news-card::after {
@@ -822,24 +891,27 @@ img {
     bottom: 0;
     left: 0;
 
-    width: 0;
+    width: 100%;
     height: 3px;
 
     background: var(--gold);
 
-    transition: 0.4s;
+    transform: scaleX(0);
+
+    transition: 0.35s;
 }
 
 .news-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-9px);
 
-    border-color: var(--gold);
+    border-color: rgba(247, 198, 0, 0.5);
 
-    box-shadow: var(--glow);
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.35);
 }
 
 .news-card:hover::after {
-    width: 100%;
+    transform: scaleX(1);
 }
 
 .news-card h3 {
@@ -874,25 +946,45 @@ img {
 
     gap: 50px;
 
-    padding: 65px;
+    padding: 60px;
 
     background:
-        radial-gradient(
-            circle at 80% 50%,
-            rgba(247,198,0,0.12),
-            transparent 35%
-        ),
-        #171717;
+        linear-gradient(
+            135deg,
+            #191919,
+            #0f0f0f
+        );
 
     border: 1px solid #292929;
-    border-radius: 25px;
+
+    border-radius: 28px;
 
     overflow: hidden;
+
+    box-shadow:
+        inset 0 0 60px rgba(247, 198, 0, 0.025);
+}
+
+.rocket-container::before {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    right: -100px;
+    top: -100px;
+
+    background: rgba(247, 198, 0, 0.1);
+
+    filter: blur(90px);
+
+    border-radius: 50%;
 }
 
 .rocket-text {
     position: relative;
-
     z-index: 2;
 
     max-width: 500px;
@@ -912,7 +1004,7 @@ img {
 
     font-family: 'Orbitron', sans-serif;
 
-    font-size: clamp(40px, 5vw, 60px);
+    font-size: clamp(42px, 6vw, 58px);
 
     line-height: 1;
 }
@@ -927,18 +1019,17 @@ img {
 
 .rocket-car {
     position: relative;
-
     z-index: 2;
 
-    animation: carMove 2.5s ease-in-out infinite alternate;
+    animation: carFloat 2.5s ease-in-out infinite alternate;
 }
 
 .rocket-car img {
-    width: 390px;
+    width: 380px;
 
     filter:
         drop-shadow(
-            0 0 25px rgba(247,198,0,0.45)
+            0 0 25px rgba(247, 198, 0, 0.45)
         );
 }
 
@@ -948,11 +1039,13 @@ img {
 ========================================================= */
 
 footer {
+    position: relative;
+
     padding: 70px 8% 25px;
 
     background: #040404;
 
-    border-top: 1px solid #171717;
+    border-top: 1px solid rgba(247, 198, 0, 0.08);
 }
 
 .footer-grid {
@@ -975,6 +1068,10 @@ footer h3 {
     margin-bottom: 18px;
 
     color: var(--gold);
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
 }
 
 footer p {
@@ -990,25 +1087,24 @@ footer a {
 
     color: #777;
 
-    transition: var(--transition);
+    transition: 0.3s;
 }
 
 footer a:hover {
     color: var(--gold);
 
-    transform: translateX(5px);
+    transform: translateX(4px);
 }
 
 .copyright {
     margin-top: 50px;
-
     padding-top: 22px;
 
     text-align: center;
 
-    color: #444;
+    color: #555;
 
-    border-top: 1px solid #1c1c1c;
+    border-top: 1px solid #1d1d1d;
 
     font-size: 12px;
 }
@@ -1019,30 +1115,32 @@ footer a:hover {
 ========================================================= */
 
 .social-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
 
     margin-top: 20px;
 
-    padding: 11px 24px;
+    padding: 11px 25px;
+
+    color: #000;
 
     background: var(--gold);
-    color: #000;
 
     border-radius: 30px;
 
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 800;
 
-    transition: var(--transition);
+    transition: 0.3s;
+
+    box-shadow:
+        0 0 0 rgba(247, 198, 0, 0);
 }
 
 .social-btn:hover {
     transform: translateY(-4px);
 
     box-shadow:
-        0 0 22px rgba(247,198,0,0.45);
+        0 0 25px rgba(247, 198, 0, 0.5);
 }
 
 
@@ -1055,17 +1153,17 @@ body.player-body {
 
     min-height: 100vh;
 
-    overflow-x: hidden;
-
     background:
         linear-gradient(
             90deg,
-            rgba(5,5,5,0.96),
-            rgba(5,5,5,0.72),
-            rgba(5,5,5,0.96)
+            rgba(4,4,4,0.97),
+            rgba(4,4,4,0.75),
+            rgba(4,4,4,0.96)
         ),
         url("https://images.unsplash.com/photo-1542751371-adc38448a05e")
         center / cover no-repeat fixed;
+
+    overflow-x: hidden;
 }
 
 body.player-body::before {
@@ -1078,9 +1176,9 @@ body.player-body::before {
 
     background:
         radial-gradient(
-            circle at 50% 45%,
-            rgba(247,198,0,0.12),
-            transparent 38%
+            circle at 50% 40%,
+            rgba(247,198,0,0.10),
+            transparent 35%
         );
 
     z-index: 0;
@@ -1088,6 +1186,7 @@ body.player-body::before {
 
 .player-page {
     position: relative;
+    z-index: 1;
 
     width: 100%;
     min-height: 100vh;
@@ -1099,32 +1198,32 @@ body.player-body::before {
     padding: 120px 20px 60px;
 
     background: transparent;
-
-    z-index: 1;
 }
 
 .player-profile {
     position: relative;
+    z-index: 2;
 
     width: 100%;
-    max-width: 520px;
+    max-width: 540px;
 
     padding: 45px 35px;
 
     text-align: center;
 
-    background: rgba(18,18,18,0.94);
+    background: rgba(15,15,15,0.92);
 
-    border: 2px solid var(--gold);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(247,198,0,0.55);
+
     border-radius: 25px;
 
-    backdrop-filter: blur(12px);
-
     box-shadow:
-        0 0 35px rgba(247,198,0,0.14),
+        0 0 35px rgba(247,198,0,0.12),
         0 25px 70px rgba(0,0,0,0.6);
 
-    animation: playerCardAppear 0.7s ease;
+    animation: playerAppear 0.7s ease;
 }
 
 .player-profile > img,
@@ -1132,22 +1231,21 @@ body.player-body::before {
     width: 150px;
     height: 150px;
 
-    margin: 0 auto 20px;
+    margin: 0 auto 22px;
 
     object-fit: cover;
 
     border: 3px solid var(--gold);
+
     border-radius: 50%;
 
-    background: #0b0b0b;
+    background: #090909;
 
     box-shadow:
         0 0 30px rgba(247,198,0,0.25);
 }
 
 .player-profile h1 {
-    margin: 0;
-
     color: var(--gold);
 
     font-family: 'Orbitron', sans-serif;
@@ -1158,9 +1256,11 @@ body.player-body::before {
 .player-profile h3 {
     margin-top: 8px;
 
+    color: #fff;
+
     font-size: 14px;
 
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 }
 
 .player-info {
@@ -1175,18 +1275,31 @@ body.player-body::before {
 }
 
 .player-info > div {
-    width: 90px;
-    min-width: 90px;
+    width: 95px;
 
-    padding: 11px 8px;
+    padding: 12px 8px;
 
-    background: #202020;
+    background: #1a1a1a;
 
-    border-radius: 12px;
+    border: 1px solid #272727;
+
+    border-radius: 13px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.player-info > div:hover {
+    border-color: var(--gold);
+
+    transform: translateY(-4px);
 }
 
 .player-info .stat-icon {
     display: block;
+
+    margin-bottom: 3px;
 
     font-size: 18px;
 }
@@ -1194,7 +1307,7 @@ body.player-body::before {
 .player-info span:not(.stat-icon) {
     display: block;
 
-    color: #aaa;
+    color: #888;
 
     font-size: 12px;
 }
@@ -1212,6 +1325,8 @@ body.player-body::before {
 }
 
 .player-profile > p {
+    max-width: 470px;
+
     margin: 25px auto 0;
 
     color: #aaa;
@@ -1221,15 +1336,12 @@ body.player-body::before {
     line-height: 1.8;
 }
 
-
-/* ROLE */
-
 .player-role {
     display: inline-block;
 
-    margin-top: 22px;
+    margin-top: 25px;
 
-    padding: 9px 18px;
+    padding: 9px 20px;
 
     color: var(--gold);
 
@@ -1237,49 +1349,54 @@ body.player-body::before {
 
     border-radius: 30px;
 
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 700;
 
     letter-spacing: 2px;
 }
 
 
-/* BACK BUTTON */
+/* =========================================================
+   BACK TO TEAM
+========================================================= */
 
-body.player-body .back-btn {
-    position: absolute;
+.back-btn {
+    position: fixed;
 
-    top: 35px;
-    left: 35px;
+    top: 105px;
+    left: 50%;
 
-    padding: 10px 18px;
+    transform: translateX(-50%);
+
+    z-index: 100;
+
+    padding: 9px 18px;
 
     color: var(--gold);
 
-    background: rgba(15,15,15,0.9);
+    background: rgba(10,10,10,0.9);
 
     border: 1px solid rgba(247,198,0,0.5);
 
     border-radius: 12px;
 
+    font-size: 13px;
+    font-weight: 600;
+
     backdrop-filter: blur(10px);
 
-    font-size: 13px;
-    font-weight: 700;
-
-    z-index: 10;
-
-    transition: var(--transition);
+    transition: 0.3s;
 }
 
-body.player-body .back-btn:hover {
-    background: var(--gold);
+.back-btn:hover {
     color: #000;
 
-    transform: translateY(-3px);
+    background: var(--gold);
+
+    transform: translateX(-50%) translateY(-3px);
 
     box-shadow:
-        0 0 22px rgba(247,198,0,0.35);
+        0 0 20px rgba(247,198,0,0.4);
 }
 
 
@@ -1287,7 +1404,7 @@ body.player-body .back-btn:hover {
    ANIMATIONS
 ========================================================= */
 
-@keyframes heroAppear {
+@keyframes heroEnter {
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -1299,15 +1416,25 @@ body.player-body .back-btn:hover {
     }
 }
 
-@keyframes playerCardAppear {
+@keyframes fadeUp {
     from {
         opacity: 0;
-        transform: translateY(25px) scale(0.97);
+        transform: translateY(20px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: translateY(0);
+    }
+}
+
+@keyframes lineGrow {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 120px;
     }
 }
 
@@ -1318,18 +1445,30 @@ body.player-body .back-btn:hover {
     }
 
     to {
-        transform: scale(1.1);
+        transform: scale(1.15);
         opacity: 1;
     }
 }
 
-@keyframes carMove {
+@keyframes carFloat {
     from {
-        transform: translateX(0) translateY(0);
+        transform: translateY(0) translateX(0);
     }
 
     to {
-        transform: translateX(25px) translateY(-8px);
+        transform: translateY(-12px) translateX(15px);
+    }
+}
+
+@keyframes playerAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
     }
 }
 
@@ -1345,7 +1484,7 @@ body.player-body .back-btn:hover {
     }
 
     .navbar ul {
-        gap: 15px;
+        gap: 14px;
     }
 
     .navbar ul a {
@@ -1353,13 +1492,29 @@ body.player-body .back-btn:hover {
     }
 
     .discord-btn {
-        padding: 9px 14px;
+        padding: 9px 13px;
         font-size: 10px;
     }
 
-    .players,
-    .news-box {
-        gap: 18px;
+    #hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .stat-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rocket-container {
+        padding: 45px;
+    }
+
+    .rocket-car img {
+        width: 300px;
     }
 }
 
@@ -1369,8 +1524,6 @@ body.player-body .back-btn:hover {
 ========================================================= */
 
 @media (max-width: 900px) {
-
-    /* NAVBAR */
 
     .navbar {
         height: 72px;
@@ -1386,19 +1539,20 @@ body.player-body .back-btn:hover {
         font-size: 21px;
     }
 
-    .logo-symbol {
-        width: 43px;
-        height: 43px;
+    .logo-symbol img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .logo span {
+        font-size: 7px;
+        letter-spacing: 3px;
     }
 
     .discord-btn {
         padding: 9px 13px;
-
         font-size: 10px;
     }
-
-
-    /* HERO */
 
     #hero {
         min-height: 100svh;
@@ -1409,57 +1563,46 @@ body.player-body .back-btn:hover {
     }
 
     .welcome {
-        font-size: 11px;
-
-        letter-spacing: 4px;
+        font-size: 12px;
+        letter-spacing: 3px;
     }
 
     .hero-content h1 {
         font-size: 52px;
+        letter-spacing: -2px;
     }
 
     .hero-content p {
         font-size: 15px;
     }
 
-
-    /* STATS */
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
 
     .stat-box {
         grid-template-columns: repeat(2, 1fr);
     }
 
-
-    /* PLAYERS */
-
     .players {
         grid-template-columns: 1fr;
     }
 
-
-    /* NEWS */
-
     .news-box {
         grid-template-columns: 1fr;
     }
-
-
-    /* ROCKET */
 
     .rocket-container {
         flex-direction: column;
 
         text-align: center;
 
-        padding: 45px 25px;
+        padding: 40px 25px;
     }
 
     .rocket-car img {
-        width: 290px;
+        width: 270px;
     }
-
-
-    /* FOOTER */
 
     .footer-grid {
         grid-template-columns: 1fr;
@@ -1477,87 +1620,44 @@ body.player-body .back-btn:hover {
    SMALL MOBILE
 ========================================================= */
 
-/* =================================
-   BACK TO TEAM - FINAL POSITION
-================================= */
-
-body.player-body .back-btn {
-    position: absolute;
-
-    top: calc(50% - 285px);
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    width: auto;
-
-    padding: 10px 18px;
-
-    color: #f7c600;
-
-    background: rgba(20, 20, 20, 0.88);
-
-    border: 1px solid rgba(247, 198, 0, 0.55);
-    border-radius: 12px;
-
-    box-shadow:
-        0 0 15px rgba(247, 198, 0, 0.10),
-        0 8px 25px rgba(0, 0, 0, 0.35);
-
-    backdrop-filter: blur(10px);
-
-    font-size: 14px;
-    font-weight: 600;
-
-    z-index: 10;
-
-    transition: all 0.3s ease;
-}
-
-body.player-body .back-btn:hover {
-    color: #000;
-    background: #f7c600;
-
-    border-color: #f7c600;
-
-    box-shadow:
-        0 0 22px rgba(247, 198, 0, 0.35);
-
-    transform: translateX(-50%) translateY(-3px);
-}
-
-
-/* =================================
-   MOBILE
-================================= */
-
 @media (max-width: 600px) {
 
-    body.player-body .back-btn {
-        top: 70px;
-        left: 50%;
-
-        transform: translateX(-50%);
-
-        padding: 8px 14px;
-
-        font-size: 12px;
+    #about,
+    #roster,
+    #achievements,
+    #rocket-league,
+    #news {
+        padding: 80px 18px;
     }
 
-    body.player-body .back-btn:hover {
-        transform: translateX(-50%) translateY(-3px);
+    #stats {
+        padding: 45px 18px;
     }
 
-}
+    .stat-box {
+        grid-template-columns: 1fr 1fr;
 
-    /* HERO */
+        gap: 12px;
+    }
 
-    #hero {
-        padding: 115px 20px 60px;
+    .stat {
+        padding: 22px 10px;
+    }
+
+    .stat > span {
+        font-size: 27px;
+    }
+
+    .stat h2 {
+        font-size: 23px;
+    }
+
+    .stat p {
+        font-size: 11px;
     }
 
     .hero-content h1 {
-        font-size: 43px;
+        font-size: 44px;
     }
 
     .hero-content p {
@@ -1565,50 +1665,67 @@ body.player-body .back-btn:hover {
     }
 
     .hero-buttons {
-        gap: 10px;
+        gap: 9px;
     }
 
     .hero-buttons .btn {
-        padding: 11px 17px;
+        padding: 10px 17px;
 
         font-size: 11px;
     }
 
-
-    /* SECTION */
-
     .section-title {
-        margin-bottom: 45px;
+        margin-bottom: 40px;
+    }
+
+    .section-title span {
+        font-size: 10px;
+        letter-spacing: 3px;
     }
 
     .section-title h2 {
         font-size: 30px;
     }
 
-
-    /* STATS */
-
-    .stat-box {
-        grid-template-columns: 1fr;
+    .about-content p {
+        font-size: 14px;
     }
 
+    .player-card {
+        padding: 35px 20px;
+    }
 
-    /* PLAYER PAGE */
+    .player-avatar {
+        width: 115px;
+        height: 115px;
+    }
+
+    .rocket-text h2 {
+        font-size: 40px;
+    }
+
+    .rocket-text p {
+        font-size: 14px;
+    }
+
+    .rocket-car img {
+        width: 230px;
+    }
 
     .player-page {
         min-height: 100svh;
 
-        padding: 100px 15px 35px;
+        padding: 130px 15px 40px;
     }
 
     .player-profile {
-        padding: 35px 18px;
+        padding: 35px 17px;
 
         border-radius: 20px;
     }
 
     .player-profile h1 {
-        font-size: 35px;
+        font-size: 34px;
     }
 
     .player-profile > img,
@@ -1618,39 +1735,26 @@ body.player-body .back-btn:hover {
     }
 
     .player-info {
-        gap: 6px;
+        gap: 5px;
     }
 
     .player-info > div {
-        width: 80px;
-        min-width: 80px;
+        width: 82px;
+        padding: 10px 5px;
     }
 
     .player-profile > p {
         font-size: 13px;
     }
 
-
-    /* BACK BUTTON */
-
-    body.player-body .back-btn {
-        top: 82px;
-        left: 18px;
-
-        padding: 8px 13px;
+    .back-btn {
+        top: 85px;
 
         font-size: 11px;
-    }
 
+        padding: 8px 14px;
 
-    /* ROCKET */
-
-    .rocket-text h2 {
-        font-size: 40px;
-    }
-
-    .rocket-car img {
-        width: 240px;
+        white-space: nowrap;
     }
 }
 
@@ -1665,30 +1769,43 @@ body.player-body .back-btn:hover {
         font-size: 18px;
     }
 
-    .logo-symbol {
+    .logo-symbol img {
         width: 38px;
         height: 38px;
     }
 
     .discord-btn {
         padding: 8px 10px;
-
         font-size: 9px;
     }
 
     .hero-content h1 {
-        font-size: 37px;
+        font-size: 38px;
     }
 
     .hero-buttons {
         flex-direction: column;
-
         align-items: flex-start;
+    }
+
+    .hero-buttons .btn {
+        width: max-content;
+    }
+
+    .stat-box {
+        grid-template-columns: 1fr;
     }
 
     .player-info > div {
         width: 75px;
-        min-width: 75px;
+    }
+
+    .player-profile {
+        padding: 30px 12px;
+    }
+
+    .player-profile h1 {
+        font-size: 30px;
     }
 }
 
@@ -1704,7 +1821,7 @@ body.player-body .back-btn:hover {
     *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
     }
 }
