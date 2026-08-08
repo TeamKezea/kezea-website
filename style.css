@@ -3385,3 +3385,84 @@ body.player-body .back-btn:hover {
         height: 120px;
     }
 }
+/* =========================================
+   PLAYER STATS INSIDE CARDS
+========================================= */
+
+.player-stats {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 22px;
+}
+
+.player-stats > div {
+    width: 75px;
+
+    padding: 10px 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid #292929;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+.player-stats span {
+    font-size: 16px;
+}
+
+.player-stats b {
+    margin-top: 3px;
+
+    color: #f7c600;
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 17px;
+}
+
+.player-stats small {
+    margin-top: 2px;
+
+    color: #777;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.player-card:hover .player-stats > div {
+    border-color: rgba(247, 198, 0, 0.4);
+
+    background: rgba(247, 198, 0, 0.05);
+
+    transform: translateY(-3px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .player-stats {
+        gap: 5px;
+    }
+
+    .player-stats > div {
+        width: 70px;
+    }
+
+}
