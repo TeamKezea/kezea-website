@@ -3715,3 +3715,105 @@ body.player-body .back-btn:hover {
     box-shadow:
         0 0 20px rgba(247, 198, 0, 0.35);
 }
+/* =========================================
+   PLAYER SOCIALS
+========================================= */
+
+.player-socials {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.player-socials .social-btn {
+    margin-top: 0;
+
+    min-width: 120px;
+
+    text-align: center;
+
+    border: 1px solid #f7c600;
+
+    box-shadow:
+        0 0 12px rgba(247, 198, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.player-socials .social-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 0 22px rgba(247, 198, 0, 0.35);
+}
+
+
+/* =========================================
+   PLAYER IMAGE GAMING EFFECT
+========================================= */
+
+.player-profile > img,
+.player-profile .player-image {
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        filter 0.4s ease;
+}
+
+.player-profile:hover > img,
+.player-profile:hover .player-image {
+
+    transform: scale(1.04);
+
+    filter:
+        brightness(1.08)
+        contrast(1.05);
+
+    box-shadow:
+        0 0 25px rgba(247, 198, 0, 0.35),
+        0 0 60px rgba(247, 198, 0, 0.10);
+}
+
+
+/* =========================================
+   PLAYER DESCRIPTION
+========================================= */
+
+.player-profile > p {
+    color: #aaa;
+
+    transition: color 0.3s ease;
+}
+
+.player-profile:hover > p {
+    color: #ccc;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .player-socials {
+        flex-wrap: wrap;
+    }
+
+    .player-socials .social-btn {
+        min-width: 110px;
+        padding: 9px 18px;
+    }
+
+}
