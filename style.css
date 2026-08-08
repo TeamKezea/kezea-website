@@ -1971,3 +1971,336 @@ body.player-body .back-btn:hover {
         min-height: 150px;
     }
 }
+/* =========================================================
+   KEZEA - PREMIUM PLAYER CARDS
+========================================================= */
+
+.player-card {
+    position: relative;
+    overflow: hidden;
+
+    padding: 42px 25px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30, 30, 30, 0.98),
+            rgba(10, 10, 10, 0.98)
+        );
+
+    border: 1px solid #292929;
+    border-radius: 22px;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+
+    isolation: isolate;
+}
+
+/* GOLDEN GLOW */
+
+.player-card::before {
+    content: "";
+
+    position: absolute;
+    width: 220px;
+    height: 220px;
+
+    top: -120px;
+    right: -100px;
+
+    background: rgba(247, 198, 0, 0.12);
+
+    border-radius: 50%;
+
+    filter: blur(45px);
+
+    transition: 0.5s;
+
+    z-index: -1;
+}
+
+/* TOP GOLD LINE */
+
+.player-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 0;
+    height: 3px;
+
+    background: #f7c600;
+
+    transform: translateX(-50%);
+
+    box-shadow: 0 0 15px rgba(247, 198, 0, 0.8);
+
+    transition: width 0.4s ease;
+}
+
+/* HOVER */
+
+.player-card:hover {
+    transform: translateY(-12px) scale(1.02);
+
+    border-color: #f7c600;
+
+    box-shadow:
+        0 0 25px rgba(247, 198, 0, 0.18),
+        0 20px 50px rgba(0, 0, 0, 0.55);
+}
+
+.player-card:hover::before {
+    transform: scale(1.5);
+
+    background: rgba(247, 198, 0, 0.18);
+}
+
+.player-card:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   PLAYER NUMBER
+========================================================= */
+
+.player-number {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    color: #333;
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+
+    transition: 0.4s;
+}
+
+.player-card:hover .player-number {
+    color: rgba(247, 198, 0, 0.35);
+
+    transform: scale(1.1);
+}
+
+
+/* =========================================================
+   PLAYER AVATAR
+========================================================= */
+
+.player-avatar {
+    position: relative;
+
+    width: 135px;
+    height: 135px;
+
+    margin: 5px auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle,
+            #292929,
+            #111 70%
+        );
+
+    border: 3px solid #f7c600;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 6px rgba(247, 198, 0, 0.05),
+        0 0 25px rgba(247, 198, 0, 0.15);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.player-avatar::before {
+    content: "";
+
+    position: absolute;
+    inset: -30%;
+
+    background: conic-gradient(
+        transparent,
+        rgba(247, 198, 0, 0.35),
+        transparent
+    );
+
+    animation: avatarSpin 5s linear infinite;
+
+    z-index: 0;
+}
+
+.player-avatar img {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    transition: transform 0.5s ease;
+}
+
+.player-card:hover .player-avatar {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 0 7px rgba(247, 198, 0, 0.08),
+        0 0 35px rgba(247, 198, 0, 0.35);
+}
+
+.player-card:hover .player-avatar img {
+    transform: scale(1.08);
+}
+
+@keyframes avatarSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   PLAYER NAME
+========================================================= */
+
+.player-card h3 {
+    position: relative;
+
+    margin-top: 22px;
+
+    color: #fff;
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+
+    transition: 0.3s;
+}
+
+.player-card:hover h3 {
+    color: #f7c600;
+
+    text-shadow:
+        0 0 15px rgba(247, 198, 0, 0.35);
+}
+
+
+/* =========================================================
+   PLAYER ROLE
+========================================================= */
+
+.player-card > p {
+    margin-top: 8px;
+
+    color: #f7c600;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   LINKS BUTTON
+========================================================= */
+
+.player-link {
+    position: relative;
+    z-index: 2;
+
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 9px 20px;
+
+    color: #f7c600;
+
+    background: rgba(247, 198, 0, 0.04);
+
+    border: 1px solid rgba(247, 198, 0, 0.5);
+
+    border-radius: 25px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.player-card:hover .player-link {
+    color: #000;
+
+    background: #f7c600;
+
+    border-color: #f7c600;
+
+    box-shadow:
+        0 0 18px rgba(247, 198, 0, 0.4);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .player-card {
+        padding: 35px 20px 28px;
+
+        border-radius: 18px;
+    }
+
+    .player-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .player-card h3 {
+        font-size: 21px;
+    }
+
+    .player-number {
+        font-size: 27px;
+    }
+
+    .player-card:hover {
+        transform: translateY(-7px);
+    }
+}
