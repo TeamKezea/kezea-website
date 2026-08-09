@@ -7161,3 +7161,93 @@ footer {
     }
 
 }
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(255, 210, 0, 0.5);
+    color: #ffd200;
+    font-size: 24px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .navbar.menu-open ul {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        padding: 15px 0;
+        background: rgba(8, 8, 8, 0.98);
+        border-top: 1px solid rgba(255, 210, 0, 0.25);
+        border-bottom: 1px solid rgba(255, 210, 0, 0.25);
+        z-index: 1000;
+    }
+
+    .navbar.menu-open ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar.menu-open ul li a {
+        display: block;
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    .navbar.menu-open ul li a:hover {
+        color: #ffd200;
+        background: rgba(255, 210, 0, 0.06);
+    }
+
+    .discord-btn {
+        display: none;
+    }
+
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 901px) {
+
+    .navbar ul {
+        display: flex !important;
+    }
+
+    .menu-toggle {
+        display: none !important;
+    }
+
+    .discord-btn {
+        display: inline-flex;
+    }
+
+}
