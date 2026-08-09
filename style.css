@@ -7251,3 +7251,417 @@ footer {
     }
 
 }
+/* =====================================================
+   BUTTONS + NAVIGATION ANIMATIONS
+===================================================== */
+
+
+/* =========================
+   GENERAL BUTTON ANIMATION
+========================= */
+
+.btn,
+.discord-btn,
+.discord-cta-btn,
+.news-card-btn,
+.stat-link,
+.player-link {
+    position: relative;
+    overflow: hidden;
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Shine effect */
+
+.btn::before,
+.discord-btn::before,
+.discord-cta-btn::before,
+.news-card-btn::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.25),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.6s ease;
+
+    pointer-events: none;
+}
+
+
+/* Hover */
+
+.btn:hover::before,
+.discord-btn:hover::before,
+.discord-cta-btn:hover::before,
+.news-card-btn:hover::before {
+    left: 140%;
+}
+
+
+.btn:hover,
+.discord-btn:hover,
+.discord-cta-btn:hover,
+.news-card-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Click */
+
+.btn:active,
+.discord-btn:active,
+.discord-cta-btn:active,
+.news-card-btn:active {
+    transform: translateY(0) scale(0.97);
+}
+
+
+
+/* =========================
+   DESKTOP NAV
+========================= */
+
+.desktop-nav a {
+    position: relative;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Animated underline */
+
+.desktop-nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #ffffff;
+
+    transform: translateX(-50%);
+
+    transition:
+        width 0.3s ease;
+}
+
+
+.desktop-nav a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+.desktop-nav a:hover::after {
+    width: 100%;
+}
+
+
+
+/* =========================
+   MOBILE MENU LINKS
+========================= */
+
+.mobile-nav a {
+    position: relative;
+
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.mobile-nav a::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    width: 0;
+    height: 2px;
+
+    background: #ffffff;
+
+    transform: translateY(-50%);
+
+    transition: width 0.3s ease;
+}
+
+
+.mobile-nav a:hover {
+    padding-left: 25px;
+    color: #ffffff;
+}
+
+
+.mobile-nav a:hover::before {
+    width: 14px;
+}
+
+
+.mobile-nav a span {
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.mobile-nav a:hover span {
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+
+
+/* =========================
+   MENU TOGGLE
+========================= */
+
+.menu-toggle {
+    position: relative;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+.menu-toggle:hover {
+    transform: scale(1.08);
+}
+
+
+.menu-toggle:active {
+    transform: scale(0.9);
+}
+
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.mobile-close {
+    transition:
+        transform 0.35s ease,
+        color 0.3s ease;
+}
+
+
+.mobile-close:hover {
+    transform: rotate(90deg) scale(1.1);
+    color: #ffffff;
+}
+
+
+.mobile-close:active {
+    transform: rotate(90deg) scale(0.9);
+}
+
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+.logo:hover {
+    transform: translateY(-2px);
+}
+
+
+.logo-symbol img {
+    transition:
+        transform 0.5s ease;
+}
+
+
+.logo:hover .logo-symbol img {
+    transform: rotate(-5deg) scale(1.08);
+}
+
+
+
+/* =========================
+   STAT CARDS
+========================= */
+
+.stat {
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.stat:hover {
+    transform: translateY(-8px);
+}
+
+
+.stat-icon {
+    display: inline-block;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.stat:hover .stat-icon {
+    transform: scale(1.15) rotate(-6deg);
+}
+
+
+.stat-link {
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.stat:hover .stat-link {
+    transform: translateX(6px);
+}
+
+
+
+/* =========================
+   PLAYER CARDS
+========================= */
+
+.player-card {
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.player-card:hover {
+    transform: translateY(-8px);
+}
+
+
+.player-avatar img {
+    transition:
+        transform 0.5s ease;
+}
+
+
+.player-card:hover .player-avatar img {
+    transform: scale(1.06);
+}
+
+
+.player-link {
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.player-card:hover .player-link:not(.disabled) {
+    transform: translateX(6px);
+}
+
+
+
+/* =========================
+   NEWS CARDS
+========================= */
+
+.news-card {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.news-card:hover {
+    transform: translateY(-8px);
+}
+
+
+.news-card-image {
+    overflow: hidden;
+}
+
+
+.news-card-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        120deg,
+        transparent 30%,
+        rgba(255,255,255,0.12),
+        transparent 70%
+    );
+
+    transform: translateX(-100%);
+
+    transition:
+        transform 0.7s ease;
+
+    pointer-events: none;
+}
+
+
+.news-card:hover .news-card-image::after {
+    transform: translateX(100%);
+}
+
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
