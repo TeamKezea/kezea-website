@@ -1,292 +1,35 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap");
-
-:root{
-  --gold:#f7c600;
-  --gold-light:#ffe36e;
-  --bg:#05070b;
-  --panel:#0b0f15;
-  --panel2:#10151d;
-  --text:#fff;
-  --muted:rgba(255,255,255,.52);
-  --line:rgba(255,255,255,.08);
-}
-
+:root{--gold:#f7c600;--bg:#05070b;--text:#fff;--line:rgba(255,255,255,.08)}
 *{box-sizing:border-box;margin:0;padding:0}
-body{
-  min-height:100vh;
-  font-family:"Poppins",sans-serif;
-  color:var(--text);
-  background:
-    radial-gradient(circle at 80% 0%, rgba(247,198,0,.06), transparent 24%),
-    #05070b;
-}
-a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%}
-
-.page{
-  min-height:100vh;
-  padding:26px 24px 48px;
-}
-
-.topbar{
-  width:min(1180px,100%);
-  margin:0 auto 24px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-family:"Orbitron",sans-serif;
-  font-size:20px;
-  font-weight:900;
-}
-.brand img{width:42px;height:42px;object-fit:contain}
-.brand small{
-  display:block;
-  margin-top:2px;
-  color:var(--gold);
-  font-family:"Poppins",sans-serif;
-  font-size:7px;
-  font-weight:900;
-  letter-spacing:3px;
-}
-
-.back{
-  padding:10px 14px;
-  border:1px solid rgba(247,198,0,.3);
-  border-radius:8px;
-  color:var(--gold);
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:1.1px;
-}
-
-.profile{
-  width:min(1180px,100%);
-  margin:0 auto;
-  min-height:640px;
-  display:grid;
-  grid-template-columns:420px 1fr;
-  overflow:hidden;
-  border:1px solid rgba(247,198,0,.22);
-  border-radius:18px;
-  background:linear-gradient(145deg,#0e1219,#080b10);
-  box-shadow:0 30px 85px rgba(0,0,0,.35);
-}
-
-.visual{
-  position:relative;
-  min-height:640px;
-  padding:34px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:
-    radial-gradient(circle at 50% 32%,rgba(247,198,0,.10),transparent 28%),
-    linear-gradient(180deg,#11161f,#080b10);
-  border-right:1px solid var(--line);
-}
-
-.number{
-  position:absolute;
-  top:20px;
-  left:22px;
-  color:rgba(247,198,0,.34);
-  font-family:"Orbitron",sans-serif;
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:3px;
-}
-
-.photo{
-  width:100%;
-  aspect-ratio:1/1;
-  overflow:hidden;
-  border-radius:16px;
-  border:1px solid rgba(247,198,0,.22);
-  box-shadow:0 18px 50px rgba(0,0,0,.34);
-}
-.photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.content{
-  padding:54px 56px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.kicker{
-  color:var(--gold);
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:3px;
-}
-
-.name{
-  margin-top:8px;
-  font-family:"Orbitron",sans-serif;
-  font-size:clamp(54px,7vw,88px);
-  line-height:.9;
-  letter-spacing:-3px;
-  font-weight:900;
-}
-
-.role{
-  margin-top:16px;
-  color:#fff;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:2px;
-}
-
-.rule{
-  width:58px;
-  height:2px;
-  margin:22px 0 26px;
-  background:var(--gold);
-}
-
-.info-card{
-  width:100%;
-  padding:24px 24px 22px;
-  border:1px solid rgba(247,198,0,.16);
-  border-radius:14px;
-  background:
-    radial-gradient(circle at 100% 0%, rgba(247,198,0,.05), transparent 26%),
-    rgba(255,255,255,.015);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.02);
-}
-
-.card-title{
-  color:var(--gold);
-  font-size:8px;
-  font-weight:900;
-  letter-spacing:2.5px;
-  margin-bottom:18px;
-}
-
-.info-list{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:0 28px;
-}
-
-.info-line{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:14px;
-  padding:12px 0;
-  border-bottom:1px solid var(--line);
-}
-
-.info-line:nth-last-child(-n+2){
-  border-bottom:0;
-}
-
-.label{
-  color:rgba(255,255,255,.30);
-  font-size:8px;
-  font-weight:900;
-  letter-spacing:1.7px;
-}
-
-.value{
-  color:#fff;
-  font-family:"Orbitron",sans-serif;
-  font-size:13px;
-  font-weight:800;
-  text-align:right;
-}
-
-.value.gold{
-  color:var(--gold);
-}
-
-.career-box{
-  margin-top:18px;
-  padding-top:18px;
-  border-top:1px solid var(--line);
-}
-
-.career-label{
-  color:rgba(255,255,255,.30);
-  font-size:8px;
-  font-weight:900;
-  letter-spacing:2px;
-}
-
-.event{
-  margin-top:9px;
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap:18px;
-}
-
-.event-name{
-  max-width:470px;
-  font-family:"Orbitron",sans-serif;
-  font-size:18px;
-  line-height:1.3;
-  font-weight:800;
-}
-
-.result{
-  flex-shrink:0;
-  color:var(--gold);
-  font-family:"Orbitron",sans-serif;
-  font-size:17px;
-  font-weight:900;
-  text-align:right;
-}
-
-.actions{
-  margin-top:22px;
-}
-
-.social{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-width:150px;
-  padding:11px 16px;
-  border-radius:8px;
-  background:var(--gold);
-  color:#050505;
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:1.1px;
-}
-.social.disabled{
-  color:rgba(255,255,255,.28);
-  background:rgba(255,255,255,.02);
-  border:1px solid rgba(255,255,255,.08);
-}
-
-@media(max-width:900px){
-  .profile{grid-template-columns:1fr}
-  .visual{border-right:0;border-bottom:1px solid var(--line)}
-  .photo{max-width:460px}
-}
-
-@media(max-width:650px){
-  .page{padding:16px 12px 30px}
-  .content{padding:34px 20px}
-  .visual{padding:24px}
-  .name{font-size:clamp(46px,15vw,68px)}
-  .info-list{grid-template-columns:1fr}
-  .info-line:nth-last-child(-n+2){border-bottom:1px solid var(--line)}
-  .info-line:last-child{border-bottom:0}
-  .event{align-items:flex-start;flex-direction:column}
-  .result{text-align:left}
-}
+body{min-height:100vh;font-family:"Poppins",sans-serif;color:#fff;background:radial-gradient(circle at 82% 0%,rgba(247,198,0,.055),transparent 25%),#05070b}
+a{text-decoration:none;color:inherit} img{display:block;max-width:100%}
+.page{min-height:100vh;padding:26px 24px 48px}
+.topbar{width:min(1180px,100%);margin:0 auto 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Orbitron";font-size:20px;font-weight:900}
+.brand img{width:42px;height:42px;object-fit:contain}.brand small{display:block;color:var(--gold);font:900 7px "Poppins";letter-spacing:3px}
+.back{padding:10px 14px;border:1px solid rgba(247,198,0,.3);border-radius:8px;color:var(--gold);font-size:9px;font-weight:900;letter-spacing:1px}
+.profile{width:min(1180px,100%);min-height:640px;margin:auto;display:grid;grid-template-columns:420px 1fr;overflow:hidden;border:1px solid rgba(247,198,0,.22);border-radius:18px;background:linear-gradient(145deg,#0e1219,#080b10)}
+.visual{position:relative;min-height:640px;padding:34px;display:flex;align-items:center;background:radial-gradient(circle at 50% 32%,rgba(247,198,0,.1),transparent 28%),linear-gradient(180deg,#11161f,#080b10);border-right:1px solid var(--line)}
+.number{position:absolute;top:20px;left:22px;color:rgba(247,198,0,.35);font:900 11px "Orbitron";letter-spacing:3px}
+.photo{width:100%;aspect-ratio:1;overflow:hidden;border-radius:16px;border:1px solid rgba(247,198,0,.3)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.content{padding:52px 56px;display:flex;flex-direction:column;justify-content:center}
+.kicker{color:var(--gold);font-size:9px;font-weight:900;letter-spacing:3px}
+.name{margin-top:8px;font:900 clamp(54px,7vw,88px)/.9 "Orbitron";letter-spacing:-3px}
+.role{display:inline-block;width:max-content;position:relative;margin-top:16px;padding-bottom:13px;font-size:11px;font-weight:900;letter-spacing:2px}
+.role:after{content:"";position:absolute;left:0;bottom:0;width:58px;height:2px;border-radius:99px;background:var(--gold);box-shadow:0 0 12px rgba(247,198,0,.2)}
+.info-card{margin-top:24px;padding:25px 26px 24px;border:1px solid rgba(247,198,0,.55);border-radius:14px;background:radial-gradient(circle at 100% 0%,rgba(247,198,0,.065),transparent 30%),linear-gradient(145deg,rgba(18,20,20,.98),rgba(8,11,16,.98));box-shadow:inset 0 1px 0 rgba(255,255,255,.025),0 16px 35px rgba(0,0,0,.16)}
+.card-title{display:flex;align-items:center;gap:10px;margin-bottom:17px;color:var(--gold);font-size:9px;font-weight:900;letter-spacing:2.4px}
+.card-title:before{content:"◉";font-size:14px}
+.info-list{display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
+.info-line{min-height:48px;padding:12px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line)}
+.label,.career-label{color:rgba(255,255,255,.32);font-size:8px;font-weight:900;letter-spacing:1.7px}
+.value{font:800 13px "Orbitron";text-align:right}.gold{color:var(--gold)}
+.career-box{margin-top:18px;padding-top:19px;border-top:1px solid var(--line)}
+.event{margin-top:10px;display:grid;grid-template-columns:1fr auto;align-items:end;gap:20px}
+.event-name{font:800 18px/1.3 "Orbitron"}.result{color:var(--gold);font:900 17px "Orbitron";text-align:right}
+.actions{margin-top:20px}.social{display:inline-flex;padding:11px 17px;border:1px solid rgba(247,198,0,.65);border-radius:8px;color:var(--gold);font-size:9px;font-weight:900;letter-spacing:1px}
+.social.disabled{color:rgba(255,255,255,.28);border-color:rgba(255,255,255,.08)}
+@media(max-width:900px){.profile{grid-template-columns:1fr}.visual{border-right:0;border-bottom:1px solid var(--line)}}
+@media(max-width:650px){.page{padding:14px 10px 28px}.content{padding:32px 20px}.visual{padding:24px}.info-list{grid-template-columns:1fr}.event{grid-template-columns:1fr}.result{text-align:left}}
