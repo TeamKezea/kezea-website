@@ -7038,3 +7038,126 @@ footer {
     }
 
 }
+/* =========================
+   KEZEA MENU
+========================= */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid #f5c400;
+    color: #f5c400;
+    font-size: 26px;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+
+/* =========================
+   DESKTOP MENU BUTTON
+========================= */
+
+@media (min-width: 901px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar ul {
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        width: 320px;
+        height: 100vh;
+
+        margin: 0;
+        padding: 120px 40px 40px;
+
+        background: #080808;
+        border-left: 2px solid #f5c400;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+
+        transform: translateX(100%);
+        transition: transform 0.45s ease;
+
+        z-index: 1000;
+    }
+
+    .navbar ul.active {
+        transform: translateX(0);
+    }
+
+    .navbar ul li {
+        list-style: none;
+    }
+
+    .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        transition: 0.25s ease;
+    }
+
+    .navbar ul li a:hover {
+        color: #f5c400;
+        padding-left: 8px;
+    }
+
+    .navbar .discord-btn {
+        display: none;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar ul {
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        width: 300px;
+        max-width: 85vw;
+        height: 100vh;
+
+        margin: 0;
+        padding: 110px 30px 30px;
+
+        background: #080808;
+        border-left: 2px solid #f5c400;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        transform: translateX(100%);
+        transition: transform 0.45s ease;
+
+        z-index: 1000;
+    }
+
+    .navbar ul.active {
+        transform: translateX(0);
+    }
+
+}
