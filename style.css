@@ -9050,8 +9050,9 @@ footer {
 
 
 /* =========================================================
-   KEZEA PLAYER PAGES — FINAL INFORMATION DESIGN
-   Add class="player-body" to <body> on each player page.
+   KEZEA PLAYER PAGES — SAFE SCOPED PROFILE DESIGN
+   This section is scoped to body.player-body only,
+   so it will NOT affect roster/player cards on index.html.
    ========================================================= */
 
 body.player-body {
@@ -9069,22 +9070,6 @@ body.player-body .player-page {
     display: block !important;
 }
 
-/* Old/simple player markup */
-body.player-body .player-profile,
-body.player-body .player-page > .player-content {
-    width: 100% !important;
-    max-width: 900px !important;
-    margin: 0 auto !important;
-    padding: 48px !important;
-    background:
-        radial-gradient(circle at 85% 10%, rgba(247,198,0,.06), transparent 27%),
-        linear-gradient(145deg, #10151d, #090c12) !important;
-    border: 1px solid rgba(247,198,0,.25) !important;
-    border-radius: 16px !important;
-    box-shadow: 0 28px 75px rgba(0,0,0,.35) !important;
-}
-
-/* New profile shell markup */
 body.player-body .profile-shell {
     width: 100% !important;
     max-width: 1120px !important;
@@ -9116,20 +9101,15 @@ body.player-body .profile-right {
     padding: 52px !important;
 }
 
-body.player-body .avatar-wrap,
-body.player-body .player-profile > img,
-body.player-body .player-image {
+body.player-body .avatar-wrap {
     width: 205px !important;
     height: 205px !important;
     margin: 0 auto 24px !important;
     padding: 4px !important;
     border-radius: 50% !important;
     border: 1px solid rgba(247,198,0,.35) !important;
-    object-fit: cover !important;
     background: rgba(247,198,0,.04) !important;
-    box-shadow:
-        0 18px 45px rgba(0,0,0,.32),
-        0 0 30px rgba(247,198,0,.08) !important;
+    box-shadow: 0 18px 45px rgba(0,0,0,.32), 0 0 30px rgba(247,198,0,.08) !important;
 }
 
 body.player-body .avatar-wrap img {
@@ -9140,9 +9120,7 @@ body.player-body .avatar-wrap img {
 }
 
 body.player-body .player-name,
-body.player-body .profile-right h1,
-body.player-body .player-profile h1,
-body.player-body .player-page > h1 {
+body.player-body .profile-right h1 {
     font-family: "Orbitron", sans-serif !important;
     font-weight: 900 !important;
 }
@@ -9186,7 +9164,6 @@ body.player-body .team-tag {
     letter-spacing: 1.5px !important;
 }
 
-/* Information cards */
 body.player-body .info-grid {
     margin-top: 32px !important;
     display: grid !important;
@@ -9228,7 +9205,6 @@ body.player-body .info-value.gold {
     color: var(--gold) !important;
 }
 
-/* Linktree / links */
 body.player-body .links-row {
     margin-top: 24px !important;
 }
@@ -9262,7 +9238,6 @@ body.player-body .profile-link.disabled {
     pointer-events: none !important;
 }
 
-/* Back button */
 body.player-body .back-btn {
     position: fixed !important;
     top: 94px !important;
@@ -9310,9 +9285,7 @@ body.player-body .back-btn:hover {
         padding: 32px 20px !important;
     }
 
-    body.player-body .avatar-wrap,
-    body.player-body .player-profile > img,
-    body.player-body .player-image {
+    body.player-body .avatar-wrap {
         width: 170px !important;
         height: 170px !important;
     }
