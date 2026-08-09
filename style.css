@@ -6757,3 +6757,126 @@ footer {
     }
 
 }
+/* =========================================
+   KEZEA DRAGON ANIMATION
+   RIGHT → LEFT + YELLOW ESPORTS LINES
+========================================= */
+
+/* التنين */
+.dragon,
+.dragon-animation,
+.dragon-container {
+    animation: kezeaDragonIn 1.8s cubic-bezier(.16, 1, .3, 1) forwards;
+}
+
+/* حركة الدخول من اليمين */
+@keyframes kezeaDragonIn {
+
+    0% {
+        transform: translateX(120%);
+        opacity: 0;
+        filter: brightness(0.5);
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        filter: brightness(1);
+    }
+}
+
+
+/* =========================================
+   YELLOW ESPORTS LINES
+========================================= */
+
+.dragon::before,
+.dragon::after,
+.dragon-animation::before,
+.dragon-animation::after,
+.dragon-container::before,
+.dragon-container::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ffd400,
+        #fff36a,
+        #ffd400,
+        transparent
+    );
+    box-shadow:
+        0 0 8px #ffd400,
+        0 0 18px rgba(255, 212, 0, 0.7);
+    pointer-events: none;
+}
+
+
+/* الخط العلوي */
+
+.dragon::before,
+.dragon-animation::before,
+.dragon-container::before {
+    width: 260px;
+    right: 10%;
+    top: 25%;
+    animation: kezeaLineTop 1.4s ease-out forwards;
+}
+
+
+/* الخط السفلي */
+
+.dragon::after,
+.dragon-animation::after,
+.dragon-container::after {
+    width: 180px;
+    right: 5%;
+    bottom: 25%;
+    animation: kezeaLineBottom 1.6s ease-out forwards;
+}
+
+
+/* حركة الخط العلوي */
+
+@keyframes kezeaLineTop {
+
+    0% {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* حركة الخط السفلي */
+
+@keyframes kezeaLineBottom {
+
+    0% {
+        transform: translateX(250px);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
