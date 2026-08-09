@@ -4637,3 +4637,272 @@ body.details-body {
 
     border-bottom: 1px solid rgba(255,255,255,0.08);
 }
+/* =========================================
+   KEZEA - NEW ESPORTS HERO
+========================================= */
+
+#hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 7, 12, 0.35),
+            rgba(5, 7, 12, 0.82)
+        ),
+        url("hero-bg.jpg") center / cover no-repeat;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* DARK VIGNETTE */
+
+#hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 15%,
+            rgba(5,7,12,0.35) 65%,
+            rgba(5,7,12,0.9) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* HUGE BACKGROUND KEZEA */
+
+.hero-bg-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: clamp(180px, 25vw, 420px);
+    font-weight: 900;
+    letter-spacing: -0.08em;
+
+    color: rgba(255,255,255,0.035);
+
+    white-space: nowrap;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+
+/* TOP INFO */
+
+.hero-top {
+    position: absolute;
+    top: 38px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 35px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+
+    color: rgba(255,255,255,0.65);
+
+    z-index: 2;
+}
+
+
+/* CENTER */
+
+.hero-center {
+    position: relative;
+    z-index: 3;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 25px;
+}
+
+
+/* LOGO */
+
+.hero-logo img {
+    width: 72px;
+    height: 72px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 0 25px rgba(80,150,255,0.35));
+
+    margin-bottom: 10px;
+}
+
+
+/* MAIN TITLE */
+
+.hero-center h1 {
+    margin: 0;
+
+    font-size: clamp(80px, 12vw, 180px);
+    line-height: 0.85;
+
+    font-weight: 900;
+    letter-spacing: -0.07em;
+
+    color: #fff;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 35px rgba(255,255,255,0.08);
+}
+
+
+/* SUBTITLE */
+
+.hero-subtitle {
+    margin-top: 20px;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 0.55em;
+
+    color: #6ea8ff;
+}
+
+
+/* LINE */
+
+.hero-line {
+    width: 100px;
+    height: 2px;
+
+    margin: 22px 0;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #6ea8ff,
+        transparent
+    );
+
+    box-shadow:
+        0 0 15px rgba(110,168,255,0.7);
+}
+
+
+/* DESCRIPTION */
+
+.hero-center p {
+    margin: 0;
+
+    color: rgba(255,255,255,0.7);
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+
+/* BOTTOM */
+
+.hero-bottom {
+    position: absolute;
+
+    bottom: 30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    z-index: 3;
+
+    color: rgba(255,255,255,0.45);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.3em;
+}
+
+
+.hero-scroll-line {
+    width: 45px;
+    height: 1px;
+
+    background: rgba(255,255,255,0.4);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .hero-top {
+        gap: 12px;
+
+        font-size: 8px;
+        letter-spacing: 0.15em;
+    }
+
+    .hero-bg-title {
+        font-size: 100px;
+    }
+
+    .hero-center h1 {
+        font-size: 80px;
+    }
+
+    .hero-subtitle {
+        font-size: 10px;
+        letter-spacing: 0.35em;
+    }
+
+    .hero-center p {
+        font-size: 12px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 220px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-bottom {
+        display: none;
+    }
+}
