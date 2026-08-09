@@ -5955,3 +5955,510 @@ footer {
     }
 
 }
+/* =========================================================
+   KEZEA — FINAL SIZE / SPACING FIX
+   Put this at the VERY END of style.css
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #05070c;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   SECTION TITLES
+========================================================= */
+
+.section-title {
+    margin-bottom: 38px !important;
+}
+
+.section-title span {
+    display: block;
+    font-size: 10px !important;
+    line-height: 1 !important;
+    letter-spacing: 2.5px !important;
+}
+
+.section-title h2 {
+    margin: 7px 0 !important;
+    font-size: 34px !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.5px !important;
+}
+
+.section-line {
+    width: 50px !important;
+    height: 2px !important;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-content p,
+.about-text p {
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+}
+
+.about-text h3 {
+    font-size: 38px !important;
+    line-height: 1 !important;
+}
+
+
+/* =========================================================
+   STATS — FINAL FIX
+========================================================= */
+
+#stats {
+    padding: 0 6% 55px !important;
+    background: #05070c;
+}
+
+.stat-box {
+    width: 100%;
+    max-width: 1100px !important;
+    margin: 0 auto;
+
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+}
+
+.stat {
+    position: relative;
+
+    height: 135px !important;
+    min-height: 135px !important;
+
+    padding: 15px 17px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+
+    overflow: hidden;
+
+    text-decoration: none;
+    color: #fff;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20, 23, 31, .96),
+            rgba(9, 11, 17, .98)
+        );
+
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 9px;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+
+/* STAT TOP */
+
+.stat-top {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.stat-icon {
+    width: 30px !important;
+    height: 30px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 14px !important;
+
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 7px;
+}
+
+.stat-number {
+    font-size: 8px !important;
+    line-height: 1 !important;
+    font-weight: 800 !important;
+    letter-spacing: 1.8px !important;
+    color: rgba(255,255,255,.18) !important;
+}
+
+
+/* STAT MAIN */
+
+.stat-main {
+    margin-top: 3px !important;
+}
+
+.stat-main h2 {
+    margin: 0 !important;
+
+    font-size: 28px !important;
+    line-height: 1 !important;
+
+    font-weight: 900 !important;
+    letter-spacing: -0.5px !important;
+
+    color: #fff !important;
+}
+
+.stat-main p {
+    margin: 5px 0 0 !important;
+
+    font-size: 8px !important;
+    line-height: 1 !important;
+
+    font-weight: 900 !important;
+    letter-spacing: 1.4px !important;
+
+    color: #ff5a1f !important;
+}
+
+
+/* STAT BOTTOM */
+
+.stat-bottom {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    padding-top: 7px !important;
+    margin: 0 !important;
+
+    border-top: 1px solid rgba(255,255,255,.06);
+
+    font-size: 7px !important;
+    line-height: 1 !important;
+
+    font-weight: 800 !important;
+    letter-spacing: .7px !important;
+
+    color: rgba(255,255,255,.3) !important;
+}
+
+.stat-arrow {
+    color: #ff5a1f !important;
+    font-size: 13px !important;
+    line-height: 1 !important;
+}
+
+
+/* STAT HOVER */
+
+.stat:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(255,90,31,.35);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.3);
+}
+
+.stat:hover .stat-arrow {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   PLAYERS
+========================================================= */
+
+.player-card h3 {
+    font-size: 20px !important;
+    line-height: 1.1 !important;
+}
+
+.player-card p {
+    font-size: 9px !important;
+    line-height: 1 !important;
+}
+
+.player-link {
+    font-size: 8px !important;
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+.achievement-content h3 {
+    font-size: 19px !important;
+    line-height: 1.15 !important;
+}
+
+.achievement-content p {
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+}
+
+.achievement-status {
+    font-size: 8px !important;
+}
+
+.achievement-meta {
+    font-size: 8px !important;
+}
+
+
+/* =========================================================
+   NEWS
+========================================================= */
+
+.news-card-content h3 {
+    font-size: 20px !important;
+    line-height: 1.15 !important;
+}
+
+.news-card-content p {
+    font-size: 11px !important;
+    line-height: 1.55 !important;
+}
+
+.news-card-date {
+    font-size: 8px !important;
+}
+
+.news-card-tag {
+    font-size: 8px !important;
+}
+
+.news-card-btn {
+    font-size: 8px !important;
+}
+
+
+/* =========================================================
+   ROCKET LEAGUE
+========================================================= */
+
+.rocket-text > span {
+    font-size: 9px !important;
+    letter-spacing: 2.5px !important;
+}
+
+.rocket-text h2 {
+    font-size: 44px !important;
+    line-height: .95 !important;
+}
+
+.rocket-text p {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+}
+
+
+/* =========================================================
+   DISCORD CTA
+========================================================= */
+
+.discord-cta-small {
+    font-size: 9px !important;
+    letter-spacing: 2.5px !important;
+}
+
+.discord-cta-content h2 {
+    font-size: 38px !important;
+    line-height: .98 !important;
+}
+
+.discord-cta-content p {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer-logo {
+    font-size: 28px !important;
+}
+
+.footer-grid h3 {
+    font-size: 10px !important;
+    letter-spacing: 2px !important;
+}
+
+.footer-grid a,
+.footer-grid p {
+    font-size: 11px !important;
+    line-height: 1.7 !important;
+}
+
+.copyright {
+    font-size: 9px !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .section-title {
+        margin-bottom: 30px !important;
+    }
+
+    .section-title span {
+        font-size: 8px !important;
+        letter-spacing: 2px !important;
+    }
+
+    .section-title h2 {
+        font-size: 28px !important;
+    }
+
+
+    /* ABOUT */
+
+    .about-text h3 {
+        font-size: 32px !important;
+    }
+
+    .about-text p {
+        font-size: 12px !important;
+    }
+
+
+    /* STATS */
+
+    #stats {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+        padding-bottom: 45px !important;
+    }
+
+    .stat-box {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
+    }
+
+    .stat {
+        height: 125px !important;
+        min-height: 125px !important;
+        padding: 13px 14px !important;
+    }
+
+    .stat-icon {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 13px !important;
+    }
+
+    .stat-main h2 {
+        font-size: 25px !important;
+    }
+
+    .stat-main p {
+        font-size: 7px !important;
+    }
+
+    .stat-bottom {
+        font-size: 6px !important;
+    }
+
+    .stat-arrow {
+        font-size: 12px !important;
+    }
+
+
+    /* PLAYERS */
+
+    .player-card h3 {
+        font-size: 18px !important;
+    }
+
+
+    /* ACHIEVEMENTS */
+
+    .achievement-content h3 {
+        font-size: 16px !important;
+    }
+
+    .achievement-content p {
+        font-size: 11px !important;
+    }
+
+
+    /* NEWS */
+
+    .news-card-content h3 {
+        font-size: 17px !important;
+    }
+
+    .news-card-content p {
+        font-size: 10px !important;
+    }
+
+
+    /* ROCKET */
+
+    .rocket-text h2 {
+        font-size: 36px !important;
+    }
+
+    .rocket-text p {
+        font-size: 12px !important;
+    }
+
+
+    /* DISCORD */
+
+    .discord-cta-content h2 {
+        font-size: 30px !important;
+    }
+
+    .discord-cta-content p {
+        font-size: 12px !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .stat-box {
+        grid-template-columns: 1fr !important;
+    }
+
+    .stat {
+        height: 120px !important;
+        min-height: 120px !important;
+    }
+
+    .section-title h2 {
+        font-size: 25px !important;
+    }
+}
