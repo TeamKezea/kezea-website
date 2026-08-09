@@ -3930,3 +3930,39 @@ body.details-body {
         transform: translateX(-50%) translateY(-3px);
     }
 }
+/* =========================================================
+   STAT CARD ACTION BUTTONS
+========================================================= */
+
+.stat .stat-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 15px;
+    padding: 7px 13px;
+
+    color: var(--gold);
+    background: rgba(247, 198, 0, 0.04);
+
+    border: 1px solid rgba(247, 198, 0, 0.45);
+    border-radius: 16px;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.stat .stat-link:hover {
+    background: var(--gold);
+    color: #000;
+
+    border-color: var(--gold);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 16px rgba(247, 198, 0, 0.25);
+}
