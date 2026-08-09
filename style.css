@@ -5081,122 +5081,86 @@ body.details-body {
     }
 }
 /* =========================================================
-   KEZEA - TEXT SIZE FIX
-   Keep headings and section text compact
+   KEZEA FINAL SIZE RESET
 ========================================================= */
 
-/* SECTION TITLES */
+/* SECTION HEADERS */
 
 .section-title {
-    margin-bottom: 45px;
+    transform: none !important;
 }
 
 .section-title span {
-    font-size: 11px;
-    letter-spacing: 3px;
+    display: block !important;
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+    letter-spacing: 3px !important;
 }
 
 .section-title h2 {
-    font-size: 38px;
-    line-height: 1.1;
-    margin: 8px 0;
-}
-
-.section-line {
-    width: 55px;
-    height: 2px;
+    display: block !important;
+    font-size: 36px !important;
+    line-height: 1 !important;
+    letter-spacing: 1px !important;
+    margin: 8px 0 !important;
 }
 
 
 /* ABOUT */
 
+.about-content {
+    transform: none !important;
+}
+
 .about-content p {
-    font-size: 15px;
-    line-height: 1.8;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
 }
 
 
-/* STAT CARDS */
-
-.stat-main h2 {
-    font-size: 34px !important;
-}
-
-.stat-main p {
-    font-size: 9px !important;
-}
-
-
-/* PLAYER CARDS */
+/* PLAYER NAMES */
 
 .player-card h3 {
-    font-size: 21px !important;
+    font-size: 20px !important;
+    line-height: 1.2 !important;
 }
 
 .player-card p {
     font-size: 10px !important;
 }
 
-.player-link {
-    font-size: 9px !important;
-}
-
 
 /* ACHIEVEMENTS */
 
 .achievement-content h3 {
-    font-size: 20px !important;
+    font-size: 19px !important;
+    line-height: 1.2 !important;
 }
 
 .achievement-content p {
     font-size: 13px !important;
-    line-height: 1.6;
-}
-
-.achievement-status {
-    font-size: 9px !important;
-}
-
-.achievement-meta {
-    font-size: 9px !important;
+    line-height: 1.6 !important;
 }
 
 
 /* NEWS */
 
 .news-card-content h3 {
-    font-size: 21px !important;
-    line-height: 1.2;
+    font-size: 20px !important;
+    line-height: 1.2 !important;
 }
 
 .news-card-content p {
     font-size: 12px !important;
-    line-height: 1.6;
-}
-
-.news-card-date {
-    font-size: 9px !important;
-}
-
-.news-card-tag {
-    font-size: 9px !important;
-}
-
-.news-card-btn {
-    font-size: 9px !important;
+    line-height: 1.6 !important;
 }
 
 
 /* ROCKET LEAGUE */
 
-.rocket-text > span {
-    font-size: 10px !important;
-    letter-spacing: 3px;
-}
-
 .rocket-text h2 {
-    font-size: 48px !important;
-    line-height: 0.95;
+    font-size: 46px !important;
+    line-height: .95 !important;
 }
 
 .rocket-text p {
@@ -5204,16 +5168,11 @@ body.details-body {
 }
 
 
-/* DISCORD CTA */
-
-.discord-cta-small {
-    font-size: 10px !important;
-    letter-spacing: 3px;
-}
+/* DISCORD */
 
 .discord-cta-content h2 {
-    font-size: 42px !important;
-    line-height: 1;
+    font-size: 40px !important;
+    line-height: 1 !important;
 }
 
 .discord-cta-content p {
@@ -5221,38 +5180,24 @@ body.details-body {
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
+/* MOBILE */
 
 @media (max-width: 700px) {
 
     .section-title h2 {
-        font-size: 30px;
-    }
-
-    .section-title span {
-        font-size: 9px;
+        font-size: 28px !important;
     }
 
     .about-content p {
-        font-size: 13px;
-    }
-
-    .achievement-content h3 {
-        font-size: 17px !important;
-    }
-
-    .news-card-content h3 {
-        font-size: 18px !important;
+        font-size: 13px !important;
     }
 
     .rocket-text h2 {
-        font-size: 38px !important;
+        font-size: 36px !important;
     }
 
     .discord-cta-content h2 {
-        font-size: 32px !important;
+        font-size: 30px !important;
     }
 
 }
