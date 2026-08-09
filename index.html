@@ -89,11 +89,11 @@
 <body>
 
 
-<!-- =====================================================
+<!-- =========================================================
      HEADER
-===================================================== -->
+========================================================= -->
 
-<header class="header">
+<header class="site-header">
 
     <div class="header-inner">
 
@@ -132,7 +132,7 @@
 
 
         <!-- =========================
-             PC NAVIGATION
+             DESKTOP NAVIGATION
         ========================== -->
 
         <nav class="desktop-navigation">
@@ -188,7 +188,10 @@
         <div class="header-actions">
 
 
-            <!-- MOBILE MENU BUTTON -->
+            <!-- MOBILE MENU BUTTON
+                 IMPORTANT:
+                 THERE IS ONLY ONE
+            -->
 
             <button
                 class="menu-toggle"
@@ -225,13 +228,14 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      MOBILE MENU
-===================================================== -->
+========================================================= -->
 
 <div
-    id="mobile-menu"
     class="mobile-menu"
+    id="mobile-menu"
+    aria-hidden="true"
 >
 
 
@@ -343,13 +347,13 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      HERO
-===================================================== -->
+========================================================= -->
 
 <section
-    id="hero"
     class="hero"
+    id="hero"
 >
 
 
@@ -454,9 +458,9 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      STATS
-===================================================== -->
+========================================================= -->
 
 <section class="stats-section">
 
@@ -575,15 +579,14 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      ABOUT
-===================================================== -->
+========================================================= -->
 
 <section
+    class="about-section"
     id="about"
-    class="about"
 >
-
 
     <div class="section-title">
 
@@ -603,8 +606,6 @@
 
     <div class="about-content">
 
-
-        <!-- LEFT -->
 
         <div class="about-visual">
 
@@ -642,8 +643,6 @@
 
 
 
-        <!-- RIGHT -->
-
         <div class="about-text">
 
             <span class="about-label">
@@ -673,9 +672,11 @@
             </p>
 
 
+
             <div class="about-stats">
 
                 <div>
+
                     <strong>
                         01
                     </strong>
@@ -683,10 +684,12 @@
                     <span>
                         TEAM
                     </span>
+
                 </div>
 
 
                 <div>
+
                     <strong>
                         03
                     </strong>
@@ -694,10 +697,12 @@
                     <span>
                         PLAYERS
                     </span>
+
                 </div>
 
 
                 <div>
+
                     <strong>
                         ∞
                     </strong>
@@ -705,6 +710,7 @@
                     <span>
                         AMBITION
                     </span>
+
                 </div>
 
             </div>
@@ -717,15 +723,14 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      ROSTER
-===================================================== -->
+========================================================= -->
 
 <section
+    class="roster-section"
     id="roster"
-    class="roster"
 >
-
 
     <div class="section-title">
 
@@ -951,15 +956,14 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      ACHIEVEMENTS
-===================================================== -->
+========================================================= -->
 
 <section
+    class="achievements-section"
     id="achievements"
-    class="achievements"
 >
-
 
     <div class="section-title">
 
@@ -979,8 +983,6 @@
 
     <div class="achievements-container">
 
-
-        <!-- ACHIEVEMENT 01 -->
 
         <div class="achievement-card">
 
@@ -1031,8 +1033,6 @@
 
 
 
-        <!-- ACHIEVEMENT 02 -->
-
         <div class="achievement-card">
 
             <div class="achievement-number">
@@ -1081,8 +1081,6 @@
         </div>
 
 
-
-        <!-- ACHIEVEMENT 03 -->
 
         <div class="achievement-card">
 
@@ -1137,15 +1135,14 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      NEWS
-===================================================== -->
+========================================================= -->
 
 <section
+    class="news-section"
     id="news"
-    class="news"
 >
-
 
     <div class="section-title">
 
@@ -1165,8 +1162,6 @@
 
     <div class="news-cards">
 
-
-        <!-- NEWS 01 -->
 
         <article class="news-card featured">
 
@@ -1213,8 +1208,6 @@
 
 
 
-        <!-- NEWS 02 -->
-
         <article class="news-card">
 
             <div class="news-card-image news-bg-2">
@@ -1259,8 +1252,6 @@
         </article>
 
 
-
-        <!-- NEWS 03 -->
 
         <article class="news-card">
 
@@ -1311,15 +1302,14 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      ROCKET LEAGUE
-===================================================== -->
+========================================================= -->
 
 <section
+    class="rocket-section"
     id="rocket-league"
-    class="rocket-league"
 >
-
 
     <div class="rocket-container">
 
@@ -1370,9 +1360,9 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      DISCORD CTA
-===================================================== -->
+========================================================= -->
 
 <section class="discord-cta">
 
@@ -1413,12 +1403,11 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      FOOTER
-===================================================== -->
+========================================================= -->
 
-<footer class="footer">
-
+<footer class="site-footer">
 
     <div class="footer-grid">
 
@@ -1530,32 +1519,35 @@
 
 
 
-<!-- =====================================================
-     MOBILE MENU SCRIPT
-===================================================== -->
+<!-- =========================================================
+     MOBILE MENU JAVASCRIPT
+========================================================= -->
 
 <script>
 
-    const menuToggle =
-        document.querySelector(".menu-toggle");
+document.addEventListener("DOMContentLoaded", function () {
 
-    const mobileMenu =
-        document.querySelector(".mobile-menu");
-
-    const mobileClose =
-        document.querySelector(".mobile-close");
-
-    const mobileLinks =
-        document.querySelectorAll(".mobile-nav a");
+    const menuButton = document.querySelector(".menu-toggle");
+    const closeButton = document.querySelector(".mobile-close");
+    const mobileMenu = document.querySelector("#mobile-menu");
+    const mobileLinks = document.querySelectorAll(".mobile-nav a");
 
 
-    /* OPEN */
+    if (!menuButton || !mobileMenu) {
+        return;
+    }
 
-    menuToggle.addEventListener("click", function () {
+
+    function openMenu() {
 
         mobileMenu.classList.add("active");
 
-        menuToggle.setAttribute(
+        mobileMenu.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        menuButton.setAttribute(
             "aria-expanded",
             "true"
         );
@@ -1564,16 +1556,19 @@
             "menu-open"
         );
 
-    });
+    }
 
 
-    /* CLOSE */
-
-    mobileClose.addEventListener("click", function () {
+    function closeMenu() {
 
         mobileMenu.classList.remove("active");
 
-        menuToggle.setAttribute(
+        mobileMenu.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        menuButton.setAttribute(
             "aria-expanded",
             "false"
         );
@@ -1582,34 +1577,34 @@
             "menu-open"
         );
 
-    });
+    }
 
 
-    /* CLOSE WHEN CLICKING A LINK */
+    menuButton.addEventListener(
+        "click",
+        openMenu
+    );
+
+
+    if (closeButton) {
+
+        closeButton.addEventListener(
+            "click",
+            closeMenu
+        );
+
+    }
+
 
     mobileLinks.forEach(function (link) {
 
-        link.addEventListener("click", function () {
-
-            mobileMenu.classList.remove(
-                "active"
-            );
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            document.body.classList.remove(
-                "menu-open"
-            );
-
-        });
+        link.addEventListener(
+            "click",
+            closeMenu
+        );
 
     });
 
-
-    /* CLOSE WITH ESC */
 
     document.addEventListener(
         "keydown",
@@ -1620,26 +1615,18 @@
                 mobileMenu.classList.contains("active")
             ) {
 
-                mobileMenu.classList.remove(
-                    "active"
-                );
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                document.body.classList.remove(
-                    "menu-open"
-                );
+                closeMenu();
 
             }
 
         }
     );
 
+});
+
 </script>
 
 
 </body>
+
 </html>
