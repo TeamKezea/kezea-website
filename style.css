@@ -6383,3 +6383,161 @@ footer {
         font-size: 17px;
     }
 }
+/* =========================================================
+   KEZEA PLAYERS - COMPACT
+========================================================= */
+
+.players {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+.player-card {
+    position: relative;
+
+    min-height: 300px;
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    overflow: hidden;
+
+    text-decoration: none;
+    color: #fff;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20,23,31,.96),
+            rgba(8,10,15,.98)
+        );
+
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 10px;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(255,90,31,.35);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.35);
+}
+
+.player-number {
+    position: absolute;
+
+    top: 15px;
+    right: 17px;
+
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,.18);
+}
+
+.player-avatar {
+    position: absolute;
+
+    inset: 25px 15px 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-avatar img {
+    max-width: 100%;
+    max-height: 210px;
+
+    object-fit: contain;
+
+    transition: transform .3s ease;
+}
+
+.player-card:hover .player-avatar img {
+    transform: scale(1.04);
+}
+
+.player-info {
+    position: relative;
+    z-index: 2;
+}
+
+.player-info h3 {
+    margin: 0;
+
+    font-size: 21px;
+    font-weight: 900;
+
+    color: #fff;
+}
+
+.player-info p {
+    margin: 4px 0 0;
+
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+
+    color: #ff5a1f;
+}
+
+.player-link {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 12px;
+    padding-top: 9px;
+
+    border-top: 1px solid rgba(255,255,255,.06);
+
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    color: rgba(255,255,255,.35);
+}
+
+.player-link.disabled {
+    color: rgba(255,255,255,.2);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .players {
+        grid-template-columns: 1fr;
+
+        max-width: 360px;
+        gap: 12px;
+    }
+
+    .player-card {
+        min-height: 270px;
+    }
+
+    .player-avatar img {
+        max-height: 190px;
+    }
+
+    .player-info h3 {
+        font-size: 19px;
+    }
+}
