@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
 
 <head>
 
@@ -64,46 +64,11 @@
     >
 
 </head>
-  <script>
 
-document.addEventListener("DOMContentLoaded", () => {
 
-    const reveals = document.querySelectorAll(".reveal");
-
-    const revealOnScroll = () => {
-
-        reveals.forEach((element) => {
-
-            const windowHeight = window.innerHeight;
-
-            const elementTop =
-                element.getBoundingClientRect().top;
-
-            const revealPoint = 120;
-
-            if (elementTop < windowHeight - revealPoint) {
-
-                element.classList.add("active");
-
-            }
-
-        });
-
-    };
-
-    window.addEventListener(
-        "scroll",
-        revealOnScroll
-    );
-
-    revealOnScroll();
-
-});
-
-</script>  
 <body>
 
-```
+
 <!-- =========================
      NAVBAR
 ========================== -->
@@ -112,8 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <nav class="navbar">
 
-
-        <a href="#home" class="logo">
+        <a
+            href="#hero"
+            class="logo"
+        >
 
             <div class="logo-symbol">
 
@@ -135,27 +102,39 @@ document.addEventListener("DOMContentLoaded", () => {
         <ul>
 
             <li>
-                <a href="#home">HOME</a>
+                <a href="#hero">
+                    HOME
+                </a>
             </li>
 
             <li>
-                <a href="#about">ABOUT</a>
+                <a href="#about">
+                    ABOUT
+                </a>
             </li>
 
             <li>
-                <a href="#roster">ROSTER</a>
+                <a href="#roster">
+                    ROSTER
+                </a>
             </li>
 
             <li>
-                <a href="#achievements">ACHIEVEMENTS</a>
+                <a href="#achievements">
+                    ACHIEVEMENTS
+                </a>
             </li>
 
             <li>
-                <a href="#rocket-league">ROCKET LEAGUE</a>
+                <a href="#rocket-league">
+                    ROCKET LEAGUE
+                </a>
             </li>
 
             <li>
-                <a href="#news">NEWS</a>
+                <a href="#news">
+                    NEWS
+                </a>
             </li>
 
         </ul>
@@ -179,55 +158,55 @@ document.addEventListener("DOMContentLoaded", () => {
 <main>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+<!-- =========================
+     HERO
+========================== -->
 
-    <section id="hero">
+<section id="hero">
 
-        <div class="hero-content">
+    <div class="hero-content">
 
-            <div class="welcome">
-                WELCOME TO
-            </div>
+        <div class="welcome">
+            WELCOME TO
+        </div>
 
-            <h1>
-                TEAM
-                <br>
-                <span>KEZEA</span>
-            </h1>
+        <h1>
+            TEAM
+            <br>
+            <span>KEZEA</span>
+        </h1>
 
-            <div class="hero-line"></div>
+        <div class="hero-line"></div>
 
-            <p>
-                A competitive Rocket League esports team
-                built on passion, teamwork and a drive for greatness.
-            </p>
+        <p>
+            A competitive Rocket League esports team
+            built on passion, teamwork and a drive for greatness.
+        </p>
 
 
-            <div class="hero-buttons">
+        <div class="hero-buttons">
 
-                <a
-                    href="#roster"
-                    class="btn"
-                >
-                    OUR TEAM
-                </a>
+            <a
+                href="#roster"
+                class="btn"
+            >
+                OUR TEAM
+            </a>
 
-                <a
-                    href="https://discord.gg/qdnSGPNUKp"
-                    class="btn outline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    JOIN DISCORD
-                </a>
-
-            </div>
+            <a
+                href="https://discord.gg/qdnSGPNUKp"
+                class="btn outline"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                JOIN DISCORD
+            </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
 
@@ -239,14 +218,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <div class="stat-box">
 
+
         <!-- TOURNAMENTS -->
-        <a href="tournaments.html" class="stat">
 
-            <span>🏆</span>
+        <a
+            href="tournaments.html"
+            class="stat"
+        >
 
-            <h2>2</h2>
+            <span>
+                🏆
+            </span>
 
-            <p>TOURNAMENTS</p>
+            <h2>
+                2
+            </h2>
+
+            <p>
+                TOURNAMENTS
+            </p>
 
             <span class="stat-link">
                 VIEW TOURNAMENTS →
@@ -255,14 +245,25 @@ document.addEventListener("DOMContentLoaded", () => {
         </a>
 
 
+
         <!-- WINS -->
-        <a href="wins.html" class="stat">
 
-            <span>🥇</span>
+        <a
+            href="wins.html"
+            class="stat"
+        >
 
-            <h2>0</h2>
+            <span>
+                🥇
+            </span>
 
-            <p>WINS</p>
+            <h2>
+                0
+            </h2>
+
+            <p>
+                WINS
+            </p>
 
             <span class="stat-link">
                 VIEW WINS →
@@ -271,14 +272,25 @@ document.addEventListener("DOMContentLoaded", () => {
         </a>
 
 
+
         <!-- PLAYERS -->
-        <a href="players.html" class="stat">
 
-            <span>👥</span>
+        <a
+            href="players.html"
+            class="stat"
+        >
 
-            <h2>3</h2>
+            <span>
+                👥
+            </span>
 
-            <p>PLAYERS</p>
+            <h2>
+                3
+            </h2>
+
+            <p>
+                PLAYERS
+            </p>
 
             <span class="stat-link">
                 VIEW PLAYERS →
@@ -287,14 +299,25 @@ document.addEventListener("DOMContentLoaded", () => {
         </a>
 
 
+
         <!-- OUR MISSION -->
-        <a href="mission.html" class="stat">
 
-            <span>🎯</span>
+        <a
+            href="mission.html"
+            class="stat"
+        >
 
-            <h2>VICTORY</h2>
+            <span>
+                🎯
+            </span>
 
-            <p>OUR MISSION</p>
+            <h2>
+                VICTORY
+            </h2>
+
+            <p>
+                OUR MISSION
+            </p>
 
             <span class="stat-link">
                 VIEW MISSION →
@@ -307,52 +330,61 @@ document.addEventListener("DOMContentLoaded", () => {
 </section>
 
 
-    <!-- =========================
-         ABOUT
-    ========================== -->
 
-    <section id="about">
+<!-- =========================
+     ABOUT
+========================== -->
 
-        <div class="section-title">
-
-            <span>WHO WE ARE</span>
-
-            <h2>ABOUT KEZEA</h2>
-
-            <div class="section-line"></div>
-
-        </div>
-
-
-        <div class="about-content">
-
-            <p>
-                KEZEA Esports is a competitive Rocket League team
-                focused on teamwork, improvement and winning.
-            </p>
-
-            <p>
-                We compete together, improve together
-                and aim to build our name in the esports scene.
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         ROSTER
-    ========================== -->
-
-   <section id="roster">
+<section id="about">
 
     <div class="section-title">
 
-        <span>THE SQUAD</span>
+        <span>
+            WHO WE ARE
+        </span>
 
-        <h2>OUR PLAYERS</h2>
+        <h2>
+            ABOUT KEZEA
+        </h2>
+
+        <div class="section-line"></div>
+
+    </div>
+
+
+    <div class="about-content">
+
+        <p>
+            KEZEA Esports is a competitive Rocket League team
+            focused on teamwork, improvement and winning.
+        </p>
+
+        <p>
+            We compete together, improve together
+            and aim to build our name in the esports scene.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ROSTER
+========================== -->
+
+<section id="roster">
+
+    <div class="section-title">
+
+        <span>
+            THE SQUAD
+        </span>
+
+        <h2>
+            OUR PLAYERS
+        </h2>
 
         <div class="section-line"></div>
 
@@ -361,38 +393,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <div class="players">
 
-        <!-- Zyvix -->
-<a href="zyvix.html" class="player-card">
 
-    <div class="player-number">01</div>
+        <!-- ZYVIX -->
 
-    <div class="player-avatar">
-        <img src="Zyvix.png" alt="Zyvix">
-    </div>
+        <a
+            href="zyvix.html"
+            class="player-card"
+        >
 
-    <h3>Zyvix</h3>
-
-    <p>CAPTAIN</p>
-
-    <span class="player-link">
-        🔗 LINKS
-    </span>
-
-</a>
-
-
-        <!-- Taiqz -->
-        <a href="taiqz.html" class="player-card">
-
-            <div class="player-number">02</div>
-
-            <div class="player-avatar">
-                <img src="taiqz.png" alt="Taiqz">
+            <div class="player-number">
+                01
             </div>
 
-            <h3>Taiqz</h3>
+            <div class="player-avatar">
 
-            <p>PLAYER</p>
+                <img
+                    src="Zyvix.png"
+                    alt="Zyvix"
+                >
+
+            </div>
+
+            <h3>
+                Zyvix
+            </h3>
+
+            <p>
+                CAPTAIN
+            </p>
 
             <span class="player-link">
                 🔗 LINKS
@@ -401,43 +429,98 @@ document.addEventListener("DOMContentLoaded", () => {
         </a>
 
 
-<!-- Real Vexy -->
-<a href="real-vexy.html" class="player-card">
 
-    <div class="player-number">03</div>
+        <!-- TAIQZ -->
 
-    <div class="player-avatar">
-        <img
-            src="real-vexy.png"
-            alt="Real Vexy"
+        <a
+            href="taiqz.html"
+            class="player-card"
         >
-    </div>
 
-    <h3>Real Vexy</h3>
+            <div class="player-number">
+                02
+            </div>
 
-    <p>PLAYER</p>
+            <div class="player-avatar">
 
-    <span class="player-link disabled">
-        🔗 LINKS — SOON
-    </span>
+                <img
+                    src="taiqz.png"
+                    alt="Taiqz"
+                >
 
-</a>
-        
+            </div>
+
+            <h3>
+                Taiqz
+            </h3>
+
+            <p>
+                PLAYER
+            </p>
+
+            <span class="player-link">
+                🔗 LINKS
+            </span>
+
+        </a>
+
+
+
+        <!-- REAL VEXY -->
+
+        <a
+            href="real-vexy.html"
+            class="player-card"
+        >
+
+            <div class="player-number">
+                03
+            </div>
+
+            <div class="player-avatar">
+
+                <img
+                    src="real-vexy.png"
+                    alt="Real Vexy"
+                >
+
+            </div>
+
+            <h3>
+                Real Vexy
+            </h3>
+
+            <p>
+                PLAYER
+            </p>
+
+            <span class="player-link disabled">
+                🔗 LINKS — SOON
+            </span>
+
+        </a>
+
     </div>
 
 </section>
 
+
+
 <!-- =========================
      ACHIEVEMENTS
-========================= -->
+========================== -->
 
 <section id="achievements">
 
     <div class="section-title">
 
-        <span>KEZEA ESPORTS</span>
+        <span>
+            KEZEA ESPORTS
+        </span>
 
-        <h2>ACHIEVEMENTS</h2>
+        <h2>
+            ACHIEVEMENTS
+        </h2>
 
         <div class="section-line"></div>
 
@@ -445,6 +528,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     <div class="achievements-container">
+
 
         <!-- ACHIEVEMENT 01 -->
 
@@ -491,6 +575,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
 
 
+
         <!-- ACHIEVEMENT 02 -->
 
         <div class="achievement-card">
@@ -534,6 +619,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
 
         </div>
+
 
 
         <!-- ACHIEVEMENT 03 -->
@@ -586,25 +672,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<!-- =========================================================
+<!-- =========================
      LATEST NEWS
-========================================================= -->
+========================== -->
 
 <section id="news">
 
     <div class="section-title">
-        <span>STAY UPDATED</span>
-        <h2>LATEST NEWS</h2>
+
+        <span>
+            STAY UPDATED
+        </span>
+
+        <h2>
+            LATEST NEWS
+        </h2>
+
         <div class="section-line"></div>
+
     </div>
+
 
     <div class="news-cards">
 
-        <!-- NEWS CARD 1 -->
+
+        <!-- NEWS 01 -->
+
         <article class="news-card featured">
 
             <div class="news-card-image news-bg-1">
-                <span class="news-card-tag">TEAM</span>
+
+                <span class="news-card-tag">
+                    TEAM
+                </span>
 
                 <div class="news-card-overlay"></div>
 
@@ -623,21 +723,30 @@ document.addEventListener("DOMContentLoaded", () => {
                         The team is ready for the next challenge.
                     </p>
 
-                    <a href="#" class="news-card-btn">
+                    <a
+                        href="#"
+                        class="news-card-btn"
+                    >
                         READ MORE →
                     </a>
 
                 </div>
+
             </div>
 
         </article>
 
 
-        <!-- NEWS CARD 2 -->
+
+        <!-- NEWS 02 -->
+
         <article class="news-card">
 
             <div class="news-card-image news-bg-2">
-                <span class="news-card-tag">ROSTER</span>
+
+                <span class="news-card-tag">
+                    ROSTER
+                </span>
 
                 <div class="news-card-overlay"></div>
 
@@ -656,21 +765,30 @@ document.addEventListener("DOMContentLoaded", () => {
                         in the upcoming competitions.
                     </p>
 
-                    <a href="#" class="news-card-btn">
+                    <a
+                        href="#"
+                        class="news-card-btn"
+                    >
                         READ MORE →
                     </a>
 
                 </div>
+
             </div>
 
         </article>
 
 
-        <!-- NEWS CARD 3 -->
+
+        <!-- NEWS 03 -->
+
         <article class="news-card">
 
             <div class="news-card-image news-bg-3">
-                <span class="news-card-tag">ROCKET LEAGUE</span>
+
+                <span class="news-card-tag">
+                    ROCKET LEAGUE
+                </span>
 
                 <div class="news-card-overlay"></div>
 
@@ -689,11 +807,15 @@ document.addEventListener("DOMContentLoaded", () => {
                         for another competitive battle.
                     </p>
 
-                    <a href="#" class="news-card-btn">
+                    <a
+                        href="#"
+                        class="news-card-btn"
+                    >
                         READ MORE →
                     </a>
 
                 </div>
+
             </div>
 
         </article>
@@ -702,122 +824,56 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </section>
 
-    <!-- =========================
-         ROCKET LEAGUE
-    ========================== -->
-
-    <section id="rocket-league">
-
-        <div class="rocket-container">
 
 
-            <div class="rocket-text">
+<!-- =========================
+     ROCKET LEAGUE
+========================== -->
 
-                <span>
-                    ROCKET LEAGUE
-                </span>
+<section id="rocket-league">
 
-                <h2>
-                    WE PLAY
-                    <br>
-                    TO WIN
-                </h2>
-
-                <p>
-                    Every match is a step closer to greatness.
-                    Every goal is for Kezea.
-                </p>
-
-                <a
-                    href="#roster"
-                    class="btn"
-                >
-                    VIEW RL TEAM →
-                </a>
-
-            </div>
+    <div class="rocket-container">
 
 
-            <div class="rocket-car">
+        <div class="rocket-text">
 
-                <img
-                    src="care.png"
-                    alt="Rocket League Car"
-                >
+            <span>
+                ROCKET LEAGUE
+            </span>
 
-            </div>
+            <h2>
+                WE PLAY
+                <br>
+                TO WIN
+            </h2>
 
-        </div>
+            <p>
+                Every match is a step closer to greatness.
+                Every goal is for Kezea.
+            </p>
 
-    </section>
-
-
-
-    <!-- =========================
-         NEWS
-    ========================== -->
-
-    <section id="news">
-
-        <div class="section-title">
-
-            <span>KEZEA UPDATES</span>
-
-            <h2>LATEST NEWS</h2>
-
-            <div class="section-line"></div>
+            <a
+                href="#roster"
+                class="btn"
+            >
+                VIEW RL TEAM →
+            </a>
 
         </div>
 
 
-        <div class="news-box">
+        <div class="rocket-car">
 
-
-            <div class="news-card">
-
-                <h3>
-                    TEAM KEZEA
-                </h3>
-
-                <p>
-                    New era.
-                    New goals.
-                    Same ambition.
-                </p>
-
-            </div>
-
-
-            <div class="news-card">
-
-                <h3>
-                    ROCKET LEAGUE
-                </h3>
-
-                <p>
-                    Compete.
-                    Improve.
-                    Conquer.
-                </p>
-
-            </div>
-
-
-            <div class="news-card">
-
-                <h3>
-                    STAY TUNED
-                </h3>
-
-                <p>
-                    More announcements coming soon.
-                </p>
-
-            </div>
+            <img
+                src="care.png"
+                alt="Rocket League Car"
+            >
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
 </main>
@@ -833,6 +889,8 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="footer-grid">
 
 
+        <!-- BRAND -->
+
         <div>
 
             <h2 class="footer-logo">
@@ -845,14 +903,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 Born to compete.
                 <br>
                 <br>
-                <br>
-                <br>
-                <br>
                 teamkezea@gmail.com
             </p>
 
         </div>
 
+
+
+        <!-- LINKS -->
 
         <div>
 
@@ -860,7 +918,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 LINKS
             </h3>
 
-            <a href="#home">
+            <a href="#hero">
                 Home
             </a>
 
@@ -878,6 +936,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         </div>
 
+
+
+        <!-- SOCIALS -->
 
         <div>
 
@@ -911,13 +972,17 @@ document.addEventListener("DOMContentLoaded", () => {
         © 2026 KEZEA Esports.
         All Rights Reserved.
 
-
-
-
     </div>
 
 </footer>
-```
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script src="script.js"></script>
 
 </body>
 
