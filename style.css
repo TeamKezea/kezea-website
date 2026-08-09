@@ -8009,7 +8009,7 @@ footer {
     border-radius: 0;
     background:
         linear-gradient(90deg, rgba(5,7,12,.10), rgba(5,7,12,.25)),
-        url("about-kezea.png") center center / cover no-repeat;
+        url("about-kezea-fit.png") center center / 100% 100% no-repeat;
 }
 
 .about-visual::after {
