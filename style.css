@@ -3,7 +3,6 @@
    GAMING STYLE v2 - CLEAN FINAL
 ========================================================= */
 
-
 /* =========================
    VARIABLES
 ========================= */
@@ -25,8 +24,7 @@
 
     --border: rgba(247, 198, 0, 0.18);
 
-    --glow:
-        0 0 25px rgba(247, 198, 0, 0.18);
+    --glow: 0 0 25px rgba(247, 198, 0, 0.18);
 
     --transition: 0.3s ease;
 }
@@ -62,6 +60,13 @@ a {
 img {
     max-width: 100%;
     display: block;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
 }
 
 
@@ -312,6 +317,12 @@ img {
     background-size: 70px 70px;
 
     mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+    );
+
+    -webkit-mask-image: linear-gradient(
         to bottom,
         black,
         transparent
@@ -856,6 +867,7 @@ img {
     gap: 25px;
 
     max-width: 1100px;
+
     margin: 0 auto;
 }
 
@@ -1175,10 +1187,9 @@ body.player-body::before {
 }
 
 
-/* PLAYER PROFILE
-   Works whether you use .player-profile
-   or the direct HTML from your previous message.
-*/
+/* =========================================================
+   PLAYER PROFILE
+========================================================= */
 
 .player-profile,
 .player-page > .player-content {
@@ -1206,9 +1217,7 @@ body.player-body::before {
 }
 
 
-/* If your HTML has the image directly inside player-page,
-   make the whole player-page look like the profile card.
-*/
+/* DIRECT PLAYER PAGE SUPPORT */
 
 .player-page:has(> .player-image) {
     width: 100%;
@@ -1396,23 +1405,31 @@ body.player-body::before {
 
 
 /* =========================================================
-   BACK BUTTON
+   BACK TO TEAM
+   FIXED CENTERED ABOVE PLAYER CARD
 ========================================================= */
 
 body.player-body .back-btn {
     position: fixed;
 
-    top: 35px;
-    left: 35px;
+    top: 92px;
+    left: 50%;
 
-    padding: 10px 18px;
+    transform: translateX(-50%);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: max-content;
+
+    padding: 10px 20px;
 
     color: var(--gold);
 
-    background: rgba(15, 15, 15, 0.9);
+    background: rgba(15, 15, 15, 0.92);
 
-    border: 1px solid rgba(247, 198, 0, 0.5);
-
+    border: 1px solid rgba(247, 198, 0, 0.55);
     border-radius: 12px;
 
     backdrop-filter: blur(10px);
@@ -1420,9 +1437,20 @@ body.player-body .back-btn {
     font-size: 13px;
     font-weight: 700;
 
-    z-index: 100;
+    white-space: nowrap;
 
-    transition: var(--transition);
+    box-shadow:
+        0 0 15px rgba(247, 198, 0, 0.10),
+        0 8px 25px rgba(0, 0, 0, 0.35);
+
+    z-index: 2000;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
 }
 
 body.player-body .back-btn:hover {
@@ -1430,10 +1458,12 @@ body.player-body .back-btn:hover {
 
     color: #000;
 
-    transform: translateY(-3px);
+    border-color: var(--gold);
 
     box-shadow:
         0 0 22px rgba(247, 198, 0, 0.35);
+
+    transform: translateX(-50%) translateY(-3px);
 }
 
 
@@ -1508,6 +1538,7 @@ body.player-body .back-btn:hover {
 
     .discord-btn {
         padding: 9px 14px;
+
         font-size: 10px;
     }
 
@@ -1519,7 +1550,7 @@ body.player-body .back-btn:hover {
 
 
 /* =========================================================
-   TABLET PLAYER GRID
+   TABLET
    2 PLAYERS PER ROW
 ========================================================= */
 
@@ -1585,9 +1616,7 @@ body.player-body .back-btn:hover {
     }
 
 
-    /* PLAYERS
-       6 players = 2 columns x 3 rows
-    */
+    /* PLAYERS */
 
     .players {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1626,6 +1655,13 @@ body.player-body .back-btn:hover {
 
     footer a:hover {
         transform: none;
+    }
+
+
+    /* PLAYER BACK BUTTON */
+
+    body.player-body .back-btn {
+        top: 82px;
     }
 }
 
@@ -1687,9 +1723,7 @@ body.player-body .back-btn:hover {
     }
 
 
-    /* PLAYERS
-       Mobile = 1 player per row
-    */
+    /* PLAYERS */
 
     .players {
         grid-template-columns: 1fr;
@@ -1707,7 +1741,7 @@ body.player-body .back-btn:hover {
     .player-page {
         min-height: 100svh;
 
-        padding: 100px 15px 35px;
+        padding: 115px 15px 35px;
     }
 
     .player-profile {
@@ -1719,7 +1753,7 @@ body.player-body .back-btn:hover {
     .player-page:has(> .player-image) {
         width: calc(100% - 30px);
 
-        margin: 100px 15px 35px;
+        margin: 105px 15px 35px;
 
         padding: 35px 18px;
 
@@ -1752,17 +1786,27 @@ body.player-body .back-btn:hover {
     }
 
 
-    /* BACK BUTTON */
+    /* BACK TO TEAM
+       CENTERED - NEVER CORNER
+    */
 
     body.player-body .back-btn {
         position: fixed;
 
-        top: 82px;
-        left: 18px;
+        top: 72px;
+        left: 50%;
 
-        padding: 8px 13px;
+        transform: translateX(-50%);
 
-        font-size: 11px;
+        padding: 8px 15px;
+
+        font-size: 12px;
+
+        border-radius: 10px;
+    }
+
+    body.player-body .back-btn:hover {
+        transform: translateX(-50%) translateY(-3px);
     }
 
 
@@ -1816,6 +1860,16 @@ body.player-body .back-btn:hover {
 
     .player-info b {
         font-size: 19px;
+    }
+
+    /* BACK BUTTON */
+
+    body.player-body .back-btn {
+        top: 70px;
+
+        padding: 8px 13px;
+
+        font-size: 11px;
     }
 }
 
