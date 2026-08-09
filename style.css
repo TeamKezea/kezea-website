@@ -1,6 +1,10 @@
 /* =========================================================
    KEZEA ESPORTS
-   GAMING STYLE v2 - CLEAN FINAL
+   GAMING STYLE v3 - CLEAN & RESPONSIVE
+========================================================= */
+
+/* =========================================================
+   IMPORTS
 ========================================================= */
 
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap");
@@ -442,8 +446,10 @@ button {
 }
 
 .stat-box {
-    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
 
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
 
     gap: 20px;
@@ -547,6 +553,7 @@ button {
 
 .section-title {
     margin-bottom: 60px;
+
     text-align: center;
 }
 
@@ -928,8 +935,6 @@ button {
     opacity: 1;
 }
 
-/* NUMBER */
-
 .achievement-number {
     position: absolute;
 
@@ -948,8 +953,6 @@ button {
 .achievement-card:hover .achievement-number {
     color: rgba(247, 198, 0, 0.25);
 }
-
-/* ICON */
 
 .achievement-icon {
     width: 65px;
@@ -982,8 +985,6 @@ button {
     box-shadow:
         0 0 25px rgba(247, 198, 0, 0.35);
 }
-
-/* CONTENT */
 
 .achievement-content {
     position: relative;
@@ -1046,8 +1047,6 @@ button {
     line-height: 1.7;
 }
 
-/* META */
-
 .achievement-meta {
     display: flex;
 
@@ -1079,19 +1078,22 @@ button {
 }
 
 /* =========================================================
-   LATEST NEWS - CARDS
+   LATEST NEWS
 ========================================================= */
 
 .news-cards {
+    width: 100%;
     max-width: 1100px;
+
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
 
     gap: 22px;
 }
-
 
 /* =========================================================
    NEWS CARD
@@ -1117,26 +1119,19 @@ button {
         box-shadow 0.4s ease;
 }
 
-
 .news-card:hover {
     transform: translateY(-10px);
 
     border-color: var(--gold);
 
     box-shadow:
-        0 20px 55px rgba(0,0,0,0.55),
-        0 0 30px rgba(247,198,0,0.14);
+        0 20px 55px rgba(0, 0, 0, 0.55),
+        0 0 30px rgba(247, 198, 0, 0.14);
 }
-
-
-/* =========================================================
-   FEATURED CARD
-========================================================= */
 
 .news-card.featured {
-    border-color: rgba(247,198,0,0.35);
+    border-color: rgba(247, 198, 0, 0.35);
 }
-
 
 /* =========================================================
    NEWS IMAGE
@@ -1161,14 +1156,12 @@ button {
     transition: transform 0.6s ease;
 }
 
-
 .news-card:hover .news-card-image {
     transform: scale(1.04);
 }
 
-
 /* =========================================================
-   BACKGROUNDS
+   NEWS BACKGROUNDS
 ========================================================= */
 
 .news-bg-1 {
@@ -1176,21 +1169,18 @@ button {
         url("https://images.unsplash.com/photo-1542751371-adc38448a05e");
 }
 
-
 .news-bg-2 {
     background-image:
         url("https://images.unsplash.com/photo-1560253023-3ec5d502959f");
 }
-
 
 .news-bg-3 {
     background-image:
         url("https://images.unsplash.com/photo-1511512578047-dfb367046420");
 }
 
-
 /* =========================================================
-   DARK OVERLAY
+   NEWS OVERLAY
 ========================================================= */
 
 .news-card-overlay {
@@ -1200,28 +1190,26 @@ button {
     background:
         linear-gradient(
             to top,
-            rgba(0,0,0,0.98) 0%,
-            rgba(0,0,0,0.72) 45%,
-            rgba(0,0,0,0.15) 100%
+            rgba(0, 0, 0, 0.98) 0%,
+            rgba(0, 0, 0, 0.72) 45%,
+            rgba(0, 0, 0, 0.15) 100%
         );
 
     transition: 0.4s ease;
 }
 
-
 .news-card:hover .news-card-overlay {
     background:
         linear-gradient(
             to top,
-            rgba(0,0,0,0.98),
-            rgba(0,0,0,0.62),
-            rgba(247,198,0,0.08)
+            rgba(0, 0, 0, 0.98),
+            rgba(0, 0, 0, 0.62),
+            rgba(247, 198, 0, 0.08)
         );
 }
 
-
 /* =========================================================
-   GOLD GLOW
+   NEWS GLOW
 ========================================================= */
 
 .news-card-image::after {
@@ -1238,7 +1226,7 @@ button {
     border-radius: 50%;
 
     background:
-        rgba(247,198,0,0.18);
+        rgba(247, 198, 0, 0.18);
 
     filter: blur(65px);
 
@@ -1247,14 +1235,12 @@ button {
     transition: 0.5s ease;
 }
 
-
 .news-card:hover .news-card-image::after {
     opacity: 1;
 }
 
-
 /* =========================================================
-   TAG
+   NEWS TAG
 ========================================================= */
 
 .news-card-tag {
@@ -1278,12 +1264,11 @@ button {
     letter-spacing: 2px;
 
     box-shadow:
-        0 0 20px rgba(247,198,0,0.2);
+        0 0 20px rgba(247, 198, 0, 0.2);
 }
 
-
 /* =========================================================
-   CONTENT
+   NEWS CONTENT
 ========================================================= */
 
 .news-card-content {
@@ -1293,7 +1278,6 @@ button {
 
     width: 100%;
 }
-
 
 .news-card-date {
     display: block;
@@ -1308,13 +1292,12 @@ button {
     letter-spacing: 2px;
 }
 
-
 .news-card-content h3 {
     margin: 0;
 
     color: #fff;
 
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
 
     font-size: 19px;
 
@@ -1323,11 +1306,9 @@ button {
     transition: 0.3s ease;
 }
 
-
 .news-card:hover .news-card-content h3 {
     color: var(--gold);
 }
-
 
 .news-card-content p {
     margin-top: 10px;
@@ -1339,9 +1320,8 @@ button {
     line-height: 1.65;
 }
 
-
 /* =========================================================
-   READ MORE
+   NEWS BUTTON
 ========================================================= */
 
 .news-card-btn {
@@ -1355,7 +1335,7 @@ button {
 
     color: var(--gold);
 
-    border: 1px solid rgba(247,198,0,0.6);
+    border: 1px solid rgba(247, 198, 0, 0.6);
 
     border-radius: 20px;
 
@@ -1367,7 +1347,6 @@ button {
     transition: 0.3s ease;
 }
 
-
 .news-card-btn:hover {
     background: var(--gold);
 
@@ -1376,8 +1355,9 @@ button {
     transform: translateX(5px);
 
     box-shadow:
-        0 0 20px rgba(247,198,0,0.3);
+        0 0 20px rgba(247, 198, 0, 0.3);
 }
+
 /* =========================================================
    ROCKET LEAGUE
 ========================================================= */
@@ -1538,6 +1518,7 @@ footer a:hover {
 
 .social-btn {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1648,8 +1629,6 @@ body.player-body::before {
 
     animation: playerCardAppear 0.7s ease;
 }
-
-/* DIRECT PLAYER PAGE */
 
 .player-page:has(> .player-image) {
     width: 100%;
@@ -1941,7 +1920,7 @@ button:focus-visible {
 }
 
 /* =========================================================
-   TABLET
+   TABLET - 1100px
 ========================================================= */
 
 @media (max-width: 1100px) {
@@ -1965,16 +1944,18 @@ button:focus-visible {
 
     .players,
     .achievements-container,
-    .news-container {
+    .news-cards {
         gap: 18px;
     }
 }
 
 /* =========================================================
-   TABLET
+   TABLET - 900px
 ========================================================= */
 
 @media (max-width: 900px) {
+
+    /* NAVBAR */
 
     .navbar {
         height: 72px;
@@ -2042,16 +2023,25 @@ button:focus-visible {
 
     /* NEWS */
 
-    .news-container {
-        grid-template-columns: 1fr;
+    .news-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
     }
 
-    .news-featured {
-        min-height: 450px;
+    .news-card {
+        height: 400px;
     }
 
-    .news-image {
-        min-height: 450px;
+    .news-card-image {
+        padding: 24px;
+    }
+
+    .news-card-content h3 {
+        font-size: 17px;
+    }
+
+    .news-card-content p {
+        font-size: 10px;
     }
 
     /* ROCKET */
@@ -2062,6 +2052,10 @@ button:focus-visible {
         text-align: center;
 
         padding: 45px 25px;
+    }
+
+    .rocket-text {
+        max-width: 600px;
     }
 
     .rocket-car img {
@@ -2088,7 +2082,7 @@ button:focus-visible {
 }
 
 /* =========================================================
-   MOBILE
+   MOBILE - 600px
 ========================================================= */
 
 @media (max-width: 600px) {
@@ -2130,14 +2124,24 @@ button:focus-visible {
         margin-bottom: 45px;
     }
 
+    .section-title span {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
     .section-title h2 {
         font-size: 30px;
     }
 
     /* STATS */
 
+    #stats {
+        padding: 55px 20px;
+    }
+
     .stat-box {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     /* PLAYERS */
@@ -2163,27 +2167,68 @@ button:focus-visible {
         padding: 30px 23px;
     }
 
-    /* NEWS */
+    /* =====================================================
+       NEWS - MOBILE
+    ===================================================== */
 
-    .news-featured {
-        min-height: 430px;
+    .news-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .news-image {
-        min-height: 430px;
-        padding: 28px 22px;
+    .news-card {
+        width: 100%;
+        height: 420px;
+        border-radius: 18px;
     }
 
-    .news-featured-content h3 {
-        font-size: 30px;
+    .news-card-image {
+        padding: 24px 20px;
     }
 
-    .news-item {
-        padding: 19px;
+    .news-card-tag {
+        top: 18px;
+        left: 18px;
+
+        padding: 6px 11px;
+
+        font-size: 7px;
     }
 
-    .news-item:hover {
-        transform: translateY(-4px);
+    .news-card-date {
+        font-size: 8px;
+    }
+
+    .news-card-content h3 {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .news-card-content p {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .news-card-btn {
+        margin-top: 15px;
+
+        padding: 8px 14px;
+
+        font-size: 8px;
+    }
+
+    /* ROCKET */
+
+    .rocket-text h2 {
+        font-size: 40px;
+    }
+
+    .rocket-text p {
+        font-size: 13px;
+    }
+
+    .rocket-car img {
+        width: 240px;
     }
 
     /* PLAYER PAGE */
@@ -2250,20 +2295,10 @@ button:focus-visible {
     body.player-body .back-btn:hover {
         transform: translateX(-50%) translateY(-3px);
     }
-
-    /* ROCKET */
-
-    .rocket-text h2 {
-        font-size: 40px;
-    }
-
-    .rocket-car img {
-        width: 240px;
-    }
 }
 
 /* =========================================================
-   VERY SMALL PHONES
+   VERY SMALL PHONES - 400px
 ========================================================= */
 
 @media (max-width: 400px) {
@@ -2290,6 +2325,41 @@ button:focus-visible {
         flex-direction: column;
         align-items: flex-start;
     }
+
+    /* NEWS */
+
+    .news-cards {
+        gap: 16px;
+    }
+
+    .news-card {
+        height: 390px;
+        border-radius: 16px;
+    }
+
+    .news-card-image {
+        padding: 20px 17px;
+    }
+
+    .news-card-content h3 {
+        font-size: 15px;
+    }
+
+    .news-card-content p {
+        font-size: 9px;
+    }
+
+    .news-card-btn {
+        padding: 7px 12px;
+        font-size: 8px;
+    }
+
+    .news-card-tag {
+        top: 15px;
+        left: 15px;
+    }
+
+    /* PLAYER */
 
     .player-info > div {
         width: 75px;
