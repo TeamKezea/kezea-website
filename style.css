@@ -5208,3 +5208,239 @@ body.details-body {
     }
 
 }
+/* =========================================================
+   KEZEA ABOUT - MODERN ESPORTS
+========================================================= */
+
+#about {
+    position: relative;
+    padding: 100px 6%;
+    background: #05070c;
+    overflow: hidden;
+}
+
+.about-modern {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* VISUAL */
+
+.about-visual {
+    position: relative;
+
+    min-height: 380px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20,23,31,.95),
+            rgba(8,10,15,.98)
+        );
+
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+/* BIG K */
+
+.about-big-text {
+    position: absolute;
+
+    font-size: 260px;
+    line-height: 1;
+
+    font-weight: 900;
+
+    color: rgba(255,90,31,.035);
+
+    user-select: none;
+}
+
+
+/* ORANGE GLOW */
+
+.about-visual::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    background: rgba(255,90,31,.12);
+
+    filter: blur(70px);
+
+    right: -50px;
+    bottom: -50px;
+}
+
+
+/* INFO */
+
+.about-info {
+    position: absolute;
+
+    left: 25px;
+    top: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    z-index: 2;
+}
+
+.about-info span {
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,.35);
+}
+
+.about-info strong {
+    font-size: 15px;
+    color: #fff;
+}
+
+.about-info.second {
+    left: auto;
+    top: auto;
+
+    right: 25px;
+    bottom: 25px;
+
+    text-align: right;
+}
+
+.about-info.second strong {
+    color: #ff5a1f;
+}
+
+
+/* TEXT */
+
+.about-text {
+    position: relative;
+}
+
+.about-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    color: #ff5a1f;
+}
+
+.about-text h3 {
+    margin: 0 0 22px;
+
+    font-size: 48px;
+    line-height: .95;
+
+    font-weight: 900;
+    letter-spacing: -1px;
+
+    color: #fff;
+}
+
+.about-text h3 span {
+    color: #ff5a1f;
+}
+
+.about-text p {
+    max-width: 520px;
+
+    margin: 0 0 15px;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: rgba(255,255,255,.52);
+}
+
+
+/* MINI STATS */
+
+.about-stats {
+    display: flex;
+
+    gap: 35px;
+
+    margin-top: 30px;
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(255,255,255,.07);
+}
+
+.about-stats div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.about-stats strong {
+    font-size: 22px;
+    line-height: 1;
+
+    color: #fff;
+}
+
+.about-stats span {
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: rgba(255,255,255,.3);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    #about {
+        padding: 75px 5%;
+    }
+
+    .about-modern {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-visual {
+        min-height: 280px;
+    }
+
+    .about-big-text {
+        font-size: 190px;
+    }
+
+    .about-text h3 {
+        font-size: 38px;
+    }
+
+}
