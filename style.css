@@ -5080,3 +5080,179 @@ body.details-body {
         display: none;
     }
 }
+/* =========================================================
+   KEZEA - TEXT SIZE FIX
+   Keep headings and section text compact
+========================================================= */
+
+/* SECTION TITLES */
+
+.section-title {
+    margin-bottom: 45px;
+}
+
+.section-title span {
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    line-height: 1.1;
+    margin: 8px 0;
+}
+
+.section-line {
+    width: 55px;
+    height: 2px;
+}
+
+
+/* ABOUT */
+
+.about-content p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* STAT CARDS */
+
+.stat-main h2 {
+    font-size: 34px !important;
+}
+
+.stat-main p {
+    font-size: 9px !important;
+}
+
+
+/* PLAYER CARDS */
+
+.player-card h3 {
+    font-size: 21px !important;
+}
+
+.player-card p {
+    font-size: 10px !important;
+}
+
+.player-link {
+    font-size: 9px !important;
+}
+
+
+/* ACHIEVEMENTS */
+
+.achievement-content h3 {
+    font-size: 20px !important;
+}
+
+.achievement-content p {
+    font-size: 13px !important;
+    line-height: 1.6;
+}
+
+.achievement-status {
+    font-size: 9px !important;
+}
+
+.achievement-meta {
+    font-size: 9px !important;
+}
+
+
+/* NEWS */
+
+.news-card-content h3 {
+    font-size: 21px !important;
+    line-height: 1.2;
+}
+
+.news-card-content p {
+    font-size: 12px !important;
+    line-height: 1.6;
+}
+
+.news-card-date {
+    font-size: 9px !important;
+}
+
+.news-card-tag {
+    font-size: 9px !important;
+}
+
+.news-card-btn {
+    font-size: 9px !important;
+}
+
+
+/* ROCKET LEAGUE */
+
+.rocket-text > span {
+    font-size: 10px !important;
+    letter-spacing: 3px;
+}
+
+.rocket-text h2 {
+    font-size: 48px !important;
+    line-height: 0.95;
+}
+
+.rocket-text p {
+    font-size: 14px !important;
+}
+
+
+/* DISCORD CTA */
+
+.discord-cta-small {
+    font-size: 10px !important;
+    letter-spacing: 3px;
+}
+
+.discord-cta-content h2 {
+    font-size: 42px !important;
+    line-height: 1;
+}
+
+.discord-cta-content p {
+    font-size: 14px !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .section-title span {
+        font-size: 9px;
+    }
+
+    .about-content p {
+        font-size: 13px;
+    }
+
+    .achievement-content h3 {
+        font-size: 17px !important;
+    }
+
+    .news-card-content h3 {
+        font-size: 18px !important;
+    }
+
+    .rocket-text h2 {
+        font-size: 38px !important;
+    }
+
+    .discord-cta-content h2 {
+        font-size: 32px !important;
+    }
+
+}
