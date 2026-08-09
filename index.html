@@ -89,151 +89,73 @@
 <body>
 
 
-<!-- =========================
-     HEADER
-========================== -->
+<!-- ==================================================
+     NAVBAR
+================================================== -->
 
-<header class="header">
+<nav class="navbar">
 
-    <div class="header-inner">
+    <!-- LOGO -->
+    <a href="#hero" class="logo">
 
-
-        <!-- LOGO -->
-
-        <a
-            href="#hero"
-            class="logo"
-        >
-
-            <div class="logo-symbol">
-
-                <img
-                    src="logo.png"
-                    alt="KEZEA Logo"
-                >
-
-            </div>
-
-
-            <div class="logo-text">
-
-                KEZEA
-
-                <span>
-                    ESPORTS
-                </span>
-
-            </div>
-
-        </a>
-
-
-
-        <!-- DESKTOP NAVIGATION -->
-
-        <nav class="desktop-navigation">
-
-            <ul class="desktop-nav">
-
-                <li>
-                    <a href="#hero">
-                        HOME
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#about">
-                        ABOUT
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#roster">
-                        ROSTER
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#achievements">
-                        ACHIEVEMENTS
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#rocket-league">
-                        ROCKET LEAGUE
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#news">
-                        NEWS
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-
-
-        <!-- HEADER ACTIONS -->
-
-        <div class="header-actions">
-
-
-            <!-- MOBILE MENU BUTTON -->
-
-            <button
-                class="menu-toggle"
-                type="button"
-                aria-label="Open menu"
-                aria-expanded="false"
-                aria-controls="mobile-menu"
-            >
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-
-
-            <!-- DISCORD BUTTON -->
-
-            <a
-                class="discord-btn"
-                href="https://discord.gg/qdnSGPNUKp"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                JOIN DISCORD
-            </a>
-
+        <div class="logo-symbol">
+            <img src="logo.png" alt="KEZEA Logo">
         </div>
 
-    </div>
+        <div class="logo-text">
+            KEZEA
+            <span>ESPORTS</span>
+        </div>
 
-</header>
+    </a>
 
 
+    <!-- PC NAVIGATION -->
+    <ul class="desktop-nav">
 
-<!-- =========================
-     MOBILE MENU
-========================== -->
+        <li><a href="#hero">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#roster">ROSTER</a></li>
+        <li><a href="#achievements">ACHIEVEMENTS</a></li>
+        <li><a href="#rocket-league">ROCKET LEAGUE</a></li>
+        <li><a href="#news">NEWS</a></li>
 
-<div
-    class="mobile-menu"
-    id="mobile-menu"
->
+    </ul>
+
+
+    <!-- MOBILE MENU BUTTON -->
+    <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
+    <!-- DISCORD -->
+    <a
+        class="discord-btn"
+        href="https://discord.gg/qdnSGPNUKp"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        JOIN DISCORD
+    </a>
+
+</nav>
+
+
+<!-- MOBILE SIDE MENU -->
+
+<div class="mobile-menu">
 
     <div class="mobile-menu-header">
 
-        <span>
-            KEZEA
-        </span>
-
+        <span>KEZEA</span>
 
         <button
             class="mobile-close"
@@ -246,109 +168,93 @@
     </div>
 
 
-
     <div class="mobile-menu-line"></div>
-
 
 
     <nav class="mobile-nav">
 
         <a href="#hero">
-
-            <span>
-                01
-            </span>
-
+            <span>01</span>
             HOME
-
         </a>
-
 
         <a href="#about">
-
-            <span>
-                02
-            </span>
-
+            <span>02</span>
             ABOUT
-
         </a>
-
 
         <a href="#roster">
-
-            <span>
-                03
-            </span>
-
+            <span>03</span>
             ROSTER
-
         </a>
-
 
         <a href="#achievements">
-
-            <span>
-                04
-            </span>
-
+            <span>04</span>
             ACHIEVEMENTS
-
         </a>
-
 
         <a href="#rocket-league">
-
-            <span>
-                05
-            </span>
-
+            <span>05</span>
             ROCKET LEAGUE
-
         </a>
 
-
         <a href="#news">
-
-            <span>
-                06
-            </span>
-
+            <span>06</span>
             NEWS
-
         </a>
 
     </nav>
 
 
-
     <div class="mobile-menu-footer">
-
         KEZEA ESPORTS
-
-        <span>
-            BUILT TO COMPETE
-        </span>
-
+        <span>BUILT TO COMPETE</span>
     </div>
 
 </div>
 
 
+<!-- DARK OVERLAY -->
 
-<!-- =========================
+<div class="menu-overlay"></div>
+    
+    <button
+        class="menu-toggle"
+        aria-label="Open menu"
+        type="button"
+    >
+        ☰
+    </button>
+
+
+    <!-- DISCORD -->
+
+    <a
+        class="discord-btn"
+        href="https://discord.gg/qdnSGPNUKp"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        JOIN DISCORD
+    </a>
+
+</nav>
+
+
+
+<!-- ==================================================
      HERO
-========================== -->
+================================================== -->
 
 <section
-    class="hero"
     id="hero"
+    class="hero"
 >
+
 
     <div class="hero-bg-title">
         KEZEA
     </div>
-
 
 
     <div class="hero-top">
@@ -368,7 +274,6 @@
     </div>
 
 
-
     <div class="hero-center">
 
 
@@ -382,11 +287,9 @@
         </div>
 
 
-
         <h1>
             KEZEA
         </h1>
-
 
 
         <div class="hero-subtitle">
@@ -394,22 +297,15 @@
         </div>
 
 
-
         <div class="hero-line"></div>
 
 
-
         <p>
-
             Competitive Rocket League.
             <br>
             One team. One goal.
-
         </p>
 
-
-
-        <!-- HERO BUTTONS -->
 
         <div class="hero-buttons">
 
@@ -435,7 +331,6 @@
     </div>
 
 
-
     <div class="hero-bottom">
 
         <span>
@@ -450,9 +345,9 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      STATS
-========================== -->
+================================================== -->
 
 <section class="stats-section">
 
@@ -485,7 +380,6 @@
         </a>
 
 
-
         <!-- WINS -->
 
         <a
@@ -512,7 +406,6 @@
         </a>
 
 
-
         <!-- PLAYERS -->
 
         <a
@@ -537,7 +430,6 @@
             </span>
 
         </a>
-
 
 
         <!-- MISSION -->
@@ -571,14 +463,15 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      ABOUT
-========================== -->
+================================================== -->
 
 <section
-    class="about-section"
     id="about"
+    class="about section"
 >
+
 
     <div class="section-title">
 
@@ -593,7 +486,6 @@
         <div class="section-line"></div>
 
     </div>
-
 
 
     <div class="about-content">
@@ -636,7 +528,6 @@
         </div>
 
 
-
         <!-- RIGHT -->
 
         <div class="about-text">
@@ -647,73 +538,40 @@
 
 
             <h3>
-
                 BUILT TO
-
-                <span>
-                    COMPETE.
-                </span>
-
+                <span>COMPETE.</span>
             </h3>
 
 
             <p>
-
                 KEZEA Esports is a competitive Rocket League
                 team built around teamwork, discipline and
                 constant improvement.
-
             </p>
 
 
             <p>
-
                 We are not here just to participate.
                 We are here to compete, improve and build
                 something that lasts.
-
             </p>
-
 
 
             <div class="about-stats">
 
                 <div>
-
-                    <strong>
-                        01
-                    </strong>
-
-                    <span>
-                        TEAM
-                    </span>
-
+                    <strong>01</strong>
+                    <span>TEAM</span>
                 </div>
 
-
                 <div>
-
-                    <strong>
-                        03
-                    </strong>
-
-                    <span>
-                        PLAYERS
-                    </span>
-
+                    <strong>03</strong>
+                    <span>PLAYERS</span>
                 </div>
 
-
                 <div>
-
-                    <strong>
-                        ∞
-                    </strong>
-
-                    <span>
-                        AMBITION
-                    </span>
-
+                    <strong>∞</strong>
+                    <span>AMBITION</span>
                 </div>
 
             </div>
@@ -726,14 +584,15 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      ROSTER
-========================== -->
+================================================== -->
 
 <section
-    class="roster-section"
     id="roster"
+    class="roster section"
 >
+
 
     <div class="section-title">
 
@@ -748,7 +607,6 @@
         <div class="section-line"></div>
 
     </div>
-
 
 
     <div class="players">
@@ -959,14 +817,15 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      ACHIEVEMENTS
-========================== -->
+================================================== -->
 
 <section
-    class="achievements-section"
     id="achievements"
+    class="achievements section"
 >
+
 
     <div class="section-title">
 
@@ -981,7 +840,6 @@
         <div class="section-line"></div>
 
     </div>
-
 
 
     <div class="achievements-container">
@@ -1014,11 +872,9 @@
 
 
                 <p>
-
                     KEZEA Esports officially competed
                     in its first competitive Rocket League
                     tournaments.
-
                 </p>
 
 
@@ -1067,11 +923,9 @@
 
 
                 <p>
-
                     The next mission is simple:
                     compete harder, improve faster
                     and claim our first championship.
-
                 </p>
 
 
@@ -1120,11 +974,9 @@
 
 
                 <p>
-
                     Build the KEZEA name, compete against
                     stronger teams and create a legacy
                     in the Rocket League scene.
-
                 </p>
 
 
@@ -1150,14 +1002,15 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      NEWS
-========================== -->
+================================================== -->
 
 <section
-    class="news-section"
     id="news"
+    class="news section"
 >
+
 
     <div class="section-title">
 
@@ -1172,7 +1025,6 @@
         <div class="section-line"></div>
 
     </div>
-
 
 
     <div class="news-cards">
@@ -1205,10 +1057,8 @@
 
 
                     <p>
-
                         A new chapter begins for KEZEA Esports.
                         The team is ready for the next challenge.
-
                     </p>
 
 
@@ -1254,10 +1104,8 @@
 
 
                     <p>
-
                         Meet the players representing KEZEA
                         in the upcoming competitions.
-
                     </p>
 
 
@@ -1303,10 +1151,8 @@
 
 
                     <p>
-
                         KEZEA Rocket League squad prepares
                         for another competitive battle.
-
                     </p>
 
 
@@ -1329,14 +1175,15 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      ROCKET LEAGUE
-========================== -->
+================================================== -->
 
 <section
-    class="rocket-section"
     id="rocket-league"
+    class="rocket-league section"
 >
+
 
     <div class="rocket-container">
 
@@ -1349,21 +1196,15 @@
 
 
             <h2>
-
                 WE PLAY
-
                 <br>
-
                 TO WIN
-
             </h2>
 
 
             <p>
-
                 Every match is a step closer to greatness.
                 Every goal is for Kezea.
-
             </p>
 
 
@@ -1375,7 +1216,6 @@
             </a>
 
         </div>
-
 
 
         <div class="rocket-car">
@@ -1393,11 +1233,12 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      DISCORD CTA
-========================== -->
+================================================== -->
 
 <section class="discord-cta">
+
 
     <div class="discord-cta-content">
 
@@ -1407,23 +1248,15 @@
 
 
         <h2>
-
             JOIN THE
-
-            <span>
-                KEZEA
-            </span>
-
+            <span>KEZEA</span>
             COMMUNITY
-
         </h2>
 
 
         <p>
-
             If you want to know us more,
             join our Discord and become part of KEZEA.
-
         </p>
 
 
@@ -1442,11 +1275,12 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      FOOTER
-========================== -->
+================================================== -->
 
 <footer>
+
 
     <div class="footer-grid">
 
@@ -1461,14 +1295,12 @@
 
 
             <p>
-
                 Built different.
                 <br>
                 Born to compete.
                 <br>
                 <br>
                 teamkezea@gmail.com
-
             </p>
 
         </div>
@@ -1548,7 +1380,6 @@
     </div>
 
 
-
     <div class="copyright">
 
         © 2026 KEZEA Esports.
@@ -1561,66 +1392,129 @@
 
 
 <!-- =========================
+
      JAVASCRIPT
+
 ========================== -->
+
+
 
 <script>
 
+
+
     const menuToggle = document.querySelector(".menu-toggle");
+
     const mobileMenu = document.querySelector("#mobile-menu");
+
     const mobileClose = document.querySelector(".mobile-close");
+
     const mobileLinks = document.querySelectorAll(".mobile-nav a");
+
+
+
 
 
     if (menuToggle && mobileMenu) {
 
+
+
         menuToggle.addEventListener("click", function () {
+
+
 
             mobileMenu.classList.add("active");
 
+
+
             menuToggle.setAttribute(
+
                 "aria-expanded",
+
                 "true"
+
             );
+
+
 
         });
 
+
+
     }
+
+
+
 
 
     if (mobileClose && mobileMenu) {
 
+
+
         mobileClose.addEventListener("click", function () {
+
+
 
             mobileMenu.classList.remove("active");
 
+
+
             menuToggle.setAttribute(
+
                 "aria-expanded",
+
                 "false"
+
             );
 
+
+
         });
+
+
 
     }
 
 
+
+
+
     mobileLinks.forEach(function (link) {
+
+
 
         link.addEventListener("click", function () {
 
+
+
             mobileMenu.classList.remove("active");
 
+
+
             menuToggle.setAttribute(
+
                 "aria-expanded",
+
                 "false"
+
             );
+
+
 
         });
 
+
+
     });
+
+
 
 </script>
 
 
+
+
+
 </body>
+
 </html>
