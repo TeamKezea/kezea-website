@@ -7976,3 +7976,157 @@ footer {
         font-size: 17px;
     }
 }
+
+
+/* =========================================================
+   KEZEA ABOUT - FINAL VISUAL UPDATE
+   ========================================================= */
+
+#about {
+    background: #05070c;
+}
+
+.about-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+    background: #090b10;
+    border: 1px solid rgba(255, 193, 7, 0.35);
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 470px;
+    box-shadow: 0 0 40px rgba(0,0,0,.35);
+}
+
+.about-visual {
+    min-height: 470px;
+    height: auto;
+    border: 0;
+    border-right: 1px solid rgba(255,255,255,.08);
+    border-radius: 0;
+    background:
+        linear-gradient(90deg, rgba(5,7,12,.10), rgba(5,7,12,.25)),
+        url("about-kezea.png") center center / cover no-repeat;
+}
+
+.about-visual::after {
+    display: none;
+}
+
+.about-big-text,
+.about-info {
+    display: none;
+}
+
+.about-text {
+    max-width: none;
+    padding: 58px 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        radial-gradient(circle at 85% 15%, rgba(255,193,7,.06), transparent 32%),
+        #090b10;
+}
+
+.about-label {
+    color: #ffc107;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.about-text h3 {
+    margin: 0 0 24px;
+    font-size: 48px;
+    line-height: .95;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    color: #fff;
+}
+
+.about-text h3 span {
+    color: #ffc107;
+}
+
+.about-text p {
+    max-width: 520px;
+    margin: 0 0 14px;
+    color: rgba(255,255,255,.58);
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.about-stats {
+    display: flex;
+    gap: 0;
+    margin-top: 26px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,.09);
+}
+
+.about-stats div {
+    flex: 1;
+    padding: 0 22px;
+    border-right: 1px solid rgba(255,255,255,.08);
+}
+
+.about-stats div:first-child {
+    padding-left: 0;
+}
+
+.about-stats div:last-child {
+    border-right: 0;
+}
+
+.about-stats strong {
+    font-size: 28px;
+    color: #ffc107;
+    line-height: 1;
+}
+
+.about-stats span {
+    display: block;
+    margin-top: 7px;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,.35);
+}
+
+@media (max-width: 700px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+
+    .about-visual {
+        min-height: 280px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .about-text {
+        padding: 38px 28px;
+    }
+
+    .about-text h3 {
+        font-size: 34px;
+    }
+
+    .about-text p {
+        font-size: 12px;
+    }
+
+    .about-stats strong {
+        font-size: 22px;
+    }
+
+    .about-stats div {
+        padding: 0 12px;
+    }
+}
