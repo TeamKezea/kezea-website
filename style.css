@@ -8343,3 +8343,10 @@ footer {
  #about .about-content{height:auto!important;min-height:0!important;grid-template-columns:1fr!important}
  #about .about-content .about-visual{height:300px!important;min-height:300px!important}
 }
+
+/* ABOUT IMAGE - slightly smaller so the full artwork is visible */
+#about .about-content .about-visual{
+  background-size: 94% 94% !important;
+  background-position: center center !important;
+  background-color: #080a0f !important;
+}
