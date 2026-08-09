@@ -6541,3 +6541,148 @@ footer {
         font-size: 19px;
     }
 }
+/* =========================
+   DAY 2 — SCROLL ANIMATIONS
+========================= */
+
+.section-title,
+.stat,
+.about-visual,
+.about-text,
+.player-card,
+.achievement-card,
+.news-card,
+.rocket-text,
+.rocket-car,
+.discord-cta-content {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.show-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   STAGGER EFFECT
+========================= */
+
+.player-card:nth-child(2),
+.achievement-card:nth-child(2),
+.news-card:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.player-card:nth-child(3),
+.achievement-card:nth-child(3),
+.news-card:nth-child(3) {
+    transition-delay: 0.24s;
+}
+
+
+/* =========================
+   CARD HOVER
+========================= */
+
+.player-card,
+.stat,
+.achievement-card,
+.news-card {
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.player-card:hover,
+.stat:hover,
+.achievement-card:hover,
+.news-card:hover {
+    transform: translateY(-6px);
+}
+
+
+/* =========================
+   HERO ANIMATION
+========================= */
+
+.hero-logo {
+    animation: heroLogoFloat 4s ease-in-out infinite;
+}
+
+@keyframes heroLogoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+/* =========================
+   ROCKET CAR
+========================= */
+
+.rocket-car img {
+    animation: rocketFloat 5s ease-in-out infinite;
+}
+
+@keyframes rocketFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(-1deg);
+    }
+
+}
+
+
+/* =========================
+   BUTTON HOVER
+========================= */
+
+.btn,
+.discord-btn,
+.discord-cta-btn {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.btn:hover,
+.discord-btn:hover,
+.discord-cta-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
