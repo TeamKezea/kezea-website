@@ -3,6 +3,8 @@
    GAMING STYLE v2 - CLEAN FINAL
 ========================================================= */
 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 /* =========================
    VARIABLES
 ========================= */
@@ -28,7 +30,6 @@
 
     --transition: 0.3s ease;
 }
-
 
 /* =========================
    RESET
@@ -69,7 +70,6 @@ select {
     font: inherit;
 }
 
-
 /* =========================
    SELECTION
 ========================= */
@@ -78,7 +78,6 @@ select {
     background: var(--gold);
     color: #000;
 }
-
 
 /* =========================
    SCROLLBAR
@@ -96,7 +95,6 @@ select {
     background: var(--gold);
     border-radius: 10px;
 }
-
 
 /* =========================================================
    NAVBAR
@@ -118,12 +116,12 @@ select {
 
     background: rgba(5, 5, 5, 0.82);
     backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 
     border-bottom: 1px solid rgba(247, 198, 0, 0.08);
 
     z-index: 1000;
 }
-
 
 /* LOGO */
 
@@ -168,7 +166,6 @@ select {
 
     letter-spacing: 4px;
 }
-
 
 /* NAV LINKS */
 
@@ -215,7 +212,6 @@ select {
     width: 100%;
 }
 
-
 /* DISCORD */
 
 .discord-btn {
@@ -229,8 +225,6 @@ select {
     font-size: 12px;
     font-weight: 800;
 
-    box-shadow: 0 0 0 rgba(247, 198, 0, 0);
-
     transition: var(--transition);
 }
 
@@ -240,7 +234,6 @@ select {
     box-shadow:
         0 0 25px rgba(247, 198, 0, 0.45);
 }
-
 
 /* =========================================================
    HERO
@@ -269,9 +262,6 @@ select {
         center / cover no-repeat;
 }
 
-
-/* GOLD LIGHT */
-
 #hero::before {
     content: "";
 
@@ -291,9 +281,6 @@ select {
 
     animation: goldPulse 5s ease-in-out infinite alternate;
 }
-
-
-/* GRID EFFECT */
 
 #hero::after {
     content: "";
@@ -328,7 +315,6 @@ select {
         transparent
     );
 }
-
 
 /* HERO CONTENT */
 
@@ -391,7 +377,6 @@ select {
     line-height: 1.8;
 }
 
-
 /* HERO BUTTONS */
 
 .hero-buttons {
@@ -401,7 +386,6 @@ select {
 
     margin-top: 35px;
 }
-
 
 /* =========================================================
    BUTTONS
@@ -441,7 +425,6 @@ select {
     background: var(--gold);
     color: #000;
 }
-
 
 /* =========================================================
    STATS
@@ -530,7 +513,6 @@ select {
     color: #999;
 }
 
-
 /* =========================================================
    SECTIONS
 ========================================================= */
@@ -555,7 +537,6 @@ select {
 #rocket-league {
     background: #111;
 }
-
 
 /* =========================================================
    SECTION TITLE
@@ -596,7 +577,6 @@ select {
         0 0 15px rgba(247, 198, 0, 0.5);
 }
 
-
 /* =========================================================
    ABOUT
 ========================================================= */
@@ -618,7 +598,6 @@ select {
     line-height: 1.9;
 }
 
-
 /* =========================================================
    PLAYER CARDS
 ========================================================= */
@@ -638,9 +617,6 @@ select {
 
     margin: 0 auto;
 }
-
-
-/* CARD */
 
 .player-card {
     position: relative;
@@ -705,7 +681,6 @@ select {
     opacity: 1;
 }
 
-
 /* PLAYER NUMBER */
 
 .player-number {
@@ -725,7 +700,6 @@ select {
 .player-card:hover .player-number {
     color: rgba(247, 198, 0, 0.35);
 }
-
 
 /* AVATAR */
 
@@ -781,7 +755,6 @@ select {
         contrast(1.05);
 }
 
-
 /* PLAYER NAME */
 
 .player-card h3 {
@@ -801,7 +774,6 @@ select {
     color: var(--gold);
 }
 
-
 /* PLAYER ROLE */
 
 .player-card p {
@@ -817,7 +789,6 @@ select {
 
     letter-spacing: 3px;
 }
-
 
 /* PLAYER LINK */
 
@@ -854,9 +825,13 @@ select {
         0 0 18px rgba(247, 198, 0, 0.25);
 }
 
+.player-link.disabled {
+    opacity: 0.65;
+    cursor: default;
+}
 
 /* =========================================================
-   ACHIEVEMENTS / NEWS CARDS
+   ACHIEVEMENTS / NEWS
 ========================================================= */
 
 .news-box {
@@ -936,7 +911,6 @@ select {
 
     line-height: 1.7;
 }
-
 
 /* =========================================================
    ROCKET LEAGUE
@@ -1022,7 +996,6 @@ select {
         );
 }
 
-
 /* =========================================================
    FOOTER
 ========================================================= */
@@ -1093,7 +1066,6 @@ footer a:hover {
     font-size: 12px;
 }
 
-
 /* =========================================================
    SOCIAL BUTTON
 ========================================================= */
@@ -1125,6 +1097,10 @@ footer a:hover {
         0 0 22px rgba(247, 198, 0, 0.45);
 }
 
+.social-btn.disabled {
+    opacity: 0.7;
+    cursor: default;
+}
 
 /* =========================================================
    PLAYER PAGE
@@ -1166,8 +1142,7 @@ body.player-body::before {
     z-index: 0;
 }
 
-
-/* PLAYER PAGE CONTAINER */
+/* PLAYER PAGE */
 
 .player-page {
     position: relative;
@@ -1181,15 +1156,10 @@ body.player-body::before {
 
     padding: 120px 20px 60px;
 
-    background: transparent;
-
     z-index: 1;
 }
 
-
-/* =========================================================
-   PLAYER PROFILE
-========================================================= */
+/* PLAYER PROFILE */
 
 .player-profile,
 .player-page > .player-content {
@@ -1208,6 +1178,7 @@ body.player-body::before {
     border-radius: 25px;
 
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     box-shadow:
         0 0 35px rgba(247, 198, 0, 0.14),
@@ -1215,7 +1186,6 @@ body.player-body::before {
 
     animation: playerCardAppear 0.7s ease;
 }
-
 
 /* DIRECT PLAYER PAGE SUPPORT */
 
@@ -1240,6 +1210,7 @@ body.player-body::before {
     border-radius: 25px;
 
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     box-shadow:
         0 0 35px rgba(247, 198, 0, 0.14),
@@ -1247,7 +1218,6 @@ body.player-body::before {
 
     animation: playerCardAppear 0.7s ease;
 }
-
 
 /* PLAYER IMAGE */
 
@@ -1279,7 +1249,6 @@ body.player-body::before {
         0 0 40px rgba(247, 198, 0, 0.4);
 }
 
-
 /* PLAYER NAME */
 
 .player-profile h1,
@@ -1293,7 +1262,6 @@ body.player-body::before {
     font-size: 45px;
 }
 
-
 /* PLAYER TITLE */
 
 .player-profile h3,
@@ -1304,7 +1272,6 @@ body.player-body::before {
 
     letter-spacing: 3px;
 }
-
 
 /* PLAYER INFO */
 
@@ -1367,7 +1334,6 @@ body.player-body::before {
     font-size: 22px;
 }
 
-
 /* PLAYER DESCRIPTION */
 
 .player-profile > p,
@@ -1380,7 +1346,6 @@ body.player-body::before {
 
     line-height: 1.8;
 }
-
 
 /* ROLE */
 
@@ -1403,10 +1368,8 @@ body.player-body::before {
     letter-spacing: 2px;
 }
 
-
 /* =========================================================
    BACK TO TEAM
-   FIXED CENTERED ABOVE PLAYER CARD
 ========================================================= */
 
 body.player-body .back-btn {
@@ -1433,6 +1396,7 @@ body.player-body .back-btn {
     border-radius: 12px;
 
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     font-size: 13px;
     font-weight: 700;
@@ -1465,7 +1429,6 @@ body.player-body .back-btn:hover {
 
     transform: translateX(-50%) translateY(-3px);
 }
-
 
 /* =========================================================
    ANIMATIONS
@@ -1517,7 +1480,6 @@ body.player-body .back-btn:hover {
     }
 }
 
-
 /* =========================================================
    TABLET
 ========================================================= */
@@ -1538,7 +1500,6 @@ body.player-body .back-btn:hover {
 
     .discord-btn {
         padding: 9px 14px;
-
         font-size: 10px;
     }
 
@@ -1548,19 +1509,14 @@ body.player-body .back-btn:hover {
     }
 }
 
-
 /* =========================================================
    TABLET
-   2 PLAYERS PER ROW
 ========================================================= */
 
 @media (max-width: 900px) {
 
-    /* NAVBAR */
-
     .navbar {
         height: 72px;
-
         padding: 0 18px;
     }
 
@@ -1579,10 +1535,8 @@ body.player-body .back-btn:hover {
 
     .discord-btn {
         padding: 9px 13px;
-
         font-size: 10px;
     }
-
 
     /* HERO */
 
@@ -1596,7 +1550,6 @@ body.player-body .back-btn:hover {
 
     .welcome {
         font-size: 11px;
-
         letter-spacing: 4px;
     }
 
@@ -1608,13 +1561,11 @@ body.player-body .back-btn:hover {
         font-size: 15px;
     }
 
-
     /* STATS */
 
     .stat-box {
         grid-template-columns: repeat(2, 1fr);
     }
-
 
     /* PLAYERS */
 
@@ -1622,13 +1573,11 @@ body.player-body .back-btn:hover {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-
     /* NEWS */
 
     .news-box {
         grid-template-columns: 1fr;
     }
-
 
     /* ROCKET */
 
@@ -1644,7 +1593,6 @@ body.player-body .back-btn:hover {
         width: 290px;
     }
 
-
     /* FOOTER */
 
     .footer-grid {
@@ -1657,14 +1605,12 @@ body.player-body .back-btn:hover {
         transform: none;
     }
 
-
     /* PLAYER BACK BUTTON */
 
     body.player-body .back-btn {
         top: 82px;
     }
 }
-
 
 /* =========================================================
    MOBILE
@@ -1692,10 +1638,8 @@ body.player-body .back-btn:hover {
 
     .hero-buttons .btn {
         padding: 11px 17px;
-
         font-size: 11px;
     }
-
 
     /* SECTIONS */
 
@@ -1715,26 +1659,22 @@ body.player-body .back-btn:hover {
         font-size: 30px;
     }
 
-
     /* STATS */
 
     .stat-box {
         grid-template-columns: 1fr;
     }
 
-
     /* PLAYERS */
 
     .players {
         grid-template-columns: 1fr;
-
         gap: 20px;
     }
 
     .player-card {
         padding: 40px 20px;
     }
-
 
     /* PLAYER PAGE */
 
@@ -1785,10 +1725,7 @@ body.player-body .back-btn:hover {
         font-size: 13px;
     }
 
-
-    /* BACK TO TEAM
-       CENTERED - NEVER CORNER
-    */
+    /* BACK BUTTON */
 
     body.player-body .back-btn {
         position: fixed;
@@ -1809,7 +1746,6 @@ body.player-body .back-btn:hover {
         transform: translateX(-50%) translateY(-3px);
     }
 
-
     /* ROCKET */
 
     .rocket-text h2 {
@@ -1820,7 +1756,6 @@ body.player-body .back-btn:hover {
         width: 240px;
     }
 }
-
 
 /* =========================================================
    VERY SMALL PHONES
@@ -1839,7 +1774,6 @@ body.player-body .back-btn:hover {
 
     .discord-btn {
         padding: 8px 10px;
-
         font-size: 9px;
     }
 
@@ -1849,7 +1783,6 @@ body.player-body .back-btn:hover {
 
     .hero-buttons {
         flex-direction: column;
-
         align-items: flex-start;
     }
 
@@ -1862,8 +1795,6 @@ body.player-body .back-btn:hover {
         font-size: 19px;
     }
 
-    /* BACK BUTTON */
-
     body.player-body .back-btn {
         top: 70px;
 
@@ -1872,7 +1803,6 @@ body.player-body .back-btn:hover {
         font-size: 11px;
     }
 }
-
 
 /* =========================================================
    REDUCED MOTION
