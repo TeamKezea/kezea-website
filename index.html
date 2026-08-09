@@ -89,73 +89,158 @@
 <body>
 
 
-<!-- ==================================================
-     NAVBAR
-================================================== -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-<nav class="navbar">
+<header class="header">
 
-    <!-- LOGO -->
-    <a href="#hero" class="logo">
+    <div class="header-inner">
 
-        <div class="logo-symbol">
-            <img src="logo.png" alt="KEZEA Logo">
+
+        <!-- =========================
+             LOGO
+        ========================== -->
+
+        <a
+            href="#hero"
+            class="logo"
+        >
+
+            <div class="logo-symbol">
+
+                <img
+                    src="logo.png"
+                    alt="KEZEA Logo"
+                >
+
+            </div>
+
+
+            <div class="logo-text">
+
+                KEZEA
+
+                <span>
+                    ESPORTS
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- =========================
+             PC NAVIGATION
+        ========================== -->
+
+        <nav class="desktop-navigation">
+
+            <ul class="desktop-nav">
+
+                <li>
+                    <a href="#hero">
+                        HOME
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        ABOUT
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#roster">
+                        ROSTER
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#achievements">
+                        ACHIEVEMENTS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#rocket-league">
+                        ROCKET LEAGUE
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#news">
+                        NEWS
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+
+        <!-- =========================
+             HEADER ACTIONS
+        ========================== -->
+
+        <div class="header-actions">
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+
+            <!-- DISCORD -->
+
+            <a
+                class="discord-btn"
+                href="https://discord.gg/qdnSGPNUKp"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                JOIN DISCORD
+            </a>
+
         </div>
 
-        <div class="logo-text">
-            KEZEA
-            <span>ESPORTS</span>
-        </div>
+    </div>
 
-    </a>
+</header>
 
 
-    <!-- PC NAVIGATION -->
-    <ul class="desktop-nav">
 
-        <li><a href="#hero">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#roster">ROSTER</a></li>
-        <li><a href="#achievements">ACHIEVEMENTS</a></li>
-        <li><a href="#rocket-league">ROCKET LEAGUE</a></li>
-        <li><a href="#news">NEWS</a></li>
+<!-- =====================================================
+     MOBILE MENU
+===================================================== -->
 
-    </ul>
+<div
+    id="mobile-menu"
+    class="mobile-menu"
+>
 
-
-    <!-- MOBILE MENU BUTTON -->
-    <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Open menu"
-        aria-expanded="false"
-    >
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
-
-    <!-- DISCORD -->
-    <a
-        class="discord-btn"
-        href="https://discord.gg/qdnSGPNUKp"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        JOIN DISCORD
-    </a>
-
-</nav>
-
-
-<!-- MOBILE SIDE MENU -->
-
-<div class="mobile-menu">
 
     <div class="mobile-menu-header">
 
-        <span>KEZEA</span>
+        <span>
+            KEZEA
+        </span>
+
 
         <button
             class="mobile-close"
@@ -168,83 +253,99 @@
     </div>
 
 
+
     <div class="mobile-menu-line"></div>
+
 
 
     <nav class="mobile-nav">
 
         <a href="#hero">
-            <span>01</span>
+
+            <span>
+                01
+            </span>
+
             HOME
+
         </a>
+
 
         <a href="#about">
-            <span>02</span>
+
+            <span>
+                02
+            </span>
+
             ABOUT
+
         </a>
+
 
         <a href="#roster">
-            <span>03</span>
+
+            <span>
+                03
+            </span>
+
             ROSTER
+
         </a>
+
 
         <a href="#achievements">
-            <span>04</span>
+
+            <span>
+                04
+            </span>
+
             ACHIEVEMENTS
+
         </a>
+
 
         <a href="#rocket-league">
-            <span>05</span>
+
+            <span>
+                05
+            </span>
+
             ROCKET LEAGUE
+
         </a>
 
+
         <a href="#news">
-            <span>06</span>
+
+            <span>
+                06
+            </span>
+
             NEWS
+
         </a>
 
     </nav>
 
 
+
     <div class="mobile-menu-footer">
+
         KEZEA ESPORTS
-        <span>BUILT TO COMPETE</span>
+
+        <span>
+            BUILT TO COMPETE
+        </span>
+
     </div>
 
 </div>
 
 
-<!-- DARK OVERLAY -->
 
-<div class="menu-overlay"></div>
-    
-    <button
-        class="menu-toggle"
-        aria-label="Open menu"
-        type="button"
-    >
-        ☰
-    </button>
-
-
-    <!-- DISCORD -->
-
-    <a
-        class="discord-btn"
-        href="https://discord.gg/qdnSGPNUKp"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        JOIN DISCORD
-    </a>
-
-</nav>
-
-
-
-<!-- ==================================================
+<!-- =====================================================
      HERO
-================================================== -->
+===================================================== -->
 
 <section
     id="hero"
@@ -255,6 +356,7 @@
     <div class="hero-bg-title">
         KEZEA
     </div>
+
 
 
     <div class="hero-top">
@@ -274,6 +376,7 @@
     </div>
 
 
+
     <div class="hero-center">
 
 
@@ -287,9 +390,11 @@
         </div>
 
 
+
         <h1>
             KEZEA
         </h1>
+
 
 
         <div class="hero-subtitle">
@@ -297,7 +402,9 @@
         </div>
 
 
+
         <div class="hero-line"></div>
+
 
 
         <p>
@@ -305,6 +412,7 @@
             <br>
             One team. One goal.
         </p>
+
 
 
         <div class="hero-buttons">
@@ -331,6 +439,7 @@
     </div>
 
 
+
     <div class="hero-bottom">
 
         <span>
@@ -345,9 +454,9 @@
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      STATS
-================================================== -->
+===================================================== -->
 
 <section class="stats-section">
 
@@ -380,6 +489,7 @@
         </a>
 
 
+
         <!-- WINS -->
 
         <a
@@ -406,6 +516,7 @@
         </a>
 
 
+
         <!-- PLAYERS -->
 
         <a
@@ -430,6 +541,7 @@
             </span>
 
         </a>
+
 
 
         <!-- MISSION -->
@@ -463,13 +575,13 @@
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      ABOUT
-================================================== -->
+===================================================== -->
 
 <section
     id="about"
-    class="about section"
+    class="about"
 >
 
 
@@ -486,6 +598,7 @@
         <div class="section-line"></div>
 
     </div>
+
 
 
     <div class="about-content">
@@ -528,6 +641,7 @@
         </div>
 
 
+
         <!-- RIGHT -->
 
         <div class="about-text">
@@ -539,7 +653,9 @@
 
             <h3>
                 BUILT TO
-                <span>COMPETE.</span>
+                <span>
+                    COMPETE.
+                </span>
             </h3>
 
 
@@ -560,18 +676,35 @@
             <div class="about-stats">
 
                 <div>
-                    <strong>01</strong>
-                    <span>TEAM</span>
+                    <strong>
+                        01
+                    </strong>
+
+                    <span>
+                        TEAM
+                    </span>
                 </div>
 
-                <div>
-                    <strong>03</strong>
-                    <span>PLAYERS</span>
-                </div>
 
                 <div>
-                    <strong>∞</strong>
-                    <span>AMBITION</span>
+                    <strong>
+                        03
+                    </strong>
+
+                    <span>
+                        PLAYERS
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong>
+                        ∞
+                    </strong>
+
+                    <span>
+                        AMBITION
+                    </span>
                 </div>
 
             </div>
@@ -584,13 +717,13 @@
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      ROSTER
-================================================== -->
+===================================================== -->
 
 <section
     id="roster"
-    class="roster section"
+    class="roster"
 >
 
 
@@ -607,6 +740,7 @@
         <div class="section-line"></div>
 
     </div>
+
 
 
     <div class="players">
@@ -817,13 +951,13 @@
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      ACHIEVEMENTS
-================================================== -->
+===================================================== -->
 
 <section
     id="achievements"
-    class="achievements section"
+    class="achievements"
 >
 
 
@@ -840,6 +974,7 @@
         <div class="section-line"></div>
 
     </div>
+
 
 
     <div class="achievements-container">
@@ -1002,13 +1137,13 @@
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      NEWS
-================================================== -->
+===================================================== -->
 
 <section
     id="news"
-    class="news section"
+    class="news"
 >
 
 
@@ -1025,6 +1160,7 @@
         <div class="section-line"></div>
 
     </div>
+
 
 
     <div class="news-cards">
@@ -1175,13 +1311,13 @@
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      ROCKET LEAGUE
-================================================== -->
+===================================================== -->
 
 <section
     id="rocket-league"
-    class="rocket-league section"
+    class="rocket-league"
 >
 
 
@@ -1218,6 +1354,7 @@
         </div>
 
 
+
         <div class="rocket-car">
 
             <img
@@ -1233,12 +1370,11 @@
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      DISCORD CTA
-================================================== -->
+===================================================== -->
 
 <section class="discord-cta">
-
 
     <div class="discord-cta-content">
 
@@ -1249,7 +1385,9 @@
 
         <h2>
             JOIN THE
-            <span>KEZEA</span>
+            <span>
+                KEZEA
+            </span>
             COMMUNITY
         </h2>
 
@@ -1275,11 +1413,11 @@
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      FOOTER
-================================================== -->
+===================================================== -->
 
-<footer>
+<footer class="footer">
 
 
     <div class="footer-grid">
@@ -1380,6 +1518,7 @@
     </div>
 
 
+
     <div class="copyright">
 
         © 2026 KEZEA Esports.
@@ -1391,150 +1530,116 @@
 
 
 
-<!-- ==================================================
-     JAVASCRIPT
-================================================== -->
+<!-- =====================================================
+     MOBILE MENU SCRIPT
+===================================================== -->
 
 <script>
 
+    const menuToggle =
+        document.querySelector(".menu-toggle");
 
-/* =========================
-   SCROLL REVEAL
-========================= */
+    const mobileMenu =
+        document.querySelector(".mobile-menu");
 
-document.addEventListener("DOMContentLoaded", function () {
+    const mobileClose =
+        document.querySelector(".mobile-close");
 
-
-    const elements = document.querySelectorAll(
-        ".section-title, .stat, .about-visual, .about-text, .player-card, .achievement-card, .news-card, .rocket-text, .rocket-car, .discord-cta-content"
-    );
-
-
-    const observer = new IntersectionObserver(
-        function (entries) {
-
-            entries.forEach(function (entry) {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add(
-                        "show-on-scroll"
-                    );
-
-                    observer.unobserve(
-                        entry.target
-                    );
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.15
-        }
-    );
+    const mobileLinks =
+        document.querySelectorAll(".mobile-nav a");
 
 
-    elements.forEach(function (element) {
+    /* OPEN */
 
-        observer.observe(element);
+    menuToggle.addEventListener("click", function () {
+
+        mobileMenu.classList.add("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+        document.body.classList.add(
+            "menu-open"
+        );
 
     });
 
 
-});
+    /* CLOSE */
 
+    mobileClose.addEventListener("click", function () {
 
+        mobileMenu.classList.remove("active");
 
-/* =========================
-   MOBILE MENU
-========================= */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-
-    const menuButton =
-        document.querySelector(".menu-toggle");
-
-
-    const menu =
-        document.querySelector(".navbar > ul");
-
-
-    const menuLinks =
-        document.querySelectorAll(
-            ".navbar > ul a"
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
         );
 
+        document.body.classList.remove(
+            "menu-open"
+        );
 
-    if (!menuButton || !menu) {
-        return;
-    }
+    });
 
 
-    menuButton.addEventListener(
-        "click",
-        function () {
+    /* CLOSE WHEN CLICKING A LINK */
 
-            menu.classList.toggle(
-                "mobile-open"
+    mobileLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            mobileMenu.classList.remove(
+                "active"
             );
 
-
-            const isOpen =
-                menu.classList.contains(
-                    "mobile-open"
-                );
-
-
-            menuButton.textContent =
-                isOpen ? "✕" : "☰";
-
-
-            menuButton.setAttribute(
-                "aria-label",
-                isOpen
-                    ? "Close menu"
-                    : "Open menu"
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
             );
 
-        }
-    );
+            document.body.classList.remove(
+                "menu-open"
+            );
+
+        });
+
+    });
 
 
-    menuLinks.forEach(function (link) {
+    /* CLOSE WITH ESC */
 
-        link.addEventListener(
-            "click",
-            function () {
+    document.addEventListener(
+        "keydown",
+        function (event) {
 
-                menu.classList.remove(
-                    "mobile-open"
+            if (
+                event.key === "Escape" &&
+                mobileMenu.classList.contains("active")
+            ) {
+
+                mobileMenu.classList.remove(
+                    "active"
                 );
 
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
-                menuButton.textContent =
-                    "☰";
-
-
-                menuButton.setAttribute(
-                    "aria-label",
-                    "Open menu"
+                document.body.classList.remove(
+                    "menu-open"
                 );
 
             }
-        );
 
-    });
-
-
-});
-
+        }
+    );
 
 </script>
 
 
 </body>
-
 </html>
