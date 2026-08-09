@@ -3966,3 +3966,251 @@ body.details-body {
     box-shadow:
         0 0 16px rgba(247, 198, 0, 0.25);
 }
+/* =========================================================
+   KEZEA PREMIUM CARD BACKGROUNDS
+========================================================= */
+
+/* ---------- COMMON CARD EFFECT ---------- */
+
+.stat,
+.player-card,
+.achievement-card,
+.news-card,
+.rocket-container {
+    position: relative;
+    isolation: isolate;
+}
+
+/* Premium background pattern */
+.stat::after,
+.player-card::after,
+.achievement-card::after,
+.news-card::before,
+.rocket-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(247, 198, 0, 0.07),
+            transparent 28%,
+            transparent 70%,
+            rgba(247, 198, 0, 0.04)
+        ),
+        linear-gradient(
+            45deg,
+            transparent 48%,
+            rgba(255, 255, 255, 0.025) 49%,
+            transparent 50%
+        );
+
+    background-size:
+        100% 100%,
+        35px 35px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   STAT CARDS
+========================================================= */
+
+.stat {
+    background:
+        radial-gradient(
+            circle at 50% -20%,
+            rgba(247, 198, 0, 0.14),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            #1c1c1c,
+            #0b0b0b
+        );
+}
+
+.stat:hover {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(247, 198, 0, 0.20),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            #202020,
+            #0b0b0b
+        );
+}
+
+
+/* =========================================================
+   PLAYER CARDS
+========================================================= */
+
+.player-card {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(247, 198, 0, 0.12),
+            transparent 38%
+        ),
+        linear-gradient(
+            145deg,
+            #1d1d1d 0%,
+            #111 45%,
+            #080808 100%
+        );
+}
+
+.player-card:hover {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(247, 198, 0, 0.20),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #242424,
+            #101010
+        );
+}
+
+
+/* Extra gold glow */
+.player-card::after {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(247, 198, 0, 0.12),
+            transparent 45%
+        );
+}
+
+
+/* =========================================================
+   ACHIEVEMENT CARDS
+========================================================= */
+
+.achievement-card {
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(247, 198, 0, 0.10),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #1d1d1d,
+            #101010 55%,
+            #080808
+        );
+}
+
+.achievement-card:hover {
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(247, 198, 0, 0.17),
+            transparent 38%
+        ),
+        linear-gradient(
+            145deg,
+            #242424,
+            #101010
+        );
+}
+
+
+/* =========================================================
+   NEWS CARDS
+========================================================= */
+
+.news-card {
+    background: #0b0b0b;
+}
+
+.news-card::before {
+    z-index: 2;
+    opacity: 0.55;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(247, 198, 0, 0.10),
+            transparent 30%,
+            transparent 70%,
+            rgba(247, 198, 0, 0.05)
+        );
+
+    mix-blend-mode: screen;
+}
+
+.news-card:hover::before {
+    opacity: 0.85;
+}
+
+
+/* =========================================================
+   ROCKET LEAGUE CARD
+========================================================= */
+
+.rocket-container {
+    background:
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(247, 198, 0, 0.16),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(247, 198, 0, 0.05),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #1c1c1c,
+            #0b0b0b
+        );
+}
+
+.rocket-container::after {
+    opacity: 0.6;
+}
+
+
+/* =========================================================
+   GOLD EDGE
+========================================================= */
+
+.stat,
+.player-card,
+.achievement-card,
+.news-card,
+.rocket-container {
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.025),
+        0 15px 40px rgba(0,0,0,0.25);
+}
+
+
+/* =========================================================
+   HOVER GLOW
+========================================================= */
+
+.stat:hover,
+.player-card:hover,
+.achievement-card:hover,
+.news-card:hover {
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.04),
+        0 20px 50px rgba(0,0,0,0.5),
+        0 0 25px rgba(247,198,0,0.10);
+}
