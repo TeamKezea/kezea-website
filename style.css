@@ -3897,3 +3897,38 @@ body.player-body .back-btn:hover {
     box-shadow:
         0 0 18px rgba(247, 198, 0, 0.35);
 }
+/* =========================================
+   PLAYER CARDS - SAME HEIGHT & ALIGNMENT
+========================================= */
+
+.players {
+    align-items: stretch;
+}
+
+.player-card {
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* الصورة */
+.player-card .player-avatar {
+    flex-shrink: 0;
+}
+
+/* الاسم */
+.player-card h3 {
+    margin-top: 0;
+}
+
+/* الدور */
+.player-card p {
+    margin-bottom: 0;
+}
+
+/* LINKS يكون دائماً بنفس المكان */
+.player-card .player-link {
+    margin-top: auto;
+}
