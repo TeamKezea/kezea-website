@@ -89,9 +89,9 @@
 <body>
 
 
-<!-- ==================================================
+<!-- =========================
      HEADER
-================================================== -->
+========================== -->
 
 <header class="header">
 
@@ -219,15 +219,14 @@
 
 
 
-<!-- ==================================================
+<!-- =========================
      MOBILE MENU
-================================================== -->
+========================== -->
 
 <div
     class="mobile-menu"
     id="mobile-menu"
 >
-
 
     <div class="mobile-menu-header">
 
@@ -337,15 +336,14 @@
 
 
 
-<!-- ==================================================
+<!-- =========================
      HERO
-================================================== -->
+========================== -->
 
 <section
     class="hero"
     id="hero"
 >
-
 
     <div class="hero-bg-title">
         KEZEA
@@ -452,9 +450,9 @@
 
 
 
-<!-- ==================================================
+<!-- =========================
      STATS
-================================================== -->
+========================== -->
 
 <section class="stats-section">
 
@@ -573,9 +571,9 @@
 
 
 
-<!-- ==================================================
+<!-- =========================
      ABOUT
-================================================== -->
+========================== -->
 
 <section
     class="about-section"
@@ -728,9 +726,9 @@
 
 
 
-<!-- ==================================================
+<!-- =========================
      ROSTER
-================================================== -->
+========================== -->
 
 <section
     class="roster-section"
@@ -961,9 +959,9 @@
 
 
 
-<!-- ==================================================
+<!-- =========================
      ACHIEVEMENTS
-================================================== -->
+========================== -->
 
 <section
     class="achievements-section"
@@ -1152,9 +1150,9 @@
 
 
 
-<!-- ==================================================
+<!-- =========================
      NEWS
-================================================== -->
+========================== -->
 
 <section
     class="news-section"
@@ -1331,9 +1329,9 @@
 
 
 
-<!-- ==================================================
+<!-- =========================
      ROCKET LEAGUE
-================================================== -->
+========================== -->
 
 <section
     class="rocket-section"
@@ -1395,9 +1393,9 @@
 
 
 
-<!-- ==================================================
+<!-- =========================
      DISCORD CTA
-================================================== -->
+========================== -->
 
 <section class="discord-cta">
 
@@ -1444,11 +1442,11 @@
 
 
 
-<!-- ==================================================
+<!-- =========================
      FOOTER
-================================================== -->
+========================== -->
 
-<footer class="footer">
+<footer>
 
     <div class="footer-grid">
 
@@ -1562,16 +1560,14 @@
 
 
 
-<!-- ==================================================
+<!-- =========================
      JAVASCRIPT
-================================================== -->
+========================== -->
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
-
     const menuToggle = document.querySelector(".menu-toggle");
-    const mobileMenu = document.querySelector(".mobile-menu");
+    const mobileMenu = document.querySelector("#mobile-menu");
     const mobileClose = document.querySelector(".mobile-close");
     const mobileLinks = document.querySelectorAll(".mobile-nav a");
 
@@ -1587,8 +1583,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 "true"
             );
 
-            document.body.classList.add("menu-open");
-
         });
 
     }
@@ -1600,16 +1594,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             mobileMenu.classList.remove("active");
 
-            if (menuToggle) {
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-            }
-
-            document.body.classList.remove("menu-open");
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
 
         });
 
@@ -1622,26 +1610,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
             mobileMenu.classList.remove("active");
 
-            if (menuToggle) {
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-            }
-
-            document.body.classList.remove("menu-open");
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
 
         });
 
     });
 
-});
-
 </script>
 
 
 </body>
-
 </html>
