@@ -10,21 +10,21 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>KEZEA ESPORTS | Rocket League Esports</title>
+    <title>KEZEA — Rocket League Esports</title>
 
     <meta
         name="description"
-        content="Official KEZEA Esports website. A competitive Rocket League esports team built on passion, teamwork and a drive for greatness."
+        content="KEZEA Esports — Competitive Rocket League team built to compete."
     >
 
     <meta
         property="og:title"
-        content="KEZEA ESPORTS | Rocket League Esports"
+        content="KEZEA ESPORTS"
     >
 
     <meta
         property="og:description"
-        content="Official KEZEA Esports website."
+        content="Built to compete. Born to win."
     >
 
     <meta
@@ -48,1755 +48,10 @@
         href="logo.png"
     >
 
-    <meta
-        name="google-site-verification"
-        content="HxjGGB0V_TbKgoSrfknSjcGnYt4F0NY1BSdPWhC2jM4"
+    <link
+        rel="stylesheet"
+        href="style.css"
     >
-
-
-<style>
-
-/* =====================================================
-   KEZEA ESPORTS
-   COMPLETE WEBSITE STYLE
-===================================================== */
-
-:root {
-    --yellow: #f5c400;
-    --yellow-bright: #ffd900;
-    --black: #050505;
-    --dark: #090909;
-    --dark2: #101010;
-    --card: #111111;
-    --white: #ffffff;
-    --gray: #9b9b9b;
-    --line: rgba(245, 196, 0, 0.25);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: var(--black);
-    color: var(--white);
-    font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-button {
-    font-family: inherit;
-}
-
-::selection {
-    background: var(--yellow);
-    color: #000;
-}
-
-
-/* =====================================================
-   NAVBAR
-===================================================== */
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 82px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 5%;
-
-    background: rgba(5,5,5,.88);
-    backdrop-filter: blur(15px);
-
-    border-bottom: 1px solid rgba(255,255,255,.06);
-
-    z-index: 9999;
-}
-
-
-/* LOGO */
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    font-size: 23px;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
-
-.logo-symbol {
-    width: 43px;
-    height: 43px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo-symbol img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.logo-text span {
-    display: block;
-
-    color: var(--yellow);
-
-    font-size: 9px;
-    letter-spacing: 4px;
-    margin-top: 2px;
-}
-
-
-/* DESKTOP NAV */
-
-.desktop-nav {
-    list-style: none;
-
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-.desktop-nav a {
-    position: relative;
-
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-
-    color: #cfcfcf;
-
-    transition: .3s ease;
-}
-
-.desktop-nav a::after {
-    content: "";
-
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-
-    width: 0;
-    height: 2px;
-
-    background: var(--yellow);
-
-    transition: .3s ease;
-}
-
-.desktop-nav a:hover {
-    color: var(--yellow);
-}
-
-.desktop-nav a:hover::after {
-    width: 100%;
-}
-
-
-/* DISCORD */
-
-.discord-btn {
-    border: 1px solid var(--yellow);
-
-    padding: 12px 18px;
-
-    color: var(--yellow);
-
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 1px;
-
-    transition: .3s ease;
-}
-
-.discord-btn:hover {
-    background: var(--yellow);
-    color: #000;
-
-    box-shadow: 0 0 25px rgba(245,196,0,.25);
-}
-
-
-/* =====================================================
-   MOBILE BUTTON
-===================================================== */
-
-.menu-toggle {
-    display: none;
-
-    width: 46px;
-    height: 46px;
-
-    border: 1px solid var(--yellow);
-    background: transparent;
-
-    cursor: pointer;
-
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-
-    z-index: 10001;
-}
-
-.menu-toggle span {
-    display: block;
-
-    width: 22px;
-    height: 2px;
-
-    background: var(--yellow);
-
-    transition: .3s ease;
-}
-
-
-/* =====================================================
-   MOBILE MENU
-===================================================== */
-
-.mobile-menu {
-    position: fixed;
-
-    top: 0;
-    right: 0;
-
-    width: min(390px, 88vw);
-    height: 100vh;
-
-    background:
-        linear-gradient(
-            135deg,
-            #121212 0%,
-            #080808 70%
-        );
-
-    border-left: 1px solid var(--yellow);
-
-    z-index: 10000;
-
-    transform: translateX(105%);
-
-    transition:
-        transform .55s cubic-bezier(.77,0,.18,1);
-
-    padding: 100px 30px 30px;
-
-    box-shadow:
-        -20px 0 60px rgba(0,0,0,.6);
-}
-
-.mobile-menu.open {
-    transform: translateX(0);
-}
-
-.mobile-menu::before {
-    content: "KEZEA";
-
-    position: absolute;
-
-    right: -25px;
-    bottom: 50px;
-
-    font-size: 90px;
-    font-weight: 900;
-
-    color: rgba(255,255,255,.025);
-
-    transform: rotate(-90deg);
-}
-
-
-/* CLOSE */
-
-.mobile-close {
-    position: absolute;
-
-    top: 25px;
-    right: 25px;
-
-    width: 42px;
-    height: 42px;
-
-    border: 1px solid rgba(245,196,0,.4);
-
-    background: transparent;
-    color: var(--yellow);
-
-    font-size: 28px;
-
-    cursor: pointer;
-
-    transition: .3s ease;
-}
-
-.mobile-close:hover {
-    background: var(--yellow);
-    color: #000;
-}
-
-
-/* MOBILE TITLE */
-
-.mobile-title {
-    color: var(--yellow);
-
-    font-size: 11px;
-    font-weight: 900;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 22px;
-}
-
-.mobile-line {
-    width: 100%;
-    height: 1px;
-
-    background: linear-gradient(
-        90deg,
-        var(--yellow),
-        transparent
-    );
-
-    margin-bottom: 25px;
-}
-
-
-/* MOBILE LINKS */
-
-.mobile-nav {
-    display: flex;
-    flex-direction: column;
-}
-
-.mobile-nav a {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-
-    padding: 19px 0;
-
-    border-bottom: 1px solid rgba(255,255,255,.07);
-
-    font-size: 17px;
-    font-weight: 900;
-    letter-spacing: 1px;
-
-    transition: .3s ease;
-
-    transform: translateX(40px);
-    opacity: 0;
-}
-
-.mobile-menu.open .mobile-nav a {
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.mobile-menu.open .mobile-nav a:nth-child(1) {
-    transition-delay: .12s;
-}
-
-.mobile-menu.open .mobile-nav a:nth-child(2) {
-    transition-delay: .17s;
-}
-
-.mobile-menu.open .mobile-nav a:nth-child(3) {
-    transition-delay: .22s;
-}
-
-.mobile-menu.open .mobile-nav a:nth-child(4) {
-    transition-delay: .27s;
-}
-
-.mobile-menu.open .mobile-nav a:nth-child(5) {
-    transition-delay: .32s;
-}
-
-.mobile-menu.open .mobile-nav a:nth-child(6) {
-    transition-delay: .37s;
-}
-
-.mobile-nav a span {
-    color: var(--yellow);
-
-    font-size: 10px;
-    letter-spacing: 1px;
-}
-
-.mobile-nav a:hover {
-    color: var(--yellow);
-    padding-left: 10px;
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.hero {
-    min-height: 100vh;
-
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(245,196,0,.08),
-            transparent 35%
-        ),
-        #050505;
-}
-
-.hero::before {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            rgba(255,255,255,.025) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.025) 1px,
-            transparent 1px
-        );
-
-    background-size: 70px 70px;
-
-    mask-image: linear-gradient(
-        to bottom,
-        black,
-        transparent
-    );
-}
-
-.hero-bg-title {
-    position: absolute;
-
-    font-size: clamp(100px, 24vw, 380px);
-
-    font-weight: 900;
-
-    color: transparent;
-
-    -webkit-text-stroke: 1px rgba(245,196,0,.07);
-
-    user-select: none;
-}
-
-.hero-top {
-    position: absolute;
-
-    top: 115px;
-    left: 5%;
-    right: 5%;
-
-    display: flex;
-    justify-content: space-between;
-
-    color: #777;
-
-    font-size: 9px;
-    font-weight: 900;
-    letter-spacing: 3px;
-}
-
-.hero-center {
-    position: relative;
-
-    text-align: center;
-
-    z-index: 2;
-
-    animation: heroIn 1s ease forwards;
-}
-
-@keyframes heroIn {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-logo {
-    width: 125px;
-    height: 125px;
-
-    margin: 0 auto 20px;
-}
-
-.hero-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-
-    filter: drop-shadow(
-        0 0 25px rgba(245,196,0,.18)
-    );
-}
-
-.hero h1 {
-    font-size: clamp(65px, 11vw, 145px);
-
-    line-height: .8;
-
-    font-weight: 1000;
-    letter-spacing: -5px;
-}
-
-.hero-subtitle {
-    color: var(--yellow);
-
-    font-size: 12px;
-    font-weight: 900;
-
-    letter-spacing: 7px;
-
-    margin-top: 25px;
-}
-
-.hero-line {
-    width: 90px;
-    height: 2px;
-
-    background: var(--yellow);
-
-    margin: 22px auto;
-
-    box-shadow:
-        0 0 15px rgba(245,196,0,.5);
-}
-
-.hero-center p {
-    color: #999;
-
-    line-height: 1.8;
-
-    font-size: 14px;
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-
-    margin-top: 30px;
-}
-
-.btn {
-    display: inline-block;
-
-    padding: 15px 25px;
-
-    background: var(--yellow);
-    color: #000;
-
-    font-size: 10px;
-    font-weight: 900;
-
-    letter-spacing: 1px;
-
-    transition: .3s ease;
-}
-
-.btn:hover {
-    background: white;
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 10px 30px rgba(245,196,0,.2);
-}
-
-.btn.outline {
-    background: transparent;
-
-    color: var(--yellow);
-
-    border: 1px solid var(--yellow);
-}
-
-.btn.outline:hover {
-    background: var(--yellow);
-    color: #000;
-}
-
-.hero-bottom {
-    position: absolute;
-
-    bottom: 35px;
-    left: 5%;
-    right: 5%;
-
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    color: #666;
-
-    font-size: 8px;
-    font-weight: 900;
-
-    letter-spacing: 3px;
-}
-
-.hero-scroll-line {
-    width: 80px;
-    height: 1px;
-
-    background: var(--yellow);
-}
-
-
-/* =====================================================
-   GENERAL SECTIONS
-===================================================== */
-
-section {
-    padding: 110px 7%;
-    position: relative;
-}
-
-.section-title {
-    margin-bottom: 55px;
-}
-
-.section-title > span {
-    color: var(--yellow);
-
-    font-size: 10px;
-    font-weight: 900;
-
-    letter-spacing: 4px;
-}
-
-.section-title h2 {
-    margin-top: 12px;
-
-    font-size: clamp(40px, 6vw, 75px);
-
-    font-weight: 1000;
-
-    letter-spacing: -2px;
-}
-
-.section-line {
-    width: 100%;
-    max-width: 700px;
-
-    height: 1px;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--yellow),
-            rgba(245,196,0,.15),
-            transparent
-        );
-
-    margin-top: 25px;
-
-    position: relative;
-}
-
-.section-line::before {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    top: -2px;
-
-    width: 35px;
-    height: 5px;
-
-    background: var(--yellow);
-
-    box-shadow:
-        0 0 15px rgba(245,196,0,.6);
-}
-
-
-/* =====================================================
-   STATS
-===================================================== */
-
-.stats-section {
-    padding-top: 0;
-}
-
-.stat-box {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
-}
-
-.stat {
-    min-height: 220px;
-
-    padding: 35px;
-
-    border-right: 1px solid #222;
-
-    position: relative;
-
-    transition: .35s ease;
-
-    overflow: hidden;
-}
-
-.stat:last-child {
-    border-right: none;
-}
-
-.stat::before {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 3px;
-
-    background: var(--yellow);
-
-    transform: scaleX(0);
-    transform-origin: left;
-
-    transition: .35s ease;
-}
-
-.stat:hover {
-    background: #101010;
-}
-
-.stat:hover::before {
-    transform: scaleX(1);
-}
-
-.stat-icon {
-    font-size: 24px;
-}
-
-.stat h2 {
-    font-size: 48px;
-
-    margin-top: 25px;
-}
-
-.stat p {
-    color: #777;
-
-    font-size: 10px;
-    font-weight: 900;
-
-    letter-spacing: 2px;
-}
-
-.stat-link {
-    position: absolute;
-
-    bottom: 25px;
-
-    color: var(--yellow);
-
-    font-size: 8px;
-    font-weight: 900;
-
-    letter-spacing: 1px;
-}
-
-
-/* =====================================================
-   ABOUT
-===================================================== */
-
-.about {
-    background: #080808;
-}
-
-.about-content {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 90px;
-
-    align-items: center;
-}
-
-.about-visual {
-    min-height: 500px;
-
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid #222;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(245,196,0,.08),
-            transparent 50%
-        );
-}
-
-.about-big-text {
-    font-size: 400px;
-
-    line-height: .7;
-
-    font-weight: 1000;
-
-    color: transparent;
-
-    -webkit-text-stroke: 1px rgba(245,196,0,.2);
-}
-
-.about-info {
-    position: absolute;
-
-    top: 25px;
-    left: 25px;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 5px;
-}
-
-.about-info.second {
-    left: auto;
-    right: 25px;
-    text-align: right;
-}
-
-.about-info span {
-    color: #777;
-
-    font-size: 8px;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
-
-.about-info strong {
-    color: var(--yellow);
-
-    font-size: 12px;
-}
-
-.about-label {
-    color: var(--yellow);
-
-    font-size: 9px;
-    font-weight: 900;
-
-    letter-spacing: 3px;
-}
-
-.about-text h3 {
-    margin: 20px 0;
-
-    font-size: clamp(38px, 5vw, 70px);
-
-    line-height: .95;
-}
-
-.about-text h3 span {
-    color: var(--yellow);
-}
-
-.about-text p {
-    max-width: 600px;
-
-    color: #888;
-
-    line-height: 1.9;
-
-    font-size: 14px;
-
-    margin-bottom: 20px;
-}
-
-.about-stats {
-    display: flex;
-    gap: 45px;
-
-    margin-top: 35px;
-}
-
-.about-stats div {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.about-stats strong {
-    color: var(--yellow);
-
-    font-size: 28px;
-}
-
-.about-stats span {
-    color: #666;
-
-    font-size: 8px;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
-
-
-/* =====================================================
-   PLAYERS
-===================================================== */
-
-.players {
-    display: grid;
-
-    grid-template-columns: repeat(3,1fr);
-
-    gap: 20px;
-}
-
-.player-card {
-    position: relative;
-
-    min-height: 480px;
-
-    background: #0d0d0d;
-
-    border: 1px solid #222;
-
-    overflow: hidden;
-
-    transition: .4s ease;
-}
-
-.player-card:hover {
-    border-color: var(--yellow);
-
-    transform: translateY(-8px);
-}
-
-.player-number {
-    position: absolute;
-
-    top: 20px;
-    left: 20px;
-
-    color: var(--yellow);
-
-    font-size: 11px;
-    font-weight: 900;
-
-    z-index: 3;
-}
-
-.player-avatar {
-    height: 330px;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(245,196,0,.1),
-            transparent 65%
-        );
-}
-
-.player-avatar img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-}
-
-.player-info {
-    padding: 20px 25px;
-}
-
-.player-info h3 {
-    font-size: 27px;
-}
-
-.player-info p {
-    margin-top: 5px;
-
-    color: var(--yellow);
-
-    font-size: 9px;
-    font-weight: 900;
-
-    letter-spacing: 2px;
-}
-
-.player-link {
-    position: absolute;
-
-    right: 20px;
-    bottom: 25px;
-
-    color: #777;
-
-    font-size: 9px;
-    font-weight: 900;
-}
-
-.player-link.disabled {
-    color: #444;
-}
-
-
-/* =====================================================
-   ACHIEVEMENTS
-===================================================== */
-
-.achievements {
-    background: #080808;
-}
-
-.achievements-container {
-    display: flex;
-    flex-direction: column;
-
-    gap: 15px;
-}
-
-.achievement-card {
-    display: grid;
-
-    grid-template-columns: 70px 80px 1fr;
-
-    align-items: center;
-
-    gap: 25px;
-
-    padding: 30px;
-
-    background: #101010;
-
-    border: 1px solid #222;
-
-    transition: .3s ease;
-}
-
-.achievement-card:hover {
-    border-color: rgba(245,196,0,.5);
-
-    transform: translateX(8px);
-}
-
-.achievement-number {
-    color: #444;
-
-    font-size: 12px;
-    font-weight: 900;
-}
-
-.achievement-icon {
-    font-size: 34px;
-}
-
-.achievement-status {
-    color: var(--yellow);
-
-    font-size: 8px;
-    font-weight: 900;
-
-    letter-spacing: 2px;
-}
-
-.achievement-status.active {
-    color: #fff;
-}
-
-.achievement-status.future {
-    color: #666;
-}
-
-.achievement-content h3 {
-    margin: 9px 0;
-
-    font-size: 22px;
-}
-
-.achievement-content p {
-    max-width: 700px;
-
-    color: #777;
-
-    line-height: 1.6;
-
-    font-size: 13px;
-}
-
-.achievement-meta {
-    display: flex;
-
-    gap: 25px;
-
-    margin-top: 18px;
-
-    color: #555;
-
-    font-size: 8px;
-    font-weight: 900;
-
-    letter-spacing: 1px;
-}
-
-
-/* =====================================================
-   NEWS
-===================================================== */
-
-.news-cards {
-    display: grid;
-
-    grid-template-columns: repeat(3,1fr);
-
-    gap: 20px;
-}
-
-.news-card {
-    min-height: 430px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    border: 1px solid #222;
-
-    background: #101010;
-}
-
-.news-card-image {
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            135deg,
-            #181818,
-            #080808
-        );
-}
-
-.news-bg-1 {
-    background:
-        radial-gradient(
-            circle at 70% 30%,
-            rgba(245,196,0,.18),
-            transparent 35%
-        ),
-        #101010;
-}
-
-.news-bg-2 {
-    background:
-        radial-gradient(
-            circle at 30% 40%,
-            rgba(245,196,0,.12),
-            transparent 35%
-        ),
-        #101010;
-}
-
-.news-bg-3 {
-    background:
-        radial-gradient(
-            circle at 50% 30%,
-            rgba(255,255,255,.08),
-            transparent 35%
-        ),
-        #101010;
-}
-
-.news-card-overlay {
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            to top,
-            #050505 5%,
-            transparent 80%
-        );
-}
-
-.news-card-tag {
-    position: absolute;
-
-    top: 20px;
-    left: 20px;
-
-    padding: 7px 10px;
-
-    background: var(--yellow);
-    color: #000;
-
-    font-size: 8px;
-    font-weight: 900;
-
-    z-index: 2;
-}
-
-.news-card-content {
-    position: absolute;
-
-    left: 25px;
-    right: 25px;
-    bottom: 25px;
-
-    z-index: 2;
-}
-
-.news-card-date {
-    color: var(--yellow);
-
-    font-size: 8px;
-    font-weight: 900;
-
-    letter-spacing: 2px;
-}
-
-.news-card h3 {
-    margin: 10px 0;
-
-    font-size: 23px;
-}
-
-.news-card p {
-    color: #888;
-
-    font-size: 12px;
-
-    line-height: 1.6;
-}
-
-.news-card-btn {
-    display: inline-block;
-
-    margin-top: 20px;
-
-    color: var(--yellow);
-
-    font-size: 9px;
-    font-weight: 900;
-
-    letter-spacing: 1px;
-}
-
-
-/* =====================================================
-   ROCKET LEAGUE
-===================================================== */
-
-.rocket-league {
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            110deg,
-            #111 0%,
-            #050505 70%
-        );
-}
-
-.rocket-container {
-    min-height: 500px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    align-items: center;
-}
-
-.rocket-text > span {
-    color: var(--yellow);
-
-    font-size: 9px;
-    font-weight: 900;
-
-    letter-spacing: 4px;
-}
-
-.rocket-text h2 {
-    margin: 20px 0;
-
-    font-size: clamp(60px, 8vw, 120px);
-
-    line-height: .8;
-}
-
-.rocket-text p {
-    color: #777;
-
-    line-height: 1.7;
-
-    max-width: 450px;
-
-    margin-bottom: 25px;
-}
-
-.rocket-car {
-    display: flex;
-    justify-content: center;
-}
-
-.rocket-car img {
-    width: min(600px,100%);
-
-    object-fit: contain;
-
-    filter:
-        drop-shadow(
-            0 25px 30px rgba(0,0,0,.7)
-        );
-
-    animation: carFloat 4s ease-in-out infinite;
-}
-
-@keyframes carFloat {
-    0%,100% {
-        transform: translateY(0) rotate(-1deg);
-    }
-
-    50% {
-        transform: translateY(-15px) rotate(1deg);
-    }
-}
-
-
-/* =====================================================
-   DISCORD CTA
-===================================================== */
-
-.discord-section {
-    padding: 130px 7%;
-
-    text-align: center;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(245,196,0,.1),
-            transparent 50%
-        ),
-        #080808;
-}
-
-.discord-cta-small {
-    color: var(--yellow);
-
-    font-size: 9px;
-    font-weight: 900;
-
-    letter-spacing: 4px;
-}
-
-.discord-cta-content h2 {
-    max-width: 900px;
-
-    margin: 20px auto;
-
-    font-size: clamp(42px, 7vw, 85px);
-
-    line-height: .9;
-}
-
-.discord-cta-content h2 span {
-    color: var(--yellow);
-}
-
-.discord-cta-content p {
-    color: #777;
-
-    margin: 25px auto;
-
-    max-width: 500px;
-
-    line-height: 1.7;
-}
-
-.discord-cta-btn {
-    display: inline-block;
-
-    padding: 16px 28px;
-
-    background: var(--yellow);
-    color: #000;
-
-    font-size: 10px;
-    font-weight: 900;
-
-    transition: .3s ease;
-}
-
-.discord-cta-btn:hover {
-    background: #fff;
-
-    transform: translateY(-3px);
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer {
-    padding: 70px 7% 25px;
-
-    background: #030303;
-
-    border-top: 1px solid #222;
-}
-
-.footer-grid {
-    display: grid;
-
-    grid-template-columns: 2fr 1fr 1fr;
-
-    gap: 50px;
-}
-
-.footer-logo {
-    font-size: 45px;
-
-    color: var(--yellow);
-}
-
-.footer-grid p {
-    color: #666;
-
-    margin-top: 15px;
-
-    line-height: 1.7;
-
-    font-size: 12px;
-}
-
-.footer-grid h3 {
-    margin-bottom: 20px;
-
-    font-size: 10px;
-
-    color: var(--yellow);
-
-    letter-spacing: 2px;
-}
-
-.footer-grid a {
-    display: block;
-
-    color: #777;
-
-    margin-bottom: 12px;
-
-    font-size: 11px;
-
-    transition: .3s ease;
-}
-
-.footer-grid a:hover {
-    color: var(--yellow);
-    transform: translateX(4px);
-}
-
-.copyright {
-    margin-top: 60px;
-
-    padding-top: 20px;
-
-    border-top: 1px solid #171717;
-
-    color: #444;
-
-    font-size: 9px;
-}
-
-
-/* =====================================================
-   RESPONSIVE
-===================================================== */
-
-@media (max-width: 1100px) {
-
-    .desktop-nav {
-        gap: 15px;
-    }
-
-    .desktop-nav a {
-        font-size: 9px;
-    }
-
-    .players,
-    .news-cards {
-        grid-template-columns: repeat(2,1fr);
-    }
-
-}
-
-
-@media (max-width: 800px) {
-
-    .navbar {
-        height: 72px;
-        padding: 0 20px;
-    }
-
-    .desktop-nav {
-        display: none;
-    }
-
-    .navbar > .discord-btn {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    section {
-        padding: 85px 6%;
-    }
-
-    .hero-top {
-        top: 95px;
-
-        font-size: 7px;
-        letter-spacing: 1.5px;
-    }
-
-    .hero-top span:nth-child(2) {
-        display: none;
-    }
-
-    .hero-logo {
-        width: 100px;
-        height: 100px;
-    }
-
-    .hero h1 {
-        font-size: 70px;
-    }
-
-    .hero-subtitle {
-        font-size: 9px;
-        letter-spacing: 4px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-
-        width: 220px;
-
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .stat-box {
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .stat:nth-child(2) {
-        border-right: none;
-    }
-
-    .stat:nth-child(3),
-    .stat:nth-child(4) {
-        border-top: 1px solid #222;
-    }
-
-    .about-content,
-    .rocket-container {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-    }
-
-    .about-visual {
-        min-height: 350px;
-    }
-
-    .about-big-text {
-        font-size: 260px;
-    }
-
-    .players,
-    .news-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .player-card {
-        min-height: 440px;
-    }
-
-    .achievement-card {
-        grid-template-columns: 45px 55px 1fr;
-
-        gap: 15px;
-
-        padding: 20px;
-    }
-
-    .achievement-content h3 {
-        font-size: 17px;
-    }
-
-    .rocket-car {
-        order: -1;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .footer-grid > div:first-child {
-        grid-column: 1 / -1;
-    }
-
-}
-
-
-@media (max-width: 500px) {
-
-    .logo {
-        font-size: 19px;
-    }
-
-    .logo-symbol {
-        width: 36px;
-        height: 36px;
-    }
-
-    .hero-bg-title {
-        font-size: 120px;
-    }
-
-    .hero h1 {
-        font-size: 60px;
-        letter-spacing: -3px;
-    }
-
-    .hero-center p {
-        font-size: 12px;
-    }
-
-    .stat {
-        min-height: 180px;
-
-        padding: 22px;
-    }
-
-    .stat h2 {
-        font-size: 38px;
-    }
-
-    .about-stats {
-        gap: 25px;
-    }
-
-    .achievement-card {
-        grid-template-columns: 35px 1fr;
-    }
-
-    .achievement-icon {
-        display: none;
-    }
-
-    .achievement-content {
-        grid-column: 2;
-    }
-
-    .achievement-number {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .achievement-meta {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-grid > div:first-child {
-        grid-column: auto;
-    }
-
-}
-
-
-/* =====================================================
-   SCROLL ANIMATION
-===================================================== */
-
-.reveal {
-    opacity: 0;
-
-    transform: translateY(35px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-}
-
-.reveal.visible {
-    opacity: 1;
-
-    transform: translateY(0);
-}
-
-</style>
 
 </head>
 
@@ -1808,21 +63,21 @@ footer {
      NAVBAR
 ===================================================== -->
 
-<header class="navbar">
+<header class="site-header">
 
+    <a
+        href="#home"
+        class="brand"
+    >
 
-    <a href="#hero" class="logo">
-
-        <div class="logo-symbol">
-
+        <div class="brand-logo">
             <img
                 src="logo.png"
-                alt="KEZEA Logo"
+                alt="KEZEA"
             >
-
         </div>
 
-        <div class="logo-text">
+        <div class="brand-name">
             KEZEA
             <span>ESPORTS</span>
         </div>
@@ -1830,28 +85,55 @@ footer {
     </a>
 
 
-    <ul class="desktop-nav">
+    <!-- DESKTOP NAV -->
 
-        <li><a href="#hero">HOME</a></li>
+    <nav class="desktop-nav">
 
-        <li><a href="#about">ABOUT</a></li>
+        <a href="#home" class="active">
+            HOME
+        </a>
 
-        <li><a href="#roster">ROSTER</a></li>
+        <a href="#about">
+            ABOUT
+        </a>
 
-        <li><a href="#achievements">ACHIEVEMENTS</a></li>
+        <a href="#roster">
+            ROSTER
+        </a>
 
-        <li><a href="#rocket-league">ROCKET LEAGUE</a></li>
+        <a href="#achievements">
+            ACHIEVEMENTS
+        </a>
 
-        <li><a href="#news">NEWS</a></li>
+        <a href="#news">
+            NEWS
+        </a>
 
-    </ul>
+        <a href="#rocket">
+            ROCKET LEAGUE
+        </a>
 
+    </nav>
+
+
+    <a
+        href="https://discord.gg/qdnSGPNUKp"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="header-discord"
+    >
+        DISCORD
+        <span>↗</span>
+    </a>
+
+
+    <!-- MOBILE BUTTON -->
 
     <button
         class="menu-toggle"
-        id="menuOpen"
         type="button"
-        aria-label="Open menu"
+        aria-label="Open navigation"
+        aria-expanded="false"
     >
 
         <span></span>
@@ -1860,156 +142,193 @@ footer {
 
     </button>
 
-
-    <a
-        class="discord-btn"
-        href="https://discord.gg/qdnSGPNUKp"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        JOIN DISCORD
-    </a>
-
 </header>
+
 
 
 <!-- =====================================================
      MOBILE MENU
 ===================================================== -->
 
-<aside
-    class="mobile-menu"
-    id="mobileMenu"
->
+<div class="mobile-menu">
 
-    <button
-        class="mobile-close"
-        id="menuClose"
-        type="button"
-        aria-label="Close menu"
-    >
-        ×
-    </button>
+    <div class="mobile-menu-top">
 
+        <span>
+            KEZEA
+        </span>
 
-    <div class="mobile-title">
-        KEZEA ESPORTS
+        <button
+            class="mobile-close"
+            type="button"
+            aria-label="Close navigation"
+        >
+            ×
+        </button>
+
     </div>
 
 
-    <div class="mobile-line"></div>
+    <div class="mobile-yellow-line"></div>
 
 
-    <nav class="mobile-nav">
+    <div class="mobile-links">
 
-        <a href="#hero">
-            <span>01</span>
+        <a href="#home">
+            <small>01</small>
             HOME
+            <span>→</span>
         </a>
 
         <a href="#about">
-            <span>02</span>
+            <small>02</small>
             ABOUT
+            <span>→</span>
         </a>
 
         <a href="#roster">
-            <span>03</span>
+            <small>03</small>
             ROSTER
+            <span>→</span>
         </a>
 
         <a href="#achievements">
-            <span>04</span>
+            <small>04</small>
             ACHIEVEMENTS
-        </a>
-
-        <a href="#rocket-league">
-            <span>05</span>
-            ROCKET LEAGUE
+            <span>→</span>
         </a>
 
         <a href="#news">
-            <span>06</span>
+            <small>05</small>
             NEWS
+            <span>→</span>
         </a>
 
-    </nav>
+        <a href="#rocket">
+            <small>06</small>
+            ROCKET LEAGUE
+            <span>→</span>
+        </a>
 
-</aside>
+    </div>
+
+
+    <div class="mobile-menu-bottom">
+
+        <span>
+            KEZEA ESPORTS
+        </span>
+
+        <p>
+            BUILT TO COMPETE
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<div class="menu-overlay"></div>
+
 
 
 <!-- =====================================================
      HERO
 ===================================================== -->
 
+<main>
+
 <section
+    id="home"
     class="hero"
-    id="hero"
 >
 
-    <div class="hero-bg-title">
+
+    <div class="hero-grid"></div>
+
+
+    <div class="hero-glow"></div>
+
+
+    <div class="hero-watermark">
         KEZEA
     </div>
 
 
-    <div class="hero-top">
+    <div class="hero-top-info">
 
-        <span>2026</span>
+        <span>
+            2026
+        </span>
 
-        <span>ROCKET LEAGUE</span>
+        <i></i>
 
-        <span>ESPORTS</span>
+        <span>
+            ROCKET LEAGUE
+        </span>
+
+        <i></i>
+
+        <span>
+            ESPORTS
+        </span>
 
     </div>
 
 
-    <div class="hero-center">
+    <div class="hero-content">
+
 
         <div class="hero-logo">
 
             <img
                 src="logo.png"
-                alt="KEZEA"
+                alt="KEZEA Esports"
             >
 
         </div>
 
 
-        <h1>
-            KEZEA
-        </h1>
-
-
-        <div class="hero-subtitle">
-            BUILT TO COMPETE
-        </div>
-
-
-        <div class="hero-line"></div>
-
-
-        <p>
-            Competitive Rocket League.
-            <br>
-            One team. One goal.
+        <p class="hero-kicker">
+            COMPETITIVE ROCKET LEAGUE
         </p>
 
 
-        <div class="hero-buttons">
+        <h1>
+            BUILT
+            <span>TO COMPETE.</span>
+        </h1>
+
+
+        <p class="hero-description">
+
+            One team.
+            One goal.
+            No excuses.
+
+        </p>
+
+
+        <div class="hero-actions">
 
             <a
                 href="#roster"
-                class="btn"
+                class="yellow-button"
             >
-                ENTER TEAM →
+                MEET THE TEAM
+                <span>→</span>
             </a>
+
 
             <a
                 href="https://discord.gg/qdnSGPNUKp"
-                class="btn outline"
                 target="_blank"
                 rel="noopener noreferrer"
+                class="dark-button"
             >
                 JOIN DISCORD
+                <span>↗</span>
             </a>
 
         </div>
@@ -2023,95 +342,125 @@ footer {
             SCROLL TO EXPLORE
         </span>
 
-        <span class="hero-scroll-line"></span>
+        <div class="scroll-line"></div>
 
     </div>
 
 </section>
+
 
 
 <!-- =====================================================
      STATS
 ===================================================== -->
 
-<section class="stats-section">
+<section class="quick-stats">
 
-    <div class="stat-box">
+    <a
+        href="tournaments.html"
+        class="quick-stat"
+    >
 
-        <a
-            href="tournaments.html"
-            class="stat"
-        >
+        <span class="stat-number">
+            02
+        </span>
 
-            <span class="stat-icon">🏆</span>
+        <div>
+            <strong>
+                TOURNAMENTS
+            </strong>
 
-            <h2>2</h2>
+            <small>
+                COMPETITIVE EVENTS
+            </small>
+        </div>
 
-            <p>TOURNAMENTS</p>
+        <span class="stat-arrow">
+            ↗
+        </span>
 
-            <span class="stat-link">
-                VIEW TOURNAMENTS →
-            </span>
-
-        </a>
-
-
-        <a
-            href="wins.html"
-            class="stat"
-        >
-
-            <span class="stat-icon">🥇</span>
-
-            <h2>0</h2>
-
-            <p>WINS</p>
-
-            <span class="stat-link">
-                VIEW WINS →
-            </span>
-
-        </a>
+    </a>
 
 
-        <a
-            href="players.html"
-            class="stat"
-        >
+    <a
+        href="wins.html"
+        class="quick-stat"
+    >
 
-            <span class="stat-icon">👥</span>
+        <span class="stat-number">
+            00
+        </span>
 
-            <h2>3</h2>
+        <div>
+            <strong>
+                WINS
+            </strong>
 
-            <p>PLAYERS</p>
+            <small>
+                MORE TO COME
+            </small>
+        </div>
 
-            <span class="stat-link">
-                VIEW PLAYERS →
-            </span>
+        <span class="stat-arrow">
+            ↗
+        </span>
 
-        </a>
+    </a>
 
 
-        <a
-            href="mission.html"
-            class="stat"
-        >
+    <a
+        href="players.html"
+        class="quick-stat"
+    >
 
-            <span class="stat-icon">🎯</span>
+        <span class="stat-number">
+            03
+        </span>
 
-            <h2>VICTORY</h2>
+        <div>
+            <strong>
+                PLAYERS
+            </strong>
 
-            <p>OUR MISSION</p>
+            <small>
+                ONE SQUAD
+            </small>
+        </div>
 
-            <span class="stat-link">
-                VIEW MISSION →
-            </span>
+        <span class="stat-arrow">
+            ↗
+        </span>
 
-        </a>
+    </a>
 
-    </div>
+
+    <a
+        href="mission.html"
+        class="quick-stat"
+    >
+
+        <span class="stat-number">
+            ∞
+        </span>
+
+        <div>
+            <strong>
+                AMBITION
+            </strong>
+
+            <small>
+                NEVER STOP
+            </small>
+        </div>
+
+        <span class="stat-arrow">
+            ↗
+        </span>
+
+    </a>
 
 </section>
+
 
 
 <!-- =====================================================
@@ -2119,61 +468,75 @@ footer {
 ===================================================== -->
 
 <section
-    class="about reveal"
     id="about"
+    class="section about-section"
 >
 
-    <div class="section-title">
 
-        <span>WHO WE ARE</span>
+    <div class="section-heading">
 
-        <h2>ABOUT KEZEA</h2>
+        <div>
+            <span class="eyebrow">
+                01 / WHO WE ARE
+            </span>
 
-        <div class="section-line"></div>
+            <h2>
+                MORE THAN
+                <span>A TEAM.</span>
+            </h2>
+        </div>
+
+        <p>
+            KEZEA ESPORTS
+            <br>
+            EST. 2026
+        </p>
 
     </div>
 
 
-    <div class="about-content">
+    <div class="about-layout">
 
 
         <div class="about-visual">
 
-            <div class="about-big-text">
+            <div class="about-letter">
                 K
             </div>
 
+            <div class="about-box">
 
-            <div class="about-info">
+                <span>
+                    GAME
+                </span>
 
-                <span>EST.</span>
-
-                <strong>2026</strong>
+                <strong>
+                    ROCKET<br>
+                    LEAGUE
+                </strong>
 
             </div>
 
-
-            <div class="about-info second">
-
-                <span>GAME</span>
-
-                <strong>ROCKET LEAGUE</strong>
-
+            <div class="about-corner">
+                KEZEA / 001
             </div>
 
         </div>
 
 
-        <div class="about-text">
+        <div class="about-copy">
 
-            <span class="about-label">
-                MORE THAN A TEAM
+            <span class="yellow-label">
+                BUILT DIFFERENT
             </span>
 
 
             <h3>
-                BUILT TO
-                <span>COMPETE.</span>
+                COMPETE.
+                <br>
+                IMPROVE.
+                <br>
+                <span>REPEAT.</span>
             </h3>
 
 
@@ -2191,21 +554,36 @@ footer {
             </p>
 
 
-            <div class="about-stats">
+            <div class="about-numbers">
 
                 <div>
-                    <strong>01</strong>
-                    <span>TEAM</span>
+                    <strong>
+                        01
+                    </strong>
+
+                    <span>
+                        TEAM
+                    </span>
                 </div>
 
                 <div>
-                    <strong>03</strong>
-                    <span>PLAYERS</span>
+                    <strong>
+                        03
+                    </strong>
+
+                    <span>
+                        PLAYERS
+                    </span>
                 </div>
 
                 <div>
-                    <strong>∞</strong>
-                    <span>AMBITION</span>
+                    <strong>
+                        ∞
+                    </strong>
+
+                    <span>
+                        AMBITION
+                    </span>
                 </div>
 
             </div>
@@ -2217,41 +595,56 @@ footer {
 </section>
 
 
+
 <!-- =====================================================
      ROSTER
 ===================================================== -->
 
 <section
     id="roster"
-    class="reveal"
+    class="section roster-section"
 >
 
-    <div class="section-title">
 
-        <span>THE SQUAD</span>
+    <div class="section-heading">
 
-        <h2>OUR PLAYERS</h2>
+        <div>
 
-        <div class="section-line"></div>
+            <span class="eyebrow">
+                02 / THE SQUAD
+            </span>
+
+            <h2>
+                OUR
+                <span>PLAYERS.</span>
+            </h2>
+
+        </div>
+
+        <p>
+            KEZEA ROCKET LEAGUE
+            <br>
+            COMPETITIVE ROSTER
+        </p>
 
     </div>
 
 
-    <div class="players">
+    <div class="roster-grid">
 
 
         <!-- ZYVIX -->
 
         <a
             href="zyvix.html"
-            class="player-card"
+            class="roster-card"
         >
 
-            <div class="player-number">
+            <span class="roster-number">
                 01
-            </div>
+            </span>
 
-            <div class="player-avatar">
+            <div class="player-image">
 
                 <img
                     src="Zyvix.png"
@@ -2260,33 +653,42 @@ footer {
 
             </div>
 
-            <div class="player-info">
+            <div class="player-card-bottom">
 
-                <h3>Zyvix</h3>
+                <div>
 
-                <p>CAPTAIN</p>
+                    <small>
+                        CAPTAIN
+                    </small>
+
+                    <h3>
+                        ZYVIX
+                    </h3>
+
+                </div>
+
+                <span>
+                    ↗
+                </span>
 
             </div>
 
-            <span class="player-link">
-                🔗 LINKS
-            </span>
-
         </a>
+
 
 
         <!-- TAIQZ -->
 
         <a
             href="taiqz.html"
-            class="player-card"
+            class="roster-card"
         >
 
-            <div class="player-number">
+            <span class="roster-number">
                 02
-            </div>
+            </span>
 
-            <div class="player-avatar">
+            <div class="player-image">
 
                 <img
                     src="taiqz.png"
@@ -2295,33 +697,42 @@ footer {
 
             </div>
 
-            <div class="player-info">
+            <div class="player-card-bottom">
 
-                <h3>Taiqz</h3>
+                <div>
 
-                <p>PLAYER</p>
+                    <small>
+                        PLAYER
+                    </small>
+
+                    <h3>
+                        TAIQZ
+                    </h3>
+
+                </div>
+
+                <span>
+                    ↗
+                </span>
 
             </div>
 
-            <span class="player-link">
-                🔗 LINKS
-            </span>
-
         </a>
+
 
 
         <!-- REAL VEXY -->
 
         <a
             href="real-vexy.html"
-            class="player-card"
+            class="roster-card"
         >
 
-            <div class="player-number">
+            <span class="roster-number">
                 03
-            </div>
+            </span>
 
-            <div class="player-avatar">
+            <div class="player-image">
 
                 <img
                     src="real-vexy.png"
@@ -2330,17 +741,25 @@ footer {
 
             </div>
 
-            <div class="player-info">
+            <div class="player-card-bottom">
 
-                <h3>Real Vexy</h3>
+                <div>
 
-                <p>PLAYER</p>
+                    <small>
+                        PLAYER
+                    </small>
+
+                    <h3>
+                        REAL VEXY
+                    </h3>
+
+                </div>
+
+                <span>
+                    ↗
+                </span>
 
             </div>
-
-            <span class="player-link disabled">
-                🔗 LINKS — SOON
-            </span>
 
         </a>
 
@@ -2349,42 +768,51 @@ footer {
 </section>
 
 
+
 <!-- =====================================================
      ACHIEVEMENTS
 ===================================================== -->
 
 <section
-    class="achievements reveal"
     id="achievements"
+    class="section achievements-section"
 >
 
-    <div class="section-title">
 
-        <span>KEZEA ESPORTS</span>
+    <div class="section-heading">
 
-        <h2>ACHIEVEMENTS</h2>
+        <div>
 
-        <div class="section-line"></div>
+            <span class="eyebrow">
+                03 / PROGRESS
+            </span>
+
+            <h2>
+                THE
+                <span>JOURNEY.</span>
+            </h2>
+
+        </div>
 
     </div>
 
 
-    <div class="achievements-container">
+    <div class="timeline">
 
 
-        <div class="achievement-card">
+        <div class="timeline-item">
 
-            <div class="achievement-number">
+            <div class="timeline-index">
                 01
             </div>
 
-            <div class="achievement-icon">
+            <div class="timeline-icon">
                 🏆
             </div>
 
-            <div class="achievement-content">
+            <div class="timeline-content">
 
-                <span class="achievement-status">
+                <span class="status done">
                     COMPLETED
                 </span>
 
@@ -2398,36 +826,29 @@ footer {
                     tournaments.
                 </p>
 
-                <div class="achievement-meta">
-
-                    <span>
-                        🎮 ROCKET LEAGUE
-                    </span>
-
-                    <span>
-                        2026
-                    </span>
-
-                </div>
+                <small>
+                    ROCKET LEAGUE / 2026
+                </small>
 
             </div>
 
         </div>
 
 
-        <div class="achievement-card">
 
-            <div class="achievement-number">
+        <div class="timeline-item">
+
+            <div class="timeline-index">
                 02
             </div>
 
-            <div class="achievement-icon">
+            <div class="timeline-icon">
                 ⚡
             </div>
 
-            <div class="achievement-content">
+            <div class="timeline-content">
 
-                <span class="achievement-status active">
+                <span class="status active">
                     IN PROGRESS
                 </span>
 
@@ -2436,41 +857,33 @@ footer {
                 </h3>
 
                 <p>
-                    The next mission is simple:
-                    compete harder, improve faster
+                    Compete harder, improve faster
                     and claim our first championship.
                 </p>
 
-                <div class="achievement-meta">
-
-                    <span>
-                        🎯 KEZEA GOAL
-                    </span>
-
-                    <span>
-                        NEXT
-                    </span>
-
-                </div>
+                <small>
+                    KEZEA GOAL / NEXT
+                </small>
 
             </div>
 
         </div>
 
 
-        <div class="achievement-card">
 
-            <div class="achievement-number">
+        <div class="timeline-item">
+
+            <div class="timeline-index">
                 03
             </div>
 
-            <div class="achievement-icon">
+            <div class="timeline-icon">
                 👑
             </div>
 
-            <div class="achievement-content">
+            <div class="timeline-content">
 
-                <span class="achievement-status future">
+                <span class="status future">
                     UPCOMING
                 </span>
 
@@ -2479,22 +892,13 @@ footer {
                 </h3>
 
                 <p>
-                    Build the KEZEA name, compete against
-                    stronger teams and create a legacy
-                    in the Rocket League scene.
+                    Build the KEZEA name and create
+                    a legacy in the Rocket League scene.
                 </p>
 
-                <div class="achievement-meta">
-
-                    <span>
-                        👥 TEAM KEZEA
-                    </span>
-
-                    <span>
-                        FUTURE
-                    </span>
-
-                </div>
+                <small>
+                    TEAM KEZEA / FUTURE
+                </small>
 
             </div>
 
@@ -2503,6 +907,7 @@ footer {
     </div>
 
 </section>
+
 
 
 <!-- =====================================================
@@ -2511,134 +916,136 @@ footer {
 
 <section
     id="news"
-    class="reveal"
+    class="section news-section"
 >
 
-    <div class="section-title">
 
-        <span>STAY UPDATED</span>
+    <div class="section-heading">
 
-        <h2>LATEST NEWS</h2>
+        <div>
 
-        <div class="section-line"></div>
+            <span class="eyebrow">
+                04 / UPDATES
+            </span>
+
+            <h2>
+                LATEST
+                <span>NEWS.</span>
+            </h2>
+
+        </div>
+
+        <a
+            href="news.html"
+            class="view-all"
+        >
+            VIEW ALL →
+        </a>
 
     </div>
 
 
-    <div class="news-cards">
+    <div class="news-grid">
 
 
-        <article class="news-card featured">
+        <article class="news-card">
 
-            <div class="news-card-image news-bg-1">
+            <div class="news-image news-one">
 
-                <span class="news-card-tag">
+                <span>
                     TEAM
                 </span>
 
-                <div class="news-card-overlay"></div>
+            </div>
 
-                <div class="news-card-content">
+            <div class="news-content">
 
-                    <span class="news-card-date">
-                        08 AUG 2026
-                    </span>
+                <small>
+                    08 AUG 2026
+                </small>
 
-                    <h3>
-                        KEZEA ENTERS A NEW ERA
-                    </h3>
+                <h3>
+                    KEZEA ENTERS A NEW ERA
+                </h3>
 
-                    <p>
-                        A new chapter begins for KEZEA Esports.
-                        The team is ready for the next challenge.
-                    </p>
+                <p>
+                    A new chapter begins for KEZEA Esports.
+                    The team is ready for the next challenge.
+                </p>
 
-                    <a
-                        href="news.html#new-era"
-                        class="news-card-btn"
-                    >
-                        READ MORE →
-                    </a>
-
-                </div>
+                <a href="news.html#new-era">
+                    READ STORY →
+                </a>
 
             </div>
 
         </article>
 
 
+
         <article class="news-card">
 
-            <div class="news-card-image news-bg-2">
+            <div class="news-image news-two">
 
-                <span class="news-card-tag">
+                <span>
                     ROSTER
                 </span>
 
-                <div class="news-card-overlay"></div>
+            </div>
 
-                <div class="news-card-content">
+            <div class="news-content">
 
-                    <span class="news-card-date">
-                        05 AUG 2026
-                    </span>
+                <small>
+                    05 AUG 2026
+                </small>
 
-                    <h3>
-                        NEW ROSTER ANNOUNCEMENT
-                    </h3>
+                <h3>
+                    NEW ROSTER ANNOUNCEMENT
+                </h3>
 
-                    <p>
-                        Meet the players representing KEZEA
-                        in the upcoming competitions.
-                    </p>
+                <p>
+                    Meet the players representing KEZEA
+                    in upcoming competitions.
+                </p>
 
-                    <a
-                        href="news.html#roster-announcement"
-                        class="news-card-btn"
-                    >
-                        READ MORE →
-                    </a>
-
-                </div>
+                <a href="news.html#roster-announcement">
+                    READ STORY →
+                </a>
 
             </div>
 
         </article>
 
 
+
         <article class="news-card">
 
-            <div class="news-card-image news-bg-3">
+            <div class="news-image news-three">
 
-                <span class="news-card-tag">
+                <span>
                     ROCKET LEAGUE
                 </span>
 
-                <div class="news-card-overlay"></div>
+            </div>
 
-                <div class="news-card-content">
+            <div class="news-content">
 
-                    <span class="news-card-date">
-                        01 AUG 2026
-                    </span>
+                <small>
+                    01 AUG 2026
+                </small>
 
-                    <h3>
-                        READY FOR THE NEXT MATCH
-                    </h3>
+                <h3>
+                    READY FOR THE NEXT MATCH
+                </h3>
 
-                    <p>
-                        KEZEA Rocket League squad prepares
-                        for another competitive battle.
-                    </p>
+                <p>
+                    KEZEA Rocket League squad prepares
+                    for another competitive battle.
+                </p>
 
-                    <a
-                        href="news.html#next-match"
-                        class="news-card-btn"
-                    >
-                        READ MORE →
-                    </a>
-
-                </div>
+                <a href="news.html#next-match">
+                    READ STORY →
+                </a>
 
             </div>
 
@@ -2647,6 +1054,7 @@ footer {
     </div>
 
 </section>
+
 
 
 <!-- =====================================================
@@ -2654,84 +1062,91 @@ footer {
 ===================================================== -->
 
 <section
-    class="rocket-league reveal"
-    id="rocket-league"
+    id="rocket"
+    class="rocket-section"
 >
 
-    <div class="rocket-container">
+
+    <div class="rocket-bg">
+        ROCKET
+    </div>
 
 
-        <div class="rocket-text">
+    <div class="rocket-copy">
 
-            <span>
-                ROCKET LEAGUE
-            </span>
+        <span class="eyebrow">
+            05 / ROCKET LEAGUE
+        </span>
 
-            <h2>
-                WE PLAY
-                <br>
-                TO WIN
-            </h2>
+        <h2>
+            WE PLAY
+            <br>
+            TO <span>WIN.</span>
+        </h2>
 
-            <p>
-                Every match is a step closer to greatness.
-                Every goal is for Kezea.
-            </p>
+        <p>
+            Every match is a step closer to greatness.
+            Every goal is for KEZEA.
+        </p>
 
-            <a
-                href="#roster"
-                class="btn"
-            >
-                VIEW RL TEAM →
-            </a>
+        <a
+            href="#roster"
+            class="yellow-button"
+        >
+            VIEW RL TEAM
+            <span>→</span>
+        </a>
 
-        </div>
+    </div>
 
 
-        <div class="rocket-car">
+    <div class="rocket-car">
 
-            <img
-                src="care.png"
-                alt="Rocket League Car"
-            >
-
-        </div>
+        <img
+            src="care.png"
+            alt="Rocket League Car"
+        >
 
     </div>
 
 </section>
 
 
+
 <!-- =====================================================
-     DISCORD
+     DISCORD CTA
 ===================================================== -->
 
 <section class="discord-section">
 
-    <div class="discord-cta-content">
 
-        <span class="discord-cta-small">
-            WANT TO KNOW US MORE?
+    <div class="discord-lines"></div>
+
+
+    <div class="discord-content">
+
+        <span>
+            JOIN THE COMMUNITY
         </span>
 
         <h2>
-            JOIN THE
-            <span>KEZEA</span>
-            COMMUNITY
+            READY TO
+            <strong>COMPETE?</strong>
         </h2>
 
         <p>
-            If you want to know us more,
-            join our Discord and become part of KEZEA.
+            Join the KEZEA Discord and become part
+            of the community.
         </p>
 
         <a
             href="https://discord.gg/qdnSGPNUKp"
-            class="discord-cta-btn"
             target="_blank"
             rel="noopener noreferrer"
+            class="discord-big-button"
         >
-            JOIN DISCORD →
+            JOIN DISCORD
+            <span>↗</span>
         </a>
 
     </div>
@@ -2739,38 +1154,47 @@ footer {
 </section>
 
 
+
+</main>
+
+
+
 <!-- =====================================================
      FOOTER
 ===================================================== -->
 
-<footer>
-
-    <div class="footer-grid">
+<footer class="footer">
 
 
-        <div>
+    <div class="footer-top">
 
-            <h2 class="footer-logo">
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
                 KEZEA
-            </h2>
+            </div>
 
             <p>
-                Built different.
+                BUILT DIFFERENT.
                 <br>
-                Born to compete.
-                <br>
-                <br>
-                teamkezea@gmail.com
+                BORN TO COMPETE.
             </p>
+
+            <span>
+                teamkezea@gmail.com
+            </span>
 
         </div>
 
 
-        <div>
+        <div class="footer-column">
 
-            <h3>LINKS</h3>
+            <h4>
+                NAVIGATION
+            </h4>
 
-            <a href="#hero">
+            <a href="#home">
                 Home
             </a>
 
@@ -2790,23 +1214,21 @@ footer {
                 News
             </a>
 
-            <a href="#rocket-league">
-                Rocket League
-            </a>
-
         </div>
 
 
-        <div>
+        <div class="footer-column">
 
-            <h3>SOCIALS</h3>
+            <h4>
+                SOCIAL
+            </h4>
 
             <a
                 href="https://discord.gg/qdnSGPNUKp"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                Discord
+                Discord ↗
             </a>
 
             <a
@@ -2814,7 +1236,7 @@ footer {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                TikTok
+                TikTok ↗
             </a>
 
         </div>
@@ -2822,14 +1244,24 @@ footer {
     </div>
 
 
-    <div class="copyright">
+    <div class="footer-bottom">
 
-        © 2026 KEZEA Esports.
-        All Rights Reserved.
+        <span>
+            © 2026 KEZEA ESPORTS
+        </span>
+
+        <span>
+            ALL RIGHTS RESERVED.
+        </span>
+
+        <span>
+            ROCKET LEAGUE / ESPORTS
+        </span>
 
     </div>
 
 </footer>
+
 
 
 <!-- =====================================================
@@ -2838,101 +1270,88 @@ footer {
 
 <script>
 
-const menuOpen = document.getElementById("menuOpen");
-const menuClose = document.getElementById("menuClose");
-const mobileMenu = document.getElementById("mobileMenu");
+const menuToggle = document.querySelector(".menu-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const mobileClose = document.querySelector(".mobile-close");
+const menuOverlay = document.querySelector(".menu-overlay");
+const mobileLinks = document.querySelectorAll(".mobile-links a");
 
 
-// OPEN MENU
-
-menuOpen.addEventListener("click", function () {
+function openMenu() {
 
     mobileMenu.classList.add("open");
+    menuOverlay.classList.add("open");
+    document.body.classList.add("menu-open");
 
-    document.body.style.overflow = "hidden";
-
-});
-
-
-// CLOSE MENU
-
-menuClose.addEventListener("click", function () {
-
-    mobileMenu.classList.remove("open");
-
-    document.body.style.overflow = "";
-
-});
-
-
-// CLOSE WHEN CLICKING A LINK
-
-document.querySelectorAll(".mobile-nav a").forEach(function(link) {
-
-    link.addEventListener("click", function () {
-
-        mobileMenu.classList.remove("open");
-
-        document.body.style.overflow = "";
-
-    });
-
-});
-
-
-// CLOSE WITH ESC
-
-document.addEventListener("keydown", function(event) {
-
-    if (event.key === "Escape") {
-
-        mobileMenu.classList.remove("open");
-
-        document.body.style.overflow = "";
-
-    }
-
-});
-
-
-// SCROLL REVEAL
-
-const revealElements =
-    document.querySelectorAll(".reveal");
-
-
-const observer =
-    new IntersectionObserver(
-
-        function(entries) {
-
-            entries.forEach(function(entry) {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("visible");
-
-                }
-
-            });
-
-        },
-
-        {
-            threshold: 0.12
-        }
-
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "true"
     );
 
+}
 
-revealElements.forEach(function(element) {
 
-    observer.observe(element);
+function closeMenu() {
+
+    mobileMenu.classList.remove("open");
+    menuOverlay.classList.remove("open");
+    document.body.classList.remove("menu-open");
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+}
+
+
+menuToggle.addEventListener(
+    "click",
+    openMenu
+);
+
+
+mobileClose.addEventListener(
+    "click",
+    closeMenu
+);
+
+
+menuOverlay.addEventListener(
+    "click",
+    closeMenu
+);
+
+
+mobileLinks.forEach(link => {
+
+    link.addEventListener(
+        "click",
+        closeMenu
+    );
 
 });
+
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key === "Escape" &&
+            mobileMenu.classList.contains("open")
+        ) {
+
+            closeMenu();
+
+        }
+
+    }
+);
 
 </script>
 
 
 </body>
+
 </html>
