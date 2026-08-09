@@ -5955,3 +5955,212 @@ footer {
     }
 
 }
+/* =========================================================
+   KEZEA - ABOUT COMPACT
+========================================================= */
+
+.section-title {
+    margin-bottom: 35px;
+}
+
+.section-title span {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    line-height: 1;
+    margin: 7px 0;
+}
+
+.section-line {
+    width: 45px;
+    height: 2px;
+}
+
+
+/* ABOUT LAYOUT */
+
+.about-modern {
+    max-width: 1050px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+
+/* VISUAL */
+
+.about-visual {
+    min-height: 360px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-big-text {
+    font-size: 260px;
+    line-height: .75;
+    font-weight: 900;
+
+    color: rgba(255,255,255,.035);
+
+    position: absolute;
+    left: 0;
+    top: 30px;
+}
+
+.about-info {
+    position: absolute;
+    left: 25px;
+    bottom: 65px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.about-info.second {
+    left: auto;
+    right: 20px;
+    bottom: 25px;
+}
+
+.about-info span {
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,.35);
+}
+
+.about-info strong {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+
+/* TEXT */
+
+.about-text {
+    max-width: 520px;
+}
+
+.about-label {
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    color: #ff5a1f;
+}
+
+.about-text h3 {
+    margin: 10px 0 18px;
+
+    font-size: 38px;
+    line-height: .95;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.about-text h3 span {
+    color: #ff5a1f;
+}
+
+.about-text p {
+    margin: 0 0 12px;
+
+    max-width: 500px;
+
+    color: rgba(255,255,255,.55);
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ABOUT STATS */
+
+.about-stats {
+    display: flex;
+    gap: 35px;
+
+    margin-top: 25px;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255,255,255,.07);
+}
+
+.about-stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.about-stats strong {
+    font-size: 20px;
+    color: #fff;
+}
+
+.about-stats span {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,.3);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .section-title {
+        margin-bottom: 28px;
+    }
+
+    .section-title h2 {
+        font-size: 27px;
+    }
+
+    .about-modern {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .about-visual {
+        min-height: 220px;
+    }
+
+    .about-big-text {
+        font-size: 180px;
+        top: 20px;
+    }
+
+    .about-info {
+        left: 15px;
+        bottom: 35px;
+    }
+
+    .about-info.second {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .about-text h3 {
+        font-size: 30px;
+    }
+
+    .about-text p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .about-stats {
+        gap: 25px;
+        margin-top: 20px;
+    }
+
+    .about-stats strong {
+        font-size: 17px;
+    }
+}
