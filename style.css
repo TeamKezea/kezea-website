@@ -8828,3 +8828,222 @@ footer {
         border-radius: 12px !important;
     }
 }
+
+
+/* =========================================================
+   KEZEA ROSTER — POLISHED PLAYER CARDS
+   ========================================================= */
+
+#roster .players {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    gap: 22px !important;
+}
+
+#roster .player-card {
+    position: relative !important;
+    height: 330px !important;
+    padding: 22px 20px 18px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+
+    background:
+        radial-gradient(circle at 50% 14%, rgba(247,198,0,.07), transparent 25%),
+        linear-gradient(145deg, #10141c, #090c12) !important;
+
+    border: 1px solid rgba(255,255,255,.08) !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.025),
+        0 12px 30px rgba(0,0,0,.18) !important;
+
+    transition:
+        transform .28s ease,
+        border-color .28s ease,
+        box-shadow .28s ease !important;
+}
+
+/* remove the large yellow block */
+#roster .player-card::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 22px !important;
+    right: 22px !important;
+    top: 18px !important;
+    height: 2px !important;
+    background: linear-gradient(90deg, transparent, #f7c600, transparent) !important;
+    opacity: .9 !important;
+    filter: none !important;
+}
+
+/* subtle bottom accent */
+#roster .player-card::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 2px !important;
+    background: #f7c600 !important;
+    transform: scaleX(.18) !important;
+    transform-origin: center !important;
+    transition: transform .28s ease !important;
+}
+
+/* number */
+#roster .player-number {
+    top: 18px !important;
+    left: 20px !important;
+    color: rgba(247,198,0,.48) !important;
+    font-size: 9px !important;
+    letter-spacing: 2px !important;
+}
+
+/* avatar */
+#roster .player-avatar {
+    position: absolute !important;
+    top: 45px !important;
+    left: 50% !important;
+
+    width: 158px !important;
+    height: 158px !important;
+
+    transform: translateX(-50%) !important;
+
+    border-radius: 50% !important;
+    overflow: hidden !important;
+
+    border: 1px solid rgba(247,198,0,.25) !important;
+
+    background:
+        radial-gradient(circle, rgba(247,198,0,.08), rgba(10,12,18,.96) 72%) !important;
+
+    box-shadow:
+        0 14px 30px rgba(0,0,0,.24),
+        0 0 24px rgba(247,198,0,.05) !important;
+}
+
+#roster .player-avatar img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    margin: 0 !important;
+    position: static !important;
+    transform: none !important;
+}
+
+/* name + role */
+#roster .player-info {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    text-align: center !important;
+}
+
+#roster .player-info h3,
+#roster .player-card h3 {
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: 23px !important;
+    line-height: 1 !important;
+    font-weight: 900 !important;
+    letter-spacing: -.3px !important;
+}
+
+#roster .player-info p,
+#roster .player-card p {
+    margin: 7px 0 14px !important;
+    color: #f7c600 !important;
+    font-size: 9px !important;
+    font-weight: 900 !important;
+    letter-spacing: 2px !important;
+}
+
+/* link area */
+#roster .player-link {
+    position: relative !important;
+    z-index: 2 !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+
+    min-width: 105px !important;
+    padding: 8px 12px !important;
+
+    color: rgba(255,255,255,.48) !important;
+    background: rgba(255,255,255,.025) !important;
+
+    border: 1px solid rgba(255,255,255,.06) !important;
+    border-radius: 7px !important;
+
+    font-size: 8px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px !important;
+
+    transition:
+        color .25s ease,
+        border-color .25s ease,
+        background .25s ease !important;
+}
+
+#roster .player-link.disabled {
+    opacity: .5 !important;
+}
+
+/* hover */
+#roster .player-card:hover {
+    transform: translateY(-7px) !important;
+    border-color: rgba(247,198,0,.34) !important;
+
+    box-shadow:
+        0 22px 45px rgba(0,0,0,.30),
+        0 0 28px rgba(247,198,0,.05) !important;
+}
+
+#roster .player-card:hover::after {
+    transform: scaleX(1) !important;
+}
+
+#roster .player-card:hover .player-avatar {
+    box-shadow:
+        0 16px 34px rgba(0,0,0,.30),
+        0 0 30px rgba(247,198,0,.10) !important;
+}
+
+#roster .player-card:hover .player-link {
+    color: #fff !important;
+    border-color: rgba(247,198,0,.26) !important;
+    background: rgba(247,198,0,.04) !important;
+}
+
+@media (max-width: 900px) {
+    #roster .players {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    #roster .players {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+    }
+
+    #roster .player-card {
+        height: 315px !important;
+    }
+
+    #roster .player-avatar {
+        width: 150px !important;
+        height: 150px !important;
+    }
+}
