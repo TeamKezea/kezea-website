@@ -1079,363 +1079,305 @@ button {
 }
 
 /* =========================================================
-   NEWS
+   LATEST NEWS - CARDS
 ========================================================= */
 
-.news-container {
+.news-cards {
     max-width: 1100px;
-
     margin: 0 auto;
 
     display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
-    grid-template-columns:
-        minmax(0, 1.35fr)
-        minmax(0, 1fr);
-
-    gap: 25px;
+    gap: 22px;
 }
 
-/* FEATURED */
 
-.news-featured {
+/* =========================================================
+   NEWS CARD
+========================================================= */
+
+.news-card {
     position: relative;
 
-    min-height: 500px;
+    min-width: 0;
+    height: 430px;
 
     border-radius: 22px;
 
     overflow: hidden;
 
-    border: 1px solid #292929;
-
     background: #111;
 
-    transition: 0.4s;
+    border: 1px solid #292929;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
 }
 
-.news-featured:hover {
+
+.news-card:hover {
+    transform: translateY(-10px);
+
     border-color: var(--gold);
 
-    transform: translateY(-8px);
-
     box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.5),
-        0 0 30px rgba(247, 198, 0, 0.12);
+        0 20px 55px rgba(0,0,0,0.55),
+        0 0 30px rgba(247,198,0,0.14);
 }
 
-.news-image {
+
+/* =========================================================
+   FEATURED CARD
+========================================================= */
+
+.news-card.featured {
+    border-color: rgba(247,198,0,0.35);
+}
+
+
+/* =========================================================
+   NEWS IMAGE
+========================================================= */
+
+.news-card-image {
     position: relative;
 
     width: 100%;
     height: 100%;
 
-    min-height: 500px;
-
     display: flex;
     align-items: flex-end;
 
-    padding: 40px;
-
-    background:
-        radial-gradient(
-            circle at 80% 20%,
-            rgba(247, 198, 0, 0.25),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #202020,
-            #090909
-        );
+    padding: 28px;
 
     overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+
+    transition: transform 0.6s ease;
 }
 
-.news-image::before {
-    content: "";
 
-    position: absolute;
-    inset: 0;
+.news-card:hover .news-card-image {
+    transform: scale(1.04);
+}
 
-    opacity: 0.12;
 
+/* =========================================================
+   BACKGROUNDS
+========================================================= */
+
+.news-bg-1 {
     background-image:
-        linear-gradient(
-            rgba(247, 198, 0, 0.2) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(247, 198, 0, 0.2) 1px,
-            transparent 1px
-        );
-
-    background-size: 55px 55px;
+        url("https://images.unsplash.com/photo-1542751371-adc38448a05e");
 }
 
-.news-image::after {
-    content: "";
 
-    position: absolute;
-
-    width: 300px;
-    height: 300px;
-
-    right: -100px;
-    top: -100px;
-
-    border-radius: 50%;
-
-    background: rgba(247, 198, 0, 0.18);
-
-    filter: blur(70px);
+.news-bg-2 {
+    background-image:
+        url("https://images.unsplash.com/photo-1560253023-3ec5d502959f");
 }
 
-.news-overlay {
+
+.news-bg-3 {
+    background-image:
+        url("https://images.unsplash.com/photo-1511512578047-dfb367046420");
+}
+
+
+/* =========================================================
+   DARK OVERLAY
+========================================================= */
+
+.news-card-overlay {
     position: absolute;
     inset: 0;
 
     background:
         linear-gradient(
             to top,
-            rgba(0, 0, 0, 0.98),
-            rgba(0, 0, 0, 0.25)
+            rgba(0,0,0,0.98) 0%,
+            rgba(0,0,0,0.72) 45%,
+            rgba(0,0,0,0.15) 100%
         );
+
+    transition: 0.4s ease;
 }
 
-.news-tag {
-    position: absolute;
 
-    top: 25px;
-    left: 25px;
-
-    z-index: 3;
-
-    padding: 8px 14px;
-
-    color: #000;
-
-    background: var(--gold);
-
-    border-radius: 20px;
-
-    font-size: 9px;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-}
-
-.news-featured-content {
-    position: relative;
-
-    z-index: 3;
-
-    max-width: 500px;
-}
-
-.news-date {
-    color: var(--gold);
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-}
-
-.news-featured-content h3 {
-    margin: 12px 0;
-
-    font-family: "Orbitron", sans-serif;
-
-    font-size: clamp(30px, 4vw, 48px);
-
-    line-height: 1;
-}
-
-.news-featured-content p {
-    max-width: 450px;
-
-    color: #999;
-
-    font-size: 13px;
-
-    line-height: 1.7;
-}
-
-.news-btn {
-    display: inline-flex;
-
-    margin-top: 25px;
-
-    padding: 11px 20px;
-
-    color: var(--gold);
-
-    border: 1px solid var(--gold);
-
-    border-radius: 25px;
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    transition: 0.3s;
-}
-
-.news-btn:hover {
-    background: var(--gold);
-
-    color: #000;
-
-    box-shadow:
-        0 0 20px rgba(247, 198, 0, 0.3);
-
-    transform: translateX(5px);
-}
-
-/* NEWS LIST */
-
-.news-list {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 18px;
-}
-
-.news-item {
-    position: relative;
-
-    display: flex;
-
-    gap: 18px;
-
-    padding: 24px;
-
+.news-card:hover .news-card-overlay {
     background:
         linear-gradient(
-            145deg,
-            #1a1a1a,
-            #101010
+            to top,
+            rgba(0,0,0,0.98),
+            rgba(0,0,0,0.62),
+            rgba(247,198,0,0.08)
         );
-
-    border: 1px solid #272727;
-
-    border-radius: 18px;
-
-    overflow: hidden;
-
-    transition: 0.35s ease;
 }
 
-.news-item::after {
+
+/* =========================================================
+   GOLD GLOW
+========================================================= */
+
+.news-card-image::after {
     content: "";
 
     position: absolute;
 
-    left: 0;
-    bottom: 0;
+    width: 220px;
+    height: 220px;
 
-    width: 0;
-    height: 2px;
+    right: -100px;
+    top: -100px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(247,198,0,0.18);
+
+    filter: blur(65px);
+
+    opacity: 0;
+
+    transition: 0.5s ease;
+}
+
+
+.news-card:hover .news-card-image::after {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   TAG
+========================================================= */
+
+.news-card-tag {
+    position: absolute;
+
+    top: 22px;
+    left: 22px;
+
+    z-index: 4;
+
+    padding: 7px 13px;
 
     background: var(--gold);
+    color: #000;
 
-    transition: 0.4s;
-}
+    border-radius: 20px;
 
-.news-item:hover {
-    transform: translateX(7px);
+    font-size: 8px;
+    font-weight: 900;
 
-    border-color: var(--gold);
+    letter-spacing: 2px;
 
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.35);
+        0 0 20px rgba(247,198,0,0.2);
 }
 
-.news-item:hover::after {
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.news-card-content {
+    position: relative;
+
+    z-index: 3;
+
     width: 100%;
 }
 
-.news-item-icon {
-    flex-shrink: 0;
 
-    width: 55px;
-    height: 55px;
+.news-card-date {
+    display: block;
 
-    display: flex;
+    margin-bottom: 10px;
 
-    align-items: center;
-    justify-content: center;
-
-    background: #0c0c0c;
-
-    border: 1px solid rgba(247, 198, 0, 0.2);
-
-    border-radius: 14px;
-
-    font-size: 23px;
-
-    transition: 0.3s;
-}
-
-.news-item:hover .news-item-icon {
-    background: var(--gold);
-
-    color: #000;
-
-    transform: scale(1.05);
-}
-
-.news-item-content {
-    min-width: 0;
-}
-
-.news-item-content > span {
     color: var(--gold);
 
     font-size: 9px;
-
     font-weight: 800;
 
     letter-spacing: 2px;
 }
 
-.news-item-content h3 {
-    margin-top: 7px;
 
-    font-family: "Orbitron", sans-serif;
+.news-card-content h3 {
+    margin: 0;
 
-    font-size: 14px;
+    color: #fff;
 
-    line-height: 1.4;
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 19px;
+
+    line-height: 1.35;
+
+    transition: 0.3s ease;
 }
 
-.news-item-content p {
-    margin-top: 8px;
 
-    color: #777;
+.news-card:hover .news-card-content h3 {
+    color: var(--gold);
+}
+
+
+.news-card-content p {
+    margin-top: 10px;
+
+    color: #999;
 
     font-size: 11px;
 
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
-.news-item-content small {
-    display: block;
 
-    margin-top: 12px;
+/* =========================================================
+   READ MORE
+========================================================= */
 
-    color: #555;
+.news-card-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-top: 18px;
+
+    padding: 9px 16px;
+
+    color: var(--gold);
+
+    border: 1px solid rgba(247,198,0,0.6);
+
+    border-radius: 20px;
 
     font-size: 9px;
+    font-weight: 800;
 
     letter-spacing: 1px;
+
+    transition: 0.3s ease;
 }
 
+
+.news-card-btn:hover {
+    background: var(--gold);
+
+    color: #000;
+
+    transform: translateX(5px);
+
+    box-shadow:
+        0 0 20px rgba(247,198,0,0.3);
+}
 /* =========================================================
    ROCKET LEAGUE
 ========================================================= */
