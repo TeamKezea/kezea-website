@@ -548,92 +548,299 @@ button {
 }
 
 /* =========================================================
-   STATS
+   KEZEA PREMIUM STATS
 ========================================================= */
 
 #stats {
     position: relative;
 
-    padding: 70px 8%;
+    padding: 0 6% 100px;
 
-    background: #0d0d0d;
+    margin-top: -1px;
+
+    background: #05070c;
 }
 
+
+/* Stats container */
+
 .stat-box {
-    max-width: 1200px;
+    position: relative;
+    z-index: 5;
+
+    max-width: 1250px;
+
     margin: 0 auto;
 
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
 
-    gap: 20px;
+    gap: 2px;
+
+    background: rgba(255,255,255,0.06);
+
+    border: 1px solid rgba(255,255,255,0.08);
 }
+
+
+/* Individual card */
 
 .stat {
     position: relative;
 
-    padding: 32px 20px;
+    min-height: 230px;
 
-    text-align: center;
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    color: white;
 
     background:
         linear-gradient(
             145deg,
-            #191919,
-            #101010
+            rgba(18,21,29,0.98),
+            rgba(8,10,15,0.98)
         );
 
-    border: 1px solid #242424;
-    border-radius: 18px;
-
-    overflow: hidden;
-
-    transition: var(--transition);
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
 }
+
+
+/* Background glow */
 
 .stat::before {
     content: "";
 
     position: absolute;
 
-    top: 0;
-    left: -100%;
+    width: 180px;
+    height: 180px;
 
-    width: 100%;
-    height: 2px;
+    top: -80px;
+    right: -70px;
 
-    background: var(--gold);
+    background: rgba(255,90,31,0.12);
 
-    transition: 0.5s;
+    filter: blur(50px);
+
+    opacity: 0;
+
+    transition: opacity 0.35s ease;
 }
+
+
+/* Orange side line */
+
+.stat::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #ff5a1f;
+
+    box-shadow:
+        0 0 18px rgba(255,90,31,0.65);
+
+    transition: width 0.35s ease;
+}
+
+
+/* Hover */
 
 .stat:hover {
     transform: translateY(-8px);
 
-    border-color: var(--gold);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25,28,38,1),
+            rgba(10,12,18,1)
+        );
 
-    box-shadow: var(--glow);
+    box-shadow:
+        0 15px 45px rgba(0,0,0,0.35);
 }
 
 .stat:hover::before {
-    left: 100%;
+    opacity: 1;
 }
 
-.stat > span {
-    font-size: 32px;
+.stat:hover::after {
+    width: 100%;
 }
 
-.stat h2 {
-    margin: 12px 0;
 
-    color: var(--gold);
+/* Top */
 
-    font-family: "Orbitron", sans-serif;
-    font-size: 30px;
+.stat-top {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
 }
 
-.stat p {
-    color: #999;
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    background: rgba(255,255,255,0.035);
+
+    border-radius: 12px;
+
+    font-size: 22px;
+}
+
+
+.stat-number {
+    color: rgba(255,255,255,0.18);
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+/* Main */
+
+.stat-main {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 20px;
+}
+
+
+.stat-main h2 {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: clamp(38px, 4vw, 58px);
+
+    line-height: 1;
+
+    font-weight: 950;
+
+    letter-spacing: -2px;
+}
+
+
+.stat-main p {
+    margin: 10px 0 0;
+
+    color: #ff5a1f;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+/* Bottom */
+
+.stat-bottom {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255,255,255,0.07);
+
+    color: rgba(255,255,255,0.35);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.stat-arrow {
+    color: #ff5a1f;
+
+    font-size: 18px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.stat:hover .stat-arrow {
+    transform: translateX(6px);
+}
+
+
+/* =========================================================
+   STATS RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .stat-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #stats {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 70px;
+    }
+
+    .stat-box {
+        grid-template-columns: 1fr;
+
+        gap: 1px;
+    }
+
+    .stat {
+        min-height: 200px;
+    }
+
 }
 
 /* =========================================================
