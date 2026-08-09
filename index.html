@@ -84,7 +84,63 @@
     >
 
 </head>
+    
+<script>
 
+const menuButton = document.querySelector(".menu-toggle");
+const navbar = document.querySelector(".navbar");
+const navLinks = document.querySelectorAll(".navbar ul a");
+
+menuButton.addEventListener("click", () => {
+
+    navbar.classList.toggle("menu-open");
+
+    const isOpen = navbar.classList.contains("menu-open");
+
+    menuButton.textContent = isOpen ? "×" : "☰";
+
+    menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+    );
+
+});
+
+
+navLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navbar.classList.remove("menu-open");
+
+        menuButton.textContent = "☰";
+
+        menuButton.setAttribute(
+            "aria-label",
+            "Open menu"
+        );
+
+    });
+
+});
+
+
+document.addEventListener("click", (event) => {
+
+    if (
+        navbar.classList.contains("menu-open") &&
+        !navbar.contains(event.target)
+    ) {
+
+        navbar.classList.remove("menu-open");
+
+        menuButton.textContent = "☰";
+
+    }
+
+});
+
+</script>
 
 <body>
 
