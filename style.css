@@ -7854,3 +7854,125 @@ footer {
     }
 
 }
+/* =========================================================
+   KEZEA ABOUT - FINAL BOX LAYOUT
+   Keeps the entire About content inside one unified card.
+========================================================= */
+
+.about-content {
+    width: min(1100px, 100%);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    text-align: left;
+    background: linear-gradient(145deg, #11141b, #090b10);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.about-content .about-visual {
+    width: 100%;
+    height: 360px;
+    min-height: 360px;
+    border: 0;
+    border-right: 1px solid rgba(255,255,255,.07);
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+.about-content .about-text {
+    width: 100%;
+    max-width: none;
+    min-height: 360px;
+    padding: 45px 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    background: linear-gradient(145deg, rgba(12,15,21,.65), rgba(7,9,13,.9));
+}
+
+.about-content .about-text h3 {
+    margin: 10px 0 20px;
+    font-size: clamp(32px, 3.2vw, 44px);
+}
+
+.about-content .about-text p {
+    margin: 0 0 14px;
+    max-width: 520px;
+    text-align: left;
+    font-size: 14px !important;
+    line-height: 1.75 !important;
+}
+
+.about-content .about-stats {
+    width: 100%;
+    margin-top: 24px;
+    padding-top: 18px;
+    display: flex;
+    gap: 38px;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+/* Subtle inner highlight */
+.about-content::before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+}
+
+@media (max-width: 800px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content .about-visual {
+        height: 260px;
+        min-height: 260px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+
+    .about-content .about-text {
+        min-height: auto;
+        padding: 35px 28px;
+    }
+}
+
+@media (max-width: 700px) {
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content .about-visual {
+        height: 220px;
+        min-height: 220px;
+    }
+
+    .about-content .about-text {
+        padding: 30px 22px;
+    }
+
+    .about-content .about-text h3 {
+        font-size: 30px;
+    }
+
+    .about-content .about-text p {
+        font-size: 12px !important;
+        line-height: 1.65 !important;
+    }
+
+    .about-content .about-stats {
+        gap: 24px;
+        margin-top: 20px;
+    }
+
+    .about-content .about-stats strong {
+        font-size: 17px;
+    }
+}
