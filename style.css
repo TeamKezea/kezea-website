@@ -5528,3 +5528,430 @@ body.details-body {
     }
 
 }
+/* =========================================================
+   KEZEA FINAL COMPACT PASS
+========================================================= */
+
+
+/* =========================
+   LATEST NEWS
+========================= */
+
+.news-cards {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.news-card {
+    min-width: 0;
+}
+
+.news-card-image {
+    position: relative;
+    height: 300px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,.07);
+
+    background-position: center;
+    background-size: cover;
+}
+
+.news-card-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(5,7,12,.98) 0%,
+            rgba(5,7,12,.55) 55%,
+            rgba(5,7,12,.15) 100%
+        );
+}
+
+.news-card-content {
+    position: absolute;
+    z-index: 2;
+
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+}
+
+.news-card-date {
+    font-size: 8px !important;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,.45);
+}
+
+.news-card-content h3 {
+    margin: 7px 0;
+
+    font-size: 18px !important;
+    line-height: 1.15;
+}
+
+.news-card-content p {
+    margin: 0 0 12px;
+
+    font-size: 10px !important;
+    line-height: 1.5;
+    color: rgba(255,255,255,.5);
+}
+
+.news-card-tag {
+    position: absolute;
+    z-index: 3;
+
+    top: 14px;
+    left: 14px;
+
+    padding: 6px 9px;
+
+    font-size: 7px !important;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    color: #fff;
+
+    background: rgba(255,90,31,.9);
+    border-radius: 4px;
+}
+
+.news-card-btn {
+    font-size: 8px !important;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    color: #ff5a1f;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   ROCKET LEAGUE
+========================= */
+
+#rocket-league {
+    overflow: hidden;
+}
+
+.rocket-container {
+    max-width: 1100px;
+    min-height: 400px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.rocket-text {
+    max-width: 430px;
+}
+
+.rocket-text > span {
+    font-size: 9px !important;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+
+    color: #ff5a1f;
+}
+
+.rocket-text h2 {
+    margin: 10px 0;
+
+    font-size: 46px !important;
+    line-height: .95;
+}
+
+.rocket-text p {
+    max-width: 350px;
+
+    font-size: 12px !important;
+    line-height: 1.6;
+
+    color: rgba(255,255,255,.45);
+}
+
+.rocket-car {
+    width: 48%;
+}
+
+.rocket-car img {
+    width: 100%;
+    max-width: 500px;
+
+    display: block;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 20px 35px rgba(0,0,0,.5));
+
+    transition: transform .4s ease;
+}
+
+.rocket-car img:hover {
+    transform: scale(1.03) translateX(-5px);
+}
+
+
+/* =========================
+   DISCORD CTA
+========================= */
+
+.discord-cta-content {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 55px 30px;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20,23,31,.98),
+            rgba(8,10,15,.98)
+        );
+
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 12px;
+}
+
+.discord-cta-content::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    top: -140px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: rgba(255,90,31,.12);
+
+    filter: blur(65px);
+}
+
+.discord-cta-small {
+    position: relative;
+
+    font-size: 9px !important;
+    font-weight: 900;
+
+    letter-spacing: 2.5px;
+
+    color: #ff5a1f;
+}
+
+.discord-cta-content h2 {
+    position: relative;
+
+    margin: 12px 0;
+
+    font-size: 38px !important;
+    line-height: 1;
+}
+
+.discord-cta-content h2 span {
+    color: #ff5a1f;
+}
+
+.discord-cta-content p {
+    position: relative;
+
+    max-width: 500px;
+
+    margin: 0 auto 20px;
+
+    font-size: 12px !important;
+    line-height: 1.6;
+
+    color: rgba(255,255,255,.45);
+}
+
+.discord-cta-btn {
+    position: relative;
+
+    display: inline-flex;
+
+    padding: 11px 20px;
+
+    color: #fff;
+
+    background: #ff5a1f;
+
+    border-radius: 5px;
+
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+    transition: .25s ease;
+}
+
+.discord-cta-btn:hover {
+    transform: translateY(-2px);
+
+    background: #ff6b35;
+
+    box-shadow:
+        0 8px 25px rgba(255,90,31,.2);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding-top: 55px;
+}
+
+.footer-grid {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+.footer-logo {
+    font-size: 25px;
+    margin: 0 0 10px;
+}
+
+.footer-grid p {
+    font-size: 11px;
+    line-height: 1.6;
+
+    color: rgba(255,255,255,.35);
+}
+
+.footer-grid h3 {
+    margin: 0 0 13px;
+
+    font-size: 9px;
+    letter-spacing: 1.5px;
+
+    color: #ff5a1f;
+}
+
+.footer-grid a {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 10px;
+
+    color: rgba(255,255,255,.45);
+
+    text-decoration: none;
+
+    transition: color .2s ease;
+}
+
+.footer-grid a:hover {
+    color: #fff;
+}
+
+.copyright {
+    margin-top: 35px;
+    padding-top: 18px;
+
+    font-size: 8px;
+    text-align: center;
+
+    color: rgba(255,255,255,.2);
+
+    border-top: 1px solid rgba(255,255,255,.06);
+}
+
+
+/* =========================================================
+   MOBILE FINAL
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .news-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .news-card-image {
+        height: 270px;
+    }
+
+    .rocket-container {
+        min-height: 0;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 50px 5%;
+    }
+
+    .rocket-text {
+        max-width: 100%;
+    }
+
+    .rocket-text h2 {
+        font-size: 38px !important;
+    }
+
+    .rocket-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .rocket-car {
+        width: 90%;
+    }
+
+    .discord-cta-content {
+        margin-left: 5%;
+        margin-right: 5%;
+
+        padding: 40px 20px;
+    }
+
+    .discord-cta-content h2 {
+        font-size: 30px !important;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+}
