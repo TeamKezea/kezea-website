@@ -9150,3 +9150,146 @@ footer {
         padding: 22px !important;
     }
 }
+/* =========================================================
+   SECOND PLAYER DETAILS BOX
+========================================================= */
+
+.general-info-card {
+    position: absolute;
+
+    top: 50px;
+    right: 60px;
+
+    width: 360px;
+
+    padding: 22px 24px;
+
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(247,198,0,.07),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #111418,
+            #080b10
+        );
+
+    border:
+        1px solid
+        rgba(247,198,0,.75);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.28);
+
+    z-index: 5;
+}
+
+
+.general-info-title {
+    margin-bottom: 15px;
+
+    color:
+        var(--gold);
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 2.4px;
+}
+
+
+.general-info-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 0 20px;
+}
+
+
+.general-detail {
+    padding:
+        11px 0;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.general-detail span {
+    display: block;
+
+    color:
+        rgba(255,255,255,.32);
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+
+.general-detail strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #fff;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+/* give the right panel room for the top box */
+
+.content {
+    position: relative;
+    padding-top: 170px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 1050px) {
+
+    .general-info-card {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        width: 100%;
+
+        margin-top: 25px;
+    }
+
+    .content {
+        padding-top: 46px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .general-info-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
