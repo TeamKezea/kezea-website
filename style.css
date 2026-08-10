@@ -4491,13 +4491,12 @@ body.details-body {
     position: relative;
     overflow: hidden;
 
-    background-image:
-        linear-gradient(
-            135deg,
-            rgba(5, 7, 12, 0.92),
-            rgba(10, 14, 25, 0.82)
-        ),
-        url("card-bg.jpg");
+background-image:
+    linear-gradient(
+        135deg,
+        rgba(5, 7, 12, 0.92),
+        rgba(10, 14, 25, 0.82)
+    );
 
     background-size: cover;
     background-position: center;
